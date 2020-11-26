@@ -28,3 +28,9 @@ class LoginModule: IModule {
         return router.create(parameters: parameters)
     }
 }
+
+extension LoginModule: Module {
+    var routePath: String {
+        return "Login"
+    }
+}

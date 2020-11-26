@@ -67,6 +67,8 @@ public protocol IAppRouter {
 public class AppRouter: BaseAppRouter {
     public static let share = AppRouter().create()
     
+    public static var scene: UIWindowScene? = nil
+    
     private func create() -> AppRouter {
         var window: UIWindow?
         
@@ -74,6 +76,7 @@ public class AppRouter: BaseAppRouter {
             window = _window
         } else {
             window = UIWindow(frame: UIScreen.main.bounds)
+            window?.windowScene = AppRouter.scene!
         }
         
         window?.makeKeyAndVisible()
@@ -82,4 +85,5 @@ public class AppRouter: BaseAppRouter {
         router.window = window
         return router
     }
+    
 }

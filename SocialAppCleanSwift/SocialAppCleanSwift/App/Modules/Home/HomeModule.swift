@@ -28,3 +28,9 @@ class HomeModule: IModule {
         return router.create(parameters: parameters)
     }
 }
+
+extension HomeModule: Module {
+    var routePath: String {
+        return "Home"
+    }
+}

@@ -28,3 +28,9 @@ class MainModule: IModule {
         return router.create(parameters: parameters)
     }
 }
+
+extension MainModule: Module {
+    var routePath: String {
+        return "Main"
+    }
+}

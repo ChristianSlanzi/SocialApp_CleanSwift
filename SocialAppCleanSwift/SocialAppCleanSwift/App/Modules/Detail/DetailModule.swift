@@ -28,3 +28,9 @@ class DetailModule: IModule {
         return router.create(parameters: parameters)
     }
 }
+
+extension DetailModule: Module {
+    var routePath: String {
+        return "Detail"
+    }
+}

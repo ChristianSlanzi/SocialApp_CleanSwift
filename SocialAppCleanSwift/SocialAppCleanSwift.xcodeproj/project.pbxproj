@@ -58,6 +58,7 @@
 		24CF04C52570029700F92B49 /* BaseAppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF04C22570029700F92B49 /* BaseAppRouter.swift */; };
 		24CF04C62570029700F92B49 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF04C32570029700F92B49 /* AppRoute.swift */; };
 		24CF04C72570029700F92B49 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF04C42570029700F92B49 /* Module.swift */; };
+		24CF04CC2570030200F92B49 /* GeneralRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF04CB2570030200F92B49 /* GeneralRouter.swift */; };
 		315B797A157BB4B8BB4F8A8F /* Pods_SocialAppCleanSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B660C27D743F8B66039406 /* Pods_SocialAppCleanSwift.framework */; };
 		7E1500FE91579E279B8DDAE0 /* Pods_SocialAppCleanSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12715154AEB87DA1D221F984 /* Pods_SocialAppCleanSwiftTests.framework */; };
 /* End PBXBuildFile section */
@@ -139,6 +140,7 @@
 		24CF04C22570029700F92B49 /* BaseAppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAppRouter.swift; sourceTree = "<group>"; };
 		24CF04C32570029700F92B49 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		24CF04C42570029700F92B49 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		24CF04CB2570030200F92B49 /* GeneralRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralRouter.swift; sourceTree = "<group>"; };
 		26B660C27D743F8B66039406 /* Pods_SocialAppCleanSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialAppCleanSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB9F03D6D9BA4C2464FE8FE /* Pods_SocialAppCleanSwift_SocialAppCleanSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialAppCleanSwift_SocialAppCleanSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBAA5C9B3ECDE7324BFDEF8 /* Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests/Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 				24CF04C22570029700F92B49 /* BaseAppRouter.swift */,
 				24CF04C32570029700F92B49 /* AppRoute.swift */,
 				24CF04C42570029700F92B49 /* Module.swift */,
+				24CF04CB2570030200F92B49 /* GeneralRouter.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -625,6 +628,7 @@
 				24CF04A62570026100F92B49 /* DetailRouter.swift in Sources */,
 				24CF04B82570026F00F92B49 /* MainPresenter.swift in Sources */,
 				24CF04702570022C00F92B49 /* LoginModel.swift in Sources */,
+				24CF04CC2570030200F92B49 /* GeneralRouter.swift in Sources */,
 				24CF04BB2570026F00F92B49 /* MainInteractor.swift in Sources */,
 				24CF04A42570026100F92B49 /* DetailModule.swift in Sources */,
 				24CF04722570022C00F92B49 /* LoginManager.swift in Sources */,

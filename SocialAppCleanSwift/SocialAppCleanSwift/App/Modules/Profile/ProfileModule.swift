@@ -28,3 +28,9 @@ class ProfileModule: IModule {
         return router.create(parameters: parameters)
     }
 }
+
+extension ProfileModule: Module {
+    var routePath: String {
+        return "Profile"
+    }
+}

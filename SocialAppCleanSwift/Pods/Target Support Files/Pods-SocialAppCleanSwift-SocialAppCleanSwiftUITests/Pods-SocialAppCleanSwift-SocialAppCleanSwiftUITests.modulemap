@@ -1,0 +1,6 @@
+framework module Pods_SocialAppCleanSwift_SocialAppCleanSwiftUITests {
+  umbrella header "Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

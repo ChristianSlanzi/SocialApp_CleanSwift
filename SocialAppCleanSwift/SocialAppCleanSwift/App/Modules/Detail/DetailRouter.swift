@@ -23,8 +23,8 @@ class DetailRouter: IDetailRouter {
     }
 
     func create(parameters: [String: Any]) -> DetailViewController {
-        let bundle = Bundle(for: type(of: self))
-        let view = DetailViewController(nibName: "DetailViewController", bundle: bundle)
+        //let bundle = Bundle(for: type(of: self))
+        let view = DetailViewController()//(nibName: "DetailViewController", bundle: bundle)
         let presenter = DetailPresenter(view: view)
         let interactor = DetailInteractor(presenter: presenter)
         view.interactor = interactor

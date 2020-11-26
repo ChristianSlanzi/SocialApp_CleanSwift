@@ -4,7 +4,7 @@
 
 language: swift
 osx_image: xcode12.2
-xcode_workspace: SocialAppCleanSwift/SocialAppCleanSwift.xcworkspace
+xcode_workspace: SocialAppCleanSwift.xcworkspace
 xcode_scheme: SocialAppCleanSwift
 xcode_destination: platform=iOS Simulator,OS=13.3,name=iPhone 11 Pro Max
 before_install:

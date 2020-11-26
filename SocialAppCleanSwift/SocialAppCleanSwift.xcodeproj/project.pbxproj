@@ -67,6 +67,14 @@
 		24DD57482570330100106BC6 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD57402570330100106BC6 /* SettingsModel.swift */; };
 		24DD57492570330100106BC6 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DD57412570330100106BC6 /* SettingsViewController.xib */; };
 		24DD574A2570330100106BC6 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD57422570330100106BC6 /* SettingsManager.swift */; };
+		24DD5757257036E200106BC6 /* ContactsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD574F257036E200106BC6 /* ContactsModule.swift */; };
+		24DD5758257036E200106BC6 /* ContactsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD5750257036E200106BC6 /* ContactsPresenter.swift */; };
+		24DD5759257036E200106BC6 /* ContactsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD5751257036E200106BC6 /* ContactsRouter.swift */; };
+		24DD575A257036E200106BC6 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD5752257036E200106BC6 /* ContactsViewController.swift */; };
+		24DD575B257036E200106BC6 /* ContactsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD5753257036E200106BC6 /* ContactsInteractor.swift */; };
+		24DD575C257036E200106BC6 /* ContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD5754257036E200106BC6 /* ContactsModel.swift */; };
+		24DD575D257036E200106BC6 /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DD5755257036E200106BC6 /* ContactsViewController.xib */; };
+		24DD575E257036E200106BC6 /* ContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD5756257036E200106BC6 /* ContactsManager.swift */; };
 		315B797A157BB4B8BB4F8A8F /* Pods_SocialAppCleanSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B660C27D743F8B66039406 /* Pods_SocialAppCleanSwift.framework */; };
 		7E1500FE91579E279B8DDAE0 /* Pods_SocialAppCleanSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12715154AEB87DA1D221F984 /* Pods_SocialAppCleanSwiftTests.framework */; };
 /* End PBXBuildFile section */
@@ -157,6 +165,14 @@
 		24DD57402570330100106BC6 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		24DD57412570330100106BC6 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		24DD57422570330100106BC6 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		24DD574F257036E200106BC6 /* ContactsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsModule.swift; sourceTree = "<group>"; };
+		24DD5750257036E200106BC6 /* ContactsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPresenter.swift; sourceTree = "<group>"; };
+		24DD5751257036E200106BC6 /* ContactsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsRouter.swift; sourceTree = "<group>"; };
+		24DD5752257036E200106BC6 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		24DD5753257036E200106BC6 /* ContactsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsInteractor.swift; sourceTree = "<group>"; };
+		24DD5754257036E200106BC6 /* ContactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsModel.swift; sourceTree = "<group>"; };
+		24DD5755257036E200106BC6 /* ContactsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsViewController.xib; sourceTree = "<group>"; };
+		24DD5756257036E200106BC6 /* ContactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsManager.swift; sourceTree = "<group>"; };
 		26B660C27D743F8B66039406 /* Pods_SocialAppCleanSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialAppCleanSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB9F03D6D9BA4C2464FE8FE /* Pods_SocialAppCleanSwift_SocialAppCleanSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialAppCleanSwift_SocialAppCleanSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBAA5C9B3ECDE7324BFDEF8 /* Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests/Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -259,6 +275,7 @@
 		24CF045C2570018800F92B49 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				24DD574E257036C400106BC6 /* Contacts */,
 				24CF04D0257032A700F92B49 /* Settings */,
 				24CF0461257001D200F92B49 /* Main */,
 				24CF0460257001C600F92B49 /* Detail */,
@@ -368,6 +385,21 @@
 				24DD57422570330100106BC6 /* SettingsManager.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		24DD574E257036C400106BC6 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				24DD574F257036E200106BC6 /* ContactsModule.swift */,
+				24DD5750257036E200106BC6 /* ContactsPresenter.swift */,
+				24DD5751257036E200106BC6 /* ContactsRouter.swift */,
+				24DD5752257036E200106BC6 /* ContactsViewController.swift */,
+				24DD5753257036E200106BC6 /* ContactsInteractor.swift */,
+				24DD5754257036E200106BC6 /* ContactsModel.swift */,
+				24DD5755257036E200106BC6 /* ContactsViewController.xib */,
+				24DD5756257036E200106BC6 /* ContactsManager.swift */,
+			);
+			path = Contacts;
 			sourceTree = "<group>";
 		};
 		3F969E8D3D875856E5B39788 /* Frameworks */ = {
@@ -505,6 +537,7 @@
 				24CF04AA2570026100F92B49 /* DetailViewController.xib in Resources */,
 				24CF0406256FC00000F92B49 /* Assets.xcassets in Resources */,
 				24DD57492570330100106BC6 /* SettingsViewController.xib in Resources */,
+				24DD575D257036E200106BC6 /* ContactsViewController.xib in Resources */,
 				24CF04712570022C00F92B49 /* LoginViewController.xib in Resources */,
 				24CF04972570025300F92B49 /* ProfileViewController.xib in Resources */,
 				24CF04BD2570026F00F92B49 /* MainViewController.xib in Resources */,
@@ -643,7 +676,10 @@
 				24CF03FD256FBFFE00F92B49 /* AppDelegate.swift in Sources */,
 				24CF04B92570026F00F92B49 /* MainRouter.swift in Sources */,
 				24CF04912570025200F92B49 /* ProfileModule.swift in Sources */,
+				24DD5759257036E200106BC6 /* ContactsRouter.swift in Sources */,
+				24DD5758257036E200106BC6 /* ContactsPresenter.swift in Sources */,
 				24CF04932570025300F92B49 /* ProfileRouter.swift in Sources */,
+				24DD575C257036E200106BC6 /* ContactsModel.swift in Sources */,
 				24DD57442570330100106BC6 /* SettingsPresenter.swift in Sources */,
 				24CF04852570024200F92B49 /* HomeManager.swift in Sources */,
 				24DD574A2570330100106BC6 /* SettingsManager.swift in Sources */,
@@ -657,6 +693,7 @@
 				24CF04C72570029700F92B49 /* Module.swift in Sources */,
 				24CF04AB2570026100F92B49 /* DetailManager.swift in Sources */,
 				24CF046D2570022C00F92B49 /* LoginRouter.swift in Sources */,
+				24DD575B257036E200106BC6 /* ContactsInteractor.swift in Sources */,
 				24CF04BA2570026F00F92B49 /* MainViewController.swift in Sources */,
 				24CF04952570025300F92B49 /* ProfileInteractor.swift in Sources */,
 				24CF04812570024200F92B49 /* HomeViewController.swift in Sources */,
@@ -666,14 +703,17 @@
 				24CF04A62570026100F92B49 /* DetailRouter.swift in Sources */,
 				24CF04B82570026F00F92B49 /* MainPresenter.swift in Sources */,
 				24CF04702570022C00F92B49 /* LoginModel.swift in Sources */,
+				24DD575E257036E200106BC6 /* ContactsManager.swift in Sources */,
 				24CF04CC2570030200F92B49 /* GeneralRouter.swift in Sources */,
 				24CF04BB2570026F00F92B49 /* MainInteractor.swift in Sources */,
 				24CF04A42570026100F92B49 /* DetailModule.swift in Sources */,
 				24CF04722570022C00F92B49 /* LoginManager.swift in Sources */,
 				24CF04B72570026F00F92B49 /* MainModule.swift in Sources */,
+				24DD575A257036E200106BC6 /* ContactsViewController.swift in Sources */,
 				24CF04BC2570026F00F92B49 /* MainModel.swift in Sources */,
 				24CF046F2570022C00F92B49 /* LoginInteractor.swift in Sources */,
 				24CF03FF256FBFFE00F92B49 /* SceneDelegate.swift in Sources */,
+				24DD5757257036E200106BC6 /* ContactsModule.swift in Sources */,
 				24CF04982570025300F92B49 /* ProfileManager.swift in Sources */,
 				24CF04962570025300F92B49 /* ProfileModel.swift in Sources */,
 				24CF04942570025300F92B49 /* ProfileViewController.swift in Sources */,

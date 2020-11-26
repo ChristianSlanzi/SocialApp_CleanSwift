@@ -22,13 +22,16 @@ class MainViewController: UITabBarController {
         let home = AppRouter.share.getModule(module: HomeModule(AppRouter.share))!
         home.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
         
-        let profile = AppRouter.share.getModule(module: ProfileModule(AppRouter.share))!
-        profile.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
+        let contacts = AppRouter.share.getModule(module: ContactsModule(AppRouter.share))!
+        contacts.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
+        
+        //let profile = AppRouter.share.getModule(module: ProfileModule(AppRouter.share))!
+        //profile.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
         
         let detail = AppRouter.share.getModule(module: DetailModule(AppRouter.share))!
         detail.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
         
-        let views = [home, profile, detail].map { UINavigationController(rootViewController: $0)
+        let views = [home, contacts, detail].map { UINavigationController(rootViewController: $0)
         }
         viewControllers = views
     }

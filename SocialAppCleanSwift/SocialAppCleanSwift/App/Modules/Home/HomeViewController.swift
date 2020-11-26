@@ -17,10 +17,17 @@ class HomeViewController: UIViewController {
     var interactor: IHomeInteractor!
     var router: IHomeRouter!
     
-    let loginLabel: UILabel = {
+    let titleLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.text = "HOME"
+        return view
+    }()
+    
+    let settingsButton: UIButton = {
+        let view = UIButton()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.setTitle("GO TO SETTING", for: .normal)
         return view
     }()
 
@@ -28,18 +35,30 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // do someting...
         view.backgroundColor = .lightGray
-        view.addSubview(loginLabel)
+        view.addSubview(titleLabel)
+        view.addSubview(settingsButton)
         
         setupConstraints()
         
+        settingsButton.addTarget(self, action: #selector(navigateToSettings(_:)), for: .touchUpInside)
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            loginLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            loginLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
         
+        NSLayoutConstraint.activate([
+            settingsButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            settingsButton.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20)
+        ])
+        
+    }
+    
+    @objc func navigateToSettings(_ sender: UIButton) {
+        let name = "Settings Page Title passed as parameter"
+        router.navigateToSettings(title: name)
     }
 }
 

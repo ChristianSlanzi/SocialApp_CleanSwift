@@ -11,6 +11,7 @@ enum GeneralRouter {
     case home
     case profile
     case detail
+    case settings
 }
 
 extension GeneralRouter {
@@ -30,6 +31,9 @@ extension GeneralRouter {
     func mappingDetail(value: IAppRouter) -> IModule {
         return DetailModule(value)
     }
+    func mappingSettings(value: IAppRouter) -> IModule {
+        return SettingsModule(value)
+    }
 
     var imodule: (_ value: IAppRouter) -> IModule {
         
@@ -44,6 +48,8 @@ extension GeneralRouter {
             return mappingProfile
         case .detail:
             return mappingDetail
+        case .settings:
+            return mappingSettings
         }
     }
     

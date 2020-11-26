@@ -9,6 +9,7 @@ import UIKit
 
 protocol IHomeRouter {
 	// do someting...
+    func navigateToSettings(title: String)
 }
 
 class HomeRouter: IHomeRouter {
@@ -23,13 +24,17 @@ class HomeRouter: IHomeRouter {
     }
 
     func create(parameters: [String: Any]) -> HomeViewController {
-        let bundle = Bundle(for: type(of: self))
-        let view = HomeViewController(nibName: "HomeViewController", bundle: bundle)
+        //let bundle = Bundle(for: type(of: self))
+        let view = HomeViewController()//(nibName: "HomeViewController", bundle: bundle)
         let presenter = HomePresenter(view: view)
         let interactor = HomeInteractor(presenter: presenter)
         view.interactor = interactor
         view.router = self
         interactor.parameters = parameters
         return view        
+    }
+    
+    func navigateToSettings(title: String) {
+        appRouter.presentModule(module: SettingsModule(appRouter), parameters: ["title" : title])
     }
 }

@@ -25,7 +25,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             "Main" : GeneralRouter.main.imodule,
             "Home" : GeneralRouter.home.imodule,
             "Profile" : GeneralRouter.profile.imodule,
-            "Detail" : GeneralRouter.detail.imodule
+            "Detail" : GeneralRouter.detail.imodule,
+            "Settings" : GeneralRouter.settings.imodule
         ]
         
         let startModule = GeneralRouter.login.module

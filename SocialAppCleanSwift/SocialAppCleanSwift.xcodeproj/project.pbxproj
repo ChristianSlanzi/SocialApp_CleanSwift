@@ -59,6 +59,14 @@
 		24CF04C62570029700F92B49 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF04C32570029700F92B49 /* AppRoute.swift */; };
 		24CF04C72570029700F92B49 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF04C42570029700F92B49 /* Module.swift */; };
 		24CF04CC2570030200F92B49 /* GeneralRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF04CB2570030200F92B49 /* GeneralRouter.swift */; };
+		24DD57432570330100106BC6 /* SettingsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD573B2570330100106BC6 /* SettingsModule.swift */; };
+		24DD57442570330100106BC6 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD573C2570330100106BC6 /* SettingsPresenter.swift */; };
+		24DD57452570330100106BC6 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD573D2570330100106BC6 /* SettingsRouter.swift */; };
+		24DD57462570330100106BC6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD573E2570330100106BC6 /* SettingsViewController.swift */; };
+		24DD57472570330100106BC6 /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD573F2570330100106BC6 /* SettingsInteractor.swift */; };
+		24DD57482570330100106BC6 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD57402570330100106BC6 /* SettingsModel.swift */; };
+		24DD57492570330100106BC6 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DD57412570330100106BC6 /* SettingsViewController.xib */; };
+		24DD574A2570330100106BC6 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD57422570330100106BC6 /* SettingsManager.swift */; };
 		315B797A157BB4B8BB4F8A8F /* Pods_SocialAppCleanSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B660C27D743F8B66039406 /* Pods_SocialAppCleanSwift.framework */; };
 		7E1500FE91579E279B8DDAE0 /* Pods_SocialAppCleanSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12715154AEB87DA1D221F984 /* Pods_SocialAppCleanSwiftTests.framework */; };
 /* End PBXBuildFile section */
@@ -141,6 +149,14 @@
 		24CF04C32570029700F92B49 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		24CF04C42570029700F92B49 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		24CF04CB2570030200F92B49 /* GeneralRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralRouter.swift; sourceTree = "<group>"; };
+		24DD573B2570330100106BC6 /* SettingsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModule.swift; sourceTree = "<group>"; };
+		24DD573C2570330100106BC6 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		24DD573D2570330100106BC6 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		24DD573E2570330100106BC6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		24DD573F2570330100106BC6 /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
+		24DD57402570330100106BC6 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		24DD57412570330100106BC6 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		24DD57422570330100106BC6 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		26B660C27D743F8B66039406 /* Pods_SocialAppCleanSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialAppCleanSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB9F03D6D9BA4C2464FE8FE /* Pods_SocialAppCleanSwift_SocialAppCleanSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialAppCleanSwift_SocialAppCleanSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBAA5C9B3ECDE7324BFDEF8 /* Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests/Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -243,6 +259,7 @@
 		24CF045C2570018800F92B49 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				24CF04D0257032A700F92B49 /* Settings */,
 				24CF0461257001D200F92B49 /* Main */,
 				24CF0460257001C600F92B49 /* Detail */,
 				24CF045F257001BB00F92B49 /* Profile */,
@@ -336,6 +353,21 @@
 				24CF04CB2570030200F92B49 /* GeneralRouter.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		24CF04D0257032A700F92B49 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				24DD573B2570330100106BC6 /* SettingsModule.swift */,
+				24DD573C2570330100106BC6 /* SettingsPresenter.swift */,
+				24DD573D2570330100106BC6 /* SettingsRouter.swift */,
+				24DD573E2570330100106BC6 /* SettingsViewController.swift */,
+				24DD573F2570330100106BC6 /* SettingsInteractor.swift */,
+				24DD57402570330100106BC6 /* SettingsModel.swift */,
+				24DD57412570330100106BC6 /* SettingsViewController.xib */,
+				24DD57422570330100106BC6 /* SettingsManager.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		3F969E8D3D875856E5B39788 /* Frameworks */ = {
@@ -472,6 +504,7 @@
 				24CF0409256FC00000F92B49 /* LaunchScreen.storyboard in Resources */,
 				24CF04AA2570026100F92B49 /* DetailViewController.xib in Resources */,
 				24CF0406256FC00000F92B49 /* Assets.xcassets in Resources */,
+				24DD57492570330100106BC6 /* SettingsViewController.xib in Resources */,
 				24CF04712570022C00F92B49 /* LoginViewController.xib in Resources */,
 				24CF04972570025300F92B49 /* ProfileViewController.xib in Resources */,
 				24CF04BD2570026F00F92B49 /* MainViewController.xib in Resources */,
@@ -603,19 +636,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DD57482570330100106BC6 /* SettingsModel.swift in Sources */,
 				24CF046E2570022C00F92B49 /* LoginViewController.swift in Sources */,
+				24DD57432570330100106BC6 /* SettingsModule.swift in Sources */,
 				24CF0401256FBFFE00F92B49 /* ViewController.swift in Sources */,
 				24CF03FD256FBFFE00F92B49 /* AppDelegate.swift in Sources */,
 				24CF04B92570026F00F92B49 /* MainRouter.swift in Sources */,
 				24CF04912570025200F92B49 /* ProfileModule.swift in Sources */,
 				24CF04932570025300F92B49 /* ProfileRouter.swift in Sources */,
+				24DD57442570330100106BC6 /* SettingsPresenter.swift in Sources */,
 				24CF04852570024200F92B49 /* HomeManager.swift in Sources */,
+				24DD574A2570330100106BC6 /* SettingsManager.swift in Sources */,
 				24CF04A92570026100F92B49 /* DetailModel.swift in Sources */,
 				24CF04822570024200F92B49 /* HomeInteractor.swift in Sources */,
 				24CF04C62570029700F92B49 /* AppRoute.swift in Sources */,
 				24CF04832570024200F92B49 /* HomeModel.swift in Sources */,
 				24CF047F2570024200F92B49 /* HomePresenter.swift in Sources */,
 				24CF04A82570026100F92B49 /* DetailInteractor.swift in Sources */,
+				24DD57462570330100106BC6 /* SettingsViewController.swift in Sources */,
 				24CF04C72570029700F92B49 /* Module.swift in Sources */,
 				24CF04AB2570026100F92B49 /* DetailManager.swift in Sources */,
 				24CF046D2570022C00F92B49 /* LoginRouter.swift in Sources */,
@@ -640,11 +678,13 @@
 				24CF04962570025300F92B49 /* ProfileModel.swift in Sources */,
 				24CF04942570025300F92B49 /* ProfileViewController.swift in Sources */,
 				24CF04C52570029700F92B49 /* BaseAppRouter.swift in Sources */,
+				24DD57452570330100106BC6 /* SettingsRouter.swift in Sources */,
 				24CF04A52570026100F92B49 /* DetailPresenter.swift in Sources */,
 				24CF04BE2570026F00F92B49 /* MainManager.swift in Sources */,
 				24CF046B2570022C00F92B49 /* LoginModule.swift in Sources */,
 				24CF046C2570022C00F92B49 /* LoginPresenter.swift in Sources */,
 				24CF04A72570026100F92B49 /* DetailViewController.swift in Sources */,
+				24DD57472570330100106BC6 /* SettingsInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

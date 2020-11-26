@@ -8,27 +8,41 @@
 import UIKit
 
 protocol IMainViewController: class {
-	// do someting...
+    // do someting...
 }
 
-class MainViewController: UIViewController {
-	var interactor: IMainInteractor!
-	var router: IMainRouter!
+class MainViewController: UITabBarController {
+    var interactor: IMainInteractor!
+    var router: IMainRouter!
 
-	override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-		// do someting...
+        // do someting...
+        
+        let home = AppRouter.share.getModule(module: HomeModule(AppRouter.share))!
+        home.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
+        
+        let profile = AppRouter.share.getModule(module: ProfileModule(AppRouter.share))!
+        profile.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
+        
+        let detail = AppRouter.share.getModule(module: DetailModule(AppRouter.share))!
+        detail.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
+        
+        let views = [home, profile, detail].map { UINavigationController(rootViewController: $0)
+        }
+        viewControllers = views
     }
+    
 }
 
 extension MainViewController: IMainViewController {
-	// do someting...
+    // do someting...
 }
 
 extension MainViewController {
-	// do someting...
+    // do someting...
 }
 
 extension MainViewController {
-	// do someting...
+    // do someting...
 }

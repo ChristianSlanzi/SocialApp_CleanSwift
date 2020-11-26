@@ -8,27 +8,44 @@
 import UIKit
 
 protocol IProfileViewController: class {
-	// do someting...
+    // do someting...
 }
 
 class ProfileViewController: UIViewController {
-	var interactor: IProfileInteractor!
-	var router: IProfileRouter!
+    var interactor: IProfileInteractor!
+    var router: IProfileRouter!
 
-	override func viewDidLoad() {
+    let titleLabel: UILabel = {
+        let view = UILabel()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.text = "PROFILE"
+        return view
+    }()
+
+    override func viewDidLoad() {
         super.viewDidLoad()
-		// do someting...
+        // do someting...
+        view.addSubview(titleLabel)
+        setupConstraints()
+        
+    }
+    
+    func setupConstraints() {
+        NSLayoutConstraint.activate([
+            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
     }
 }
 
 extension ProfileViewController: IProfileViewController {
-	// do someting...
+    // do someting...
 }
 
 extension ProfileViewController {
-	// do someting...
+    // do someting...
 }
 
 extension ProfileViewController {
-	// do someting...
+    // do someting...
 }

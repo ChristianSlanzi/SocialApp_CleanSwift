@@ -23,8 +23,9 @@ class SettingsRouter: ISettingsRouter {
     }
 
     func create(parameters: [String: Any]) -> SettingsViewController {
-        let bundle = Bundle(for: type(of: self))
-        let view = SettingsViewController(nibName: "SettingsViewController", bundle: bundle)
+        //let bundle = Bundle(for: type(of: self))
+        let view = SettingsViewController()//(nibName: "SettingsViewController", bundle: bundle)
+        view.title = "Settings"
         let presenter = SettingsPresenter(view: view)
         let interactor = SettingsInteractor(presenter: presenter)
         view.interactor = interactor

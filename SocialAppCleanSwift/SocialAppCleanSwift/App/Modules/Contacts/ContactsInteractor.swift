@@ -8,7 +8,9 @@
 import UIKit
 
 protocol IContactsInteractor: class {
-	var parameters: [String: Any]? { get }
+    var parameters: [String: Any]? { get }
+    
+    func fetchContacts(request: ContactsModel.Request)
 }
 
 class ContactsInteractor: IContactsInteractor {
@@ -20,6 +22,23 @@ class ContactsInteractor: IContactsInteractor {
     }
 
     init(presenter: IContactsPresenter) {
-    	self.presenter = presenter
+        self.presenter = presenter
+    }
+}
+
+extension ContactsInteractor {
+    func fetchContacts(request: ContactsModel.Request) {
+        
+        NetworkingService.retrieveUsers { (result) in
+            switch(result) {
+            case .success(let users):
+                let response = ContactsModel.Response(contacts: users)
+                self.presenter.presentFetchedContacts(response: response)
+            case .failure(_):
+                //show failure message
+                break
+            }
+        }
+        
     }
 }

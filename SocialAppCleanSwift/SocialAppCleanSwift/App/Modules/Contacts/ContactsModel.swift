@@ -7,21 +7,29 @@
 
 import UIKit
 
-struct ContactsModel {	
-	struct Request {
-		// do someting...
+struct ContactsModel {
+    struct Request {
+        // do someting...
 
-		var parameters: [String: Any]? {
-			// do someting...
-			return nil
-		}
-	}
+        var parameters: [String: Any]? {
+            // do someting...
+            return nil
+        }
+    }
 
-	struct Response {
-		// do someting...
-	}
+    struct Response {
+        var contacts: [UserModel]
+    }
 
-	struct ViewModel {
-		// do someting...
-	}
+    struct ViewModel {
+        struct DisplayedContact
+        {
+          //var id: String
+          //var date: String
+          //var email: String
+          var name: String
+          //var total: String
+        }
+        var displayedContacts: [DisplayedContact]
+    }
 }

@@ -75,6 +75,10 @@
 		24DD575C257036E200106BC6 /* ContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD5754257036E200106BC6 /* ContactsModel.swift */; };
 		24DD575D257036E200106BC6 /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DD5755257036E200106BC6 /* ContactsViewController.xib */; };
 		24DD575E257036E200106BC6 /* ContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD5756257036E200106BC6 /* ContactsManager.swift */; };
+		24DD576A2570382F00106BC6 /* ApiServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD57642570382F00106BC6 /* ApiServiceInterface.swift */; };
+		24DD576B2570382F00106BC6 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD57652570382F00106BC6 /* NetworkingService.swift */; };
+		24DD576C2570382F00106BC6 /* ServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD57662570382F00106BC6 /* ServiceInterface.swift */; };
+		24DD576D2570382F00106BC6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD57692570382F00106BC6 /* UserModel.swift */; };
 		315B797A157BB4B8BB4F8A8F /* Pods_SocialAppCleanSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B660C27D743F8B66039406 /* Pods_SocialAppCleanSwift.framework */; };
 		7E1500FE91579E279B8DDAE0 /* Pods_SocialAppCleanSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12715154AEB87DA1D221F984 /* Pods_SocialAppCleanSwiftTests.framework */; };
 /* End PBXBuildFile section */
@@ -173,6 +177,10 @@
 		24DD5754257036E200106BC6 /* ContactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsModel.swift; sourceTree = "<group>"; };
 		24DD5755257036E200106BC6 /* ContactsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsViewController.xib; sourceTree = "<group>"; };
 		24DD5756257036E200106BC6 /* ContactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsManager.swift; sourceTree = "<group>"; };
+		24DD57642570382F00106BC6 /* ApiServiceInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiServiceInterface.swift; sourceTree = "<group>"; };
+		24DD57652570382F00106BC6 /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		24DD57662570382F00106BC6 /* ServiceInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceInterface.swift; sourceTree = "<group>"; };
+		24DD57692570382F00106BC6 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		26B660C27D743F8B66039406 /* Pods_SocialAppCleanSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialAppCleanSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB9F03D6D9BA4C2464FE8FE /* Pods_SocialAppCleanSwift_SocialAppCleanSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialAppCleanSwift_SocialAppCleanSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBAA5C9B3ECDE7324BFDEF8 /* Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests/Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -234,6 +242,8 @@
 		24CF03FB256FBFFE00F92B49 /* SocialAppCleanSwift */ = {
 			isa = PBXGroup;
 			children = (
+				24DD57672570382F00106BC6 /* DataModel */,
+				24DD57622570382F00106BC6 /* Services */,
 				24CF045B2570017400F92B49 /* App */,
 				24CF03FC256FBFFE00F92B49 /* AppDelegate.swift */,
 				24CF03FE256FBFFE00F92B49 /* SceneDelegate.swift */,
@@ -400,6 +410,40 @@
 				24DD5756257036E200106BC6 /* ContactsManager.swift */,
 			);
 			path = Contacts;
+			sourceTree = "<group>";
+		};
+		24DD57622570382F00106BC6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				24DD57632570382F00106BC6 /* Network */,
+				24DD57662570382F00106BC6 /* ServiceInterface.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		24DD57632570382F00106BC6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				24DD57642570382F00106BC6 /* ApiServiceInterface.swift */,
+				24DD57652570382F00106BC6 /* NetworkingService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		24DD57672570382F00106BC6 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				24DD57682570382F00106BC6 /* User */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		24DD57682570382F00106BC6 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				24DD57692570382F00106BC6 /* UserModel.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		3F969E8D3D875856E5B39788 /* Frameworks */ = {
@@ -695,14 +739,17 @@
 				24CF046D2570022C00F92B49 /* LoginRouter.swift in Sources */,
 				24DD575B257036E200106BC6 /* ContactsInteractor.swift in Sources */,
 				24CF04BA2570026F00F92B49 /* MainViewController.swift in Sources */,
+				24DD576A2570382F00106BC6 /* ApiServiceInterface.swift in Sources */,
 				24CF04952570025300F92B49 /* ProfileInteractor.swift in Sources */,
 				24CF04812570024200F92B49 /* HomeViewController.swift in Sources */,
 				24CF047E2570024200F92B49 /* HomeModule.swift in Sources */,
 				24CF04922570025200F92B49 /* ProfilePresenter.swift in Sources */,
+				24DD576B2570382F00106BC6 /* NetworkingService.swift in Sources */,
 				24CF04802570024200F92B49 /* HomeRouter.swift in Sources */,
 				24CF04A62570026100F92B49 /* DetailRouter.swift in Sources */,
 				24CF04B82570026F00F92B49 /* MainPresenter.swift in Sources */,
 				24CF04702570022C00F92B49 /* LoginModel.swift in Sources */,
+				24DD576C2570382F00106BC6 /* ServiceInterface.swift in Sources */,
 				24DD575E257036E200106BC6 /* ContactsManager.swift in Sources */,
 				24CF04CC2570030200F92B49 /* GeneralRouter.swift in Sources */,
 				24CF04BB2570026F00F92B49 /* MainInteractor.swift in Sources */,
@@ -724,6 +771,7 @@
 				24CF046B2570022C00F92B49 /* LoginModule.swift in Sources */,
 				24CF046C2570022C00F92B49 /* LoginPresenter.swift in Sources */,
 				24CF04A72570026100F92B49 /* DetailViewController.swift in Sources */,
+				24DD576D2570382F00106BC6 /* UserModel.swift in Sources */,
 				24DD57472570330100106BC6 /* SettingsInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

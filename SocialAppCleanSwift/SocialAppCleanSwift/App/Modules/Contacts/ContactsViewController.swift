@@ -8,27 +8,101 @@
 import UIKit
 
 protocol IContactsViewController: class {
-	// do someting...
+    // do someting...
+    func displayFetchedContacts(viewModel: ContactsModel.ViewModel)
 }
 
 class ContactsViewController: UIViewController {
-	var interactor: IContactsInteractor!
-	var router: IContactsRouter!
-
-	override func viewDidLoad() {
+    var interactor: IContactsInteractor!
+    var router: IContactsRouter!
+    
+    let tableView = UITableView()
+    
+    // MARK: View lifecycle
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
-		// do someting...
+        // do someting...
+        //view.backgroundColor = .yellow
+        
+        setupViews()
+        setupConstraints()
+    }
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+      super.viewWillAppear(animated)
+      fetchContacts()
+    }
+    
+    // MARK: - Fetch contacts
+    
+    var displayedContacts: [ContactsModel.ViewModel.DisplayedContact] = []
+    
+    func fetchContacts()
+    {
+      let request = ContactsModel.Request()
+      interactor?.fetchContacts(request: request)
+    }
+    
+    func displayFetchedContacts(viewModel: ContactsModel.ViewModel)
+    {
+      displayedContacts = viewModel.displayedContacts
+      tableView.reloadData()
     }
 }
 
+
+
+    
+
 extension ContactsViewController: IContactsViewController {
-	// do someting...
+    // do someting...
 }
 
 extension ContactsViewController {
-	// do someting...
+    // do someting...
+    func setupViews() {
+        //view.backgroundColor = .red
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 50
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        view.addSubview(tableView)
+    }
+    
+    func setupConstraints() {
+        NSLayoutConstraint.activate(
+            [
+                tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+                tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+                tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+                tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+            ]
+        )
+    }
 }
 
 extension ContactsViewController {
-	// do someting...
+    // do someting...
+}
+
+
+extension ContactsViewController: UITableViewDelegate {
+    
+}
+
+extension ContactsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.displayedContacts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = self.displayedContacts[indexPath.row].name
+        return cell
+    }
 }

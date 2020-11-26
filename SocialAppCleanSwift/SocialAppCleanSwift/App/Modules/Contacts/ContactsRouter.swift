@@ -24,12 +24,12 @@ class ContactsRouter: IContactsRouter {
 
     func create(parameters: [String: Any]) -> ContactsViewController {
         let bundle = Bundle(for: type(of: self))
-        let view = ContactsViewController(nibName: "ContactsViewController", bundle: bundle)
+        let view = ContactsViewController()//(nibName: "ContactsViewController", bundle: bundle)
         let presenter = ContactsPresenter(view: view)
         let interactor = ContactsInteractor(presenter: presenter)
         view.interactor = interactor
         view.router = self
         interactor.parameters = parameters
-        return view        
+        return view
     }
 }

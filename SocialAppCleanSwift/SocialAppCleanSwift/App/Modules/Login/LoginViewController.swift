@@ -21,15 +21,28 @@ class LoginViewController: UIViewController {
         view.text = "LOGIN"
         return view
     }()
+    
+    let loginButton: UIButton = {
+        let view = UIButton()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.setTitle("GO TO HOME", for: .normal)
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // do someting...
         view.backgroundColor = .lightGray
         view.addSubview(loginLabel)
+        view.addSubview(loginButton)
         
         setupConstraints()
         
+        loginButton.addTarget(self, action: #selector(navigateToHome(_:)), for: .touchUpInside)
+    }
+    
+    @objc func navigateToHome(_ sender: UIButton) {
+        router.navigateToHome()
     }
     
     func setupConstraints() {
@@ -38,6 +51,10 @@ class LoginViewController: UIViewController {
             loginLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
         
+        NSLayoutConstraint.activate([
+            loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loginButton.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 20)
+        ])
     }
 }
 

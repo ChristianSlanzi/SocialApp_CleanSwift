@@ -8,10 +8,13 @@
 import UIKit
 
 protocol ILoginRouter {
-	// do someting...
+    // do someting...
+    func navigateToHome()
 }
 
 class LoginRouter: ILoginRouter {
+    
+    
     var appRouter: IAppRouter
 
     init(appRouter: IAppRouter) {
@@ -23,13 +26,17 @@ class LoginRouter: ILoginRouter {
     }
 
     func create(parameters: [String: Any]) -> LoginViewController {
-        //let bundle = Bundle(for: type(of: self))
-        let view = LoginViewController()//(nibName: "LoginViewController", bundle: bundle)
+        let bundle = Bundle(for: type(of: self))
+        let view = LoginViewController() //(nibName: "LoginViewController", bundle: bundle)
         let presenter = LoginPresenter(view: view)
         let interactor = LoginInteractor(presenter: presenter)
         view.interactor = interactor
         view.router = self
         interactor.parameters = parameters
-        return view        
+        return view
+    }
+    
+    func navigateToHome() {
+        appRouter.presentModule(module: MainModule(appRouter), type: .root)
     }
 }

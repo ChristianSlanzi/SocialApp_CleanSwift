@@ -26,6 +26,12 @@ struct ProfileModel {
 		// do someting...
         struct DisplayedUser {
             var name: String
+            var username: String
+            var email: String
+            var street: String
+            var city: String
+            var zipcode: String
+            var phone: String
         }
         var displayedUser: DisplayedUser
 	}

@@ -15,26 +15,105 @@ protocol IProfileViewController: class {
 class ProfileViewController: UIViewController {
     var interactor: ShowContactBusinessLogic!
     var router: IProfileRouter!
+    
+    let margin: CGFloat = 20
 
-    let titleLabel: UILabel = {
+    let nameLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "PROFILE"
+        view.text = "NAME"
+        return view
+    }()
+    
+    let usernameLabel: UILabel = {
+        let view = UILabel()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.text = "USERNAME"
+        return view
+    }()
+    
+    let emailLabel: UILabel = {
+        let view = UILabel()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.text = "EMAIL"
+        return view
+    }()
+    
+    let streetLabel: UILabel = {
+        let view = UILabel()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.text = "STREET"
+        return view
+    }()
+    
+    let cityPlusZipLabel: UILabel = {
+        let view = UILabel()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.text = "CITY+ZIP"
+        return view
+    }()
+    
+    let phoneLabel: UILabel = {
+        let view = UILabel()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.text = "PHONE"
         return view
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // do someting...
-        view.addSubview(titleLabel)
+        view.addSubview(nameLabel)
+        view.addSubview(usernameLabel)
+        view.addSubview(emailLabel)
+        view.addSubview(streetLabel)
+        view.addSubview(cityPlusZipLabel)
+        view.addSubview(phoneLabel)
         setupConstraints()
         interactor.getUser(request: ProfileModel.Request())
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            nameLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 120), //TODO: use safe top anchor
+            nameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
+            nameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin),
+            nameLabel.heightAnchor.constraint(equalToConstant: 30)
+        ])
+        
+        NSLayoutConstraint.activate([
+            usernameLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: margin),
+            usernameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
+            usernameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin),
+            usernameLabel.heightAnchor.constraint(equalToConstant: 30)
+        ])
+        
+        NSLayoutConstraint.activate([
+            emailLabel.topAnchor.constraint(equalTo: usernameLabel.bottomAnchor, constant: margin),
+            emailLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
+            emailLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin),
+            emailLabel.heightAnchor.constraint(equalToConstant: 30)
+        ])
+        
+        NSLayoutConstraint.activate([
+            streetLabel.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: margin),
+            streetLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
+            streetLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin),
+            streetLabel.heightAnchor.constraint(equalToConstant: 30)
+        ])
+        
+        NSLayoutConstraint.activate([
+            cityPlusZipLabel.topAnchor.constraint(equalTo: streetLabel.bottomAnchor, constant: margin),
+            cityPlusZipLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
+            cityPlusZipLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin),
+            cityPlusZipLabel.heightAnchor.constraint(equalToConstant: 30)
+        ])
+        
+        NSLayoutConstraint.activate([
+            phoneLabel.topAnchor.constraint(equalTo: cityPlusZipLabel.bottomAnchor, constant: margin),
+            phoneLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
+            phoneLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin),
+            phoneLabel.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
 }
@@ -42,7 +121,12 @@ class ProfileViewController: UIViewController {
 extension ProfileViewController: IProfileViewController {
     // do someting...
     func displayUserProfile(viewModel: ProfileModel.ViewModel) {
-        titleLabel.text = viewModel.displayedUser.name
+        nameLabel.text = "Name: " + viewModel.displayedUser.name
+        usernameLabel.text = "Username: " + viewModel.displayedUser.username
+        emailLabel.text = "E-mail: " + viewModel.displayedUser.email
+        streetLabel.text = "Street: " + viewModel.displayedUser.street
+        cityPlusZipLabel.text = "City: " + viewModel.displayedUser.city + " , Zip: " + viewModel.displayedUser.zipcode
+        phoneLabel.text = "Phone: " + viewModel.displayedUser.phone
     }
 }
 

@@ -81,5 +81,4 @@ public class AppRouter: BaseAppRouter {
         router.window = window
         return router
     }
-    
 }

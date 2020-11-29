@@ -24,7 +24,7 @@ struct ContactsModel {
     struct ViewModel {
         struct DisplayedContact
         {
-          //var id: String
+          var id: Int
           //var date: String
           //var email: String
           var name: String

@@ -7,9 +7,11 @@
 
 import UIKit
 
-class ProfileModule: IModule {
+class ProfileModule: IModule, ShowContactDataStore {
+    
     let appRouter: IAppRouter
     private var router: ProfileRouter!
+    var user: UserModel!
 
     init(_ appRouter: IAppRouter) {
         self.appRouter = appRouter
@@ -17,6 +19,7 @@ class ProfileModule: IModule {
     }
 
     func presentView(parameters: [String: Any]) {
+        router.dataStore = self
         router.presentView(parameters: parameters)
     }
 

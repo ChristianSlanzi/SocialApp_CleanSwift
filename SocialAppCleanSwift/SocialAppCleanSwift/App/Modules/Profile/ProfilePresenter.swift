@@ -9,6 +9,7 @@ import UIKit
 
 protocol IProfilePresenter: class {
 	// do someting...
+    func presentUserProfile(response: ProfileModel.Response)
 }
 
 class ProfilePresenter: IProfilePresenter {	
@@ -17,4 +18,13 @@ class ProfilePresenter: IProfilePresenter {
 	init(view: IProfileViewController) {
 		self.view = view
 	}
+}
+
+extension ProfilePresenter {
+    func presentUserProfile(response: ProfileModel.Response) {
+        let user = response.user
+        let displayedUser = ProfileModel.ViewModel.DisplayedUser(name: user.name!)
+        let viewModel = ProfileModel.ViewModel(displayedUser: displayedUser)
+        view.displayUserProfile(viewModel: viewModel)
+    }
 }

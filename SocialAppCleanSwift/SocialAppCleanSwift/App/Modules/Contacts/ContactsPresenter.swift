@@ -27,8 +27,9 @@ extension ContactsPresenter {
         for contact in response.contacts {
           //let date = dateFormatter.string(from: order.date)
           //let total = currencyFormatter.string(from: order.total)
-            let displayedContact = ContactsModel.ViewModel.DisplayedContact(name: contact.name ?? "no name")
-          displayedContacts.append(displayedContact)
+            guard let id = contact.id, let name = contact.name else { break }
+            let displayedContact = ContactsModel.ViewModel.DisplayedContact(id: id, name: name)
+            displayedContacts.append(displayedContact)
         }
         let viewModel = ContactsModel.ViewModel(displayedContacts: displayedContacts)
         view.displayFetchedContacts(viewModel: viewModel)

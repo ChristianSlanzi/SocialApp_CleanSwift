@@ -106,10 +106,14 @@ public extension BaseAppRouter {
             moduleStack[forModule] = onDismissed
         }
         
-        if let module = modules[module.routePath] {
-            let module = module(self)
-            module.presentView(parameters: parameters)
+        if let moduleToPresent = module as? IModule, modules[module.routePath] != nil {
+            moduleToPresent.presentView(parameters: parameters)
         }
+        /*
+        if let moduleToPresent = modules[module.routePath] {
+            let moduleToPresent = moduleToPresent(self)
+            moduleToPresent.presentView(parameters: parameters)
+        }*/
     }
     
     func presentView(view: UIViewController) {
@@ -199,6 +203,12 @@ public extension BaseAppRouter {
         } else {
             window.rootViewController = rootViewController
         }
+    }
+    
+    func switchTabPresentedView(tabBarController: UITabBarController) {
+        guard let navigation = tabBarController.selectedViewController as? UINavigationController else { return }
+        navigationStack.removeLast()
+        navigationStack.append(navigation)
     }
     
     func dismiss() {

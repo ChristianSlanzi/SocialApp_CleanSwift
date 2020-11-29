@@ -19,9 +19,14 @@ struct ProfileModel {
 
 	struct Response {
 		// do someting...
+        var user: UserModel
 	}
 
 	struct ViewModel {
 		// do someting...
+        struct DisplayedUser {
+            var name: String
+        }
+        var displayedUser: DisplayedUser
 	}
 }

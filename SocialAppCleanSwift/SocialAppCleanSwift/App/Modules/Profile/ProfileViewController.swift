@@ -9,10 +9,11 @@ import UIKit
 
 protocol IProfileViewController: class {
     // do someting...
+    func displayUserProfile(viewModel: ProfileModel.ViewModel)
 }
 
 class ProfileViewController: UIViewController {
-    var interactor: IProfileInteractor!
+    var interactor: ShowContactBusinessLogic!
     var router: IProfileRouter!
 
     let titleLabel: UILabel = {
@@ -27,7 +28,7 @@ class ProfileViewController: UIViewController {
         // do someting...
         view.addSubview(titleLabel)
         setupConstraints()
-        
+        interactor.getUser(request: ProfileModel.Request())
     }
     
     func setupConstraints() {
@@ -40,6 +41,9 @@ class ProfileViewController: UIViewController {
 
 extension ProfileViewController: IProfileViewController {
     // do someting...
+    func displayUserProfile(viewModel: ProfileModel.ViewModel) {
+        titleLabel.text = viewModel.displayedUser.name
+    }
 }
 
 extension ProfileViewController {

@@ -11,9 +11,21 @@ protocol IProfileInteractor: class {
 	var parameters: [String: Any]? { get }
 }
 
-class ProfileInteractor: IProfileInteractor {
+protocol ShowContactBusinessLogic
+{
+  func getUser(request: ProfileModel.Request)
+}
+
+protocol ShowContactDataStore
+{
+  var user: UserModel! { get set }
+}
+
+class ProfileInteractor: IProfileInteractor, ShowContactDataStore {
     var presenter: IProfilePresenter!
     var parameters: [String: Any]?
+    
+    var user: UserModel!
 
     private var manager: IProfileManager {
         return ProfileManager()
@@ -21,5 +33,12 @@ class ProfileInteractor: IProfileInteractor {
 
     init(presenter: IProfilePresenter) {
     	self.presenter = presenter
+    }
+}
+
+extension ProfileInteractor: ShowContactBusinessLogic {
+    func getUser(request: ProfileModel.Request) {
+        let response = ProfileModel.Response(user: user)
+        presenter?.presentUserProfile(response: response)
     }
 }

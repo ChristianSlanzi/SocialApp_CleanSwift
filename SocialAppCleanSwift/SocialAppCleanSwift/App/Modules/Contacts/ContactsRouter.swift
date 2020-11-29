@@ -9,10 +9,13 @@ import UIKit
 
 protocol IContactsRouter {
 	// do someting...
+    func navigateToProfile(for contactId: Int)
 }
 
 class ContactsRouter: IContactsRouter {
+
     var appRouter: IAppRouter
+    var dataStore: ContactsDataStore?
 
     init(appRouter: IAppRouter) {
         self.appRouter = appRouter
@@ -31,6 +34,18 @@ class ContactsRouter: IContactsRouter {
         view.interactor = interactor
         view.router = self
         interactor.parameters = parameters
+        dataStore = interactor
         return view
+    }
+}
+
+extension ContactsRouter {
+    func navigateToProfile(for contactId: Int) {
+        let selectedContact = dataStore?.contacts?.first { $0.id == contactId }
+        guard let contact = selectedContact else { return }
+        let module = ProfileModule(appRouter)
+        module.user = contact
+        //TODO: ask appRouter to route to Profile model with contact as parameter
+        appRouter.presentModule(module: module, parameters: ["contactId" : contactId])
     }
 }

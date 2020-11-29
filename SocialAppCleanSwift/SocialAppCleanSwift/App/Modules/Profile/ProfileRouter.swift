@@ -11,8 +11,14 @@ protocol IProfileRouter {
 	// do someting...
 }
 
-class ProfileRouter: IProfileRouter {
+protocol ShowContactDataPassing
+{
+  var dataStore: ShowContactDataStore? { get }
+}
+
+class ProfileRouter: IProfileRouter, ShowContactDataPassing {
     var appRouter: IAppRouter
+    var dataStore: ShowContactDataStore?
 
     init(appRouter: IAppRouter) {
         self.appRouter = appRouter
@@ -23,10 +29,11 @@ class ProfileRouter: IProfileRouter {
     }
 
     func create(parameters: [String: Any]) -> ProfileViewController {
-        let bundle = Bundle(for: type(of: self))
-        let view = ProfileViewController(nibName: "ProfileViewController", bundle: bundle)
+        //let bundle = Bundle(for: type(of: self))
+        let view = ProfileViewController()//(nibName: "ProfileViewController", bundle: bundle)
         let presenter = ProfilePresenter(view: view)
         let interactor = ProfileInteractor(presenter: presenter)
+        interactor.user = dataStore?.user
         view.interactor = interactor
         view.router = self
         interactor.parameters = parameters

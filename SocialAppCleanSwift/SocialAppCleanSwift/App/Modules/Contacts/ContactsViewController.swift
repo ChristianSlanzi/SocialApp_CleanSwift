@@ -44,20 +44,15 @@ class ContactsViewController: UIViewController {
       let request = ContactsModel.Request()
       interactor?.fetchContacts(request: request)
     }
-    
+}
+
+extension ContactsViewController: IContactsViewController {
+    // do someting...
     func displayFetchedContacts(viewModel: ContactsModel.ViewModel)
     {
       displayedContacts = viewModel.displayedContacts
       tableView.reloadData()
     }
-}
-
-
-
-    
-
-extension ContactsViewController: IContactsViewController {
-    // do someting...
 }
 
 extension ContactsViewController {
@@ -92,7 +87,17 @@ extension ContactsViewController {
 
 
 extension ContactsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        //TODO: either ask the interactor or the router to show the profile of the selected contact.
+        //interactor.showContactProfile(contact: indexPath.row)
+        //router.showContactProfile(contact: indexPath.row)
     
+        // but interactor doesnt talk to the router...
+        // in this case we want to route to another module.
+        // so let's use the router directly
+        router.navigateToProfile(for: self.displayedContacts[indexPath.row].id)
+    }
 }
 
 extension ContactsViewController: UITableViewDataSource {

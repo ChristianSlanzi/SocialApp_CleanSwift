@@ -13,9 +13,14 @@ protocol IContactsInteractor: class {
     func fetchContacts(request: ContactsModel.Request)
 }
 
-class ContactsInteractor: IContactsInteractor {
+protocol ContactsDataStore {
+    var contacts: [UserModel]? { get }
+}
+
+class ContactsInteractor: IContactsInteractor, ContactsDataStore {
     var presenter: IContactsPresenter!
     var parameters: [String: Any]?
+    var contacts: [UserModel]?
 
     private var manager: IContactsManager {
         return ContactsManager()
@@ -29,9 +34,10 @@ class ContactsInteractor: IContactsInteractor {
 extension ContactsInteractor {
     func fetchContacts(request: ContactsModel.Request) {
         
-        NetworkingService.retrieveUsers { (result) in
+        NetworkingServiceMock.retrieveUsers { (result) in
             switch(result) {
             case .success(let users):
+                self.contacts = users
                 let response = ContactsModel.Response(contacts: users)
                 self.presenter.presentFetchedContacts(response: response)
             case .failure(_):

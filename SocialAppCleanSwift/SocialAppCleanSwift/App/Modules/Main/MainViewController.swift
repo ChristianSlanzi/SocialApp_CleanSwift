@@ -34,6 +34,8 @@ class MainViewController: UITabBarController {
         let views = [home, contacts, detail].map { UINavigationController(rootViewController: $0)
         }
         viewControllers = views
+        
+        delegate = self
     }
     
 }
@@ -46,6 +48,14 @@ extension MainViewController {
     // do someting...
 }
 
-extension MainViewController {
+extension MainViewController: UITabBarControllerDelegate {
     // do someting...
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        //AppRouter.share.
+        return true
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        AppRouter.share.switchTabPresentedView(tabBarController: self)
+    }
 }

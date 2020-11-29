@@ -13,6 +13,7 @@ enum GeneralRouter {
     case detail
     case settings
     case contacts
+    case showLocation
 }
 
 extension GeneralRouter {
@@ -38,6 +39,9 @@ extension GeneralRouter {
     func mappingContacts(value: IAppRouter) -> IModule {
         return ContactsModule(value)
     }
+    func mappingShowLocation(value: IAppRouter) -> IModule {
+        return ShowLocationModule(value)
+    }
 
     var imodule: (_ value: IAppRouter) -> IModule {
         
@@ -56,6 +60,8 @@ extension GeneralRouter {
             return mappingSettings
         case .contacts:
             return mappingContacts
+        case .showLocation:
+            return mappingShowLocation
         }
     }
     

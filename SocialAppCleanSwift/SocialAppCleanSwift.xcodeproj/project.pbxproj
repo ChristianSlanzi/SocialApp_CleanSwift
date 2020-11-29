@@ -79,6 +79,14 @@
 		24DD576B2570382F00106BC6 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD57652570382F00106BC6 /* NetworkingService.swift */; };
 		24DD576C2570382F00106BC6 /* ServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD57662570382F00106BC6 /* ServiceInterface.swift */; };
 		24DD576D2570382F00106BC6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD57692570382F00106BC6 /* UserModel.swift */; };
+		24E0ADF4257407FF00A54F30 /* ShowLocationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E0ADEC257407FE00A54F30 /* ShowLocationModule.swift */; };
+		24E0ADF5257407FF00A54F30 /* ShowLocationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E0ADED257407FF00A54F30 /* ShowLocationPresenter.swift */; };
+		24E0ADF6257407FF00A54F30 /* ShowLocationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E0ADEE257407FF00A54F30 /* ShowLocationRouter.swift */; };
+		24E0ADF7257407FF00A54F30 /* ShowLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E0ADEF257407FF00A54F30 /* ShowLocationViewController.swift */; };
+		24E0ADF8257407FF00A54F30 /* ShowLocationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E0ADF0257407FF00A54F30 /* ShowLocationInteractor.swift */; };
+		24E0ADF9257407FF00A54F30 /* ShowLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E0ADF1257407FF00A54F30 /* ShowLocationModel.swift */; };
+		24E0ADFA257407FF00A54F30 /* ShowLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E0ADF2257407FF00A54F30 /* ShowLocationViewController.xib */; };
+		24E0ADFB257407FF00A54F30 /* ShowLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E0ADF3257407FF00A54F30 /* ShowLocationManager.swift */; };
 		315B797A157BB4B8BB4F8A8F /* Pods_SocialAppCleanSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B660C27D743F8B66039406 /* Pods_SocialAppCleanSwift.framework */; };
 		7E1500FE91579E279B8DDAE0 /* Pods_SocialAppCleanSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12715154AEB87DA1D221F984 /* Pods_SocialAppCleanSwiftTests.framework */; };
 /* End PBXBuildFile section */
@@ -181,6 +189,14 @@
 		24DD57652570382F00106BC6 /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		24DD57662570382F00106BC6 /* ServiceInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceInterface.swift; sourceTree = "<group>"; };
 		24DD57692570382F00106BC6 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		24E0ADEC257407FE00A54F30 /* ShowLocationModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLocationModule.swift; sourceTree = "<group>"; };
+		24E0ADED257407FF00A54F30 /* ShowLocationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLocationPresenter.swift; sourceTree = "<group>"; };
+		24E0ADEE257407FF00A54F30 /* ShowLocationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLocationRouter.swift; sourceTree = "<group>"; };
+		24E0ADEF257407FF00A54F30 /* ShowLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLocationViewController.swift; sourceTree = "<group>"; };
+		24E0ADF0257407FF00A54F30 /* ShowLocationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLocationInteractor.swift; sourceTree = "<group>"; };
+		24E0ADF1257407FF00A54F30 /* ShowLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLocationModel.swift; sourceTree = "<group>"; };
+		24E0ADF2257407FF00A54F30 /* ShowLocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowLocationViewController.xib; sourceTree = "<group>"; };
+		24E0ADF3257407FF00A54F30 /* ShowLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLocationManager.swift; sourceTree = "<group>"; };
 		26B660C27D743F8B66039406 /* Pods_SocialAppCleanSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialAppCleanSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB9F03D6D9BA4C2464FE8FE /* Pods_SocialAppCleanSwift_SocialAppCleanSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialAppCleanSwift_SocialAppCleanSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBAA5C9B3ECDE7324BFDEF8 /* Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests/Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -285,6 +301,7 @@
 		24CF045C2570018800F92B49 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				24E0ADEB257407A700A54F30 /* ShowLocation */,
 				24DD574E257036C400106BC6 /* Contacts */,
 				24CF04D0257032A700F92B49 /* Settings */,
 				24CF0461257001D200F92B49 /* Main */,
@@ -446,6 +463,21 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		24E0ADEB257407A700A54F30 /* ShowLocation */ = {
+			isa = PBXGroup;
+			children = (
+				24E0ADEC257407FE00A54F30 /* ShowLocationModule.swift */,
+				24E0ADED257407FF00A54F30 /* ShowLocationPresenter.swift */,
+				24E0ADEE257407FF00A54F30 /* ShowLocationRouter.swift */,
+				24E0ADEF257407FF00A54F30 /* ShowLocationViewController.swift */,
+				24E0ADF0257407FF00A54F30 /* ShowLocationInteractor.swift */,
+				24E0ADF1257407FF00A54F30 /* ShowLocationModel.swift */,
+				24E0ADF2257407FF00A54F30 /* ShowLocationViewController.xib */,
+				24E0ADF3257407FF00A54F30 /* ShowLocationManager.swift */,
+			);
+			path = ShowLocation;
+			sourceTree = "<group>";
+		};
 		3F969E8D3D875856E5B39788 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -579,6 +611,7 @@
 			files = (
 				24CF0409256FC00000F92B49 /* LaunchScreen.storyboard in Resources */,
 				24CF04AA2570026100F92B49 /* DetailViewController.xib in Resources */,
+				24E0ADFA257407FF00A54F30 /* ShowLocationViewController.xib in Resources */,
 				24CF0406256FC00000F92B49 /* Assets.xcassets in Resources */,
 				24DD57492570330100106BC6 /* SettingsViewController.xib in Resources */,
 				24DD575D257036E200106BC6 /* ContactsViewController.xib in Resources */,
@@ -725,6 +758,8 @@
 				24CF04932570025300F92B49 /* ProfileRouter.swift in Sources */,
 				24DD575C257036E200106BC6 /* ContactsModel.swift in Sources */,
 				24DD57442570330100106BC6 /* SettingsPresenter.swift in Sources */,
+				24E0ADF4257407FF00A54F30 /* ShowLocationModule.swift in Sources */,
+				24E0ADF9257407FF00A54F30 /* ShowLocationModel.swift in Sources */,
 				24CF04852570024200F92B49 /* HomeManager.swift in Sources */,
 				24DD574A2570330100106BC6 /* SettingsManager.swift in Sources */,
 				24CF04A92570026100F92B49 /* DetailModel.swift in Sources */,
@@ -738,6 +773,7 @@
 				24CF04AB2570026100F92B49 /* DetailManager.swift in Sources */,
 				24CF046D2570022C00F92B49 /* LoginRouter.swift in Sources */,
 				24DD575B257036E200106BC6 /* ContactsInteractor.swift in Sources */,
+				24E0ADF5257407FF00A54F30 /* ShowLocationPresenter.swift in Sources */,
 				24CF04BA2570026F00F92B49 /* MainViewController.swift in Sources */,
 				24DD576A2570382F00106BC6 /* ApiServiceInterface.swift in Sources */,
 				24CF04952570025300F92B49 /* ProfileInteractor.swift in Sources */,
@@ -748,9 +784,12 @@
 				24CF04802570024200F92B49 /* HomeRouter.swift in Sources */,
 				24CF04A62570026100F92B49 /* DetailRouter.swift in Sources */,
 				24CF04B82570026F00F92B49 /* MainPresenter.swift in Sources */,
+				24E0ADF6257407FF00A54F30 /* ShowLocationRouter.swift in Sources */,
 				24CF04702570022C00F92B49 /* LoginModel.swift in Sources */,
 				24DD576C2570382F00106BC6 /* ServiceInterface.swift in Sources */,
+				24E0ADF7257407FF00A54F30 /* ShowLocationViewController.swift in Sources */,
 				24DD575E257036E200106BC6 /* ContactsManager.swift in Sources */,
+				24E0ADFB257407FF00A54F30 /* ShowLocationManager.swift in Sources */,
 				24CF04CC2570030200F92B49 /* GeneralRouter.swift in Sources */,
 				24CF04BB2570026F00F92B49 /* MainInteractor.swift in Sources */,
 				24CF04A42570026100F92B49 /* DetailModule.swift in Sources */,
@@ -771,6 +810,7 @@
 				24CF046B2570022C00F92B49 /* LoginModule.swift in Sources */,
 				24CF046C2570022C00F92B49 /* LoginPresenter.swift in Sources */,
 				24CF04A72570026100F92B49 /* DetailViewController.swift in Sources */,
+				24E0ADF8257407FF00A54F30 /* ShowLocationInteractor.swift in Sources */,
 				24DD576D2570382F00106BC6 /* UserModel.swift in Sources */,
 				24DD57472570330100106BC6 /* SettingsInteractor.swift in Sources */,
 			);

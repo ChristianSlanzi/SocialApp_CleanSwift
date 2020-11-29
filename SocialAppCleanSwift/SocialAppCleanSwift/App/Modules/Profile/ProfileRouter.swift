@@ -9,6 +9,7 @@ import UIKit
 
 protocol IProfileRouter {
 	// do someting...
+    func navigateToShowLocation()
 }
 
 protocol ShowContactDataPassing
@@ -38,5 +39,9 @@ class ProfileRouter: IProfileRouter, ShowContactDataPassing {
         view.router = self
         interactor.parameters = parameters
         return view        
+    }
+    
+    func navigateToShowLocation() {
+        appRouter.presentModule(module: ShowLocationModule(appRouter))
     }
 }

@@ -59,6 +59,14 @@ class ProfileViewController: UIViewController {
         view.text = "PHONE"
         return view
     }()
+    
+    let locationButton: UIButton = {
+        let view = UIButton()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .purple
+        view.setTitle("SHOW LOCATION", for: .normal)
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,11 +77,20 @@ class ProfileViewController: UIViewController {
         view.addSubview(streetLabel)
         view.addSubview(cityPlusZipLabel)
         view.addSubview(phoneLabel)
+        view.addSubview(locationButton)
+        
+        locationButton.addTarget(self, action: #selector(navigateToShowLocation(_:)), for: .touchUpInside)
+        
         setupConstraints()
         interactor.getUser(request: ProfileModel.Request())
     }
     
-    func setupConstraints() {
+    @objc func navigateToShowLocation(_ sender: UIButton) {
+        let name = "Settings Page Title passed as parameter"
+        router.navigateToShowLocation()
+    }
+    
+    private func setupConstraints() {
         NSLayoutConstraint.activate([
             nameLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 120), //TODO: use safe top anchor
             nameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
@@ -114,6 +131,13 @@ class ProfileViewController: UIViewController {
             phoneLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
             phoneLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin),
             phoneLabel.heightAnchor.constraint(equalToConstant: 30)
+        ])
+        
+        NSLayoutConstraint.activate([
+            locationButton.topAnchor.constraint(equalTo: phoneLabel.bottomAnchor, constant: margin),
+            locationButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
+            locationButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin),
+            locationButton.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
 }

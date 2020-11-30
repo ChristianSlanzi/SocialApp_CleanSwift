@@ -42,6 +42,8 @@ class ProfileRouter: IProfileRouter, ShowContactDataPassing {
     }
     
     func navigateToShowLocation() {
-        appRouter.presentModule(module: ShowLocationModule(appRouter))
+        appRouter.presentModule(module: ShowLocationModule(appRouter),
+                                parameters: ["lat" : dataStore?.user.address?.geo?.lat,
+                                             "lng" : dataStore?.user.address?.geo?.lng])
     }
 }

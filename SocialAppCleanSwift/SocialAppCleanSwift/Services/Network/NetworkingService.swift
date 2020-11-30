@@ -44,8 +44,8 @@ class NetworkingServiceMock: ApiServiceInterface {
                           "city": "Gwenborough",
                           "zipcode": "92998-3874",
                           "geo": {
-                            "lat": "-37.3159",
-                            "lng": "81.1496"
+                            "lat": "45.4734",
+                            "lng": "9.1806"
                           }
                         },
                         "phone": "1-770-736-8031 x56442",

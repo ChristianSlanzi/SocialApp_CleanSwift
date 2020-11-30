@@ -25,6 +25,11 @@ class ShowLocationViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 		// do someting...
+        if let lat = interactor.parameters?["lat"] as? String, let lng = interactor.parameters?["lng"] as? String {
+            let coordinates: CLLocationCoordinate2D = CLLocationCoordinate2DMake(CLLocationDegrees(lat)!, CLLocationDegrees(lng)!)
+            //mapView.setCenter(coordinates, animated: true)
+            mapView.setRegion(MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)), animated: true)
+        }
         
         view.addSubview(mapView)
         

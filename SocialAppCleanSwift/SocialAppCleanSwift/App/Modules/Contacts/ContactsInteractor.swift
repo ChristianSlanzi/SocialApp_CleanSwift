@@ -33,7 +33,6 @@ class ContactsInteractor: IContactsInteractor, ContactsDataStore {
 
 extension ContactsInteractor {
     func fetchContacts(request: ContactsModel.Request) {
-        
         NetworkingServiceMock.retrieveUsers { (result) in
             switch(result) {
             case .success(let users):
@@ -45,6 +44,5 @@ extension ContactsInteractor {
                 break
             }
         }
-        
     }
 }

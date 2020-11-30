@@ -14,6 +14,14 @@
 		248517EF25759788006F8A60 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248517EE25759788006F8A60 /* Album.swift */; };
 		248517F4257597DE006F8A60 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248517F3257597DE006F8A60 /* Photo.swift */; };
 		248517F92575A236006F8A60 /* JSONinitiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248517F82575A236006F8A60 /* JSONinitiable.swift */; };
+		248518082575A6BD006F8A60 /* PostListingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248518002575A6BD006F8A60 /* PostListingModule.swift */; };
+		248518092575A6BD006F8A60 /* PostListingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248518012575A6BD006F8A60 /* PostListingPresenter.swift */; };
+		2485180A2575A6BD006F8A60 /* PostListingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248518022575A6BD006F8A60 /* PostListingRouter.swift */; };
+		2485180B2575A6BD006F8A60 /* PostListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248518032575A6BD006F8A60 /* PostListingViewController.swift */; };
+		2485180C2575A6BD006F8A60 /* PostListingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248518042575A6BD006F8A60 /* PostListingInteractor.swift */; };
+		2485180D2575A6BD006F8A60 /* PostListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248518052575A6BD006F8A60 /* PostListingModel.swift */; };
+		2485180E2575A6BD006F8A60 /* PostListingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 248518062575A6BD006F8A60 /* PostListingViewController.xib */; };
+		2485180F2575A6BD006F8A60 /* PostListingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248518072575A6BD006F8A60 /* PostListingManager.swift */; };
 		24CF03FD256FBFFE00F92B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF03FC256FBFFE00F92B49 /* AppDelegate.swift */; };
 		24CF03FF256FBFFE00F92B49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF03FE256FBFFE00F92B49 /* SceneDelegate.swift */; };
 		24CF0401256FBFFE00F92B49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF0400256FBFFE00F92B49 /* ViewController.swift */; };
@@ -124,6 +132,14 @@
 		248517EE25759788006F8A60 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		248517F3257597DE006F8A60 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		248517F82575A236006F8A60 /* JSONinitiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONinitiable.swift; sourceTree = "<group>"; };
+		248518002575A6BD006F8A60 /* PostListingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListingModule.swift; sourceTree = "<group>"; };
+		248518012575A6BD006F8A60 /* PostListingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListingPresenter.swift; sourceTree = "<group>"; };
+		248518022575A6BD006F8A60 /* PostListingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListingRouter.swift; sourceTree = "<group>"; };
+		248518032575A6BD006F8A60 /* PostListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListingViewController.swift; sourceTree = "<group>"; };
+		248518042575A6BD006F8A60 /* PostListingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListingInteractor.swift; sourceTree = "<group>"; };
+		248518052575A6BD006F8A60 /* PostListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListingModel.swift; sourceTree = "<group>"; };
+		248518062575A6BD006F8A60 /* PostListingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostListingViewController.xib; sourceTree = "<group>"; };
+		248518072575A6BD006F8A60 /* PostListingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListingManager.swift; sourceTree = "<group>"; };
 		24CF03F9256FBFFE00F92B49 /* SocialAppCleanSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialAppCleanSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24CF03FC256FBFFE00F92B49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24CF03FE256FBFFE00F92B49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -256,6 +272,14 @@
 		2402AAA92575855900D879C9 /* PostListing */ = {
 			isa = PBXGroup;
 			children = (
+				248518002575A6BD006F8A60 /* PostListingModule.swift */,
+				248518012575A6BD006F8A60 /* PostListingPresenter.swift */,
+				248518022575A6BD006F8A60 /* PostListingRouter.swift */,
+				248518032575A6BD006F8A60 /* PostListingViewController.swift */,
+				248518042575A6BD006F8A60 /* PostListingInteractor.swift */,
+				248518052575A6BD006F8A60 /* PostListingModel.swift */,
+				248518062575A6BD006F8A60 /* PostListingViewController.xib */,
+				248518072575A6BD006F8A60 /* PostListingManager.swift */,
 			);
 			path = PostListing;
 			sourceTree = "<group>";
@@ -652,6 +676,7 @@
 				24CF04712570022C00F92B49 /* LoginViewController.xib in Resources */,
 				24CF04972570025300F92B49 /* ProfileViewController.xib in Resources */,
 				24CF04BD2570026F00F92B49 /* MainViewController.xib in Resources */,
+				2485180E2575A6BD006F8A60 /* PostListingViewController.xib in Resources */,
 				24CF04842570024200F92B49 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -795,7 +820,9 @@
 				24E0ADF4257407FF00A54F30 /* ShowLocationModule.swift in Sources */,
 				24E0ADF9257407FF00A54F30 /* ShowLocationModel.swift in Sources */,
 				24CF04852570024200F92B49 /* HomeManager.swift in Sources */,
+				2485180A2575A6BD006F8A60 /* PostListingRouter.swift in Sources */,
 				24DD574A2570330100106BC6 /* SettingsManager.swift in Sources */,
+				2485180C2575A6BD006F8A60 /* PostListingInteractor.swift in Sources */,
 				24CF04A92570026100F92B49 /* DetailModel.swift in Sources */,
 				24CF04822570024200F92B49 /* HomeInteractor.swift in Sources */,
 				24CF04C62570029700F92B49 /* AppRoute.swift in Sources */,
@@ -805,6 +832,7 @@
 				24DD57462570330100106BC6 /* SettingsViewController.swift in Sources */,
 				24CF04C72570029700F92B49 /* Module.swift in Sources */,
 				24CF04AB2570026100F92B49 /* DetailManager.swift in Sources */,
+				2485180D2575A6BD006F8A60 /* PostListingModel.swift in Sources */,
 				24CF046D2570022C00F92B49 /* LoginRouter.swift in Sources */,
 				24DD575B257036E200106BC6 /* ContactsInteractor.swift in Sources */,
 				24E0ADF5257407FF00A54F30 /* ShowLocationPresenter.swift in Sources */,
@@ -839,19 +867,23 @@
 				24CF046F2570022C00F92B49 /* LoginInteractor.swift in Sources */,
 				24CF03FF256FBFFE00F92B49 /* SceneDelegate.swift in Sources */,
 				24DD5757257036E200106BC6 /* ContactsModule.swift in Sources */,
+				248518092575A6BD006F8A60 /* PostListingPresenter.swift in Sources */,
 				24CF04982570025300F92B49 /* ProfileManager.swift in Sources */,
 				2402AA9F25757E8000D879C9 /* Post.swift in Sources */,
+				2485180B2575A6BD006F8A60 /* PostListingViewController.swift in Sources */,
 				24CF04962570025300F92B49 /* ProfileModel.swift in Sources */,
 				24CF04942570025300F92B49 /* ProfileViewController.swift in Sources */,
 				24CF04C52570029700F92B49 /* BaseAppRouter.swift in Sources */,
 				24DD57452570330100106BC6 /* SettingsRouter.swift in Sources */,
 				24CF04A52570026100F92B49 /* DetailPresenter.swift in Sources */,
+				248518082575A6BD006F8A60 /* PostListingModule.swift in Sources */,
 				24CF04BE2570026F00F92B49 /* MainManager.swift in Sources */,
 				24CF046B2570022C00F92B49 /* LoginModule.swift in Sources */,
 				24CF046C2570022C00F92B49 /* LoginPresenter.swift in Sources */,
 				24CF04A72570026100F92B49 /* DetailViewController.swift in Sources */,
 				24E0ADF8257407FF00A54F30 /* ShowLocationInteractor.swift in Sources */,
 				24DD576D2570382F00106BC6 /* UserModel.swift in Sources */,
+				2485180F2575A6BD006F8A60 /* PostListingManager.swift in Sources */,
 				24DD57472570330100106BC6 /* SettingsInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

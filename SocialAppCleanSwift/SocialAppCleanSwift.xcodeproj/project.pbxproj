@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0249AF78E0B4B8CFE6862414 /* Pods_SocialAppCleanSwift_SocialAppCleanSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB9F03D6D9BA4C2464FE8FE /* Pods_SocialAppCleanSwift_SocialAppCleanSwiftUITests.framework */; };
+		2402AA9F25757E8000D879C9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2402AA9E25757E8000D879C9 /* Post.swift */; };
+		2402AAA525757FDF00D879C9 /* NetworkingServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2402AAA425757FDF00D879C9 /* NetworkingServiceMock.swift */; };
+		248517EA25759700006F8A60 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248517E925759700006F8A60 /* Comment.swift */; };
+		248517EF25759788006F8A60 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248517EE25759788006F8A60 /* Album.swift */; };
+		248517F4257597DE006F8A60 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248517F3257597DE006F8A60 /* Photo.swift */; };
+		248517F92575A236006F8A60 /* JSONinitiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248517F82575A236006F8A60 /* JSONinitiable.swift */; };
 		24CF03FD256FBFFE00F92B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF03FC256FBFFE00F92B49 /* AppDelegate.swift */; };
 		24CF03FF256FBFFE00F92B49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF03FE256FBFFE00F92B49 /* SceneDelegate.swift */; };
 		24CF0401256FBFFE00F92B49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF0400256FBFFE00F92B49 /* ViewController.swift */; };
@@ -112,6 +118,12 @@
 		12715154AEB87DA1D221F984 /* Pods_SocialAppCleanSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialAppCleanSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		180D287A508EC11D82AA4BBE /* Pods-SocialAppCleanSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialAppCleanSwift.debug.xcconfig"; path = "Target Support Files/Pods-SocialAppCleanSwift/Pods-SocialAppCleanSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		22684A7D73388F631D9425D7 /* Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests/Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2402AA9E25757E8000D879C9 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		2402AAA425757FDF00D879C9 /* NetworkingServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingServiceMock.swift; sourceTree = "<group>"; };
+		248517E925759700006F8A60 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		248517EE25759788006F8A60 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		248517F3257597DE006F8A60 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		248517F82575A236006F8A60 /* JSONinitiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONinitiable.swift; sourceTree = "<group>"; };
 		24CF03F9256FBFFE00F92B49 /* SocialAppCleanSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialAppCleanSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24CF03FC256FBFFE00F92B49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24CF03FE256FBFFE00F92B49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -233,6 +245,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2402AAA325757FCB00D879C9 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				2402AAA425757FDF00D879C9 /* NetworkingServiceMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		2402AAA92575855900D879C9 /* PostListing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PostListing;
+			sourceTree = "<group>";
+		};
 		24CF03F0256FBFFE00F92B49 = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +328,7 @@
 		24CF045C2570018800F92B49 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2402AAA92575855900D879C9 /* PostListing */,
 				24E0ADEB257407A700A54F30 /* ShowLocation */,
 				24DD574E257036C400106BC6 /* Contacts */,
 				24CF04D0257032A700F92B49 /* Settings */,
@@ -441,6 +469,7 @@
 		24DD57632570382F00106BC6 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				2402AAA325757FCB00D879C9 /* Mock */,
 				24DD57642570382F00106BC6 /* ApiServiceInterface.swift */,
 				24DD57652570382F00106BC6 /* NetworkingService.swift */,
 			);
@@ -450,6 +479,7 @@
 		24DD57672570382F00106BC6 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				248517F82575A236006F8A60 /* JSONinitiable.swift */,
 				24DD57682570382F00106BC6 /* User */,
 			);
 			path = DataModel;
@@ -459,6 +489,10 @@
 			isa = PBXGroup;
 			children = (
 				24DD57692570382F00106BC6 /* UserModel.swift */,
+				2402AA9E25757E8000D879C9 /* Post.swift */,
+				248517E925759700006F8A60 /* Comment.swift */,
+				248517EE25759788006F8A60 /* Album.swift */,
+				248517F3257597DE006F8A60 /* Photo.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -790,10 +824,15 @@
 				24E0ADF7257407FF00A54F30 /* ShowLocationViewController.swift in Sources */,
 				24DD575E257036E200106BC6 /* ContactsManager.swift in Sources */,
 				24E0ADFB257407FF00A54F30 /* ShowLocationManager.swift in Sources */,
+				2402AAA525757FDF00D879C9 /* NetworkingServiceMock.swift in Sources */,
+				248517EA25759700006F8A60 /* Comment.swift in Sources */,
+				248517EF25759788006F8A60 /* Album.swift in Sources */,
 				24CF04CC2570030200F92B49 /* GeneralRouter.swift in Sources */,
+				248517F4257597DE006F8A60 /* Photo.swift in Sources */,
 				24CF04BB2570026F00F92B49 /* MainInteractor.swift in Sources */,
 				24CF04A42570026100F92B49 /* DetailModule.swift in Sources */,
 				24CF04722570022C00F92B49 /* LoginManager.swift in Sources */,
+				248517F92575A236006F8A60 /* JSONinitiable.swift in Sources */,
 				24CF04B72570026F00F92B49 /* MainModule.swift in Sources */,
 				24DD575A257036E200106BC6 /* ContactsViewController.swift in Sources */,
 				24CF04BC2570026F00F92B49 /* MainModel.swift in Sources */,
@@ -801,6 +840,7 @@
 				24CF03FF256FBFFE00F92B49 /* SceneDelegate.swift in Sources */,
 				24DD5757257036E200106BC6 /* ContactsModule.swift in Sources */,
 				24CF04982570025300F92B49 /* ProfileManager.swift in Sources */,
+				2402AA9F25757E8000D879C9 /* Post.swift in Sources */,
 				24CF04962570025300F92B49 /* ProfileModel.swift in Sources */,
 				24CF04942570025300F92B49 /* ProfileViewController.swift in Sources */,
 				24CF04C52570029700F92B49 /* BaseAppRouter.swift in Sources */,

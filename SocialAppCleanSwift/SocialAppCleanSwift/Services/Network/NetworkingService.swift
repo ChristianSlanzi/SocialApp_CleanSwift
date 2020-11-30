@@ -9,7 +9,63 @@ import Alamofire
 import SwiftyJSON
 
 class NetworkingService: ApiServiceInterface {
+    
+    private static func retrieveItems<T: JSONinitiable>(url: String, completion: @escaping (Result<[T], Error>) -> Void) {
+        AF.request(url).responseJSON { (response) in
+            switch(response.result) {
+            case .success(let value):
+                let data = JSON(value)
+                if let item = data.array {
+                    let posts = item.map({ T(json: JSON($0.object)) })
+                    completion(.success(posts))
+                    return
+                }
+                completion(.success([]))
+                //print(data)
+            case .failure(let error):
+                print(error.localizedDescription)
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    static func retrieveComments(for postId: String, completion: @escaping (Result<[Comment], Error>) -> Void) {
+        retrieveItems(url: "https://jsonplaceholder.typicode.com/post/\(postId)/comments", completion: completion)
+    }
+    
+    static func retrieveAlbums(completion: @escaping (Result<[Album], Error>) -> Void) {
+        retrieveItems(url: "https://jsonplaceholder.typicode.com/albums", completion: completion)
+    }
+    
+    static func retrievePhotos(completion: @escaping (Result<[Photo], Error>) -> Void) {
+        retrieveItems(url: "https://jsonplaceholder.typicode.com/photos", completion: completion)
+    }
+    
+    static func retrievePosts(completion: @escaping (Result<[Post], Error>) -> Void) {
+        
+        retrieveItems(url: "https://jsonplaceholder.typicode.com/posts", completion: completion)
+        /*
+        AF.request("https://jsonplaceholder.typicode.com/users").responseJSON { (response) in
+            switch(response.result) {
+            case .success(let value):
+                let data = JSON(value)
+                if let item = data.array {
+                    let posts = item.map({ Post(json: JSON($0.object)) })
+                    completion(.success(posts))
+                    return
+                }
+                completion(.success([]))
+                //print(data)
+            case .failure(let error):
+                print(error.localizedDescription)
+                completion(.failure(error))
+            }
+        }*/
+    }
+    
     static func retrieveUsers(completion: @escaping (Result<[UserModel], Error>)->Void) {
+        retrieveItems(url: "https://jsonplaceholder.typicode.com/users", completion: completion)
+        /*
         AF.request("https://jsonplaceholder.typicode.com/users").responseJSON { (response) in
             switch(response.result) {
             case .success(let value):
@@ -26,38 +82,8 @@ class NetworkingService: ApiServiceInterface {
                 completion(.failure(error))
             }
         }
+        */
     }
 }
 
-class NetworkingServiceMock: ApiServiceInterface {
-    static func retrieveUsers(completion: @escaping (Result<[UserModel], Error>)->Void) {
-        let users = [
-            UserModel(json: JSON(parseJSON: """
-{
-                        "id": 1,
-                        "name": "Leanne Graham",
-                        "username": "Bret",
-                        "email": "Sincere@april.biz",
-                        "address": {
-                          "street": "Kulas Light",
-                          "suite": "Apt. 556",
-                          "city": "Gwenborough",
-                          "zipcode": "92998-3874",
-                          "geo": {
-                            "lat": "45.4734",
-                            "lng": "9.1806"
-                          }
-                        },
-                        "phone": "1-770-736-8031 x56442",
-                        "website": "hildegard.org",
-                        "company": {
-                          "name": "Romaguera-Crona",
-                          "catchPhrase": "Multi-layered client-server neural-net",
-                          "bs": "harness real-time e-markets"
-                        }
-                      }
-"""))
-        ]
-        completion(.success(users))
-    }
-}
+

@@ -21,6 +21,7 @@ class ContactsInteractor: IContactsInteractor, ContactsDataStore {
     var presenter: IContactsPresenter!
     var parameters: [String: Any]?
     var contacts: [UserModel]?
+    //var networkingService: ApiServiceInterface?
 
     private var manager: IContactsManager {
         return ContactsManager()
@@ -33,7 +34,7 @@ class ContactsInteractor: IContactsInteractor, ContactsDataStore {
 
 extension ContactsInteractor {
     func fetchContacts(request: ContactsModel.Request) {
-        NetworkingServiceMock.retrieveUsers { (result) in
+        Current.networkingService.retrieveUsers { (result) in
             switch(result) {
             case .success(let users):
                 self.contacts = users

@@ -8,8 +8,8 @@
 import SwiftyJSON
 
 class NetworkingServiceMock: ApiServiceInterface {
-    
-    private static func retrieveItems<T: JSONinitiable>(json: JSON, completion: @escaping (Result<[T], Error>) -> Void) {
+
+    private func retrieveItems<T: JSONinitiable>(json: JSON, completion: @escaping (Result<[T], Error>) -> Void) {
         if let data = json.array {
             let items = data.map({ T(json: JSON($0.object)) })
             completion(.success(items))
@@ -17,7 +17,7 @@ class NetworkingServiceMock: ApiServiceInterface {
         }
     }
     
-    static func retrieveComments(for postId: String, completion: @escaping (Result<[Comment], Error>) -> Void) {
+    func retrieveComments(for postId: String, completion: @escaping (Result<[Comment], Error>) -> Void) {
         retrieveItems(json: commentsPost1Data, completion: completion)
         /*
         if let item = commentsPost1Data.array {
@@ -27,7 +27,7 @@ class NetworkingServiceMock: ApiServiceInterface {
         }*/
     }
     
-    static func retrieveAlbums(completion: @escaping (Result<[Album], Error>) -> Void) {
+    func retrieveAlbums(completion: @escaping (Result<[Album], Error>) -> Void) {
         retrieveItems(json: albumsData, completion: completion)
         /*
         if let item = albumsData.array {
@@ -37,7 +37,7 @@ class NetworkingServiceMock: ApiServiceInterface {
         }*/
     }
     
-    static func retrievePhotos(completion: @escaping (Result<[Photo], Error>) -> Void) {
+    func retrievePhotos(completion: @escaping (Result<[Photo], Error>) -> Void) {
         retrieveItems(json: photosData, completion: completion)
         /*
         if let item = photosData.array {
@@ -47,7 +47,7 @@ class NetworkingServiceMock: ApiServiceInterface {
         }*/
     }
     
-    static func retrievePosts(completion: @escaping (Result<[Post], Error>) -> Void) {
+    func retrievePosts(completion: @escaping (Result<[Post], Error>) -> Void) {
         retrieveItems(json: postsData, completion: completion)
         /*
         if let item = postsData.array {
@@ -57,7 +57,7 @@ class NetworkingServiceMock: ApiServiceInterface {
         }*/
     }
     
-    static func retrieveUsers(completion: @escaping (Result<[UserModel], Error>)->Void) {
+    func retrieveUsers(completion: @escaping (Result<[UserModel], Error>)->Void) {
         let users = [
             UserModel(json: JSON(parseJSON: """
 {

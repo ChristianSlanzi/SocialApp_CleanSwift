@@ -10,6 +10,7 @@
 		0249AF78E0B4B8CFE6862414 /* Pods_SocialAppCleanSwift_SocialAppCleanSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB9F03D6D9BA4C2464FE8FE /* Pods_SocialAppCleanSwift_SocialAppCleanSwiftUITests.framework */; };
 		2402AA9F25757E8000D879C9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2402AA9E25757E8000D879C9 /* Post.swift */; };
 		2402AAA525757FDF00D879C9 /* NetworkingServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2402AAA425757FDF00D879C9 /* NetworkingServiceMock.swift */; };
+		2425E8402576C0970084E415 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425E83F2576C0970084E415 /* Environment.swift */; };
 		248517EA25759700006F8A60 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248517E925759700006F8A60 /* Comment.swift */; };
 		248517EF25759788006F8A60 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248517EE25759788006F8A60 /* Album.swift */; };
 		248517F4257597DE006F8A60 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248517F3257597DE006F8A60 /* Photo.swift */; };
@@ -130,6 +131,7 @@
 		22684A7D73388F631D9425D7 /* Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests/Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2402AA9E25757E8000D879C9 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		2402AAA425757FDF00D879C9 /* NetworkingServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingServiceMock.swift; sourceTree = "<group>"; };
+		2425E83F2576C0970084E415 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		248517E925759700006F8A60 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		248517EE25759788006F8A60 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		248517F3257597DE006F8A60 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -289,6 +291,14 @@
 			path = PostListing;
 			sourceTree = "<group>";
 		};
+		2425E83E2576C07B0084E415 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				2425E83F2576C0970084E415 /* Environment.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
 		248518132575B747006F8A60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +364,7 @@
 		24CF03FB256FBFFE00F92B49 /* SocialAppCleanSwift */ = {
 			isa = PBXGroup;
 			children = (
+				2425E83E2576C07B0084E415 /* Environment */,
 				2485181D2575B824006F8A60 /* Utils */,
 				24DD57672570382F00106BC6 /* DataModel */,
 				24DD57622570382F00106BC6 /* Services */,
@@ -874,6 +885,7 @@
 				24CF04C62570029700F92B49 /* AppRoute.swift in Sources */,
 				24CF04832570024200F92B49 /* HomeModel.swift in Sources */,
 				24CF047F2570024200F92B49 /* HomePresenter.swift in Sources */,
+				2425E8402576C0970084E415 /* Environment.swift in Sources */,
 				24CF04A82570026100F92B49 /* DetailInteractor.swift in Sources */,
 				24DD57462570330100106BC6 /* SettingsViewController.swift in Sources */,
 				24CF04C72570029700F92B49 /* Module.swift in Sources */,

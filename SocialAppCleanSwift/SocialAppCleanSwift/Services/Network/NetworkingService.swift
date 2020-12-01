@@ -9,8 +9,8 @@ import Alamofire
 import SwiftyJSON
 
 class NetworkingService: ApiServiceInterface {
-    
-    private static func retrieveItems<T: JSONinitiable>(url: String, completion: @escaping (Result<[T], Error>) -> Void) {
+
+    private func retrieveItems<T: JSONinitiable>(url: String, completion: @escaping (Result<[T], Error>) -> Void) {
         AF.request(url).responseJSON { (response) in
             switch(response.result) {
             case .success(let value):
@@ -29,19 +29,19 @@ class NetworkingService: ApiServiceInterface {
         }
     }
     
-    static func retrieveComments(for postId: String, completion: @escaping (Result<[Comment], Error>) -> Void) {
+    func retrieveComments(for postId: String, completion: @escaping (Result<[Comment], Error>) -> Void) {
         retrieveItems(url: "https://jsonplaceholder.typicode.com/post/\(postId)/comments", completion: completion)
     }
     
-    static func retrieveAlbums(completion: @escaping (Result<[Album], Error>) -> Void) {
+    func retrieveAlbums(completion: @escaping (Result<[Album], Error>) -> Void) {
         retrieveItems(url: "https://jsonplaceholder.typicode.com/albums", completion: completion)
     }
     
-    static func retrievePhotos(completion: @escaping (Result<[Photo], Error>) -> Void) {
+    func retrievePhotos(completion: @escaping (Result<[Photo], Error>) -> Void) {
         retrieveItems(url: "https://jsonplaceholder.typicode.com/photos", completion: completion)
     }
     
-    static func retrievePosts(completion: @escaping (Result<[Post], Error>) -> Void) {
+    func retrievePosts(completion: @escaping (Result<[Post], Error>) -> Void) {
         
         retrieveItems(url: "https://jsonplaceholder.typicode.com/posts", completion: completion)
         /*
@@ -63,7 +63,7 @@ class NetworkingService: ApiServiceInterface {
         }*/
     }
     
-    static func retrieveUsers(completion: @escaping (Result<[UserModel], Error>)->Void) {
+    func retrieveUsers(completion: @escaping (Result<[UserModel], Error>)->Void) {
         retrieveItems(url: "https://jsonplaceholder.typicode.com/users", completion: completion)
         /*
         AF.request("https://jsonplaceholder.typicode.com/users").responseJSON { (response) in

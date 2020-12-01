@@ -17,6 +17,7 @@ class PostListingInteractor: IPostListingInteractor {
     var presenter: IPostListingPresenter!
     var parameters: [String: Any]?
     var posts: [Post]?
+    var networkingService: ApiServiceInterface?
 
     private var manager: IPostListingManager {
         return PostListingManager()
@@ -29,7 +30,7 @@ class PostListingInteractor: IPostListingInteractor {
 
 extension PostListingInteractor {
     func fetchPosts(request: PostListingModel.Request) {
-        NetworkingServiceMock.retrievePosts { (result) in
+        networkingService?.retrievePosts { (result) in
             switch(result) {
             case .success(let posts):
                 self.posts = posts

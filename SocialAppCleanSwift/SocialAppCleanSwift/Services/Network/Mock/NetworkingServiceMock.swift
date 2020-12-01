@@ -7,6 +7,10 @@
 
 import SwiftyJSON
 
+enum NetworkServiceError: Error {
+    case jsonWrongFormat
+}
+
 class NetworkingServiceMock: ApiServiceInterface {
 
     private func retrieveItems<T: JSONinitiable>(json: JSON, completion: @escaping (Result<[T], Error>) -> Void) {
@@ -15,46 +19,23 @@ class NetworkingServiceMock: ApiServiceInterface {
             completion(.success(items))
             return
         }
+        completion(.failure(NetworkServiceError.jsonWrongFormat))
     }
     
     func retrieveComments(for postId: String, completion: @escaping (Result<[Comment], Error>) -> Void) {
         retrieveItems(json: commentsPost1Data, completion: completion)
-        /*
-        if let item = commentsPost1Data.array {
-            let comments = item.map({ Comment(json: JSON($0.object)) })
-            completion(.success(comments))
-            return
-        }*/
     }
     
     func retrieveAlbums(completion: @escaping (Result<[Album], Error>) -> Void) {
         retrieveItems(json: albumsData, completion: completion)
-        /*
-        if let item = albumsData.array {
-            let albums = item.map({ Album(json: JSON($0.object)) })
-            completion(.success(albums))
-            return
-        }*/
     }
     
     func retrievePhotos(completion: @escaping (Result<[Photo], Error>) -> Void) {
         retrieveItems(json: photosData, completion: completion)
-        /*
-        if let item = photosData.array {
-            let photos = item.map({ Photo(json: JSON($0.object)) })
-            completion(.success(photos))
-            return
-        }*/
     }
     
     func retrievePosts(completion: @escaping (Result<[Post], Error>) -> Void) {
         retrieveItems(json: postsData, completion: completion)
-        /*
-        if let item = postsData.array {
-            let posts = item.map({ Post(json: JSON($0.object)) })
-            completion(.success(posts))
-            return
-        }*/
     }
     
     func retrieveUsers(completion: @escaping (Result<[UserModel], Error>)->Void) {
@@ -90,92 +71,64 @@ class NetworkingServiceMock: ApiServiceInterface {
 }
 
 fileprivate let postsData = JSON(parseJSON: """
-[{"userId": 1,"id": 1,"title": "sunt aut","body": "quia et"},{"userId": 1,"id": 2,"title": "qui est esse","body": "est rerum tempore"}]
+[
+{
+"userId": 1,
+"id": 1,
+"title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+"body": "quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit molestiae ut ut quas totam nostrum rerum est autem sunt rem eveniet architecto"
+},
+{
+"userId": 1,
+"id": 2,
+"title": "qui est esse",
+"body": "est rerum tempore vitae sequi sint nihil reprehenderit dolor beatae ea dolores neque fugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis qui aperiam non debitis possimus qui neque nisi nulla"
+},
+{
+"userId": 1,
+"id": 3,
+"title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+"body": "et iusto sed quo iure voluptatem occaecati omnis eligendi aut ad voluptatem doloribus vel accusantium quis pariatur molestiae porro eius odio et labore et velit aut"
+},
+{
+"userId": 1,
+"id": 4,
+"title": "eum et est occaecati",
+"body": "ullam et saepe reiciendis voluptatem adipisci sit amet autem assumenda provident rerum culpa quis hic commodi nesciunt rem tenetur doloremque ipsam iure quis sunt voluptatem rerum illo velit"
+},
+{
+"userId": 1,
+"id": 5,
+"title": "nesciunt quas odio",
+"body": "repudiandae veniam quaerat sunt sed alias aut fugiat sit autem sed est voluptatem omnis possimus esse voluptatibus quis est aut tenetur dolor neque"
+},
+{
+"userId": 1,
+"id": 6,
+"title": "dolorem eum magni eos aperiam quia",
+"body": "ut aspernatur corporis harum nihil quis provident sequi mollitia nobis aliquid molestiae perspiciatis et ea nemo ab reprehenderit accusantium quas voluptate dolores velit et doloremque molestiae"
+}
+]
 """)
 
-//fileprivate let postsData = JSON(parseJSON: """
-//[
-//{
-//"userId": 1,
-//"id": 1,
-//"title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-//"body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
-//},
-//{
-//"userId": 1,
-//"id": 2,
-//"title": "qui est esse",
-//"body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
-//},
-//{
-//"userId": 1,
-//"id": 3,
-//"title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
-//"body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
-//},
-//{
-//"userId": 1,
-//"id": 4,
-//"title": "eum et est occaecati",
-//"body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
-//},
-//{
-//"userId": 1,
-//"id": 5,
-//"title": "nesciunt quas odio",
-//"body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
-//},
-//{
-//"userId": 1,
-//"id": 6,
-//"title": "dolorem eum magni eos aperiam quia",
-//"body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
-//}
-//]
-//""")
-
-    
-fileprivate let commentsPost1Data = JSON("""
-        [
-          {
-            "postId": 1,
-            "id": 1,
-            "name": "id labore ex et quam laborum",
-            "email": "Eliseo@gardner.biz",
-            "body": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
-          },
-          {
-            "postId": 1,
-            "id": 2,
-            "name": "quo vero reiciendis velit similique earum",
-            "email": "Jayne_Kuhic@sydney.com",
-            "body": "est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et"
-          },
-          {
-            "postId": 1,
-            "id": 3,
-            "name": "odio adipisci rerum aut animi",
-            "email": "Nikita@garfield.biz",
-            "body": "quia molestiae reprehenderit quasi aspernatur\naut expedita occaecati aliquam eveniet laudantium\nomnis quibusdam delectus saepe quia accusamus maiores nam est\ncum et ducimus et vero voluptates excepturi deleniti ratione"
-          },
-          {
-            "postId": 1,
-            "id": 4,
-            "name": "alias odio sit",
-            "email": "Lew@alysha.tv",
-            "body": "non et atque\noccaecati deserunt quas accusantium unde odit nobis qui voluptatem\nquia voluptas consequuntur itaque dolor\net qui rerum deleniti ut occaecati"
-          },
-          {
-            "postId": 1,
-            "id": 5,
-            "name": "vero eaque aliquid doloribus et culpa",
-            "email": "Hayden@althea.biz",
-            "body": "harum non quasi et ratione\ntempore iure ex voluptates in ratione\nharum architecto fugit inventore cupiditate\nvoluptates magni quo et"
-          }
-        ]
+fileprivate let commentsPost1Data = JSON(parseJSON: """
+[{"postId": 1,"id": 1,"name": "id labore ex et quam laborum","email": "Eliseo@gardner.biz","body": "laudantium enim quasi"},{"postId": 1,
+"id": 3,
+"name": "odio adipisci rerum aut animi",
+"email": "Nikita@garfield.biz",
+"body": "quia molestiae reprehenderit quasi aspernatur aut expedita occaecati aliquam eveniet laudantium omnis quibusdam delectus saepe quia accusamus maiores nam est cum et ducimus et vero voluptates excepturi deleniti ratione"},{"postId": 1,
+"id": 4,
+"name": "alias odio sit",
+"email": "Lew@alysha.tv",
+"body": "non et atque occaecati deserunt quas accusantium unde odit nobis qui voluptatem quia voluptas consequuntur itaque dolor et qui rerum deleniti ut occaecati"
+},{"postId": 1,
+"id": 5,
+"name": "vero eaque aliquid doloribus et culpa",
+"email": "Hayden@althea.biz",
+"body": "harum non quasi et ratione tempore iure ex voluptates in ratione harum architecto fugit inventore cupiditate voluptates magni quo et"}]
 """)
 
-fileprivate let albumsData = JSON("""
+fileprivate let albumsData = JSON(parseJSON: """
         [
           {
             "userId": 1,
@@ -205,7 +158,7 @@ fileprivate let albumsData = JSON("""
         ]
 """)
 
-fileprivate let photosData = JSON("""
+fileprivate let photosData = JSON(parseJSON: """
         [
           {
               "albumId": 1,
@@ -245,7 +198,7 @@ fileprivate let photosData = JSON("""
         ]
 """)
 
-fileprivate let todosData = JSON("""
+fileprivate let todosData = JSON(parseJSON: """
         [
           {
               "userId": 1,

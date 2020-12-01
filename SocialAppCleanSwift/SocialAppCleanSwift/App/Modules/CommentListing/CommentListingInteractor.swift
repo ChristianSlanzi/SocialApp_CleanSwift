@@ -29,6 +29,15 @@ class CommentListingInteractor: ICommentListingInteractor {
 
 extension CommentListingInteractor {
     func fetchComments(request: CommentListingModel.Request) {
-        
+        guard let postId = request.parameters["postId"] as? String else { return }
+        Current.networkingService.retrieveComments(for: postId) { (result) in
+            switch(result) {
+            case .success(let comments):
+                let response = CommentListingModel.Response(comments: comments)
+                self.presenter.presentFetchedComments(response: response)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }

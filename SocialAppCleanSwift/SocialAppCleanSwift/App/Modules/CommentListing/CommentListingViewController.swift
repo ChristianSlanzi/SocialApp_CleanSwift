@@ -28,7 +28,7 @@ class CommentListingViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool)
     {
-      super.viewWillAppear(animated)
+        super.viewWillAppear(animated)
         fetchComments()
     }
     
@@ -38,14 +38,15 @@ class CommentListingViewController: UIViewController {
     
     func fetchComments()
     {
-      let request = CommentListingModel.Request()
-      interactor?.fetchComments(request: request)
+        let request = CommentListingModel.Request(parameters: ["postId" : "1"])
+        interactor?.fetchComments(request: request)
     }
 }
 
 extension CommentListingViewController: ICommentListingViewController {
     func displayFetchedComments(viewModel: CommentListingModel.ViewModel) {
-        
+        displayedComments = viewModel.displayedComments
+        tableView.reloadData()
     }
     
 	// do someting...
@@ -58,7 +59,7 @@ extension CommentListingViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 50
-        tableView.register(PostViewCell.self, forCellReuseIdentifier: CommentViewCell.identifier)
+        tableView.register(CommentViewCell.self, forCellReuseIdentifier: CommentViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
         

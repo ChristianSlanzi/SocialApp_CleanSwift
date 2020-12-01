@@ -22,13 +22,8 @@ class PostListingPresenter: IPostListingPresenter {
 
 extension PostListingPresenter {
     func presentFetchedPosts(response: PostListingModel.Response) {
-        var displayedPosts: [PostListingModel.ViewModel.DisplayedPost] = []
-        for post in response.posts {
-          //let date = dateFormatter.string(from: order.date)
-          //let total = currencyFormatter.string(from: order.total)
-            //guard let id = post.id, let title = post.title else { break }
-            let displayedPost = PostListingModel.ViewModel.DisplayedPost(id: post.id, title: post.title, body: post.body)
-            displayedPosts.append(displayedPost)
+        let displayedPosts = response.posts.map {
+            PostListingModel.ViewModel.DisplayedPost(id: $0.id, title: $0.title, body: $0.body)
         }
         let viewModel = PostListingModel.ViewModel(displayedPosts: displayedPosts)
         view.displayFetchedPosts(viewModel: viewModel)

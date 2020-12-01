@@ -22,13 +22,10 @@ struct PostListingModel {
 	}
 
 	struct ViewModel {
-        struct DisplayedPost
-        {
-          var id: Int
-          //var date: String
-          //var email: String
-          var title: String
-          //var total: String
+        struct DisplayedPost {
+            var id: Int
+            var title: String
+            var body: String
         }
         var displayedPosts: [DisplayedPost]
 	}

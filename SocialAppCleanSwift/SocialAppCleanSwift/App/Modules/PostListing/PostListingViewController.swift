@@ -60,7 +60,7 @@ extension PostListingViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 50
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(PostViewCell.self, forCellReuseIdentifier: PostViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -94,13 +94,18 @@ extension PostListingViewController: UITableViewDelegate {
 }
 
 extension PostListingViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 55
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.displayedPosts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = self.displayedPosts[indexPath.row].title
+        let cell = tableView.dequeueReusableCell(withIdentifier: PostViewCell.identifier, for: indexPath) as! PostViewCell
+        //cell.textLabel?.text = self.displayedPosts[indexPath.row].title
+        cell.item = self.displayedPosts[indexPath.row]
         return cell
     }
 }

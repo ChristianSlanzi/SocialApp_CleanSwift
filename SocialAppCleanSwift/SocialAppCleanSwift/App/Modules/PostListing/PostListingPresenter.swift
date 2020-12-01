@@ -27,7 +27,7 @@ extension PostListingPresenter {
           //let date = dateFormatter.string(from: order.date)
           //let total = currencyFormatter.string(from: order.total)
             //guard let id = post.id, let title = post.title else { break }
-            let displayedPost = PostListingModel.ViewModel.DisplayedPost(id: post.id, title: post.title)
+            let displayedPost = PostListingModel.ViewModel.DisplayedPost(id: post.id, title: post.title, body: post.body)
             displayedPosts.append(displayedPost)
         }
         let viewModel = PostListingModel.ViewModel(displayedPosts: displayedPosts)

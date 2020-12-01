@@ -19,6 +19,7 @@
 		247447B02576F91D006A6BAE /* CommentListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247447A82576F91D006A6BAE /* CommentListingModel.swift */; };
 		247447B12576F91D006A6BAE /* CommentListingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247447A92576F91D006A6BAE /* CommentListingViewController.xib */; };
 		247447B22576F91D006A6BAE /* CommentListingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247447AA2576F91D006A6BAE /* CommentListingManager.swift */; };
+		247447B92576FCD1006A6BAE /* CommentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247447B82576FCD1006A6BAE /* CommentViewCell.swift */; };
 		248517EA25759700006F8A60 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248517E925759700006F8A60 /* Comment.swift */; };
 		248517EF25759788006F8A60 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248517EE25759788006F8A60 /* Album.swift */; };
 		248517F4257597DE006F8A60 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248517F3257597DE006F8A60 /* Photo.swift */; };
@@ -148,6 +149,7 @@
 		247447A82576F91D006A6BAE /* CommentListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListingModel.swift; sourceTree = "<group>"; };
 		247447A92576F91D006A6BAE /* CommentListingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentListingViewController.xib; sourceTree = "<group>"; };
 		247447AA2576F91D006A6BAE /* CommentListingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListingManager.swift; sourceTree = "<group>"; };
+		247447B82576FCD1006A6BAE /* CommentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewCell.swift; sourceTree = "<group>"; };
 		248517E925759700006F8A60 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		248517EE25759788006F8A60 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		248517F3257597DE006F8A60 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 		247447A22576F8FD006A6BAE /* CommentListing */ = {
 			isa = PBXGroup;
 			children = (
+				247447B62576FCB5006A6BAE /* Views */,
 				247447A32576F91D006A6BAE /* CommentListingModule.swift */,
 				247447A42576F91D006A6BAE /* CommentListingPresenter.swift */,
 				247447A52576F91D006A6BAE /* CommentListingRouter.swift */,
@@ -328,6 +331,22 @@
 				247447AA2576F91D006A6BAE /* CommentListingManager.swift */,
 			);
 			path = CommentListing;
+			sourceTree = "<group>";
+		};
+		247447B62576FCB5006A6BAE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				247447B72576FCBD006A6BAE /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		247447B72576FCBD006A6BAE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				247447B82576FCD1006A6BAE /* CommentViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		248518132575B747006F8A60 /* Views */ = {
@@ -962,6 +981,7 @@
 				24CF04B72570026F00F92B49 /* MainModule.swift in Sources */,
 				24DD575A257036E200106BC6 /* ContactsViewController.swift in Sources */,
 				247447B22576F91D006A6BAE /* CommentListingManager.swift in Sources */,
+				247447B92576FCD1006A6BAE /* CommentViewCell.swift in Sources */,
 				24CF04BC2570026F00F92B49 /* MainModel.swift in Sources */,
 				24CF046F2570022C00F92B49 /* LoginInteractor.swift in Sources */,
 				24CF03FF256FBFFE00F92B49 /* SceneDelegate.swift in Sources */,

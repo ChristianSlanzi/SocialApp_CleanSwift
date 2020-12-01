@@ -9,9 +9,12 @@ import UIKit
 
 protocol ICommentListingInteractor: class {
 	var parameters: [String: Any]? { get }
+    
+    func fetchComments(request: CommentListingModel.Request)
 }
 
 class CommentListingInteractor: ICommentListingInteractor {
+
     var presenter: ICommentListingPresenter!
     var parameters: [String: Any]?
 
@@ -21,5 +24,11 @@ class CommentListingInteractor: ICommentListingInteractor {
 
     init(presenter: ICommentListingPresenter) {
     	self.presenter = presenter
+    }
+}
+
+extension CommentListingInteractor {
+    func fetchComments(request: CommentListingModel.Request) {
+        
     }
 }

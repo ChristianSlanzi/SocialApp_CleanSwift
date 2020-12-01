@@ -23,5 +23,9 @@ struct CommentListingModel {
 
 	struct ViewModel {
 		// do someting...
+        struct DisplayedComment {
+            var name: String
+            var body: String
+        }
 	}
 }

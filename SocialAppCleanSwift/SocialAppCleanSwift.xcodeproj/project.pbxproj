@@ -34,6 +34,14 @@
 		2485180F2575A6BD006F8A60 /* PostListingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248518072575A6BD006F8A60 /* PostListingManager.swift */; };
 		248518162575B7B4006F8A60 /* PostViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248518152575B7B4006F8A60 /* PostViewCell.swift */; };
 		248518212575B84D006F8A60 /* UITableViewCell+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248518202575B84D006F8A60 /* UITableViewCell+Ext.swift */; };
+		24BA4B74257922E300A7F088 /* AlbumListingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B6C257922E300A7F088 /* AlbumListingModule.swift */; };
+		24BA4B75257922E300A7F088 /* AlbumListingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B6D257922E300A7F088 /* AlbumListingPresenter.swift */; };
+		24BA4B76257922E300A7F088 /* AlbumListingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B6E257922E300A7F088 /* AlbumListingRouter.swift */; };
+		24BA4B77257922E300A7F088 /* AlbumListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B6F257922E300A7F088 /* AlbumListingViewController.swift */; };
+		24BA4B78257922E300A7F088 /* AlbumListingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B70257922E300A7F088 /* AlbumListingInteractor.swift */; };
+		24BA4B79257922E300A7F088 /* AlbumListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B71257922E300A7F088 /* AlbumListingModel.swift */; };
+		24BA4B7A257922E300A7F088 /* AlbumListingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BA4B72257922E300A7F088 /* AlbumListingViewController.xib */; };
+		24BA4B7B257922E300A7F088 /* AlbumListingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B73257922E300A7F088 /* AlbumListingManager.swift */; };
 		24CF03FD256FBFFE00F92B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF03FC256FBFFE00F92B49 /* AppDelegate.swift */; };
 		24CF03FF256FBFFE00F92B49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF03FE256FBFFE00F92B49 /* SceneDelegate.swift */; };
 		24CF0401256FBFFE00F92B49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF0400256FBFFE00F92B49 /* ViewController.swift */; };
@@ -164,6 +172,14 @@
 		248518072575A6BD006F8A60 /* PostListingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListingManager.swift; sourceTree = "<group>"; };
 		248518152575B7B4006F8A60 /* PostViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewCell.swift; sourceTree = "<group>"; };
 		248518202575B84D006F8A60 /* UITableViewCell+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Ext.swift"; sourceTree = "<group>"; };
+		24BA4B6C257922E300A7F088 /* AlbumListingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListingModule.swift; sourceTree = "<group>"; };
+		24BA4B6D257922E300A7F088 /* AlbumListingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListingPresenter.swift; sourceTree = "<group>"; };
+		24BA4B6E257922E300A7F088 /* AlbumListingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListingRouter.swift; sourceTree = "<group>"; };
+		24BA4B6F257922E300A7F088 /* AlbumListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListingViewController.swift; sourceTree = "<group>"; };
+		24BA4B70257922E300A7F088 /* AlbumListingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListingInteractor.swift; sourceTree = "<group>"; };
+		24BA4B71257922E300A7F088 /* AlbumListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListingModel.swift; sourceTree = "<group>"; };
+		24BA4B72257922E300A7F088 /* AlbumListingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumListingViewController.xib; sourceTree = "<group>"; };
+		24BA4B73257922E300A7F088 /* AlbumListingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListingManager.swift; sourceTree = "<group>"; };
 		24CF03F9256FBFFE00F92B49 /* SocialAppCleanSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialAppCleanSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24CF03FC256FBFFE00F92B49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24CF03FE256FBFFE00F92B49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -389,6 +405,21 @@
 			path = UITableViewCell;
 			sourceTree = "<group>";
 		};
+		24BA4B6B2579222A00A7F088 /* AlbumListing */ = {
+			isa = PBXGroup;
+			children = (
+				24BA4B6C257922E300A7F088 /* AlbumListingModule.swift */,
+				24BA4B6D257922E300A7F088 /* AlbumListingPresenter.swift */,
+				24BA4B6E257922E300A7F088 /* AlbumListingRouter.swift */,
+				24BA4B6F257922E300A7F088 /* AlbumListingViewController.swift */,
+				24BA4B70257922E300A7F088 /* AlbumListingInteractor.swift */,
+				24BA4B71257922E300A7F088 /* AlbumListingModel.swift */,
+				24BA4B72257922E300A7F088 /* AlbumListingViewController.xib */,
+				24BA4B73257922E300A7F088 /* AlbumListingManager.swift */,
+			);
+			path = AlbumListing;
+			sourceTree = "<group>";
+		};
 		24CF03F0256FBFFE00F92B49 = {
 			isa = PBXGroup;
 			children = (
@@ -459,6 +490,7 @@
 		24CF045C2570018800F92B49 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				24BA4B6B2579222A00A7F088 /* AlbumListing */,
 				247447A22576F8FD006A6BAE /* CommentListing */,
 				2402AAA92575855900D879C9 /* PostListing */,
 				24E0ADEB257407A700A54F30 /* ShowLocation */,
@@ -780,6 +812,7 @@
 				24E0ADFA257407FF00A54F30 /* ShowLocationViewController.xib in Resources */,
 				24CF0406256FC00000F92B49 /* Assets.xcassets in Resources */,
 				24DD57492570330100106BC6 /* SettingsViewController.xib in Resources */,
+				24BA4B7A257922E300A7F088 /* AlbumListingViewController.xib in Resources */,
 				24DD575D257036E200106BC6 /* ContactsViewController.xib in Resources */,
 				247447B12576F91D006A6BAE /* CommentListingViewController.xib in Resources */,
 				24CF04712570022C00F92B49 /* LoginViewController.xib in Resources */,
@@ -942,6 +975,7 @@
 				24DD57462570330100106BC6 /* SettingsViewController.swift in Sources */,
 				24CF04C72570029700F92B49 /* Module.swift in Sources */,
 				24CF04AB2570026100F92B49 /* DetailManager.swift in Sources */,
+				24BA4B74257922E300A7F088 /* AlbumListingModule.swift in Sources */,
 				247447AB2576F91D006A6BAE /* CommentListingModule.swift in Sources */,
 				2485180D2575A6BD006F8A60 /* PostListingModel.swift in Sources */,
 				24CF046D2570022C00F92B49 /* LoginRouter.swift in Sources */,
@@ -958,6 +992,7 @@
 				24DD576B2570382F00106BC6 /* NetworkingService.swift in Sources */,
 				24CF04802570024200F92B49 /* HomeRouter.swift in Sources */,
 				248518162575B7B4006F8A60 /* PostViewCell.swift in Sources */,
+				24BA4B79257922E300A7F088 /* AlbumListingModel.swift in Sources */,
 				24CF04A62570026100F92B49 /* DetailRouter.swift in Sources */,
 				24CF04B82570026F00F92B49 /* MainPresenter.swift in Sources */,
 				24E0ADF6257407FF00A54F30 /* ShowLocationRouter.swift in Sources */,
@@ -970,9 +1005,12 @@
 				24E0ADFB257407FF00A54F30 /* ShowLocationManager.swift in Sources */,
 				2402AAA525757FDF00D879C9 /* NetworkingServiceMock.swift in Sources */,
 				248517EA25759700006F8A60 /* Comment.swift in Sources */,
+				24BA4B7B257922E300A7F088 /* AlbumListingManager.swift in Sources */,
 				248517EF25759788006F8A60 /* Album.swift in Sources */,
 				24CF04CC2570030200F92B49 /* GeneralRouter.swift in Sources */,
+				24BA4B77257922E300A7F088 /* AlbumListingViewController.swift in Sources */,
 				247447AF2576F91D006A6BAE /* CommentListingInteractor.swift in Sources */,
+				24BA4B78257922E300A7F088 /* AlbumListingInteractor.swift in Sources */,
 				248517F4257597DE006F8A60 /* Photo.swift in Sources */,
 				24CF04BB2570026F00F92B49 /* MainInteractor.swift in Sources */,
 				24CF04A42570026100F92B49 /* DetailModule.swift in Sources */,
@@ -988,6 +1026,7 @@
 				24DD5757257036E200106BC6 /* ContactsModule.swift in Sources */,
 				248518092575A6BD006F8A60 /* PostListingPresenter.swift in Sources */,
 				24CF04982570025300F92B49 /* ProfileManager.swift in Sources */,
+				24BA4B75257922E300A7F088 /* AlbumListingPresenter.swift in Sources */,
 				2402AA9F25757E8000D879C9 /* Post.swift in Sources */,
 				247447AE2576F91D006A6BAE /* CommentListingViewController.swift in Sources */,
 				2485180B2575A6BD006F8A60 /* PostListingViewController.swift in Sources */,
@@ -1001,6 +1040,7 @@
 				24CF046B2570022C00F92B49 /* LoginModule.swift in Sources */,
 				24CF046C2570022C00F92B49 /* LoginPresenter.swift in Sources */,
 				24CF04A72570026100F92B49 /* DetailViewController.swift in Sources */,
+				24BA4B76257922E300A7F088 /* AlbumListingRouter.swift in Sources */,
 				24E0ADF8257407FF00A54F30 /* ShowLocationInteractor.swift in Sources */,
 				24DD576D2570382F00106BC6 /* UserModel.swift in Sources */,
 				2485180F2575A6BD006F8A60 /* PostListingManager.swift in Sources */,

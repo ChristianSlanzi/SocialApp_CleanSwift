@@ -30,7 +30,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             "Contacts" : GeneralRouter.contacts.imodule,
             "ShowLocation" : GeneralRouter.showLocation.imodule,
             "PostListing" : GeneralRouter.postListing.imodule,
-            "CommentListing" : GeneralRouter.commentListing.imodule
+            "CommentListing" : GeneralRouter.commentListing.imodule,
+            "AlbumListing" : GeneralRouter.albumListing.imodule
         ]
         
         let startModule = GeneralRouter.login.module

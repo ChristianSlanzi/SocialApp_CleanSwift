@@ -9,6 +9,7 @@ import UIKit
 
 protocol IPhotoListingInteractor: class {
 	var parameters: [String: Any]? { get }
+    func fetchPhotos(request: PhotoListingModel.Request)
 }
 
 class PhotoListingInteractor: IPhotoListingInteractor {
@@ -21,5 +22,20 @@ class PhotoListingInteractor: IPhotoListingInteractor {
 
     init(presenter: IPhotoListingPresenter) {
     	self.presenter = presenter
+    }
+}
+
+extension PhotoListingInteractor {
+    func fetchPhotos(request: PhotoListingModel.Request) {
+        guard let albumId = parameters?["albumId"] as? Int else { return }
+        Current.networkingService.retrievePhotos(for: albumId) { (result) in
+            switch(result) {
+            case .success(let photos):
+                let response = PhotoListingModel.Response(photos: photos)
+                self.presenter.presentFetchedPhotos(response: response)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }

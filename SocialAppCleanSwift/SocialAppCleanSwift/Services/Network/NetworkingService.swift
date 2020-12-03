@@ -37,8 +37,8 @@ class NetworkingService: ApiServiceInterface {
         retrieveItems(url: "https://jsonplaceholder.typicode.com/users/\(userId)/albums/", completion: completion)
     }
     
-    func retrievePhotos(completion: @escaping (Result<[Photo], Error>) -> Void) {
-        retrieveItems(url: "https://jsonplaceholder.typicode.com/photos", completion: completion)
+    func retrievePhotos(for albumId: Int, completion: @escaping (Result<[Photo], Error>) -> Void) {
+        retrieveItems(url: "https://jsonplaceholder.typicode.com/albums/\(albumId)/photos", completion: completion)
     }
     
     func retrievePosts(completion: @escaping (Result<[Post], Error>) -> Void) {

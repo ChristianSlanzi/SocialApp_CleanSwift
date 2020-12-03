@@ -17,11 +17,15 @@ struct PhotoListingModel {
 		}
 	}
 
-	struct Response {
-		// do someting...
-	}
+    struct Response {
+        var photos: [Photo]
+    }
 
-	struct ViewModel {
-		// do someting...
-	}
+    struct ViewModel {
+        struct DisplayedPhoto {
+            var id: Int
+            var name: String
+        }
+        var displayedPhotos: [DisplayedPhoto]
+    }
 }

@@ -9,6 +9,7 @@ import UIKit
 
 protocol IPhotoListingViewController: class {
 	// do someting...
+    func displayFetchedPhotos(viewModel: PhotoListingModel.ViewModel)
 }
 
 class PhotoListingViewController: UIViewController {
@@ -23,10 +24,29 @@ class PhotoListingViewController: UIViewController {
         configureCollectionView()
     }
     
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        fetchPhotos()
+    }
     
+    // MARK: - Fetch posts
+    
+    var displayedPhotos: [PhotoListingModel.ViewModel.DisplayedPhoto] = []
+    
+    func fetchPhotos()
+    {
+        let request = PhotoListingModel.Request()
+        interactor?.fetchPhotos(request: request)
+    }
 }
 
 extension PhotoListingViewController: IPhotoListingViewController {
+    func displayFetchedPhotos(viewModel: PhotoListingModel.ViewModel) {
+        displayedPhotos = viewModel.displayedPhotos
+        collectionView.reloadData()
+    }
+    
 	// do someting...
 }
 
@@ -59,7 +79,7 @@ extension PhotoListingViewController: UICollectionViewDelegate {
 /// UICollectionViewDataSource Conformance
 extension PhotoListingViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        displayedPhotos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

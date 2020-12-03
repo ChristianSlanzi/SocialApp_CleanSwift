@@ -9,6 +9,8 @@ import UIKit
 
 protocol IAlbumListingInteractor: class {
 	var parameters: [String: Any]? { get }
+    
+    func fetchAlbums(request: AlbumListingModel.Request)
 }
 
 class AlbumListingInteractor: IAlbumListingInteractor {
@@ -21,5 +23,11 @@ class AlbumListingInteractor: IAlbumListingInteractor {
 
     init(presenter: IAlbumListingPresenter) {
     	self.presenter = presenter
+    }
+}
+
+extension AlbumListingInteractor {
+    func fetchAlbums(request: AlbumListingModel.Request) {
+        
     }
 }

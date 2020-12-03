@@ -51,6 +51,11 @@
 		24BA4B942579761900A7F088 /* PhotoListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B8C2579761900A7F088 /* PhotoListingModel.swift */; };
 		24BA4B952579761900A7F088 /* PhotoListingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BA4B8D2579761900A7F088 /* PhotoListingViewController.xib */; };
 		24BA4B962579761900A7F088 /* PhotoListingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B8E2579761900A7F088 /* PhotoListingManager.swift */; };
+		24C89CD32579988500791646 /* CollectionViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C89CD22579988500791646 /* CollectionViewHelper.swift */; };
+		24C89CDE257999B300791646 /* UICollectionViewCell+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C89CDD257999B300791646 /* UICollectionViewCell+Ext.swift */; };
+		24C89CE6257999FE00791646 /* PhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C89CE5257999FE00791646 /* PhotoViewCell.swift */; };
+		24C89CEC25799C2F00791646 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C89CEB25799C2F00791646 /* UIColor+Ext.swift */; };
+		24C89CF525799C7000791646 /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C89CF425799C7000791646 /* CGFloat+Ext.swift */; };
 		24CF03FD256FBFFE00F92B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF03FC256FBFFE00F92B49 /* AppDelegate.swift */; };
 		24CF03FF256FBFFE00F92B49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF03FE256FBFFE00F92B49 /* SceneDelegate.swift */; };
 		24CF0401256FBFFE00F92B49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF0400256FBFFE00F92B49 /* ViewController.swift */; };
@@ -198,6 +203,11 @@
 		24BA4B8C2579761900A7F088 /* PhotoListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListingModel.swift; sourceTree = "<group>"; };
 		24BA4B8D2579761900A7F088 /* PhotoListingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoListingViewController.xib; sourceTree = "<group>"; };
 		24BA4B8E2579761900A7F088 /* PhotoListingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListingManager.swift; sourceTree = "<group>"; };
+		24C89CD22579988500791646 /* CollectionViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHelper.swift; sourceTree = "<group>"; };
+		24C89CDD257999B300791646 /* UICollectionViewCell+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Ext.swift"; sourceTree = "<group>"; };
+		24C89CE5257999FE00791646 /* PhotoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewCell.swift; sourceTree = "<group>"; };
+		24C89CEB25799C2F00791646 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		24C89CF425799C7000791646 /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
 		24CF03F9256FBFFE00F92B49 /* SocialAppCleanSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialAppCleanSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24CF03FC256FBFFE00F92B49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24CF03FE256FBFFE00F92B49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -402,6 +412,7 @@
 		2485181D2575B824006F8A60 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				24C89CD02579985400791646 /* Helpers */,
 				2485181E2575B82B006F8A60 /* Extensions */,
 			);
 			path = Utils;
@@ -410,6 +421,9 @@
 		2485181E2575B82B006F8A60 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				24C89CF325799C6000791646 /* CGFloat */,
+				24C89CEA25799C1900791646 /* UIColor */,
+				24C89CDC2579999600791646 /* UICollectionViewCell */,
 				2485181F2575B834006F8A60 /* UITableViewCell */,
 			);
 			path = Extensions;
@@ -458,6 +472,7 @@
 		24BA4B86257975B100A7F088 /* PhotoListing */ = {
 			isa = PBXGroup;
 			children = (
+				24C89CDA2579995A00791646 /* Views */,
 				24BA4B872579761900A7F088 /* PhotoListingModule.swift */,
 				24BA4B882579761900A7F088 /* PhotoListingPresenter.swift */,
 				24BA4B892579761900A7F088 /* PhotoListingRouter.swift */,
@@ -468,6 +483,62 @@
 				24BA4B8E2579761900A7F088 /* PhotoListingManager.swift */,
 			);
 			path = PhotoListing;
+			sourceTree = "<group>";
+		};
+		24C89CD02579985400791646 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				24C89CD12579985C00791646 /* UICollectionView */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		24C89CD12579985C00791646 /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				24C89CD22579988500791646 /* CollectionViewHelper.swift */,
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		24C89CDA2579995A00791646 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				24C89CDB2579996100791646 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		24C89CDB2579996100791646 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				24C89CE5257999FE00791646 /* PhotoViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		24C89CDC2579999600791646 /* UICollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				24C89CDD257999B300791646 /* UICollectionViewCell+Ext.swift */,
+			);
+			path = UICollectionViewCell;
+			sourceTree = "<group>";
+		};
+		24C89CEA25799C1900791646 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				24C89CEB25799C2F00791646 /* UIColor+Ext.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		24C89CF325799C6000791646 /* CGFloat */ = {
+			isa = PBXGroup;
+			children = (
+				24C89CF425799C7000791646 /* CGFloat+Ext.swift */,
+			);
+			path = CGFloat;
 			sourceTree = "<group>";
 		};
 		24CF03F0256FBFFE00F92B49 = {
@@ -1025,6 +1096,7 @@
 				24CF047F2570024200F92B49 /* HomePresenter.swift in Sources */,
 				2425E8402576C0970084E415 /* Environment.swift in Sources */,
 				24CF04A82570026100F92B49 /* DetailInteractor.swift in Sources */,
+				24C89CDE257999B300791646 /* UICollectionViewCell+Ext.swift in Sources */,
 				24DD57462570330100106BC6 /* SettingsViewController.swift in Sources */,
 				24CF04C72570029700F92B49 /* Module.swift in Sources */,
 				24CF04AB2570026100F92B49 /* DetailManager.swift in Sources */,
@@ -1035,6 +1107,7 @@
 				247447AD2576F91D006A6BAE /* CommentListingRouter.swift in Sources */,
 				24DD575B257036E200106BC6 /* ContactsInteractor.swift in Sources */,
 				24E0ADF5257407FF00A54F30 /* ShowLocationPresenter.swift in Sources */,
+				24C89CEC25799C2F00791646 /* UIColor+Ext.swift in Sources */,
 				24CF04BA2570026F00F92B49 /* MainViewController.swift in Sources */,
 				24DD576A2570382F00106BC6 /* ApiServiceInterface.swift in Sources */,
 				24BA4B932579761900A7F088 /* PhotoListingInteractor.swift in Sources */,
@@ -1055,6 +1128,7 @@
 				24CF04702570022C00F92B49 /* LoginModel.swift in Sources */,
 				247447B02576F91D006A6BAE /* CommentListingModel.swift in Sources */,
 				24DD576C2570382F00106BC6 /* ServiceInterface.swift in Sources */,
+				24C89CD32579988500791646 /* CollectionViewHelper.swift in Sources */,
 				248518212575B84D006F8A60 /* UITableViewCell+Ext.swift in Sources */,
 				24E0ADF7257407FF00A54F30 /* ShowLocationViewController.swift in Sources */,
 				24DD575E257036E200106BC6 /* ContactsManager.swift in Sources */,
@@ -1073,9 +1147,11 @@
 				24CF04BB2570026F00F92B49 /* MainInteractor.swift in Sources */,
 				24CF04A42570026100F92B49 /* DetailModule.swift in Sources */,
 				24CF04722570022C00F92B49 /* LoginManager.swift in Sources */,
+				24C89CE6257999FE00791646 /* PhotoViewCell.swift in Sources */,
 				248517F92575A236006F8A60 /* JSONinitiable.swift in Sources */,
 				24CF04B72570026F00F92B49 /* MainModule.swift in Sources */,
 				24DD575A257036E200106BC6 /* ContactsViewController.swift in Sources */,
+				24C89CF525799C7000791646 /* CGFloat+Ext.swift in Sources */,
 				247447B22576F91D006A6BAE /* CommentListingManager.swift in Sources */,
 				247447B92576FCD1006A6BAE /* CommentViewCell.swift in Sources */,
 				24CF04BC2570026F00F92B49 /* MainModel.swift in Sources */,

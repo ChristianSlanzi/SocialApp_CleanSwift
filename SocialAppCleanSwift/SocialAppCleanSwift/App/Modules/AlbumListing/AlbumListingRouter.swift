@@ -9,9 +9,11 @@ import UIKit
 
 protocol IAlbumListingRouter {
 	// do someting...
+    func navigateToPhotos(for albumId: Int)
 }
 
 class AlbumListingRouter: IAlbumListingRouter {
+
     var appRouter: IAppRouter
 
     init(appRouter: IAppRouter) {
@@ -31,5 +33,11 @@ class AlbumListingRouter: IAlbumListingRouter {
         view.router = self
         interactor.parameters = parameters
         return view        
+    }
+}
+
+extension AlbumListingRouter {
+    func navigateToPhotos(for albumId: Int) {
+        appRouter.presentModule(module: PhotoListingModule(appRouter), parameters: ["albumId" : albumId])
     }
 }

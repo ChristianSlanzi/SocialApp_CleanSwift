@@ -1,5 +1,5 @@
 //
-//  AlbumListingModel.swift
+//  PhotoListingModel.swift
 //  SocialAppCleanSwift
 //
 //  Created by Christian Slanzi on 03.12.20.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct AlbumListingModel {	
+struct PhotoListingModel {	
 	struct Request {
 		// do someting...
 
@@ -18,14 +18,10 @@ struct AlbumListingModel {
 	}
 
 	struct Response {
-        var albums: [Album]
+		// do someting...
 	}
 
 	struct ViewModel {
-        struct DisplayedAlbum {
-            var id: Int
-            var name: String
-        }
-        var displayedAlbums: [DisplayedAlbum]
+		// do someting...
 	}
 }

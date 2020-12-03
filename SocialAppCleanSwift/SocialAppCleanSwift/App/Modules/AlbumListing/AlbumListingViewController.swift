@@ -80,7 +80,7 @@ extension AlbumListingViewController {
 
 extension AlbumListingViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        router.navigateToPhotos(for: self.displayedAlbums[indexPath.row].id)
     }
 }
 

@@ -23,7 +23,7 @@ class AlbumListingPresenter: IAlbumListingPresenter {
 extension AlbumListingPresenter {
     func presentFetchedAlbums(response: AlbumListingModel.Response) {
         let displayedAlbums = response.albums.map({
-            AlbumListingModel.ViewModel.DisplayedAlbum(name: $0.title)
+            AlbumListingModel.ViewModel.DisplayedAlbum(id: $0.id, name: $0.title)
         })
         let viewModel = AlbumListingModel.ViewModel(displayedAlbums: displayedAlbums)
         view.displayFetchedAlbums(viewModel: viewModel)

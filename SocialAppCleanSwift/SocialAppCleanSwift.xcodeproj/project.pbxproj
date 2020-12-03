@@ -43,6 +43,14 @@
 		24BA4B7A257922E300A7F088 /* AlbumListingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BA4B72257922E300A7F088 /* AlbumListingViewController.xib */; };
 		24BA4B7B257922E300A7F088 /* AlbumListingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B73257922E300A7F088 /* AlbumListingManager.swift */; };
 		24BA4B8225794B6C00A7F088 /* AlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B8125794B6C00A7F088 /* AlbumViewCell.swift */; };
+		24BA4B8F2579761900A7F088 /* PhotoListingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B872579761900A7F088 /* PhotoListingModule.swift */; };
+		24BA4B902579761900A7F088 /* PhotoListingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B882579761900A7F088 /* PhotoListingPresenter.swift */; };
+		24BA4B912579761900A7F088 /* PhotoListingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B892579761900A7F088 /* PhotoListingRouter.swift */; };
+		24BA4B922579761900A7F088 /* PhotoListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B8A2579761900A7F088 /* PhotoListingViewController.swift */; };
+		24BA4B932579761900A7F088 /* PhotoListingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B8B2579761900A7F088 /* PhotoListingInteractor.swift */; };
+		24BA4B942579761900A7F088 /* PhotoListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B8C2579761900A7F088 /* PhotoListingModel.swift */; };
+		24BA4B952579761900A7F088 /* PhotoListingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BA4B8D2579761900A7F088 /* PhotoListingViewController.xib */; };
+		24BA4B962579761900A7F088 /* PhotoListingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B8E2579761900A7F088 /* PhotoListingManager.swift */; };
 		24CF03FD256FBFFE00F92B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF03FC256FBFFE00F92B49 /* AppDelegate.swift */; };
 		24CF03FF256FBFFE00F92B49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF03FE256FBFFE00F92B49 /* SceneDelegate.swift */; };
 		24CF0401256FBFFE00F92B49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF0400256FBFFE00F92B49 /* ViewController.swift */; };
@@ -182,6 +190,14 @@
 		24BA4B72257922E300A7F088 /* AlbumListingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumListingViewController.xib; sourceTree = "<group>"; };
 		24BA4B73257922E300A7F088 /* AlbumListingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListingManager.swift; sourceTree = "<group>"; };
 		24BA4B8125794B6C00A7F088 /* AlbumViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewCell.swift; sourceTree = "<group>"; };
+		24BA4B872579761900A7F088 /* PhotoListingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListingModule.swift; sourceTree = "<group>"; };
+		24BA4B882579761900A7F088 /* PhotoListingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListingPresenter.swift; sourceTree = "<group>"; };
+		24BA4B892579761900A7F088 /* PhotoListingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListingRouter.swift; sourceTree = "<group>"; };
+		24BA4B8A2579761900A7F088 /* PhotoListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListingViewController.swift; sourceTree = "<group>"; };
+		24BA4B8B2579761900A7F088 /* PhotoListingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListingInteractor.swift; sourceTree = "<group>"; };
+		24BA4B8C2579761900A7F088 /* PhotoListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListingModel.swift; sourceTree = "<group>"; };
+		24BA4B8D2579761900A7F088 /* PhotoListingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoListingViewController.xib; sourceTree = "<group>"; };
+		24BA4B8E2579761900A7F088 /* PhotoListingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListingManager.swift; sourceTree = "<group>"; };
 		24CF03F9256FBFFE00F92B49 /* SocialAppCleanSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialAppCleanSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24CF03FC256FBFFE00F92B49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24CF03FE256FBFFE00F92B49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -439,6 +455,21 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		24BA4B86257975B100A7F088 /* PhotoListing */ = {
+			isa = PBXGroup;
+			children = (
+				24BA4B872579761900A7F088 /* PhotoListingModule.swift */,
+				24BA4B882579761900A7F088 /* PhotoListingPresenter.swift */,
+				24BA4B892579761900A7F088 /* PhotoListingRouter.swift */,
+				24BA4B8A2579761900A7F088 /* PhotoListingViewController.swift */,
+				24BA4B8B2579761900A7F088 /* PhotoListingInteractor.swift */,
+				24BA4B8C2579761900A7F088 /* PhotoListingModel.swift */,
+				24BA4B8D2579761900A7F088 /* PhotoListingViewController.xib */,
+				24BA4B8E2579761900A7F088 /* PhotoListingManager.swift */,
+			);
+			path = PhotoListing;
+			sourceTree = "<group>";
+		};
 		24CF03F0256FBFFE00F92B49 = {
 			isa = PBXGroup;
 			children = (
@@ -509,6 +540,7 @@
 		24CF045C2570018800F92B49 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				24BA4B86257975B100A7F088 /* PhotoListing */,
 				24BA4B6B2579222A00A7F088 /* AlbumListing */,
 				247447A22576F8FD006A6BAE /* CommentListing */,
 				2402AAA92575855900D879C9 /* PostListing */,
@@ -836,6 +868,7 @@
 				247447B12576F91D006A6BAE /* CommentListingViewController.xib in Resources */,
 				24CF04712570022C00F92B49 /* LoginViewController.xib in Resources */,
 				24CF04972570025300F92B49 /* ProfileViewController.xib in Resources */,
+				24BA4B952579761900A7F088 /* PhotoListingViewController.xib in Resources */,
 				24CF04BD2570026F00F92B49 /* MainViewController.xib in Resources */,
 				2485180E2575A6BD006F8A60 /* PostListingViewController.xib in Resources */,
 				24CF04842570024200F92B49 /* HomeViewController.xib in Resources */,
@@ -988,6 +1021,7 @@
 				24CF04822570024200F92B49 /* HomeInteractor.swift in Sources */,
 				24CF04C62570029700F92B49 /* AppRoute.swift in Sources */,
 				24CF04832570024200F92B49 /* HomeModel.swift in Sources */,
+				24BA4B912579761900A7F088 /* PhotoListingRouter.swift in Sources */,
 				24CF047F2570024200F92B49 /* HomePresenter.swift in Sources */,
 				2425E8402576C0970084E415 /* Environment.swift in Sources */,
 				24CF04A82570026100F92B49 /* DetailInteractor.swift in Sources */,
@@ -1003,8 +1037,11 @@
 				24E0ADF5257407FF00A54F30 /* ShowLocationPresenter.swift in Sources */,
 				24CF04BA2570026F00F92B49 /* MainViewController.swift in Sources */,
 				24DD576A2570382F00106BC6 /* ApiServiceInterface.swift in Sources */,
+				24BA4B932579761900A7F088 /* PhotoListingInteractor.swift in Sources */,
 				24CF04952570025300F92B49 /* ProfileInteractor.swift in Sources */,
+				24BA4B942579761900A7F088 /* PhotoListingModel.swift in Sources */,
 				24CF04812570024200F92B49 /* HomeViewController.swift in Sources */,
+				24BA4B922579761900A7F088 /* PhotoListingViewController.swift in Sources */,
 				247447AC2576F91D006A6BAE /* CommentListingPresenter.swift in Sources */,
 				24CF047E2570024200F92B49 /* HomeModule.swift in Sources */,
 				24CF04922570025200F92B49 /* ProfilePresenter.swift in Sources */,
@@ -1025,8 +1062,10 @@
 				2402AAA525757FDF00D879C9 /* NetworkingServiceMock.swift in Sources */,
 				248517EA25759700006F8A60 /* Comment.swift in Sources */,
 				24BA4B7B257922E300A7F088 /* AlbumListingManager.swift in Sources */,
+				24BA4B962579761900A7F088 /* PhotoListingManager.swift in Sources */,
 				248517EF25759788006F8A60 /* Album.swift in Sources */,
 				24CF04CC2570030200F92B49 /* GeneralRouter.swift in Sources */,
+				24BA4B8F2579761900A7F088 /* PhotoListingModule.swift in Sources */,
 				24BA4B77257922E300A7F088 /* AlbumListingViewController.swift in Sources */,
 				247447AF2576F91D006A6BAE /* CommentListingInteractor.swift in Sources */,
 				24BA4B78257922E300A7F088 /* AlbumListingInteractor.swift in Sources */,
@@ -1057,6 +1096,7 @@
 				248518082575A6BD006F8A60 /* PostListingModule.swift in Sources */,
 				24BA4B8225794B6C00A7F088 /* AlbumViewCell.swift in Sources */,
 				24CF04BE2570026F00F92B49 /* MainManager.swift in Sources */,
+				24BA4B902579761900A7F088 /* PhotoListingPresenter.swift in Sources */,
 				24CF046B2570022C00F92B49 /* LoginModule.swift in Sources */,
 				24CF046C2570022C00F92B49 /* LoginPresenter.swift in Sources */,
 				24CF04A72570026100F92B49 /* DetailViewController.swift in Sources */,

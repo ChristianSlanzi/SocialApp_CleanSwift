@@ -75,6 +75,14 @@ class ProfileViewController: UIViewController {
         view.setTitle("SHOW ALBUMS", for: .normal)
         return view
     }()
+    
+    let todosButton: UIButton = {
+        let view = UIButton()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .cyan
+        view.setTitle("SHOW TODOS", for: .normal)
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,10 +95,13 @@ class ProfileViewController: UIViewController {
         view.addSubview(phoneLabel)
         view.addSubview(locationButton)
         view.addSubview(albumsButton)
+        view.addSubview(todosButton)
         
         locationButton.addTarget(self, action: #selector(navigateToShowLocation(_:)), for: .touchUpInside)
         
         albumsButton.addTarget(self, action: #selector(navigateToAlbumListing(_:)), for: .touchUpInside)
+        
+        todosButton.addTarget(self, action: #selector(navigateToTodoListing(_:)), for: .touchUpInside)
         
         setupConstraints()
         interactor.getUser(request: ProfileModel.Request())
@@ -102,6 +113,10 @@ class ProfileViewController: UIViewController {
     
     @objc func navigateToAlbumListing(_ sender: UIButton) {
         router.navigateToAlbumListing()
+    }
+    
+    @objc func navigateToTodoListing(_ sender: UIButton) {
+        router.navigateToTodoListing()
     }
     
     private func setupConstraints() {
@@ -159,6 +174,13 @@ class ProfileViewController: UIViewController {
             albumsButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
             albumsButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin),
             albumsButton.heightAnchor.constraint(equalToConstant: 30)
+        ])
+        
+        NSLayoutConstraint.activate([
+            todosButton.topAnchor.constraint(equalTo: albumsButton.bottomAnchor, constant: margin),
+            todosButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
+            todosButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin),
+            todosButton.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
 }

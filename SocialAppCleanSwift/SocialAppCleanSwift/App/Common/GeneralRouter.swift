@@ -18,6 +18,7 @@ enum GeneralRouter {
     case commentListing
     case albumListing
     case photoListing
+    case todoListing
 }
 
 extension GeneralRouter {
@@ -58,6 +59,9 @@ extension GeneralRouter {
     func mappingPhotoListing(value: IAppRouter) -> IModule {
         return PhotoListingModule(value)
     }
+    func mappingTodoListing(value: IAppRouter) -> IModule {
+        return TodoListingModule(value)
+    }
     
     var imodule: (_ value: IAppRouter) -> IModule {
         
@@ -86,6 +90,8 @@ extension GeneralRouter {
             return mappingAlbumListing
         case .photoListing:
             return mappingPhotoListing
+        case .todoListing:
+            return mappingTodoListing
         }
     }
     

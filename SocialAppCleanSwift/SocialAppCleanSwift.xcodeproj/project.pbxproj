@@ -56,6 +56,7 @@
 		24C89CE6257999FE00791646 /* PhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C89CE5257999FE00791646 /* PhotoViewCell.swift */; };
 		24C89CEC25799C2F00791646 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C89CEB25799C2F00791646 /* UIColor+Ext.swift */; };
 		24C89CF525799C7000791646 /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C89CF425799C7000791646 /* CGFloat+Ext.swift */; };
+		24C89CFD2579A77900791646 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C89CFC2579A77900791646 /* Todo.swift */; };
 		24CF03FD256FBFFE00F92B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF03FC256FBFFE00F92B49 /* AppDelegate.swift */; };
 		24CF03FF256FBFFE00F92B49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF03FE256FBFFE00F92B49 /* SceneDelegate.swift */; };
 		24CF0401256FBFFE00F92B49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF0400256FBFFE00F92B49 /* ViewController.swift */; };
@@ -208,6 +209,7 @@
 		24C89CE5257999FE00791646 /* PhotoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewCell.swift; sourceTree = "<group>"; };
 		24C89CEB25799C2F00791646 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		24C89CF425799C7000791646 /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
+		24C89CFC2579A77900791646 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		24CF03F9256FBFFE00F92B49 /* SocialAppCleanSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialAppCleanSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24CF03FC256FBFFE00F92B49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24CF03FE256FBFFE00F92B49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -779,6 +781,7 @@
 				248517E925759700006F8A60 /* Comment.swift */,
 				248517EE25759788006F8A60 /* Album.swift */,
 				248517F3257597DE006F8A60 /* Photo.swift */,
+				24C89CFC2579A77900791646 /* Todo.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -1161,6 +1164,7 @@
 				248518092575A6BD006F8A60 /* PostListingPresenter.swift in Sources */,
 				24CF04982570025300F92B49 /* ProfileManager.swift in Sources */,
 				24BA4B75257922E300A7F088 /* AlbumListingPresenter.swift in Sources */,
+				24C89CFD2579A77900791646 /* Todo.swift in Sources */,
 				2402AA9F25757E8000D879C9 /* Post.swift in Sources */,
 				247447AE2576F91D006A6BAE /* CommentListingViewController.swift in Sources */,
 				2485180B2575A6BD006F8A60 /* PostListingViewController.swift in Sources */,

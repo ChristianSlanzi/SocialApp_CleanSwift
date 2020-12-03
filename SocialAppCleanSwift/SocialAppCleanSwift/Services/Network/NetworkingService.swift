@@ -9,7 +9,7 @@ import Alamofire
 import SwiftyJSON
 
 class NetworkingService: ApiServiceInterface {
-
+    
     private func retrieveItems<T: JSONinitiable>(url: String, completion: @escaping (Result<[T], Error>) -> Void) {
         AF.request(url).responseJSON { (response) in
             switch(response.result) {
@@ -27,6 +27,10 @@ class NetworkingService: ApiServiceInterface {
                 completion(.failure(error))
             }
         }
+    }
+    
+    func retrieveTodos(for userId: Int, completion: @escaping (Result<[Todo], Error>) -> Void) {
+        retrieveItems(url: "https://jsonplaceholder.typicode.com/users/\(userId)/todos/", completion: completion)
     }
     
     func retrieveComments(for postId: Int, completion: @escaping (Result<[Comment], Error>) -> Void) {

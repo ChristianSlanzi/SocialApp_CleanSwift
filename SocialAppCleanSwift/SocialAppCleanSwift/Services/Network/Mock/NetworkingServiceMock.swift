@@ -12,7 +12,7 @@ enum NetworkServiceError: Error {
 }
 
 class NetworkingServiceMock: ApiServiceInterface {
-
+    
     private func retrieveItems<T: JSONinitiable>(json: JSON, completion: @escaping (Result<[T], Error>) -> Void) {
         if let data = json.array {
             let items = data.map({ T(json: JSON($0.object)) })
@@ -20,6 +20,10 @@ class NetworkingServiceMock: ApiServiceInterface {
             return
         }
         completion(.failure(NetworkServiceError.jsonWrongFormat))
+    }
+    
+    func retrieveTodos(for userId: Int, completion: @escaping (Result<[Todo], Error>) -> Void) {
+        retrieveItems(json: todosData, completion: completion)
     }
     
     func retrieveComments(for postId: Int, completion: @escaping (Result<[Comment], Error>) -> Void) {

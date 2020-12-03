@@ -11,4 +11,5 @@ protocol ApiServiceInterface: ServiceInterface {
     func retrieveComments(for postId: Int, completion: @escaping (Result<[Comment], Error>)->Void)
     func retrieveAlbums(for userId: Int, completion: @escaping (Result<[Album], Error>)->Void)
     func retrievePhotos(for albumId: Int, completion: @escaping (Result<[Photo], Error>)->Void)
+    func retrieveTodos(for userId: Int, completion: @escaping (Result<[Todo], Error>)->Void)
 }

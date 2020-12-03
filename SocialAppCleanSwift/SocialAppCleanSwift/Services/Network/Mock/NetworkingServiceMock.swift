@@ -22,7 +22,7 @@ class NetworkingServiceMock: ApiServiceInterface {
         completion(.failure(NetworkServiceError.jsonWrongFormat))
     }
     
-    func retrieveComments(for postId: String, completion: @escaping (Result<[Comment], Error>) -> Void) {
+    func retrieveComments(for postId: Int, completion: @escaping (Result<[Comment], Error>) -> Void) {
         retrieveItems(json: commentsPost1Data, completion: completion)
     }
     

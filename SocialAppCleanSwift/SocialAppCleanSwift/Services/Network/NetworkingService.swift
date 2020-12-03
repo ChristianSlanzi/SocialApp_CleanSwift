@@ -29,7 +29,7 @@ class NetworkingService: ApiServiceInterface {
         }
     }
     
-    func retrieveComments(for postId: String, completion: @escaping (Result<[Comment], Error>) -> Void) {
+    func retrieveComments(for postId: Int, completion: @escaping (Result<[Comment], Error>) -> Void) {
         retrieveItems(url: "https://jsonplaceholder.typicode.com/post/\(postId)/comments", completion: completion)
     }
     

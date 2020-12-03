@@ -11,11 +11,11 @@ struct CommentListingModel {
 	struct Request {
 		// do someting...
 
-		var parameters: [String: Any]
-        /*{
+		var parameters: [String: Any]?
+        {
 			// do someting...
 			return nil
-		}*/
+		}
 	}
 
 	struct Response {

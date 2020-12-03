@@ -18,10 +18,13 @@ struct AlbumListingModel {
 	}
 
 	struct Response {
-		// do someting...
+        var albums: [Album]
 	}
 
 	struct ViewModel {
-		// do someting...
+        struct DisplayedAlbum {
+            var name: String
+        }
+        var displayedAlbums: [DisplayedAlbum]
 	}
 }

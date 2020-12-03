@@ -67,6 +67,14 @@ class ProfileViewController: UIViewController {
         view.setTitle("SHOW LOCATION", for: .normal)
         return view
     }()
+    
+    let albumsButton: UIButton = {
+        let view = UIButton()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .orange
+        view.setTitle("SHOW ALBUMS", for: .normal)
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,16 +86,22 @@ class ProfileViewController: UIViewController {
         view.addSubview(cityPlusZipLabel)
         view.addSubview(phoneLabel)
         view.addSubview(locationButton)
+        view.addSubview(albumsButton)
         
         locationButton.addTarget(self, action: #selector(navigateToShowLocation(_:)), for: .touchUpInside)
+        
+        albumsButton.addTarget(self, action: #selector(navigateToAlbumListing(_:)), for: .touchUpInside)
         
         setupConstraints()
         interactor.getUser(request: ProfileModel.Request())
     }
     
     @objc func navigateToShowLocation(_ sender: UIButton) {
-        let name = "Settings Page Title passed as parameter"
         router.navigateToShowLocation()
+    }
+    
+    @objc func navigateToAlbumListing(_ sender: UIButton) {
+        router.navigateToAlbumListing()
     }
     
     private func setupConstraints() {
@@ -138,6 +152,13 @@ class ProfileViewController: UIViewController {
             locationButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
             locationButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin),
             locationButton.heightAnchor.constraint(equalToConstant: 30)
+        ])
+        
+        NSLayoutConstraint.activate([
+            albumsButton.topAnchor.constraint(equalTo: locationButton.bottomAnchor, constant: margin),
+            albumsButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
+            albumsButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin),
+            albumsButton.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
 }

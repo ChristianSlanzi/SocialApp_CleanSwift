@@ -10,6 +10,7 @@ import UIKit
 protocol IProfileRouter {
 	// do someting...
     func navigateToShowLocation()
+    func navigateToAlbumListing()
 }
 
 protocol ShowContactDataPassing
@@ -43,7 +44,12 @@ class ProfileRouter: IProfileRouter, ShowContactDataPassing {
     
     func navigateToShowLocation() {
         appRouter.presentModule(module: ShowLocationModule(appRouter),
-                                parameters: ["lat" : dataStore?.user.address?.geo?.lat,
-                                             "lng" : dataStore?.user.address?.geo?.lng])
+                                parameters: ["lat" : (dataStore?.user.address?.geo?.lat)!,
+                                             "lng" : (dataStore?.user.address?.geo?.lng)!])
+    }
+    
+    func navigateToAlbumListing() {
+        appRouter.presentModule(module: AlbumListingModule(appRouter),
+                                parameters: ["userId" : (dataStore?.user.id)!])
     }
 }

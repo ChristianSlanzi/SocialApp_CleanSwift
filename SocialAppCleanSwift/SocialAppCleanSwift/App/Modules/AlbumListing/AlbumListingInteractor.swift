@@ -28,6 +28,15 @@ class AlbumListingInteractor: IAlbumListingInteractor {
 
 extension AlbumListingInteractor {
     func fetchAlbums(request: AlbumListingModel.Request) {
-        
+        guard let userId = parameters?["userId"] as? Int else { return }
+        Current.networkingService.retrieveAlbums(for: userId) { (result) in
+            switch(result) {
+            case .success(let albums):
+                let response = AlbumListingModel.Response(albums: albums)
+                self.presenter.presentFetchedAlbums(response: response)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }

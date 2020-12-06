@@ -12,6 +12,7 @@ protocol IProfileRouter {
     func navigateToShowLocation()
     func navigateToAlbumListing()
     func navigateToTodoListing()
+    func navigateToArticleListing()
 }
 
 protocol ShowContactDataPassing
@@ -56,6 +57,11 @@ class ProfileRouter: IProfileRouter, ShowContactDataPassing {
     
     func navigateToTodoListing() {
         appRouter.presentModule(module: TodoListingModule(appRouter),
+                                parameters: ["userId" : (dataStore?.user.id)!])
+    }
+    
+    func navigateToArticleListing() {
+        appRouter.presentModule(module: ArticleListingModule(appRouter),
                                 parameters: ["userId" : (dataStore?.user.id)!])
     }
 }

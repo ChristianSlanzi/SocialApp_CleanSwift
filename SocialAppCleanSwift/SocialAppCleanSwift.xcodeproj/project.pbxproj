@@ -10,6 +10,14 @@
 		0249AF78E0B4B8CFE6862414 /* Pods_SocialAppCleanSwift_SocialAppCleanSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB9F03D6D9BA4C2464FE8FE /* Pods_SocialAppCleanSwift_SocialAppCleanSwiftUITests.framework */; };
 		2402AA9F25757E8000D879C9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2402AA9E25757E8000D879C9 /* Post.swift */; };
 		2402AAA525757FDF00D879C9 /* NetworkingServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2402AAA425757FDF00D879C9 /* NetworkingServiceMock.swift */; };
+		2403DD1A257D3990001F6025 /* ArticleListingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403DD12257D3990001F6025 /* ArticleListingModule.swift */; };
+		2403DD1B257D3990001F6025 /* ArticleListingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403DD13257D3990001F6025 /* ArticleListingPresenter.swift */; };
+		2403DD1C257D3990001F6025 /* ArticleListingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403DD14257D3990001F6025 /* ArticleListingRouter.swift */; };
+		2403DD1D257D3990001F6025 /* ArticleListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403DD15257D3990001F6025 /* ArticleListingViewController.swift */; };
+		2403DD1E257D3990001F6025 /* ArticleListingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403DD16257D3990001F6025 /* ArticleListingInteractor.swift */; };
+		2403DD1F257D3990001F6025 /* ArticleListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403DD17257D3990001F6025 /* ArticleListingModel.swift */; };
+		2403DD20257D3990001F6025 /* ArticleListingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2403DD18257D3990001F6025 /* ArticleListingViewController.xib */; };
+		2403DD21257D3990001F6025 /* ArticleListingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403DD19257D3990001F6025 /* ArticleListingManager.swift */; };
 		2425E8402576C0970084E415 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425E83F2576C0970084E415 /* Environment.swift */; };
 		247447AB2576F91D006A6BAE /* CommentListingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247447A32576F91D006A6BAE /* CommentListingModule.swift */; };
 		247447AC2576F91D006A6BAE /* CommentListingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247447A42576F91D006A6BAE /* CommentListingPresenter.swift */; };
@@ -173,6 +181,14 @@
 		22684A7D73388F631D9425D7 /* Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests/Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2402AA9E25757E8000D879C9 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		2402AAA425757FDF00D879C9 /* NetworkingServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingServiceMock.swift; sourceTree = "<group>"; };
+		2403DD12257D3990001F6025 /* ArticleListingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListingModule.swift; sourceTree = "<group>"; };
+		2403DD13257D3990001F6025 /* ArticleListingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListingPresenter.swift; sourceTree = "<group>"; };
+		2403DD14257D3990001F6025 /* ArticleListingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListingRouter.swift; sourceTree = "<group>"; };
+		2403DD15257D3990001F6025 /* ArticleListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListingViewController.swift; sourceTree = "<group>"; };
+		2403DD16257D3990001F6025 /* ArticleListingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListingInteractor.swift; sourceTree = "<group>"; };
+		2403DD17257D3990001F6025 /* ArticleListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListingModel.swift; sourceTree = "<group>"; };
+		2403DD18257D3990001F6025 /* ArticleListingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleListingViewController.xib; sourceTree = "<group>"; };
+		2403DD19257D3990001F6025 /* ArticleListingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListingManager.swift; sourceTree = "<group>"; };
 		2425E83F2576C0970084E415 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		247447A32576F91D006A6BAE /* CommentListingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListingModule.swift; sourceTree = "<group>"; };
 		247447A42576F91D006A6BAE /* CommentListingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListingPresenter.swift; sourceTree = "<group>"; };
@@ -373,6 +389,21 @@
 				248518072575A6BD006F8A60 /* PostListingManager.swift */,
 			);
 			path = PostListing;
+			sourceTree = "<group>";
+		};
+		2403DD11257D3951001F6025 /* ArticleListing */ = {
+			isa = PBXGroup;
+			children = (
+				2403DD12257D3990001F6025 /* ArticleListingModule.swift */,
+				2403DD13257D3990001F6025 /* ArticleListingPresenter.swift */,
+				2403DD14257D3990001F6025 /* ArticleListingRouter.swift */,
+				2403DD15257D3990001F6025 /* ArticleListingViewController.swift */,
+				2403DD16257D3990001F6025 /* ArticleListingInteractor.swift */,
+				2403DD17257D3990001F6025 /* ArticleListingModel.swift */,
+				2403DD18257D3990001F6025 /* ArticleListingViewController.xib */,
+				2403DD19257D3990001F6025 /* ArticleListingManager.swift */,
+			);
+			path = ArticleListing;
 			sourceTree = "<group>";
 		};
 		2425E83E2576C07B0084E415 /* Environment */ = {
@@ -674,6 +705,7 @@
 		24CF045C2570018800F92B49 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2403DD11257D3951001F6025 /* ArticleListing */,
 				24C89D012579A86800791646 /* TodoListing */,
 				24BA4B86257975B100A7F088 /* PhotoListing */,
 				24BA4B6B2579222A00A7F088 /* AlbumListing */,
@@ -1006,6 +1038,7 @@
 				24CF04972570025300F92B49 /* ProfileViewController.xib in Resources */,
 				24BA4B952579761900A7F088 /* PhotoListingViewController.xib in Resources */,
 				24CF04BD2570026F00F92B49 /* MainViewController.xib in Resources */,
+				2403DD20257D3990001F6025 /* ArticleListingViewController.xib in Resources */,
 				2485180E2575A6BD006F8A60 /* PostListingViewController.xib in Resources */,
 				24C89D102579AC2000791646 /* TodoListingViewController.xib in Resources */,
 				24CF04842570024200F92B49 /* HomeViewController.xib in Resources */,
@@ -1168,6 +1201,7 @@
 				24C89D0F2579AC2000791646 /* TodoListingModel.swift in Sources */,
 				24CF04A82570026100F92B49 /* DetailInteractor.swift in Sources */,
 				24C89CDE257999B300791646 /* UICollectionViewCell+Ext.swift in Sources */,
+				2403DD1B257D3990001F6025 /* ArticleListingPresenter.swift in Sources */,
 				24DD57462570330100106BC6 /* SettingsViewController.swift in Sources */,
 				24CF04C72570029700F92B49 /* Module.swift in Sources */,
 				24CF04AB2570026100F92B49 /* DetailManager.swift in Sources */,
@@ -1182,6 +1216,7 @@
 				24CF04BA2570026F00F92B49 /* MainViewController.swift in Sources */,
 				24DD576A2570382F00106BC6 /* ApiServiceInterface.swift in Sources */,
 				24BA4B932579761900A7F088 /* PhotoListingInteractor.swift in Sources */,
+				2403DD1F257D3990001F6025 /* ArticleListingModel.swift in Sources */,
 				24CF04952570025300F92B49 /* ProfileInteractor.swift in Sources */,
 				24BA4B942579761900A7F088 /* PhotoListingModel.swift in Sources */,
 				24CF04812570024200F92B49 /* HomeViewController.swift in Sources */,
@@ -1202,17 +1237,22 @@
 				24DD576C2570382F00106BC6 /* ServiceInterface.swift in Sources */,
 				24C89CD32579988500791646 /* CollectionViewHelper.swift in Sources */,
 				248518212575B84D006F8A60 /* UITableViewCell+Ext.swift in Sources */,
+				2403DD1D257D3990001F6025 /* ArticleListingViewController.swift in Sources */,
 				24E0ADF7257407FF00A54F30 /* ShowLocationViewController.swift in Sources */,
 				24DD575E257036E200106BC6 /* ContactsManager.swift in Sources */,
 				24E0ADFB257407FF00A54F30 /* ShowLocationManager.swift in Sources */,
 				2402AAA525757FDF00D879C9 /* NetworkingServiceMock.swift in Sources */,
 				248517EA25759700006F8A60 /* Comment.swift in Sources */,
+				2403DD1C257D3990001F6025 /* ArticleListingRouter.swift in Sources */,
+				2403DD1E257D3990001F6025 /* ArticleListingInteractor.swift in Sources */,
 				24C89D0C2579AC2000791646 /* TodoListingRouter.swift in Sources */,
 				24BA4B7B257922E300A7F088 /* AlbumListingManager.swift in Sources */,
 				24BA4B962579761900A7F088 /* PhotoListingManager.swift in Sources */,
+				2403DD21257D3990001F6025 /* ArticleListingManager.swift in Sources */,
 				248517EF25759788006F8A60 /* Album.swift in Sources */,
 				24CF04CC2570030200F92B49 /* GeneralRouter.swift in Sources */,
 				24BA4B8F2579761900A7F088 /* PhotoListingModule.swift in Sources */,
+				2403DD1A257D3990001F6025 /* ArticleListingModule.swift in Sources */,
 				24BA4B77257922E300A7F088 /* AlbumListingViewController.swift in Sources */,
 				247447AF2576F91D006A6BAE /* CommentListingInteractor.swift in Sources */,
 				24BA4B78257922E300A7F088 /* AlbumListingInteractor.swift in Sources */,

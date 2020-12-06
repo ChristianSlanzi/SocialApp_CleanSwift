@@ -25,6 +25,7 @@ struct PhotoListingModel {
         struct DisplayedPhoto {
             var id: Int
             var name: String
+            var thumbnailUrl: String
         }
         var displayedPhotos: [DisplayedPhoto]
     }

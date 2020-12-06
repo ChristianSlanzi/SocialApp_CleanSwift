@@ -84,7 +84,7 @@ extension PhotoListingViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoViewCell.identifier, for: indexPath) as! PhotoViewCell
-        //cell.set(viewModel: viewModel.getFollower(indexPath))
+        cell.set(viewModel: displayedPhotos[indexPath.row])
         return cell
     }
     

@@ -23,7 +23,7 @@ class PhotoListingPresenter: IPhotoListingPresenter {
 
 extension PhotoListingPresenter {
     func presentFetchedPhotos(response: PhotoListingModel.Response) {
-        let displayedPhotos = response.photos.map({ PhotoListingModel.ViewModel.DisplayedPhoto(id: $0.id, name: $0.title) })
+        let displayedPhotos = response.photos.map({ PhotoListingModel.ViewModel.DisplayedPhoto(id: $0.id, name: $0.title, thumbnailUrl: $0.thumbnailUrl) })
         let viewModel = PhotoListingModel.ViewModel(displayedPhotos: displayedPhotos)
         view.displayFetchedPhotos(viewModel: viewModel)
     }

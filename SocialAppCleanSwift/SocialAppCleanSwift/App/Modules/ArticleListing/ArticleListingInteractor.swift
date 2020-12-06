@@ -9,6 +9,8 @@ import UIKit
 
 protocol IArticleListingInteractor: class {
 	var parameters: [String: Any]? { get }
+    
+    func fetchArticles(request: ArticleListingModel.Request)
 }
 
 class ArticleListingInteractor: IArticleListingInteractor {
@@ -21,5 +23,20 @@ class ArticleListingInteractor: IArticleListingInteractor {
 
     init(presenter: IArticleListingPresenter) {
     	self.presenter = presenter
+    }
+}
+
+extension ArticleListingInteractor {
+    func fetchArticles(request: ArticleListingModel.Request) {
+        guard let userId = parameters?["userId"] as? Int else { return }
+        Current.networkingService.retrieveArticles(for: userId) { (result) in
+            switch(result) {
+            case .success(let articles):
+                let response = ArticleListingModel.Response(articles: articles)
+                self.presenter.presentFetchedArticles(response: response)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }

@@ -42,6 +42,10 @@ class NetworkingServiceMock: ApiServiceInterface {
         retrieveItems(json: postsData, completion: completion)
     }
     
+    func retrieveArticles(for userId: Int, completion: @escaping (Result<[Article], Error>) -> Void) {
+        retrieveItems(json: articlesData, completion: completion)
+    }
+    
     func retrieveUsers(completion: @escaping (Result<[UserModel], Error>)->Void) {
         let users = [
             UserModel(json: JSON(parseJSON: """
@@ -200,6 +204,19 @@ fileprivate let photosData = JSON(parseJSON: """
               "thumbnailUrl": "https://via.placeholder.com/150/f66b97"
             }
         ]
+""")
+
+fileprivate let articlesData = JSON(parseJSON: """
+[
+  {
+      "date": "06.12.2020",
+      "title": "Repubblica",
+      "website": "https://www.repubblica.it",
+      "authors": "",
+      "content": "",
+      "imageUrl": ""
+    }
+]
 """)
 
 fileprivate let todosData = JSON(parseJSON: """

@@ -67,6 +67,10 @@ class NetworkingService: ApiServiceInterface {
         }*/
     }
     
+    func retrieveArticles(for userId: Int, completion: @escaping (Result<[Article], Error>) -> Void) {
+        // TODO
+    }
+    
     func retrieveUsers(completion: @escaping (Result<[UserModel], Error>)->Void) {
         retrieveItems(url: "https://jsonplaceholder.typicode.com/users", completion: completion)
         /*

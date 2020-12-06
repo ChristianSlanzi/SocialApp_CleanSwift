@@ -19,9 +19,14 @@ struct ArticleListingModel {
 
 	struct Response {
 		// do someting...
+        var articles: [Article]
 	}
 
-	struct ViewModel {
-		// do someting...
-	}
+    struct ViewModel {
+        struct DisplayedArticle {
+            var title: String
+            var authors: String
+        }
+        var displayedArticles: [DisplayedArticle]
+    }
 }

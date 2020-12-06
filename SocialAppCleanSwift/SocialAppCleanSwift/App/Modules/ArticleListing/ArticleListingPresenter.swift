@@ -9,12 +9,21 @@ import UIKit
 
 protocol IArticleListingPresenter: class {
 	// do someting...
+    func presentFetchedArticles(response: ArticleListingModel.Response)
 }
 
-class ArticleListingPresenter: IArticleListingPresenter {	
+class ArticleListingPresenter: IArticleListingPresenter {
 	weak var view: IArticleListingViewController!
 	
 	init(view: IArticleListingViewController) {
 		self.view = view
 	}
+}
+
+extension ArticleListingPresenter {
+    func presentFetchedArticles(response: ArticleListingModel.Response) {
+        let displayedArticles = response.articles.map({ ArticleListingModel.ViewModel.DisplayedArticle(title: $0.title, authors: $0.authors)})
+        let viewModel = ArticleListingModel.ViewModel(displayedArticles: displayedArticles)
+        view.displayFetchedArticles(viewModel: viewModel)
+    }
 }

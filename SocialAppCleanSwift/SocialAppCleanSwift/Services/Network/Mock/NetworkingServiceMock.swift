@@ -43,7 +43,8 @@ class NetworkingServiceMock: ApiServiceInterface {
     }
     
     func retrieveArticles(for userId: Int, completion: @escaping (Result<[Article], Error>) -> Void) {
-        retrieveItems(json: articlesData, completion: completion)
+        //retrieveItems(json: articlesData, completion: completion)
+        retrieveItems(json: articlesEmptyData, completion: completion)
     }
     
     func retrieveUsers(completion: @escaping (Result<[UserModel], Error>)->Void) {
@@ -204,6 +205,12 @@ fileprivate let photosData = JSON(parseJSON: """
               "thumbnailUrl": "https://via.placeholder.com/150/f66b97"
             }
         ]
+""")
+
+fileprivate let articlesEmptyData = JSON(parseJSON: """
+[
+
+]
 """)
 
 fileprivate let articlesData = JSON(parseJSON: """

@@ -22,6 +22,10 @@ class ArticleListingPresenter: IArticleListingPresenter {
 
 extension ArticleListingPresenter {
     func presentFetchedArticles(response: ArticleListingModel.Response) {
+        if response.articles.count == 0 {
+            view.displayNoContentScreen()
+            return
+        }
         let displayedArticles = response.articles.map({ ArticleListingModel.ViewModel.DisplayedArticle(title: $0.title, authors: $0.authors)})
         let viewModel = ArticleListingModel.ViewModel(displayedArticles: displayedArticles)
         view.displayFetchedArticles(viewModel: viewModel)

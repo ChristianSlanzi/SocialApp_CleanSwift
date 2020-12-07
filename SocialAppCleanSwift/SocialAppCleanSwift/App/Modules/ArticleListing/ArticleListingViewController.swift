@@ -10,6 +10,7 @@ import UIKit
 protocol IArticleListingViewController: class {
 	// do someting...
     func displayFetchedArticles(viewModel: ArticleListingModel.ViewModel)
+    func displayNoContentScreen()
 }
 
 class ArticleListingViewController: UIViewController {
@@ -44,6 +45,10 @@ class ArticleListingViewController: UIViewController {
 }
 
 extension ArticleListingViewController: IArticleListingViewController {
+    func displayNoContentScreen() {
+        tableView.setEmptyView(title: "There are no articles.", message: "Please retry later.")
+    }
+    
     func displayFetchedArticles(viewModel: ArticleListingModel.ViewModel) {
         displayedArticles = viewModel.displayedArticles
         tableView.reloadData()

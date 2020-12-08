@@ -13,6 +13,7 @@ protocol IProfileRouter {
     func navigateToAlbumListing()
     func navigateToTodoListing()
     func navigateToArticleListing()
+    func navigateToReminderListing()
 }
 
 protocol ShowContactDataPassing
@@ -62,6 +63,11 @@ class ProfileRouter: IProfileRouter, ShowContactDataPassing {
     
     func navigateToArticleListing() {
         appRouter.presentModule(module: ArticleListingModule(appRouter),
+                                parameters: ["userId" : (dataStore?.user.id)!])
+    }
+    
+    func navigateToReminderListing() {
+        appRouter.presentModule(module: ReminderListingModule(appRouter),
                                 parameters: ["userId" : (dataStore?.user.id)!])
     }
 }

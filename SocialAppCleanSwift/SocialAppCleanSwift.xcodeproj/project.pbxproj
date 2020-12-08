@@ -80,6 +80,14 @@
 		24BFC457258023AA00C15C67 /* ArticleDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFC44F258023AA00C15C67 /* ArticleDetailModel.swift */; };
 		24BFC458258023AA00C15C67 /* ArticleDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BFC450258023AA00C15C67 /* ArticleDetailViewController.xib */; };
 		24BFC459258023AA00C15C67 /* ArticleDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFC451258023AA00C15C67 /* ArticleDetailManager.swift */; };
+		24BFC46625802E4F00C15C67 /* ReminderListingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFC45E25802E4F00C15C67 /* ReminderListingModule.swift */; };
+		24BFC46725802E4F00C15C67 /* ReminderListingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFC45F25802E4F00C15C67 /* ReminderListingPresenter.swift */; };
+		24BFC46825802E4F00C15C67 /* ReminderListingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFC46025802E4F00C15C67 /* ReminderListingRouter.swift */; };
+		24BFC46925802E4F00C15C67 /* ReminderListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFC46125802E4F00C15C67 /* ReminderListingViewController.swift */; };
+		24BFC46A25802E4F00C15C67 /* ReminderListingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFC46225802E4F00C15C67 /* ReminderListingInteractor.swift */; };
+		24BFC46B25802E4F00C15C67 /* ReminderListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFC46325802E4F00C15C67 /* ReminderListingModel.swift */; };
+		24BFC46C25802E4F00C15C67 /* ReminderListingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BFC46425802E4F00C15C67 /* ReminderListingViewController.xib */; };
+		24BFC46D25802E4F00C15C67 /* ReminderListingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFC46525802E4F00C15C67 /* ReminderListingManager.swift */; };
 		24C89CD32579988500791646 /* CollectionViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C89CD22579988500791646 /* CollectionViewHelper.swift */; };
 		24C89CDE257999B300791646 /* UICollectionViewCell+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C89CDD257999B300791646 /* UICollectionViewCell+Ext.swift */; };
 		24C89CE6257999FE00791646 /* PhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C89CE5257999FE00791646 /* PhotoViewCell.swift */; };
@@ -271,6 +279,14 @@
 		24BFC44F258023AA00C15C67 /* ArticleDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailModel.swift; sourceTree = "<group>"; };
 		24BFC450258023AA00C15C67 /* ArticleDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleDetailViewController.xib; sourceTree = "<group>"; };
 		24BFC451258023AA00C15C67 /* ArticleDetailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailManager.swift; sourceTree = "<group>"; };
+		24BFC45E25802E4F00C15C67 /* ReminderListingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListingModule.swift; sourceTree = "<group>"; };
+		24BFC45F25802E4F00C15C67 /* ReminderListingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListingPresenter.swift; sourceTree = "<group>"; };
+		24BFC46025802E4F00C15C67 /* ReminderListingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListingRouter.swift; sourceTree = "<group>"; };
+		24BFC46125802E4F00C15C67 /* ReminderListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListingViewController.swift; sourceTree = "<group>"; };
+		24BFC46225802E4F00C15C67 /* ReminderListingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListingInteractor.swift; sourceTree = "<group>"; };
+		24BFC46325802E4F00C15C67 /* ReminderListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListingModel.swift; sourceTree = "<group>"; };
+		24BFC46425802E4F00C15C67 /* ReminderListingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReminderListingViewController.xib; sourceTree = "<group>"; };
+		24BFC46525802E4F00C15C67 /* ReminderListingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListingManager.swift; sourceTree = "<group>"; };
 		24C89CD22579988500791646 /* CollectionViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHelper.swift; sourceTree = "<group>"; };
 		24C89CDD257999B300791646 /* UICollectionViewCell+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Ext.swift"; sourceTree = "<group>"; };
 		24C89CE5257999FE00791646 /* PhotoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewCell.swift; sourceTree = "<group>"; };
@@ -642,6 +658,21 @@
 			path = ArticleDetail;
 			sourceTree = "<group>";
 		};
+		24BFC45D25802E0300C15C67 /* ReminderListing */ = {
+			isa = PBXGroup;
+			children = (
+				24BFC45E25802E4F00C15C67 /* ReminderListingModule.swift */,
+				24BFC45F25802E4F00C15C67 /* ReminderListingPresenter.swift */,
+				24BFC46025802E4F00C15C67 /* ReminderListingRouter.swift */,
+				24BFC46125802E4F00C15C67 /* ReminderListingViewController.swift */,
+				24BFC46225802E4F00C15C67 /* ReminderListingInteractor.swift */,
+				24BFC46325802E4F00C15C67 /* ReminderListingModel.swift */,
+				24BFC46425802E4F00C15C67 /* ReminderListingViewController.xib */,
+				24BFC46525802E4F00C15C67 /* ReminderListingManager.swift */,
+			);
+			path = ReminderListing;
+			sourceTree = "<group>";
+		};
 		24C89CD02579985400791646 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -801,6 +832,7 @@
 		24CF045C2570018800F92B49 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				24BFC45D25802E0300C15C67 /* ReminderListing */,
 				24BFC4332580233100C15C67 /* ArticleDetail */,
 				24601868257EF11B00FF623E /* SellItemListing */,
 				2403DD11257D3951001F6025 /* ArticleListing */,
@@ -1140,6 +1172,7 @@
 				24CF04972570025300F92B49 /* ProfileViewController.xib in Resources */,
 				24BA4B952579761900A7F088 /* PhotoListingViewController.xib in Resources */,
 				24CF04BD2570026F00F92B49 /* MainViewController.xib in Resources */,
+				24BFC46C25802E4F00C15C67 /* ReminderListingViewController.xib in Resources */,
 				2403DD20257D3990001F6025 /* ArticleListingViewController.xib in Resources */,
 				2485180E2575A6BD006F8A60 /* PostListingViewController.xib in Resources */,
 				24C89D102579AC2000791646 /* TodoListingViewController.xib in Resources */,
@@ -1281,10 +1314,12 @@
 				24CF04B92570026F00F92B49 /* MainRouter.swift in Sources */,
 				24CF04912570025200F92B49 /* ProfileModule.swift in Sources */,
 				24DD5759257036E200106BC6 /* ContactsRouter.swift in Sources */,
+				24BFC46D25802E4F00C15C67 /* ReminderListingManager.swift in Sources */,
 				24BFC455258023AA00C15C67 /* ArticleDetailViewController.swift in Sources */,
 				24DD5758257036E200106BC6 /* ContactsPresenter.swift in Sources */,
 				24CF04932570025300F92B49 /* ProfileRouter.swift in Sources */,
 				24DD575C257036E200106BC6 /* ContactsModel.swift in Sources */,
+				24BFC46825802E4F00C15C67 /* ReminderListingRouter.swift in Sources */,
 				24BFC452258023AA00C15C67 /* ArticleDetailModule.swift in Sources */,
 				24C89D0B2579AC2000791646 /* TodoListingPresenter.swift in Sources */,
 				24DD57442570330100106BC6 /* SettingsPresenter.swift in Sources */,
@@ -1303,6 +1338,7 @@
 				24CF04C62570029700F92B49 /* AppRoute.swift in Sources */,
 				24CF04832570024200F92B49 /* HomeModel.swift in Sources */,
 				24BA4B912579761900A7F088 /* PhotoListingRouter.swift in Sources */,
+				24BFC46925802E4F00C15C67 /* ReminderListingViewController.swift in Sources */,
 				24CF047F2570024200F92B49 /* HomePresenter.swift in Sources */,
 				24C89D0E2579AC2000791646 /* TodoListingInteractor.swift in Sources */,
 				2425E8402576C0970084E415 /* Environment.swift in Sources */,
@@ -1320,8 +1356,10 @@
 				247447AB2576F91D006A6BAE /* CommentListingModule.swift in Sources */,
 				2485180D2575A6BD006F8A60 /* PostListingModel.swift in Sources */,
 				24601874257EF17900FF623E /* SellItemListingViewController.swift in Sources */,
+				24BFC46725802E4F00C15C67 /* ReminderListingPresenter.swift in Sources */,
 				24CF046D2570022C00F92B49 /* LoginRouter.swift in Sources */,
 				247447AD2576F91D006A6BAE /* CommentListingRouter.swift in Sources */,
+				24BFC46B25802E4F00C15C67 /* ReminderListingModel.swift in Sources */,
 				24DD575B257036E200106BC6 /* ContactsInteractor.swift in Sources */,
 				24E0ADF5257407FF00A54F30 /* ShowLocationPresenter.swift in Sources */,
 				24C89CEC25799C2F00791646 /* UIColor+Ext.swift in Sources */,
@@ -1337,6 +1375,7 @@
 				24BA4B922579761900A7F088 /* PhotoListingViewController.swift in Sources */,
 				247447AC2576F91D006A6BAE /* CommentListingPresenter.swift in Sources */,
 				24CF047E2570024200F92B49 /* HomeModule.swift in Sources */,
+				24BFC46625802E4F00C15C67 /* ReminderListingModule.swift in Sources */,
 				24CF04922570025200F92B49 /* ProfilePresenter.swift in Sources */,
 				24DD576B2570382F00106BC6 /* NetworkingService.swift in Sources */,
 				24CF04802570024200F92B49 /* HomeRouter.swift in Sources */,
@@ -1394,6 +1433,7 @@
 				24CF04982570025300F92B49 /* ProfileManager.swift in Sources */,
 				24BA4B75257922E300A7F088 /* AlbumListingPresenter.swift in Sources */,
 				24C89CFD2579A77900791646 /* Todo.swift in Sources */,
+				24BFC46A25802E4F00C15C67 /* ReminderListingInteractor.swift in Sources */,
 				2402AA9F25757E8000D879C9 /* Post.swift in Sources */,
 				247447AE2576F91D006A6BAE /* CommentListingViewController.swift in Sources */,
 				2485180B2575A6BD006F8A60 /* PostListingViewController.swift in Sources */,

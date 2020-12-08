@@ -91,6 +91,14 @@ class ProfileViewController: UIViewController {
         view.setTitle("SHOW ARTICLES", for: .normal)
         return view
     }()
+    
+    let remindersButton: UIButton = {
+        let view = UIButton()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .red
+        view.setTitle("SHOW REMINDERS", for: .normal)
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,6 +113,7 @@ class ProfileViewController: UIViewController {
         view.addSubview(albumsButton)
         view.addSubview(todosButton)
         view.addSubview(articlesButton)
+        view.addSubview(remindersButton)
         
         locationButton.addTarget(self, action: #selector(navigateToShowLocation(_:)), for: .touchUpInside)
         
@@ -113,6 +122,8 @@ class ProfileViewController: UIViewController {
         todosButton.addTarget(self, action: #selector(navigateToTodoListing(_:)), for: .touchUpInside)
         
         articlesButton.addTarget(self, action: #selector(navigateToArticleListing(_:)), for: .touchUpInside)
+        
+        remindersButton.addTarget(self, action: #selector(navigateToReminderListing(_:)), for: .touchUpInside)
         
         setupConstraints()
         interactor.getUser(request: ProfileModel.Request())
@@ -132,6 +143,10 @@ class ProfileViewController: UIViewController {
     
     @objc func navigateToArticleListing(_ sender: UIButton) {
         router.navigateToArticleListing()
+    }
+    
+    @objc func navigateToReminderListing(_ sender: UIButton) {
+        router.navigateToReminderListing()
     }
     
     private func setupConstraints() {
@@ -203,6 +218,13 @@ class ProfileViewController: UIViewController {
             articlesButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
             articlesButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin),
             articlesButton.heightAnchor.constraint(equalToConstant: 30)
+        ])
+        
+        NSLayoutConstraint.activate([
+            remindersButton.topAnchor.constraint(equalTo: articlesButton.bottomAnchor, constant: margin),
+            remindersButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
+            remindersButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin),
+            remindersButton.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
 }

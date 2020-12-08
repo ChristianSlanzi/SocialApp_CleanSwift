@@ -72,6 +72,14 @@
 		24BA4B942579761900A7F088 /* PhotoListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B8C2579761900A7F088 /* PhotoListingModel.swift */; };
 		24BA4B952579761900A7F088 /* PhotoListingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BA4B8D2579761900A7F088 /* PhotoListingViewController.xib */; };
 		24BA4B962579761900A7F088 /* PhotoListingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B8E2579761900A7F088 /* PhotoListingManager.swift */; };
+		24BFC452258023AA00C15C67 /* ArticleDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFC44A258023AA00C15C67 /* ArticleDetailModule.swift */; };
+		24BFC453258023AA00C15C67 /* ArticleDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFC44B258023AA00C15C67 /* ArticleDetailPresenter.swift */; };
+		24BFC454258023AA00C15C67 /* ArticleDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFC44C258023AA00C15C67 /* ArticleDetailRouter.swift */; };
+		24BFC455258023AA00C15C67 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFC44D258023AA00C15C67 /* ArticleDetailViewController.swift */; };
+		24BFC456258023AA00C15C67 /* ArticleDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFC44E258023AA00C15C67 /* ArticleDetailInteractor.swift */; };
+		24BFC457258023AA00C15C67 /* ArticleDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFC44F258023AA00C15C67 /* ArticleDetailModel.swift */; };
+		24BFC458258023AA00C15C67 /* ArticleDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BFC450258023AA00C15C67 /* ArticleDetailViewController.xib */; };
+		24BFC459258023AA00C15C67 /* ArticleDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFC451258023AA00C15C67 /* ArticleDetailManager.swift */; };
 		24C89CD32579988500791646 /* CollectionViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C89CD22579988500791646 /* CollectionViewHelper.swift */; };
 		24C89CDE257999B300791646 /* UICollectionViewCell+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C89CDD257999B300791646 /* UICollectionViewCell+Ext.swift */; };
 		24C89CE6257999FE00791646 /* PhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C89CE5257999FE00791646 /* PhotoViewCell.swift */; };
@@ -255,6 +263,14 @@
 		24BA4B8C2579761900A7F088 /* PhotoListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListingModel.swift; sourceTree = "<group>"; };
 		24BA4B8D2579761900A7F088 /* PhotoListingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoListingViewController.xib; sourceTree = "<group>"; };
 		24BA4B8E2579761900A7F088 /* PhotoListingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListingManager.swift; sourceTree = "<group>"; };
+		24BFC44A258023AA00C15C67 /* ArticleDetailModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailModule.swift; sourceTree = "<group>"; };
+		24BFC44B258023AA00C15C67 /* ArticleDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailPresenter.swift; sourceTree = "<group>"; };
+		24BFC44C258023AA00C15C67 /* ArticleDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailRouter.swift; sourceTree = "<group>"; };
+		24BFC44D258023AA00C15C67 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
+		24BFC44E258023AA00C15C67 /* ArticleDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailInteractor.swift; sourceTree = "<group>"; };
+		24BFC44F258023AA00C15C67 /* ArticleDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailModel.swift; sourceTree = "<group>"; };
+		24BFC450258023AA00C15C67 /* ArticleDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleDetailViewController.xib; sourceTree = "<group>"; };
+		24BFC451258023AA00C15C67 /* ArticleDetailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailManager.swift; sourceTree = "<group>"; };
 		24C89CD22579988500791646 /* CollectionViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHelper.swift; sourceTree = "<group>"; };
 		24C89CDD257999B300791646 /* UICollectionViewCell+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Ext.swift"; sourceTree = "<group>"; };
 		24C89CE5257999FE00791646 /* PhotoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewCell.swift; sourceTree = "<group>"; };
@@ -611,6 +627,21 @@
 			path = PhotoListing;
 			sourceTree = "<group>";
 		};
+		24BFC4332580233100C15C67 /* ArticleDetail */ = {
+			isa = PBXGroup;
+			children = (
+				24BFC44A258023AA00C15C67 /* ArticleDetailModule.swift */,
+				24BFC44B258023AA00C15C67 /* ArticleDetailPresenter.swift */,
+				24BFC44C258023AA00C15C67 /* ArticleDetailRouter.swift */,
+				24BFC44D258023AA00C15C67 /* ArticleDetailViewController.swift */,
+				24BFC44E258023AA00C15C67 /* ArticleDetailInteractor.swift */,
+				24BFC44F258023AA00C15C67 /* ArticleDetailModel.swift */,
+				24BFC450258023AA00C15C67 /* ArticleDetailViewController.xib */,
+				24BFC451258023AA00C15C67 /* ArticleDetailManager.swift */,
+			);
+			path = ArticleDetail;
+			sourceTree = "<group>";
+		};
 		24C89CD02579985400791646 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -770,6 +801,7 @@
 		24CF045C2570018800F92B49 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				24BFC4332580233100C15C67 /* ArticleDetail */,
 				24601868257EF11B00FF623E /* SellItemListing */,
 				2403DD11257D3951001F6025 /* ArticleListing */,
 				24C89D012579A86800791646 /* TodoListing */,
@@ -1104,6 +1136,7 @@
 				247447B12576F91D006A6BAE /* CommentListingViewController.xib in Resources */,
 				24601877257EF17900FF623E /* SellItemListingViewController.xib in Resources */,
 				24CF04712570022C00F92B49 /* LoginViewController.xib in Resources */,
+				24BFC458258023AA00C15C67 /* ArticleDetailViewController.xib in Resources */,
 				24CF04972570025300F92B49 /* ProfileViewController.xib in Resources */,
 				24BA4B952579761900A7F088 /* PhotoListingViewController.xib in Resources */,
 				24CF04BD2570026F00F92B49 /* MainViewController.xib in Resources */,
@@ -1248,9 +1281,11 @@
 				24CF04B92570026F00F92B49 /* MainRouter.swift in Sources */,
 				24CF04912570025200F92B49 /* ProfileModule.swift in Sources */,
 				24DD5759257036E200106BC6 /* ContactsRouter.swift in Sources */,
+				24BFC455258023AA00C15C67 /* ArticleDetailViewController.swift in Sources */,
 				24DD5758257036E200106BC6 /* ContactsPresenter.swift in Sources */,
 				24CF04932570025300F92B49 /* ProfileRouter.swift in Sources */,
 				24DD575C257036E200106BC6 /* ContactsModel.swift in Sources */,
+				24BFC452258023AA00C15C67 /* ArticleDetailModule.swift in Sources */,
 				24C89D0B2579AC2000791646 /* TodoListingPresenter.swift in Sources */,
 				24DD57442570330100106BC6 /* SettingsPresenter.swift in Sources */,
 				24E0ADF4257407FF00A54F30 /* ShowLocationModule.swift in Sources */,
@@ -1259,9 +1294,11 @@
 				2485180A2575A6BD006F8A60 /* PostListingRouter.swift in Sources */,
 				24DD574A2570330100106BC6 /* SettingsManager.swift in Sources */,
 				2485180C2575A6BD006F8A60 /* PostListingInteractor.swift in Sources */,
+				24BFC457258023AA00C15C67 /* ArticleDetailModel.swift in Sources */,
 				24CF04A92570026100F92B49 /* DetailModel.swift in Sources */,
 				24CF04822570024200F92B49 /* HomeInteractor.swift in Sources */,
 				24601878257EF17900FF623E /* SellItemListingManager.swift in Sources */,
+				24BFC456258023AA00C15C67 /* ArticleDetailInteractor.swift in Sources */,
 				24C89D182579AF1700791646 /* TodoViewCell.swift in Sources */,
 				24CF04C62570029700F92B49 /* AppRoute.swift in Sources */,
 				24CF04832570024200F92B49 /* HomeModel.swift in Sources */,
@@ -1325,12 +1362,14 @@
 				2403DD1E257D3990001F6025 /* ArticleListingInteractor.swift in Sources */,
 				24C89D0C2579AC2000791646 /* TodoListingRouter.swift in Sources */,
 				24BA4B7B257922E300A7F088 /* AlbumListingManager.swift in Sources */,
+				24BFC459258023AA00C15C67 /* ArticleDetailManager.swift in Sources */,
 				24BA4B962579761900A7F088 /* PhotoListingManager.swift in Sources */,
 				2403DD21257D3990001F6025 /* ArticleListingManager.swift in Sources */,
 				248517EF25759788006F8A60 /* Album.swift in Sources */,
 				24CF04CC2570030200F92B49 /* GeneralRouter.swift in Sources */,
 				24BA4B8F2579761900A7F088 /* PhotoListingModule.swift in Sources */,
 				2403DD1A257D3990001F6025 /* ArticleListingModule.swift in Sources */,
+				24BFC454258023AA00C15C67 /* ArticleDetailRouter.swift in Sources */,
 				24BA4B77257922E300A7F088 /* AlbumListingViewController.swift in Sources */,
 				247447AF2576F91D006A6BAE /* CommentListingInteractor.swift in Sources */,
 				24BA4B78257922E300A7F088 /* AlbumListingInteractor.swift in Sources */,
@@ -1374,6 +1413,7 @@
 				24BA4B76257922E300A7F088 /* AlbumListingRouter.swift in Sources */,
 				2460187D257EF33000FF623E /* SellItem.swift in Sources */,
 				24E0ADF8257407FF00A54F30 /* ShowLocationInteractor.swift in Sources */,
+				24BFC453258023AA00C15C67 /* ArticleDetailPresenter.swift in Sources */,
 				24DD576D2570382F00106BC6 /* UserModel.swift in Sources */,
 				2485180F2575A6BD006F8A60 /* PostListingManager.swift in Sources */,
 				24DD57472570330100106BC6 /* SettingsInteractor.swift in Sources */,

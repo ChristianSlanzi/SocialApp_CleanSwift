@@ -9,9 +9,11 @@ import UIKit
 
 protocol IArticleListingRouter {
 	// do someting...
+    func navigateToArticleDetail(for article: String)
 }
 
 class ArticleListingRouter: IArticleListingRouter {
+    
     var appRouter: IAppRouter
 
     init(appRouter: IAppRouter) {
@@ -31,5 +33,9 @@ class ArticleListingRouter: IArticleListingRouter {
         view.router = self
         interactor.parameters = parameters
         return view        
+    }
+    
+    func navigateToArticleDetail(for articleTitle: String) {
+        appRouter.presentModule(module: ArticleDetailModule(appRouter), parameters: ["title" : articleTitle])
     }
 }

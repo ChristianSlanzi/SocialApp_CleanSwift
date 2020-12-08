@@ -30,6 +30,7 @@
 		24601876257EF17900FF623E /* SellItemListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2460186E257EF17800FF623E /* SellItemListingModel.swift */; };
 		24601877257EF17900FF623E /* SellItemListingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2460186F257EF17800FF623E /* SellItemListingViewController.xib */; };
 		24601878257EF17900FF623E /* SellItemListingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24601870257EF17900FF623E /* SellItemListingManager.swift */; };
+		2460187D257EF33000FF623E /* SellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2460187C257EF33000FF623E /* SellItem.swift */; };
 		247447AB2576F91D006A6BAE /* CommentListingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247447A32576F91D006A6BAE /* CommentListingModule.swift */; };
 		247447AC2576F91D006A6BAE /* CommentListingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247447A42576F91D006A6BAE /* CommentListingPresenter.swift */; };
 		247447AD2576F91D006A6BAE /* CommentListingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247447A52576F91D006A6BAE /* CommentListingRouter.swift */; };
@@ -212,6 +213,7 @@
 		2460186E257EF17800FF623E /* SellItemListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellItemListingModel.swift; sourceTree = "<group>"; };
 		2460186F257EF17800FF623E /* SellItemListingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SellItemListingViewController.xib; sourceTree = "<group>"; };
 		24601870257EF17900FF623E /* SellItemListingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellItemListingManager.swift; sourceTree = "<group>"; };
+		2460187C257EF33000FF623E /* SellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellItem.swift; sourceTree = "<group>"; };
 		247447A32576F91D006A6BAE /* CommentListingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListingModule.swift; sourceTree = "<group>"; };
 		247447A42576F91D006A6BAE /* CommentListingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListingPresenter.swift; sourceTree = "<group>"; };
 		247447A52576F91D006A6BAE /* CommentListingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListingRouter.swift; sourceTree = "<group>"; };
@@ -941,6 +943,7 @@
 				248517F3257597DE006F8A60 /* Photo.swift */,
 				24C89CFC2579A77900791646 /* Todo.swift */,
 				2403DD25257D3D76001F6025 /* Article.swift */,
+				2460187C257EF33000FF623E /* SellItem.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -1369,6 +1372,7 @@
 				24CF046C2570022C00F92B49 /* LoginPresenter.swift in Sources */,
 				24CF04A72570026100F92B49 /* DetailViewController.swift in Sources */,
 				24BA4B76257922E300A7F088 /* AlbumListingRouter.swift in Sources */,
+				2460187D257EF33000FF623E /* SellItem.swift in Sources */,
 				24E0ADF8257407FF00A54F30 /* ShowLocationInteractor.swift in Sources */,
 				24DD576D2570382F00106BC6 /* UserModel.swift in Sources */,
 				2485180F2575A6BD006F8A60 /* PostListingManager.swift in Sources */,

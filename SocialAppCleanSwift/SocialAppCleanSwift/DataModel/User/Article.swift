@@ -17,10 +17,10 @@ struct Article: JSONinitiable {
     
     init(json: JSON) {
         self.date = json["date"].string ?? ""
-        self.authors = json["id"].string ?? ""
+        self.authors = json["authors"].string ?? ""
         self.title = json["title"].string ?? ""
-        self.website = json["completed"].string ?? ""
-        self.content = json["title"].string ?? ""
-        self.imageUrl = json["completed"].string ?? ""
+        self.website = json["website"].string ?? ""
+        self.content = json["content"].string ?? ""
+        self.imageUrl = json["imageUrl"].string ?? ""
     }
 }

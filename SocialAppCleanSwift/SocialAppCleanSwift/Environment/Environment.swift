@@ -9,7 +9,7 @@ struct Environment {
     var networkingService: ApiServiceInterface = NetworkingService()
 }
 
-var Current = Environment()
+var Current = Environment.mock
 
 extension Environment {
     static let mock = Environment(networkingService: NetworkingService.mock)

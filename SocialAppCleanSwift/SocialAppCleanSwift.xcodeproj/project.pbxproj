@@ -31,6 +31,13 @@
 		24601877257EF17900FF623E /* SellItemListingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2460186F257EF17800FF623E /* SellItemListingViewController.xib */; };
 		24601878257EF17900FF623E /* SellItemListingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24601870257EF17900FF623E /* SellItemListingManager.swift */; };
 		2460187D257EF33000FF623E /* SellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2460187C257EF33000FF623E /* SellItem.swift */; };
+		2462E0AB2582C53400B78203 /* PostsDataStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2462E0AA2582C53400B78203 /* PostsDataStub.swift */; };
+		2462E0B32582C59900B78203 /* CommentsDataStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2462E0B22582C59900B78203 /* CommentsDataStub.swift */; };
+		2462E0B82582C5D100B78203 /* AlbumsDataStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2462E0B72582C5D100B78203 /* AlbumsDataStub.swift */; };
+		2462E0BD2582C5F500B78203 /* PhotosDataStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2462E0BC2582C5F500B78203 /* PhotosDataStub.swift */; };
+		2462E0C22582C62C00B78203 /* ArticlesDataStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2462E0C12582C62C00B78203 /* ArticlesDataStub.swift */; };
+		2462E0C72582C67300B78203 /* TodosDataStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2462E0C62582C67300B78203 /* TodosDataStub.swift */; };
+		2462E0CC2582C69000B78203 /* UsersDataStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2462E0CB2582C69000B78203 /* UsersDataStub.swift */; };
 		247447AB2576F91D006A6BAE /* CommentListingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247447A32576F91D006A6BAE /* CommentListingModule.swift */; };
 		247447AC2576F91D006A6BAE /* CommentListingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247447A42576F91D006A6BAE /* CommentListingPresenter.swift */; };
 		247447AD2576F91D006A6BAE /* CommentListingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247447A52576F91D006A6BAE /* CommentListingRouter.swift */; };
@@ -232,6 +239,13 @@
 		2460186F257EF17800FF623E /* SellItemListingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SellItemListingViewController.xib; sourceTree = "<group>"; };
 		24601870257EF17900FF623E /* SellItemListingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellItemListingManager.swift; sourceTree = "<group>"; };
 		2460187C257EF33000FF623E /* SellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellItem.swift; sourceTree = "<group>"; };
+		2462E0AA2582C53400B78203 /* PostsDataStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsDataStub.swift; sourceTree = "<group>"; };
+		2462E0B22582C59900B78203 /* CommentsDataStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsDataStub.swift; sourceTree = "<group>"; };
+		2462E0B72582C5D100B78203 /* AlbumsDataStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsDataStub.swift; sourceTree = "<group>"; };
+		2462E0BC2582C5F500B78203 /* PhotosDataStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosDataStub.swift; sourceTree = "<group>"; };
+		2462E0C12582C62C00B78203 /* ArticlesDataStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesDataStub.swift; sourceTree = "<group>"; };
+		2462E0C62582C67300B78203 /* TodosDataStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosDataStub.swift; sourceTree = "<group>"; };
+		2462E0CB2582C69000B78203 /* UsersDataStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataStub.swift; sourceTree = "<group>"; };
 		247447A32576F91D006A6BAE /* CommentListingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListingModule.swift; sourceTree = "<group>"; };
 		247447A42576F91D006A6BAE /* CommentListingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListingPresenter.swift; sourceTree = "<group>"; };
 		247447A52576F91D006A6BAE /* CommentListingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListingRouter.swift; sourceTree = "<group>"; };
@@ -430,6 +444,7 @@
 		2402AAA325757FCB00D879C9 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				2462E0A92582C4F900B78203 /* Stub */,
 				2402AAA425757FDF00D879C9 /* NetworkingServiceMock.swift */,
 			);
 			path = Mock;
@@ -512,6 +527,20 @@
 				24601870257EF17900FF623E /* SellItemListingManager.swift */,
 			);
 			path = SellItemListing;
+			sourceTree = "<group>";
+		};
+		2462E0A92582C4F900B78203 /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				2462E0AA2582C53400B78203 /* PostsDataStub.swift */,
+				2462E0B22582C59900B78203 /* CommentsDataStub.swift */,
+				2462E0B72582C5D100B78203 /* AlbumsDataStub.swift */,
+				2462E0BC2582C5F500B78203 /* PhotosDataStub.swift */,
+				2462E0C12582C62C00B78203 /* ArticlesDataStub.swift */,
+				2462E0C62582C67300B78203 /* TodosDataStub.swift */,
+				2462E0CB2582C69000B78203 /* UsersDataStub.swift */,
+			);
+			path = Stub;
 			sourceTree = "<group>";
 		};
 		247447A22576F8FD006A6BAE /* CommentListing */ = {
@@ -1374,6 +1403,7 @@
 				24CF046D2570022C00F92B49 /* LoginRouter.swift in Sources */,
 				247447AD2576F91D006A6BAE /* CommentListingRouter.swift in Sources */,
 				24BFC46B25802E4F00C15C67 /* ReminderListingModel.swift in Sources */,
+				2462E0BD2582C5F500B78203 /* PhotosDataStub.swift in Sources */,
 				24DD575B257036E200106BC6 /* ContactsInteractor.swift in Sources */,
 				24E0ADF5257407FF00A54F30 /* ShowLocationPresenter.swift in Sources */,
 				24C89CEC25799C2F00791646 /* UIColor+Ext.swift in Sources */,
@@ -1409,10 +1439,12 @@
 				24E0ADF7257407FF00A54F30 /* ShowLocationViewController.swift in Sources */,
 				2403DD2D257D41E7001F6025 /* ArticleViewCell.swift in Sources */,
 				24DD575E257036E200106BC6 /* ContactsManager.swift in Sources */,
+				2462E0CC2582C69000B78203 /* UsersDataStub.swift in Sources */,
 				24E0ADFB257407FF00A54F30 /* ShowLocationManager.swift in Sources */,
 				2402AAA525757FDF00D879C9 /* NetworkingServiceMock.swift in Sources */,
 				248517EA25759700006F8A60 /* Comment.swift in Sources */,
 				2403DD1C257D3990001F6025 /* ArticleListingRouter.swift in Sources */,
+				2462E0C22582C62C00B78203 /* ArticlesDataStub.swift in Sources */,
 				2403DD1E257D3990001F6025 /* ArticleListingInteractor.swift in Sources */,
 				24C89D0C2579AC2000791646 /* TodoListingRouter.swift in Sources */,
 				24BA4B7B257922E300A7F088 /* AlbumListingManager.swift in Sources */,
@@ -1421,7 +1453,9 @@
 				24BA4B962579761900A7F088 /* PhotoListingManager.swift in Sources */,
 				2403DD21257D3990001F6025 /* ArticleListingManager.swift in Sources */,
 				248517EF25759788006F8A60 /* Album.swift in Sources */,
+				2462E0B82582C5D100B78203 /* AlbumsDataStub.swift in Sources */,
 				24CF04CC2570030200F92B49 /* GeneralRouter.swift in Sources */,
+				2462E0C72582C67300B78203 /* TodosDataStub.swift in Sources */,
 				24BA4B8F2579761900A7F088 /* PhotoListingModule.swift in Sources */,
 				2403DD1A257D3990001F6025 /* ArticleListingModule.swift in Sources */,
 				24BFC454258023AA00C15C67 /* ArticleDetailRouter.swift in Sources */,
@@ -1435,6 +1469,7 @@
 				24CF04722570022C00F92B49 /* LoginManager.swift in Sources */,
 				24C89CE6257999FE00791646 /* PhotoViewCell.swift in Sources */,
 				248517F92575A236006F8A60 /* JSONinitiable.swift in Sources */,
+				2462E0B32582C59900B78203 /* CommentsDataStub.swift in Sources */,
 				24CF04B72570026F00F92B49 /* MainModule.swift in Sources */,
 				24DD575A257036E200106BC6 /* ContactsViewController.swift in Sources */,
 				24AE32F0257C01F80064598A /* CachedImageView.swift in Sources */,
@@ -1445,6 +1480,7 @@
 				24CF046F2570022C00F92B49 /* LoginInteractor.swift in Sources */,
 				24CF03FF256FBFFE00F92B49 /* SceneDelegate.swift in Sources */,
 				24DD5757257036E200106BC6 /* ContactsModule.swift in Sources */,
+				2462E0AB2582C53400B78203 /* PostsDataStub.swift in Sources */,
 				248518092575A6BD006F8A60 /* PostListingPresenter.swift in Sources */,
 				24CF04982570025300F92B49 /* ProfileManager.swift in Sources */,
 				24BA4B75257922E300A7F088 /* AlbumListingPresenter.swift in Sources */,

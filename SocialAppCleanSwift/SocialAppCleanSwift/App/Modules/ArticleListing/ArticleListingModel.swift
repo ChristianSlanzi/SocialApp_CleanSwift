@@ -26,6 +26,7 @@ struct ArticleListingModel {
         struct DisplayedArticle {
             var title: String
             var authors: String
+            var url: String
         }
         var displayedArticles: [DisplayedArticle]
     }

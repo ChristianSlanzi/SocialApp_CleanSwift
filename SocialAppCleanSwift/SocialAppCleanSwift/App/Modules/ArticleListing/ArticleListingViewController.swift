@@ -85,7 +85,7 @@ extension ArticleListingViewController {
 
 extension ArticleListingViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        router.navigateToArticleDetail(for: self.displayedArticles[indexPath.row].title)
+        router.navigateToArticleDetail(for: self.displayedArticles[indexPath.row].title, url: self.displayedArticles[indexPath.row].url)
     }
 }
 

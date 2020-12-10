@@ -9,7 +9,7 @@ import UIKit
 
 protocol IArticleListingRouter {
 	// do someting...
-    func navigateToArticleDetail(for article: String)
+    func navigateToArticleDetail(for article: String, url: String)
 }
 
 class ArticleListingRouter: IArticleListingRouter {
@@ -35,7 +35,7 @@ class ArticleListingRouter: IArticleListingRouter {
         return view        
     }
     
-    func navigateToArticleDetail(for articleTitle: String) {
-        appRouter.presentModule(module: ArticleDetailModule(appRouter), parameters: ["title" : articleTitle])
+    func navigateToArticleDetail(for articleTitle: String, url: String) {
+        appRouter.presentModule(module: ArticleDetailModule(appRouter), parameters: ["title" : articleTitle, "url" : url])
     }
 }

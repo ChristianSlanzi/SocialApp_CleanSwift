@@ -26,7 +26,7 @@ extension ArticleListingPresenter {
             view.displayNoContentScreen()
             return
         }
-        let displayedArticles = response.articles.map({ ArticleListingModel.ViewModel.DisplayedArticle(title: $0.title, authors: $0.authors)})
+        let displayedArticles = response.articles.map({ ArticleListingModel.ViewModel.DisplayedArticle(title: $0.title, authors: $0.authors, url: $0.website)})
         let viewModel = ArticleListingModel.ViewModel(displayedArticles: displayedArticles)
         view.displayFetchedArticles(viewModel: viewModel)
     }

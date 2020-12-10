@@ -99,6 +99,14 @@ class ProfileViewController: UIViewController {
         view.setTitle("SHOW REMINDERS", for: .normal)
         return view
     }()
+    
+    let marketplaceButton: UIButton = {
+        let view = UIButton()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .blue
+        view.setTitle("SHOW MARKETPLACE", for: .normal)
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -114,6 +122,7 @@ class ProfileViewController: UIViewController {
         view.addSubview(todosButton)
         view.addSubview(articlesButton)
         view.addSubview(remindersButton)
+        view.addSubview(marketplaceButton)
         
         locationButton.addTarget(self, action: #selector(navigateToShowLocation(_:)), for: .touchUpInside)
         
@@ -124,6 +133,8 @@ class ProfileViewController: UIViewController {
         articlesButton.addTarget(self, action: #selector(navigateToArticleListing(_:)), for: .touchUpInside)
         
         remindersButton.addTarget(self, action: #selector(navigateToReminderListing(_:)), for: .touchUpInside)
+        
+        marketplaceButton.addTarget(self, action: #selector(navigateToMarketplace(_:)), for: .touchUpInside)
         
         setupConstraints()
         interactor.getUser(request: ProfileModel.Request())
@@ -147,6 +158,10 @@ class ProfileViewController: UIViewController {
     
     @objc func navigateToReminderListing(_ sender: UIButton) {
         router.navigateToReminderListing()
+    }
+    
+    @objc func navigateToMarketplace(_ sender: UIButton) {
+        router.navigateToMarketplace()
     }
     
     private func setupConstraints() {
@@ -225,6 +240,13 @@ class ProfileViewController: UIViewController {
             remindersButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
             remindersButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin),
             remindersButton.heightAnchor.constraint(equalToConstant: 30)
+        ])
+        
+        NSLayoutConstraint.activate([
+            marketplaceButton.topAnchor.constraint(equalTo: remindersButton.bottomAnchor, constant: margin),
+            marketplaceButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
+            marketplaceButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin),
+            marketplaceButton.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
 }

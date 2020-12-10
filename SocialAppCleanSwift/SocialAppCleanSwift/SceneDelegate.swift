@@ -36,7 +36,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             "TodoListing" : GeneralRouter.todoListing.imodule,
             "ArticleListing" : GeneralRouter.articleListing.imodule,
             "ArticleDetail" : GeneralRouter.articleDetail.imodule,
-            "ReminderListing" : GeneralRouter.reminderListing.imodule
+            "ReminderListing" : GeneralRouter.reminderListing.imodule,
+            "SellItemListing" : GeneralRouter.sellItemListing.imodule
         ]
         
         let startModule = GeneralRouter.login.module

@@ -14,6 +14,7 @@ protocol IProfileRouter {
     func navigateToTodoListing()
     func navigateToArticleListing()
     func navigateToReminderListing()
+    func navigateToMarketplace()
 }
 
 protocol ShowContactDataPassing
@@ -68,6 +69,11 @@ class ProfileRouter: IProfileRouter, ShowContactDataPassing {
     
     func navigateToReminderListing() {
         appRouter.presentModule(module: ReminderListingModule(appRouter),
+                                parameters: ["userId" : (dataStore?.user.id)!])
+    }
+    
+    func navigateToMarketplace() {
+        appRouter.presentModule(module: SellItemListingModule(appRouter),
                                 parameters: ["userId" : (dataStore?.user.id)!])
     }
 }

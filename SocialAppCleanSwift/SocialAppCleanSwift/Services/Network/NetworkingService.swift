@@ -47,24 +47,7 @@ class NetworkingService: ApiServiceInterface {
     
     func retrievePosts(completion: @escaping (Result<[Post], Error>) -> Void) {
         
-        retrieveItems(url: "https://jsonplaceholder.typicode.com/posts", completion: completion)
-        /*
-        AF.request("https://jsonplaceholder.typicode.com/users").responseJSON { (response) in
-            switch(response.result) {
-            case .success(let value):
-                let data = JSON(value)
-                if let item = data.array {
-                    let posts = item.map({ Post(json: JSON($0.object)) })
-                    completion(.success(posts))
-                    return
-                }
-                completion(.success([]))
-                //print(data)
-            case .failure(let error):
-                print(error.localizedDescription)
-                completion(.failure(error))
-            }
-        }*/
+        retrieveItems(url: "https://my-json-server.typicode.com/christianslanzi/SocialAppJson/posts", completion: completion)
     }
     
     func retrieveArticles(for userId: Int, completion: @escaping (Result<[Article], Error>) -> Void) {
@@ -73,24 +56,6 @@ class NetworkingService: ApiServiceInterface {
     
     func retrieveUsers(completion: @escaping (Result<[UserModel], Error>)->Void) {
         retrieveItems(url: "https://jsonplaceholder.typicode.com/users", completion: completion)
-        /*
-        AF.request("https://jsonplaceholder.typicode.com/users").responseJSON { (response) in
-            switch(response.result) {
-            case .success(let value):
-                let data = JSON(value)
-                if let item = data.array {
-                    let users = item.map({ UserModel(json: JSON($0.object)) })
-                    completion(.success(users))
-                    return
-                }
-                completion(.success([]))
-                //print(data)
-            case .failure(let error):
-                print(error.localizedDescription)
-                completion(.failure(error))
-            }
-        }
-        */
     }
 }
 

@@ -33,7 +33,7 @@ class PostViewCell: UITableViewCell {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.textColor = .black
-        lbl.font = UIFont.boldSystemFont(ofSize: 25)
+        lbl.font = UIFont.boldSystemFont(ofSize: 22)
         lbl.textAlignment = .left
         //lbl.adjustsFontSizeToFitWidth = true
         return lbl
@@ -44,7 +44,8 @@ class PostViewCell: UITableViewCell {
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.textColor = .black
         lbl.font = UIFont.boldSystemFont(ofSize: 15)
-        lbl.textAlignment = .right
+        lbl.textAlignment = .left
+        lbl.numberOfLines = 0
         //lbl.adjustsFontSizeToFitWidth = true
         return lbl
     }()
@@ -76,25 +77,27 @@ class PostViewCell: UITableViewCell {
     
     func setupConstraints() {
         
+        let margin: CGFloat = 16.0
+        
         NSLayoutConstraint.activate([
-            updatedTimeLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
-            updatedTimeLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),
+            updatedTimeLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: margin),
+            updatedTimeLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -margin),
             updatedTimeLabel.heightAnchor.constraint(equalToConstant: 15),
-            updatedTimeLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16)
+            updatedTimeLabel.topAnchor.constraint(equalTo: topAnchor, constant: margin)
         ])
         
         NSLayoutConstraint.activate([
-            titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
-            titleLabel.rightAnchor.constraint(equalTo: bodyLabel.leftAnchor, constant: -8),
-            titleLabel.heightAnchor.constraint(equalToConstant: 30),
-            titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 0)
+            titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: margin),
+            titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -margin),
+            titleLabel.heightAnchor.constraint(equalToConstant: 25),
+            titleLabel.topAnchor.constraint(equalTo: updatedTimeLabel.bottomAnchor, constant: margin)
         ])
         
         NSLayoutConstraint.activate([
-            bodyLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.35),
-            bodyLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -8),
-            bodyLabel.heightAnchor.constraint(equalToConstant: 30),
-            bodyLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 0)
+            bodyLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: margin),
+            bodyLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -margin),
+            bodyLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: margin),
+            bodyLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -margin)
         ])
     }
 }

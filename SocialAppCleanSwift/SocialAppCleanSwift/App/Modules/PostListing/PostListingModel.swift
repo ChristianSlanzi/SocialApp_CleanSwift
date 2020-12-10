@@ -26,6 +26,7 @@ struct PostListingModel {
             var id: Int
             var title: String
             var body: String
+            var updatedTime: String
         }
         var displayedPosts: [DisplayedPost]
 	}

@@ -9,10 +9,10 @@ import Foundation
 
 // MARK: - DATE FROM STRING
 public extension String{
-    func toDate(format: String, locale: Locale) -> Date? {
+    func toDate(format: String, locale: Locale = Locale.current, timeZone: TimeZone = TimeZone.current) -> Date? {
         let dateTimeFormatter = DateFormatter()
         dateTimeFormatter.dateFormat = format
-        dateTimeFormatter.timeZone = TimeZone.current
+        dateTimeFormatter.timeZone = timeZone
         dateTimeFormatter.locale = locale
         return dateTimeFormatter.date(from: self)
     }

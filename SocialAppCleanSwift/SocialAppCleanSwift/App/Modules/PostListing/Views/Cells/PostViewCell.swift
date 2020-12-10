@@ -12,11 +12,22 @@ class PostViewCell: UITableViewCell {
     var item: PostListingModel.ViewModel.DisplayedPost? {
         didSet {
             if let item = item {
+                updatedTimeLabel.text = item.updatedTime
                 titleLabel.text = item.title
                 bodyLabel.text = item.body
             }
         }
     }
+    
+    private let updatedTimeLabel: UILabel = {
+        let lbl = UILabel()
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.textColor = .gray
+        lbl.font = UIFont.boldSystemFont(ofSize: 15)
+        lbl.textAlignment = .left
+        //lbl.adjustsFontSizeToFitWidth = true
+        return lbl
+    }()
 
     private let titleLabel: UILabel = {
         let lbl = UILabel()
@@ -53,6 +64,7 @@ class PostViewCell: UITableViewCell {
     func setupViews() {
         backgroundColor = .white
         
+        addSubview(updatedTimeLabel)
         addSubview(titleLabel)
         addSubview(bodyLabel)
         
@@ -63,6 +75,13 @@ class PostViewCell: UITableViewCell {
     }
     
     func setupConstraints() {
+        
+        NSLayoutConstraint.activate([
+            updatedTimeLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
+            updatedTimeLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),
+            updatedTimeLabel.heightAnchor.constraint(equalToConstant: 15),
+            updatedTimeLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16)
+        ])
         
         NSLayoutConstraint.activate([
             titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),

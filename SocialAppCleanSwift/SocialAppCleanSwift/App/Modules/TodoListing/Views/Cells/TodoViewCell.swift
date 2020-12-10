@@ -13,6 +13,8 @@ class TodoViewCell: UITableViewCell {
         didSet {
             if let item = item {
                 titleLabel.text = item.name
+                
+                titleLabel.textColor = item.completed ? .gray : .black
             }
         }
     }

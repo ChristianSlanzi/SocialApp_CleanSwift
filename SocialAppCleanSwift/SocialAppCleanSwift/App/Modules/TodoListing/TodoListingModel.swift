@@ -25,6 +25,7 @@ struct TodoListingModel {
         struct DisplayedTodo {
             var id: Int
             var name: String
+            var completed: Bool
         }
         var displayedTodos: [DisplayedTodo]
     }

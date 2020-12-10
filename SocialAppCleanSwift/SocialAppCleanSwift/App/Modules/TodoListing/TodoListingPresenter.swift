@@ -23,7 +23,7 @@ class TodoListingPresenter: ITodoListingPresenter {
 extension TodoListingPresenter {
     func presentFetchedTodos(response: TodoListingModel.Response) {
         let displayedTodos = response.todos.map({
-            TodoListingModel.ViewModel.DisplayedTodo(id: $0.id, name: $0.title)
+            TodoListingModel.ViewModel.DisplayedTodo(id: $0.id, name: $0.title, completed: $0.completed)
         })
         let viewModel = TodoListingModel.ViewModel(displayedTodos: displayedTodos)
         view.displayFetchedTodos(viewModel: viewModel)

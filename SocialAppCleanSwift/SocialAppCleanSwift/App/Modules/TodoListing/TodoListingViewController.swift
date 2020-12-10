@@ -95,7 +95,6 @@ extension TodoListingViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TodoViewCell.identifier, for: indexPath) as! TodoViewCell
-        //cell.textLabel?.text = self.displayedPosts[indexPath.row].title
         cell.item = self.displayedTodos[indexPath.row]
         return cell
     }

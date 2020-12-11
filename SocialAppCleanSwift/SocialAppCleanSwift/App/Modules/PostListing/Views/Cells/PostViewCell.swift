@@ -35,6 +35,7 @@ class PostViewCell: UITableViewCell {
         lbl.textColor = .black
         lbl.font = UIFont.boldSystemFont(ofSize: 22)
         lbl.textAlignment = .left
+        lbl.numberOfLines = 0
         //lbl.adjustsFontSizeToFitWidth = true
         return lbl
     }()
@@ -89,7 +90,6 @@ class PostViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: margin),
             titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -margin),
-            titleLabel.heightAnchor.constraint(equalToConstant: 25),
             titleLabel.topAnchor.constraint(equalTo: updatedTimeLabel.bottomAnchor, constant: margin)
         ])
         

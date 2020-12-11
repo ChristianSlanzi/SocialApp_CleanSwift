@@ -59,7 +59,7 @@ extension PostListingViewController {
         //view.backgroundColor = .red
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 50
+        tableView.estimatedRowHeight = 80
         tableView.register(PostViewCell.self, forCellReuseIdentifier: PostViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
@@ -88,9 +88,9 @@ extension PostListingViewController: UITableViewDelegate {
 
 extension PostListingViewController: UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 155
-    }
+    //func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //    return 155
+    //}
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.displayedPosts.count
     }

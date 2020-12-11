@@ -30,7 +30,7 @@ class PostListingModule: IModule {
         
         //let bundle = Bundle(for: type(of: self))
         let view = PostListingViewController()//(nibName: "PostListingViewController", bundle: bundle)
-        view.title = "Posts"
+        view.title = "Feed"
         let presenter = PostListingPresenter(view: view)
         let interactor = PostListingInteractor(presenter: presenter)
         interactor.networkingService = networkingService

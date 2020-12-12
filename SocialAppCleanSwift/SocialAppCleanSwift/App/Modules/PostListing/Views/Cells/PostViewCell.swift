@@ -9,6 +9,8 @@ import UIKit
 
 class PostViewCell: UITableViewCell {
     
+    private var photoHeightConstraint: NSLayoutConstraint?
+    
     var item: PostListingModel.ViewModel.DisplayedPost? {
         didSet {
             if let item = item {
@@ -16,8 +18,14 @@ class PostViewCell: UITableViewCell {
                 titleLabel.text = item.title
                 bodyLabel.text = item.body
                 if let photoUrl = item.photoUrl {
+                    photoImageView.isHidden = false
+                    photoHeightConstraint?.isActive = true
                     photoImageView.load(url: photoUrl)
+                } else {
+                    photoImageView.isHidden = true
+                    photoHeightConstraint?.isActive = false
                 }
+                self.layoutIfNeeded()
             }
         }
     }
@@ -111,11 +119,13 @@ class PostViewCell: UITableViewCell {
             bodyLabel.bottomAnchor.constraint(equalTo: photoImageView.topAnchor, constant: -margin)
         ])
         
+        photoHeightConstraint = photoImageView.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 0.66)
+        
         NSLayoutConstraint.activate([
             photoImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: margin),
             photoImageView.rightAnchor.constraint(equalTo: rightAnchor, constant: -margin),
             photoImageView.topAnchor.constraint(equalTo: bodyLabel.bottomAnchor, constant: margin),
-            photoImageView.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 0.66),
+            photoHeightConstraint!,
             photoImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -margin)
         ])
     }

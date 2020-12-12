@@ -23,7 +23,7 @@ class PostListingPresenter: IPostListingPresenter {
 extension PostListingPresenter {
     func presentFetchedPosts(response: PostListingModel.Response) {
         let displayedPosts = response.posts.map {
-            PostListingModel.ViewModel.DisplayedPost(id: $0.id, title: $0.title, body: $0.body, updatedTime: $0.updatedTime.toString(format:"dd. MMMM, yyyy HH:mm"))
+            PostListingModel.ViewModel.DisplayedPost(id: $0.id, title: $0.title, body: $0.body, updatedTime: $0.updatedTime.toString(format:"dd. MMMM, yyyy HH:mm"), photoUrl: $0.photo != nil ? URL(string: $0.photo!) : nil)
         }
         let viewModel = PostListingModel.ViewModel(displayedPosts: displayedPosts)
         view.displayFetchedPosts(viewModel: viewModel)

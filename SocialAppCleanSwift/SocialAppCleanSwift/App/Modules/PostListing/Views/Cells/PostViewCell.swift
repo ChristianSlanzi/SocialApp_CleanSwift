@@ -15,6 +15,9 @@ class PostViewCell: UITableViewCell {
                 updatedTimeLabel.text = item.updatedTime
                 titleLabel.text = item.title
                 bodyLabel.text = item.body
+                if let photoUrl = item.photoUrl {
+                    photoImageView.load(url: photoUrl)
+                }
             }
         }
     }
@@ -50,6 +53,13 @@ class PostViewCell: UITableViewCell {
         //lbl.adjustsFontSizeToFitWidth = true
         return lbl
     }()
+    
+    private let photoImageView: CachedImageView = {
+        let view = CachedImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .gray
+        return view
+    }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -69,6 +79,7 @@ class PostViewCell: UITableViewCell {
         addSubview(updatedTimeLabel)
         addSubview(titleLabel)
         addSubview(bodyLabel)
+        addSubview(photoImageView)
         
         let whiteBackgroundView = UIView(frame: self.frame)
         whiteBackgroundView.backgroundColor = .white
@@ -97,7 +108,15 @@ class PostViewCell: UITableViewCell {
             bodyLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: margin),
             bodyLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -margin),
             bodyLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: margin),
-            bodyLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -margin)
+            bodyLabel.bottomAnchor.constraint(equalTo: photoImageView.topAnchor, constant: -margin)
+        ])
+        
+        NSLayoutConstraint.activate([
+            photoImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: margin),
+            photoImageView.rightAnchor.constraint(equalTo: rightAnchor, constant: -margin),
+            photoImageView.topAnchor.constraint(equalTo: bodyLabel.bottomAnchor, constant: margin),
+            photoImageView.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 0.66),
+            photoImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -margin)
         ])
     }
 }

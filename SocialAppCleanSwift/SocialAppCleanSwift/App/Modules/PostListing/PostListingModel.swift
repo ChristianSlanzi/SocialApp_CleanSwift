@@ -27,6 +27,7 @@ struct PostListingModel {
             var title: String
             var body: String
             var updatedTime: String
+            var photoUrl: URL?
         }
         var displayedPosts: [DisplayedPost]
 	}

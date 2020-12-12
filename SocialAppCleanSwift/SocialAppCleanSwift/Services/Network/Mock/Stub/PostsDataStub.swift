@@ -15,7 +15,8 @@ let postsData = JSON(parseJSON: """
 "created_time":"2017-01-27T18:36:36Z",
 "updated_time":"2020-11-27T18:36:36Z",
 "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-"body": "quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit molestiae ut ut quas totam nostrum rerum est autem sunt rem eveniet architecto"
+"body": "quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit molestiae ut ut quas totam nostrum rerum est autem sunt rem eveniet architecto",
+"photo": "https://images.ctfassets.net/cnu0m8re1exe/2AL3FwP145eJrIPpDCzBiC/0948a812c1d1ec72aec839b6c9b1e2d1/shutterstock_687841828.jpg?w=650&h=433&fit=fill"
 },
 {
 "userId": 1,

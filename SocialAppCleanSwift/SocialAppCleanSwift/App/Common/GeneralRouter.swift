@@ -9,6 +9,7 @@ enum GeneralRouter {
     case login
     case main
     case home
+    case discover
     case profile
     case detail
     case settings
@@ -25,7 +26,7 @@ enum GeneralRouter {
     case reminderListing
 }
 
-extension GeneralRouter {
+private extension GeneralRouter {
     
     func mappingLogin(value: IAppRouter) -> IModule {
         return LoginModule(value)
@@ -78,7 +79,12 @@ extension GeneralRouter {
     func mappingReminderListing(value: IAppRouter) -> IModule {
         return ReminderListingModule(value)
     }
-    
+    func mappingDiscover(value: IAppRouter) -> IModule {
+        return DiscoverModule(value)
+    }
+}
+
+extension GeneralRouter {
     var imodule: (_ value: IAppRouter) -> IModule {
         
         switch self {
@@ -116,6 +122,8 @@ extension GeneralRouter {
             return mappingArticleDetail
         case .reminderListing:
             return mappingReminderListing
+        case .discover:
+            return mappingDiscover
         }
     }
     

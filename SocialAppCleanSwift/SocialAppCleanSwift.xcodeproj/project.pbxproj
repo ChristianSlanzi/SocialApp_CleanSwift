@@ -22,6 +22,14 @@
 		2403DD2D257D41E7001F6025 /* ArticleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403DD2C257D41E7001F6025 /* ArticleViewCell.swift */; };
 		2425E8402576C0970084E415 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425E83F2576C0970084E415 /* Environment.swift */; };
 		24408AFF25866A9B00910D35 /* ContactViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408AFE25866A9B00910D35 /* ContactViewCell.swift */; };
+		24408B0F2586849600910D35 /* DiscoverModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408B072586849500910D35 /* DiscoverModule.swift */; };
+		24408B102586849600910D35 /* DiscoverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408B082586849500910D35 /* DiscoverPresenter.swift */; };
+		24408B112586849600910D35 /* DiscoverRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408B092586849500910D35 /* DiscoverRouter.swift */; };
+		24408B122586849600910D35 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408B0A2586849500910D35 /* DiscoverViewController.swift */; };
+		24408B132586849600910D35 /* DiscoverInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408B0B2586849500910D35 /* DiscoverInteractor.swift */; };
+		24408B142586849600910D35 /* DiscoverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408B0C2586849500910D35 /* DiscoverModel.swift */; };
+		24408B152586849600910D35 /* DiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24408B0D2586849500910D35 /* DiscoverViewController.xib */; };
+		24408B162586849600910D35 /* DiscoverManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408B0E2586849500910D35 /* DiscoverManager.swift */; };
 		24601861257EE02100FF623E /* UITableView+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24601860257EE02100FF623E /* UITableView+Empty.swift */; };
 		24601871257EF17900FF623E /* SellItemListingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24601869257EF17800FF623E /* SellItemListingModule.swift */; };
 		24601872257EF17900FF623E /* SellItemListingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2460186A257EF17800FF623E /* SellItemListingPresenter.swift */; };
@@ -231,6 +239,14 @@
 		2403DD2C257D41E7001F6025 /* ArticleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewCell.swift; sourceTree = "<group>"; };
 		2425E83F2576C0970084E415 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		24408AFE25866A9B00910D35 /* ContactViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewCell.swift; sourceTree = "<group>"; };
+		24408B072586849500910D35 /* DiscoverModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverModule.swift; sourceTree = "<group>"; };
+		24408B082586849500910D35 /* DiscoverPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPresenter.swift; sourceTree = "<group>"; };
+		24408B092586849500910D35 /* DiscoverRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverRouter.swift; sourceTree = "<group>"; };
+		24408B0A2586849500910D35 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		24408B0B2586849500910D35 /* DiscoverInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverInteractor.swift; sourceTree = "<group>"; };
+		24408B0C2586849500910D35 /* DiscoverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverModel.swift; sourceTree = "<group>"; };
+		24408B0D2586849500910D35 /* DiscoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverViewController.xib; sourceTree = "<group>"; };
+		24408B0E2586849500910D35 /* DiscoverManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverManager.swift; sourceTree = "<group>"; };
 		24601860257EE02100FF623E /* UITableView+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Empty.swift"; sourceTree = "<group>"; };
 		24601869257EF17800FF623E /* SellItemListingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellItemListingModule.swift; sourceTree = "<group>"; };
 		2460186A257EF17800FF623E /* SellItemListingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellItemListingPresenter.swift; sourceTree = "<group>"; };
@@ -522,6 +538,21 @@
 				24408AFE25866A9B00910D35 /* ContactViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		24408B062586847800910D35 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				24408B072586849500910D35 /* DiscoverModule.swift */,
+				24408B082586849500910D35 /* DiscoverPresenter.swift */,
+				24408B092586849500910D35 /* DiscoverRouter.swift */,
+				24408B0A2586849500910D35 /* DiscoverViewController.swift */,
+				24408B0B2586849500910D35 /* DiscoverInteractor.swift */,
+				24408B0C2586849500910D35 /* DiscoverModel.swift */,
+				24408B0D2586849500910D35 /* DiscoverViewController.xib */,
+				24408B0E2586849500910D35 /* DiscoverManager.swift */,
+			);
+			path = Discover;
 			sourceTree = "<group>";
 		};
 		2460185F257EE00500FF623E /* UITableView */ = {
@@ -893,6 +924,7 @@
 		24CF045C2570018800F92B49 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				24408B062586847800910D35 /* Discover */,
 				24BFC45D25802E0300C15C67 /* ReminderListing */,
 				24BFC4332580233100C15C67 /* ArticleDetail */,
 				24601868257EF11B00FF623E /* SellItemListing */,
@@ -1229,6 +1261,7 @@
 				24DD575D257036E200106BC6 /* ContactsViewController.xib in Resources */,
 				247447B12576F91D006A6BAE /* CommentListingViewController.xib in Resources */,
 				24601877257EF17900FF623E /* SellItemListingViewController.xib in Resources */,
+				24408B152586849600910D35 /* DiscoverViewController.xib in Resources */,
 				24CF04712570022C00F92B49 /* LoginViewController.xib in Resources */,
 				24BFC458258023AA00C15C67 /* ArticleDetailViewController.xib in Resources */,
 				24CF04972570025300F92B49 /* ProfileViewController.xib in Resources */,
@@ -1394,6 +1427,7 @@
 				24BFC457258023AA00C15C67 /* ArticleDetailModel.swift in Sources */,
 				24CF04A92570026100F92B49 /* DetailModel.swift in Sources */,
 				24CF04822570024200F92B49 /* HomeInteractor.swift in Sources */,
+				24408B0F2586849600910D35 /* DiscoverModule.swift in Sources */,
 				24601878257EF17900FF623E /* SellItemListingManager.swift in Sources */,
 				24BFC456258023AA00C15C67 /* ArticleDetailInteractor.swift in Sources */,
 				24C89D182579AF1700791646 /* TodoViewCell.swift in Sources */,
@@ -1413,6 +1447,7 @@
 				24CF04C72570029700F92B49 /* Module.swift in Sources */,
 				2403DD26257D3D76001F6025 /* Article.swift in Sources */,
 				24CF04AB2570026100F92B49 /* DetailManager.swift in Sources */,
+				24408B162586849600910D35 /* DiscoverManager.swift in Sources */,
 				24BA4B74257922E300A7F088 /* AlbumListingModule.swift in Sources */,
 				24601876257EF17900FF623E /* SellItemListingModel.swift in Sources */,
 				247447AB2576F91D006A6BAE /* CommentListingModule.swift in Sources */,
@@ -1432,10 +1467,13 @@
 				2403DD1F257D3990001F6025 /* ArticleListingModel.swift in Sources */,
 				24CF04952570025300F92B49 /* ProfileInteractor.swift in Sources */,
 				24BA4B942579761900A7F088 /* PhotoListingModel.swift in Sources */,
+				24408B112586849600910D35 /* DiscoverRouter.swift in Sources */,
 				24601861257EE02100FF623E /* UITableView+Empty.swift in Sources */,
+				24408B132586849600910D35 /* DiscoverInteractor.swift in Sources */,
 				24601873257EF17900FF623E /* SellItemListingRouter.swift in Sources */,
 				24CF04812570024200F92B49 /* HomeViewController.swift in Sources */,
 				24BDDA722582A5B0006D78A1 /* Date+String.swift in Sources */,
+				24408B122586849600910D35 /* DiscoverViewController.swift in Sources */,
 				24BA4B922579761900A7F088 /* PhotoListingViewController.swift in Sources */,
 				247447AC2576F91D006A6BAE /* CommentListingPresenter.swift in Sources */,
 				24CF047E2570024200F92B49 /* HomeModule.swift in Sources */,
@@ -1445,6 +1483,7 @@
 				24CF04802570024200F92B49 /* HomeRouter.swift in Sources */,
 				248518162575B7B4006F8A60 /* PostViewCell.swift in Sources */,
 				24BA4B79257922E300A7F088 /* AlbumListingModel.swift in Sources */,
+				24408B102586849600910D35 /* DiscoverPresenter.swift in Sources */,
 				24CF04A62570026100F92B49 /* DetailRouter.swift in Sources */,
 				24CF04B82570026F00F92B49 /* MainPresenter.swift in Sources */,
 				24E0ADF6257407FF00A54F30 /* ShowLocationRouter.swift in Sources */,
@@ -1466,6 +1505,7 @@
 				2462E0C22582C62C00B78203 /* ArticlesDataStub.swift in Sources */,
 				2403DD1E257D3990001F6025 /* ArticleListingInteractor.swift in Sources */,
 				24C89D0C2579AC2000791646 /* TodoListingRouter.swift in Sources */,
+				24408B142586849600910D35 /* DiscoverModel.swift in Sources */,
 				24BA4B7B257922E300A7F088 /* AlbumListingManager.swift in Sources */,
 				24BFC459258023AA00C15C67 /* ArticleDetailManager.swift in Sources */,
 				24BDDA6D25828AD1006D78A1 /* String+Date.swift in Sources */,

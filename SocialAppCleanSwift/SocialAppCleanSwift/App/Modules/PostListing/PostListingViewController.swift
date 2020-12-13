@@ -98,9 +98,9 @@ extension PostListingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PostViewCell.identifier, for: indexPath) as! PostViewCell
         //cell.textLabel?.text = self.displayedPosts[indexPath.row].title
-        if(indexPath.row == 6 || indexPath.row == 5) {
-            print("prr")
-        }
+        //if(indexPath.row == 6 || indexPath.row == 5) {
+        //    print("prr")
+        //}
         cell.item = self.displayedPosts[indexPath.row]
         return cell
     }

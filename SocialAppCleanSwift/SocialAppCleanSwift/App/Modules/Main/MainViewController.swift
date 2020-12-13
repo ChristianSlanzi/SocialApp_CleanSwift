@@ -19,11 +19,14 @@ class MainViewController: UITabBarController {
         super.viewDidLoad()
         // do someting...
         
-        let detail = AppRouter.share.getModule(module: PostListingModule(AppRouter.share))!
-        detail.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home-tab"), tag: 0)
+        let feeds = AppRouter.share.getModule(module: PostListingModule(AppRouter.share))!
+        feeds.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home-tab"), tag: 0)
+        
+        let discover = AppRouter.share.getModule(module: DiscoverModule(AppRouter.share))!
+        discover.tabBarItem = UITabBarItem(title: "Discover", image: UIImage(named: "search-tab"), tag: 1)
         
         let contacts = AppRouter.share.getModule(module: ContactsModule(AppRouter.share))!
-        contacts.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
+        contacts.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 2)
         
         //let profile = AppRouter.share.getModule(module: ProfileModule(AppRouter.share))!
         //profile.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
@@ -32,9 +35,9 @@ class MainViewController: UITabBarController {
         //detail.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
         
         let home = AppRouter.share.getModule(module: HomeModule(AppRouter.share))!
-        home.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 2)
+        home.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 3)
         
-        let views = [detail, contacts, home].map { UINavigationController(rootViewController: $0)
+        let views = [feeds, discover, contacts, home].map { UINavigationController(rootViewController: $0)
         }
         viewControllers = views
         

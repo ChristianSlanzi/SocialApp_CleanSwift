@@ -20,7 +20,7 @@ class MainViewController: UITabBarController {
         // do someting...
         
         let detail = AppRouter.share.getModule(module: PostListingModule(AppRouter.share))!
-        detail.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
+        detail.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home-tab"), tag: 0)
         
         let contacts = AppRouter.share.getModule(module: ContactsModule(AppRouter.share))!
         contacts.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)

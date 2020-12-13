@@ -24,8 +24,6 @@ class ContactsPresenter: IContactsPresenter {
 extension ContactsPresenter {
     func presentFetchedContacts(response: ContactsModel.Response) {
         let displayedContacts: [ContactsModel.ViewModel.DisplayedContact] = response.contacts.map {
-            let url = URL(string: $0.avatar!)
-            print(url)
             return ContactsModel.ViewModel.DisplayedContact(id: $0.id, name: $0.name, avatarURL: $0.avatar != nil ? URL(string: $0.avatar!) : nil)
         }
         let viewModel = ContactsModel.ViewModel(displayedContacts: displayedContacts)

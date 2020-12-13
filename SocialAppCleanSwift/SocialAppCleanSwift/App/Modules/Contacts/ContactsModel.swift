@@ -24,11 +24,12 @@ struct ContactsModel {
     struct ViewModel {
         struct DisplayedContact
         {
-          var id: Int
-          //var date: String
-          //var email: String
-          var name: String
-          //var total: String
+            var id: Int
+            //var date: String
+            //var email: String
+            var name: String
+            //var total: String
+            var avatarURL: URL?
         }
         var displayedContacts: [DisplayedContact]
     }

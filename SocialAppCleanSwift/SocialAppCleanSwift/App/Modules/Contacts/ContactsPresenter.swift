@@ -23,13 +23,10 @@ class ContactsPresenter: IContactsPresenter {
 
 extension ContactsPresenter {
     func presentFetchedContacts(response: ContactsModel.Response) {
-        var displayedContacts: [ContactsModel.ViewModel.DisplayedContact] = []
-        for contact in response.contacts {
-          //let date = dateFormatter.string(from: order.date)
-          //let total = currencyFormatter.string(from: order.total)
-            guard let id = contact.id, let name = contact.name else { break }
-            let displayedContact = ContactsModel.ViewModel.DisplayedContact(id: id, name: name)
-            displayedContacts.append(displayedContact)
+        let displayedContacts: [ContactsModel.ViewModel.DisplayedContact] = response.contacts.map {
+            let url = URL(string: $0.avatar!)
+            print(url)
+            return ContactsModel.ViewModel.DisplayedContact(id: $0.id, name: $0.name, avatarURL: $0.avatar != nil ? URL(string: $0.avatar!) : nil)
         }
         let viewModel = ContactsModel.ViewModel(displayedContacts: displayedContacts)
         view.displayFetchedContacts(viewModel: viewModel)

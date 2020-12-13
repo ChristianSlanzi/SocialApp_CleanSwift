@@ -21,6 +21,7 @@
 		2403DD26257D3D76001F6025 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403DD25257D3D76001F6025 /* Article.swift */; };
 		2403DD2D257D41E7001F6025 /* ArticleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403DD2C257D41E7001F6025 /* ArticleViewCell.swift */; };
 		2425E8402576C0970084E415 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425E83F2576C0970084E415 /* Environment.swift */; };
+		24408AFF25866A9B00910D35 /* ContactViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408AFE25866A9B00910D35 /* ContactViewCell.swift */; };
 		24601861257EE02100FF623E /* UITableView+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24601860257EE02100FF623E /* UITableView+Empty.swift */; };
 		24601871257EF17900FF623E /* SellItemListingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24601869257EF17800FF623E /* SellItemListingModule.swift */; };
 		24601872257EF17900FF623E /* SellItemListingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2460186A257EF17800FF623E /* SellItemListingPresenter.swift */; };
@@ -229,6 +230,7 @@
 		2403DD25257D3D76001F6025 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		2403DD2C257D41E7001F6025 /* ArticleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewCell.swift; sourceTree = "<group>"; };
 		2425E83F2576C0970084E415 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		24408AFE25866A9B00910D35 /* ContactViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewCell.swift; sourceTree = "<group>"; };
 		24601860257EE02100FF623E /* UITableView+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Empty.swift"; sourceTree = "<group>"; };
 		24601869257EF17800FF623E /* SellItemListingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellItemListingModule.swift; sourceTree = "<group>"; };
 		2460186A257EF17800FF623E /* SellItemListingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellItemListingPresenter.swift; sourceTree = "<group>"; };
@@ -504,6 +506,22 @@
 				2425E83F2576C0970084E415 /* Environment.swift */,
 			);
 			path = Environment;
+			sourceTree = "<group>";
+		};
+		24408AFC25866A7900910D35 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				24408AFD25866A8300910D35 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		24408AFD25866A8300910D35 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				24408AFE25866A9B00910D35 /* ContactViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		2460185F257EE00500FF623E /* UITableView */ = {
@@ -1000,6 +1018,7 @@
 		24DD574E257036C400106BC6 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				24408AFC25866A7900910D35 /* Views */,
 				24DD574F257036E200106BC6 /* ContactsModule.swift */,
 				24DD5750257036E200106BC6 /* ContactsPresenter.swift */,
 				24DD5751257036E200106BC6 /* ContactsRouter.swift */,
@@ -1457,6 +1476,7 @@
 				24CF04CC2570030200F92B49 /* GeneralRouter.swift in Sources */,
 				2462E0C72582C67300B78203 /* TodosDataStub.swift in Sources */,
 				24BA4B8F2579761900A7F088 /* PhotoListingModule.swift in Sources */,
+				24408AFF25866A9B00910D35 /* ContactViewCell.swift in Sources */,
 				2403DD1A257D3990001F6025 /* ArticleListingModule.swift in Sources */,
 				24BFC454258023AA00C15C67 /* ArticleDetailRouter.swift in Sources */,
 				24BA4B77257922E300A7F088 /* AlbumListingViewController.swift in Sources */,

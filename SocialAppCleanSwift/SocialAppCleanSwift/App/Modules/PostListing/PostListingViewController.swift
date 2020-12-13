@@ -59,7 +59,7 @@ extension PostListingViewController {
         //view.backgroundColor = .red
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 80
+        tableView.estimatedRowHeight = 45
         tableView.register(PostViewCell.self, forCellReuseIdentifier: PostViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
@@ -98,6 +98,9 @@ extension PostListingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PostViewCell.identifier, for: indexPath) as! PostViewCell
         //cell.textLabel?.text = self.displayedPosts[indexPath.row].title
+        if(indexPath.row == 6 || indexPath.row == 5) {
+            print("prr")
+        }
         cell.item = self.displayedPosts[indexPath.row]
         return cell
     }

@@ -23,7 +23,7 @@ class ProfilePresenter: IProfilePresenter {
 extension ProfilePresenter {
     func presentUserProfile(response: ProfileModel.Response) {
         let user = response.user
-        let displayedUser = ProfileModel.ViewModel.DisplayedUser(name: user.name!,
+        let displayedUser = ProfileModel.ViewModel.DisplayedUser(name: user.name,
                                                                  username: user.username!,
                                                                  email: user.email!,
                                                                  street: user.address!.street!,

@@ -13,6 +13,7 @@ let usersData = JSON(parseJSON: """
         "id": 1,
         "name": "Leanne Graham",
         "username": "Bret",
+        "avatar": "https://github.com/ChristianSlanzi/SocialAppJson/blob/main/avatars/id1.png?raw=true",
         "email": "Sincere@april.biz",
         "address": {
           "street": "Kulas Light",
@@ -36,6 +37,7 @@ let usersData = JSON(parseJSON: """
       "id": 2,
       "name": "Anthony Graham",
       "username": "Thony",
+        "avatar": "https://github.com/ChristianSlanzi/SocialAppJson/blob/main/avatars/id2.png?raw=true",
       "email": "thonyg@buzz.biz",
       "address": {
         "street": "Green Light",

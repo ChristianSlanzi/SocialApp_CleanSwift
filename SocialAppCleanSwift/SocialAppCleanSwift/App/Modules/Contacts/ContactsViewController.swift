@@ -62,7 +62,7 @@ extension ContactsViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 50
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(ContactViewCell.self, forCellReuseIdentifier: ContactViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -101,13 +101,18 @@ extension ContactsViewController: UITableViewDelegate {
 }
 
 extension ContactsViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 155
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.displayedContacts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = self.displayedContacts[indexPath.row].name
+        let cell = tableView.dequeueReusableCell(withIdentifier: ContactViewCell.identifier, for: indexPath) as! ContactViewCell
+        cell.item = self.displayedContacts[indexPath.row]
         return cell
     }
 }

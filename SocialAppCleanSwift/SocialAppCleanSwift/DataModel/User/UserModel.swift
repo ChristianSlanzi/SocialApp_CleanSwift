@@ -34,9 +34,10 @@ import SwiftyJSON
  */
 
 struct UserModel: JSONinitiable {
-    var id: Int?
-    var name: String?
+    var id: Int
+    var name: String
     var username: String?
+    var avatar: String?
     var email: String?
     var address: UserAddress?
     var phone: String?
@@ -44,9 +45,10 @@ struct UserModel: JSONinitiable {
     var company: UserCompany?
     
     init(json: JSON) {
-        self.id = json["id"].int
-        self.name = json["name"].string
+        self.id = json["id"].int!
+        self.name = json["name"].string!
         self.username = json["username"].string
+        self.avatar = json["avatar"].string
         self.email = json["email"].string
         self.phone = json["phone"].string
         self.website = json["website"].string

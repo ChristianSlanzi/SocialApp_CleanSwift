@@ -25,7 +25,8 @@ class PostViewCell: UITableViewCell {
                     photoImageView.isHidden = true
                     photoHeightConstraint?.isActive = false
                 }
-                self.layoutIfNeeded()
+                //self.updateConstraints()
+                //self.layoutIfNeeded()
             }
         }
     }

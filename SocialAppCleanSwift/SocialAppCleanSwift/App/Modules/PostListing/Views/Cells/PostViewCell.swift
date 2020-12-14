@@ -21,30 +21,13 @@ class PostViewCell: UITableViewCell {
                 bodyLabel.text = item.body
                 if let photoUrl = item.photoUrl {
                     photoImageView.isHidden = false
-                    //photoHeightConstraint?.isActive = true
                     photoImageView.load(url: photoUrl)
-                    
                     photoHeightConstraint?.isActive = true
                     photoReducedHeightConstraint?.isActive = false
-
-//                    let newConstraint = photoHeightConstraint!.constraintWithMultiplier(0.66)
-//                    removeConstraint(photoHeightConstraint!)
-//                    addConstraint(newConstraint)
-//                    layoutIfNeeded()
-//                    photoHeightConstraint = newConstraint
                 } else {
                     photoImageView.isHidden = true
-
                     photoHeightConstraint?.isActive = false
                     photoReducedHeightConstraint?.isActive = true
-/*
-                    let newConstraint = photoHeightConstraint!.constraintWithMultiplier(0.0)
-                    removeConstraint(photoHeightConstraint!)
-                    addConstraint(newConstraint)
-                    layoutIfNeeded()
-                    photoHeightConstraint = newConstraint                    //photoHeightConstraint?.isActive = false
- */
-                    
                 }
                 self.setNeedsLayout()
             }

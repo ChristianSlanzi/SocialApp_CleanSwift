@@ -102,6 +102,7 @@ extension PostListingViewController: UITableViewDataSource {
         //    print("prr")
         //}
         cell.item = self.displayedPosts[indexPath.row]
+        cell.layoutIfNeeded()
         return cell
     }
 }

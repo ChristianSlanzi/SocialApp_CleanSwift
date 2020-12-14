@@ -30,6 +30,7 @@
 		24408B142586849600910D35 /* DiscoverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408B0C2586849500910D35 /* DiscoverModel.swift */; };
 		24408B152586849600910D35 /* DiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24408B0D2586849500910D35 /* DiscoverViewController.xib */; };
 		24408B162586849600910D35 /* DiscoverManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408B0E2586849500910D35 /* DiscoverManager.swift */; };
+		245F4DA0258799F500C83134 /* NSLayoutConstraint+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F4D9F258799F500C83134 /* NSLayoutConstraint+Ext.swift */; };
 		24601861257EE02100FF623E /* UITableView+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24601860257EE02100FF623E /* UITableView+Empty.swift */; };
 		24601871257EF17900FF623E /* SellItemListingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24601869257EF17800FF623E /* SellItemListingModule.swift */; };
 		24601872257EF17900FF623E /* SellItemListingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2460186A257EF17800FF623E /* SellItemListingPresenter.swift */; };
@@ -247,6 +248,7 @@
 		24408B0C2586849500910D35 /* DiscoverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverModel.swift; sourceTree = "<group>"; };
 		24408B0D2586849500910D35 /* DiscoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverViewController.xib; sourceTree = "<group>"; };
 		24408B0E2586849500910D35 /* DiscoverManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverManager.swift; sourceTree = "<group>"; };
+		245F4D9F258799F500C83134 /* NSLayoutConstraint+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Ext.swift"; sourceTree = "<group>"; };
 		24601860257EE02100FF623E /* UITableView+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Empty.swift"; sourceTree = "<group>"; };
 		24601869257EF17800FF623E /* SellItemListingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellItemListingModule.swift; sourceTree = "<group>"; };
 		2460186A257EF17800FF623E /* SellItemListingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellItemListingPresenter.swift; sourceTree = "<group>"; };
@@ -555,6 +557,14 @@
 			path = Discover;
 			sourceTree = "<group>";
 		};
+		245F4D9E258799AA00C83134 /* NSLayoutConstraint */ = {
+			isa = PBXGroup;
+			children = (
+				245F4D9F258799F500C83134 /* NSLayoutConstraint+Ext.swift */,
+			);
+			path = NSLayoutConstraint;
+			sourceTree = "<group>";
+		};
 		2460185F257EE00500FF623E /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -652,6 +662,7 @@
 		2485181E2575B82B006F8A60 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				245F4D9E258799AA00C83134 /* NSLayoutConstraint */,
 				24BDDA6B258289CB006D78A1 /* Date */,
 				2460185F257EE00500FF623E /* UITableView */,
 				24C89CF325799C6000791646 /* CGFloat */,
@@ -1454,6 +1465,7 @@
 				2485180D2575A6BD006F8A60 /* PostListingModel.swift in Sources */,
 				24601874257EF17900FF623E /* SellItemListingViewController.swift in Sources */,
 				24BFC46725802E4F00C15C67 /* ReminderListingPresenter.swift in Sources */,
+				245F4DA0258799F500C83134 /* NSLayoutConstraint+Ext.swift in Sources */,
 				24CF046D2570022C00F92B49 /* LoginRouter.swift in Sources */,
 				247447AD2576F91D006A6BAE /* CommentListingRouter.swift in Sources */,
 				24BFC46B25802E4F00C15C67 /* ReminderListingModel.swift in Sources */,

@@ -10,6 +10,8 @@ import UIKit
 class PostViewCell: UITableViewCell {
     
     private var photoHeightConstraint: NSLayoutConstraint?
+    private var photoReducedHeightConstraint: NSLayoutConstraint?
+    //private var photoHeightConstraint: NSLayoutConstraint?
     
     var item: PostListingModel.ViewModel.DisplayedPost? {
         didSet {
@@ -19,14 +21,32 @@ class PostViewCell: UITableViewCell {
                 bodyLabel.text = item.body
                 if let photoUrl = item.photoUrl {
                     photoImageView.isHidden = false
-                    photoHeightConstraint?.isActive = true
+                    //photoHeightConstraint?.isActive = true
                     photoImageView.load(url: photoUrl)
+                    
+                    photoHeightConstraint?.isActive = true
+                    photoReducedHeightConstraint?.isActive = false
+
+//                    let newConstraint = photoHeightConstraint!.constraintWithMultiplier(0.66)
+//                    removeConstraint(photoHeightConstraint!)
+//                    addConstraint(newConstraint)
+//                    layoutIfNeeded()
+//                    photoHeightConstraint = newConstraint
                 } else {
                     photoImageView.isHidden = true
+
                     photoHeightConstraint?.isActive = false
+                    photoReducedHeightConstraint?.isActive = true
+/*
+                    let newConstraint = photoHeightConstraint!.constraintWithMultiplier(0.0)
+                    removeConstraint(photoHeightConstraint!)
+                    addConstraint(newConstraint)
+                    layoutIfNeeded()
+                    photoHeightConstraint = newConstraint                    //photoHeightConstraint?.isActive = false
+ */
+                    
                 }
-                //self.updateConstraints()
-                //self.layoutIfNeeded()
+                self.setNeedsLayout()
             }
         }
     }
@@ -121,6 +141,7 @@ class PostViewCell: UITableViewCell {
         ])
         
         photoHeightConstraint = photoImageView.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 0.66)
+        photoReducedHeightConstraint = photoImageView.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 0.0)
         
         NSLayoutConstraint.activate([
             photoImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: margin),
@@ -129,5 +150,7 @@ class PostViewCell: UITableViewCell {
             photoHeightConstraint!,
             photoImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -margin)
         ])
+        
+        photoReducedHeightConstraint?.isActive = false
     }
 }

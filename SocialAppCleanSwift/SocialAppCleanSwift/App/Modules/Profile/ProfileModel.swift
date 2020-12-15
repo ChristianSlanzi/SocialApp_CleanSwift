@@ -32,6 +32,7 @@ struct ProfileModel {
             var city: String
             var zipcode: String
             var phone: String
+            var avatarURL: URL?
         }
         var displayedUser: DisplayedUser
 	}

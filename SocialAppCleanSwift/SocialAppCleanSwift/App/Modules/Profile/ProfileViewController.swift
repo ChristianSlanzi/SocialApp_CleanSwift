@@ -18,6 +18,13 @@ class ProfileViewController: UIViewController {
     
     let margin: CGFloat = 20
 
+    private let photoImageView: CachedImageView = {
+        let view = CachedImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .gray
+        return view
+    }()
+    
     let nameLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -111,6 +118,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // do someting...
+        view.addSubview(photoImageView)
         view.addSubview(nameLabel)
         view.addSubview(usernameLabel)
         view.addSubview(emailLabel)
@@ -165,10 +173,21 @@ class ProfileViewController: UIViewController {
     }
     
     private func setupConstraints() {
+        
+        let margin: CGFloat = 16.0
+        
         NSLayoutConstraint.activate([
-            nameLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 120), //TODO: use safe top anchor
-            nameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
-            nameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin),
+            photoImageView.centerXAnchor
+                .constraint(equalTo: view.centerXAnchor, constant: 0),
+            photoImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
+            photoImageView.heightAnchor.constraint(equalToConstant: 155),
+            photoImageView.widthAnchor.constraint(equalTo: photoImageView.heightAnchor, multiplier: 1.0)
+        ])
+        
+        NSLayoutConstraint.activate([
+            nameLabel.topAnchor.constraint(equalTo: photoImageView.bottomAnchor, constant: margin), //TODO: use safe top anchor
+            nameLabel.centerXAnchor
+                .constraint(equalTo: view.centerXAnchor, constant: 0),
             nameLabel.heightAnchor.constraint(equalToConstant: 30)
         ])
         
@@ -249,12 +268,22 @@ class ProfileViewController: UIViewController {
             marketplaceButton.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        photoImageView.maskCircle()
+    }
 }
 
 extension ProfileViewController: IProfileViewController {
     // do someting...
     func displayUserProfile(viewModel: ProfileModel.ViewModel) {
-        nameLabel.text = "Name: " + viewModel.displayedUser.name
+        
+        if let photoUrl = viewModel.displayedUser.avatarURL {
+            photoImageView.load(url: photoUrl)
+        }
+        
+        nameLabel.text = viewModel.displayedUser.name
         usernameLabel.text = "Username: " + viewModel.displayedUser.username
         emailLabel.text = "E-mail: " + viewModel.displayedUser.email
         streetLabel.text = "Street: " + viewModel.displayedUser.street

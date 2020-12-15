@@ -37,6 +37,7 @@ class ProfileRouter: IProfileRouter, ShowContactDataPassing {
     func create(parameters: [String: Any]) -> ProfileViewController {
         //let bundle = Bundle(for: type(of: self))
         let view = ProfileViewController()//(nibName: "ProfileViewController", bundle: bundle)
+        view.title = "Profile"
         let presenter = ProfilePresenter(view: view)
         let interactor = ProfileInteractor(presenter: presenter)
         interactor.user = dataStore?.user

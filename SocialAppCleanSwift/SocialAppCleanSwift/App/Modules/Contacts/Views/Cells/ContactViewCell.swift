@@ -78,7 +78,10 @@ class ContactViewCell: UITableViewCell {
             titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -margin),
             titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 0)
         ])
-        
-        
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews() // call super.layoutSubviews()
+        photoImageView.maskCircle()
     }
 }

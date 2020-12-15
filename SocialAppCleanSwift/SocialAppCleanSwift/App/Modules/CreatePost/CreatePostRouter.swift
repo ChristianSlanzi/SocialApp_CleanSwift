@@ -25,6 +25,7 @@ class CreatePostRouter: ICreatePostRouter {
     func create(parameters: [String: Any]) -> CreatePostViewController {
         let bundle = Bundle(for: type(of: self))
         let view = CreatePostViewController(nibName: "CreatePostViewController", bundle: bundle)
+        view.title = "Create Post"
         let presenter = CreatePostPresenter(view: view)
         let interactor = CreatePostInteractor(presenter: presenter)
         view.interactor = interactor

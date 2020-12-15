@@ -56,6 +56,9 @@ extension PostListingViewController: IPostListingViewController {
 extension PostListingViewController {
     // do someting...
     func setupViews() {
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "New post", style: .plain, target: self, action: #selector(createPost))
+
         //view.backgroundColor = .red
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.rowHeight = UITableView.automaticDimension
@@ -77,6 +80,11 @@ extension PostListingViewController {
             ]
         )
     }
+    
+    @objc func createPost() {
+        router.navigateToCreatePost()
+    }
+    
 }
 
 extension PostListingViewController: UITableViewDelegate {

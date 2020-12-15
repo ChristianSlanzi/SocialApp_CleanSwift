@@ -90,6 +90,14 @@
 		24BA4B952579761900A7F088 /* PhotoListingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BA4B8D2579761900A7F088 /* PhotoListingViewController.xib */; };
 		24BA4B962579761900A7F088 /* PhotoListingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B8E2579761900A7F088 /* PhotoListingManager.swift */; };
 		24BBA06A2588FD3300E167C6 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BBA0692588FD3300E167C6 /* UIImageView+Ext.swift */; };
+		24BBA07A2589125A00E167C6 /* CreatePostModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BBA0722589125A00E167C6 /* CreatePostModule.swift */; };
+		24BBA07B2589125A00E167C6 /* CreatePostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BBA0732589125A00E167C6 /* CreatePostPresenter.swift */; };
+		24BBA07C2589125A00E167C6 /* CreatePostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BBA0742589125A00E167C6 /* CreatePostRouter.swift */; };
+		24BBA07D2589125A00E167C6 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BBA0752589125A00E167C6 /* CreatePostViewController.swift */; };
+		24BBA07E2589125A00E167C6 /* CreatePostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BBA0762589125A00E167C6 /* CreatePostInteractor.swift */; };
+		24BBA07F2589125A00E167C6 /* CreatePostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BBA0772589125A00E167C6 /* CreatePostModel.swift */; };
+		24BBA0802589125A00E167C6 /* CreatePostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BBA0782589125A00E167C6 /* CreatePostViewController.xib */; };
+		24BBA0812589125A00E167C6 /* CreatePostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BBA0792589125A00E167C6 /* CreatePostManager.swift */; };
 		24BDDA6D25828AD1006D78A1 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDDA6C25828AD1006D78A1 /* String+Date.swift */; };
 		24BDDA722582A5B0006D78A1 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDDA712582A5AF006D78A1 /* Date+String.swift */; };
 		24BFC452258023AA00C15C67 /* ArticleDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFC44A258023AA00C15C67 /* ArticleDetailModule.swift */; };
@@ -309,6 +317,14 @@
 		24BA4B8D2579761900A7F088 /* PhotoListingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoListingViewController.xib; sourceTree = "<group>"; };
 		24BA4B8E2579761900A7F088 /* PhotoListingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListingManager.swift; sourceTree = "<group>"; };
 		24BBA0692588FD3300E167C6 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		24BBA0722589125A00E167C6 /* CreatePostModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostModule.swift; sourceTree = "<group>"; };
+		24BBA0732589125A00E167C6 /* CreatePostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostPresenter.swift; sourceTree = "<group>"; };
+		24BBA0742589125A00E167C6 /* CreatePostRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostRouter.swift; sourceTree = "<group>"; };
+		24BBA0752589125A00E167C6 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		24BBA0762589125A00E167C6 /* CreatePostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostInteractor.swift; sourceTree = "<group>"; };
+		24BBA0772589125A00E167C6 /* CreatePostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostModel.swift; sourceTree = "<group>"; };
+		24BBA0782589125A00E167C6 /* CreatePostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePostViewController.xib; sourceTree = "<group>"; };
+		24BBA0792589125A00E167C6 /* CreatePostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostManager.swift; sourceTree = "<group>"; };
 		24BDDA6C25828AD1006D78A1 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 		24BDDA712582A5AF006D78A1 /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
 		24BFC44A258023AA00C15C67 /* ArticleDetailModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailModule.swift; sourceTree = "<group>"; };
@@ -748,6 +764,21 @@
 			path = UIImageView;
 			sourceTree = "<group>";
 		};
+		24BBA071258911E500E167C6 /* CreatePost */ = {
+			isa = PBXGroup;
+			children = (
+				24BBA0722589125A00E167C6 /* CreatePostModule.swift */,
+				24BBA0732589125A00E167C6 /* CreatePostPresenter.swift */,
+				24BBA0742589125A00E167C6 /* CreatePostRouter.swift */,
+				24BBA0752589125A00E167C6 /* CreatePostViewController.swift */,
+				24BBA0762589125A00E167C6 /* CreatePostInteractor.swift */,
+				24BBA0772589125A00E167C6 /* CreatePostModel.swift */,
+				24BBA0782589125A00E167C6 /* CreatePostViewController.xib */,
+				24BBA0792589125A00E167C6 /* CreatePostManager.swift */,
+			);
+			path = CreatePost;
+			sourceTree = "<group>";
+		};
 		24BDDA6B258289CB006D78A1 /* Date */ = {
 			isa = PBXGroup;
 			children = (
@@ -946,6 +977,7 @@
 		24CF045C2570018800F92B49 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				24BBA071258911E500E167C6 /* CreatePost */,
 				24408B062586847800910D35 /* Discover */,
 				24BFC45D25802E0300C15C67 /* ReminderListing */,
 				24BFC4332580233100C15C67 /* ArticleDetail */,
@@ -1280,6 +1312,7 @@
 				24CF0406256FC00000F92B49 /* Assets.xcassets in Resources */,
 				24DD57492570330100106BC6 /* SettingsViewController.xib in Resources */,
 				24BA4B7A257922E300A7F088 /* AlbumListingViewController.xib in Resources */,
+				24BBA0802589125A00E167C6 /* CreatePostViewController.xib in Resources */,
 				24DD575D257036E200106BC6 /* ContactsViewController.xib in Resources */,
 				247447B12576F91D006A6BAE /* CommentListingViewController.xib in Resources */,
 				24601877257EF17900FF623E /* SellItemListingViewController.xib in Resources */,
@@ -1430,6 +1463,7 @@
 				24CF03FD256FBFFE00F92B49 /* AppDelegate.swift in Sources */,
 				24CF04B92570026F00F92B49 /* MainRouter.swift in Sources */,
 				24CF04912570025200F92B49 /* ProfileModule.swift in Sources */,
+				24BBA07F2589125A00E167C6 /* CreatePostModel.swift in Sources */,
 				24DD5759257036E200106BC6 /* ContactsRouter.swift in Sources */,
 				24BFC46D25802E4F00C15C67 /* ReminderListingManager.swift in Sources */,
 				24BFC455258023AA00C15C67 /* ArticleDetailViewController.swift in Sources */,
@@ -1439,6 +1473,7 @@
 				24BFC46825802E4F00C15C67 /* ReminderListingRouter.swift in Sources */,
 				24BFC452258023AA00C15C67 /* ArticleDetailModule.swift in Sources */,
 				24C89D0B2579AC2000791646 /* TodoListingPresenter.swift in Sources */,
+				24BBA07D2589125A00E167C6 /* CreatePostViewController.swift in Sources */,
 				24DD57442570330100106BC6 /* SettingsPresenter.swift in Sources */,
 				24E0ADF4257407FF00A54F30 /* ShowLocationModule.swift in Sources */,
 				24E0ADF9257407FF00A54F30 /* ShowLocationModel.swift in Sources */,
@@ -1476,6 +1511,7 @@
 				2485180D2575A6BD006F8A60 /* PostListingModel.swift in Sources */,
 				24601874257EF17900FF623E /* SellItemListingViewController.swift in Sources */,
 				24BFC46725802E4F00C15C67 /* ReminderListingPresenter.swift in Sources */,
+				24BBA07E2589125A00E167C6 /* CreatePostInteractor.swift in Sources */,
 				245F4DA0258799F500C83134 /* NSLayoutConstraint+Ext.swift in Sources */,
 				24CF046D2570022C00F92B49 /* LoginRouter.swift in Sources */,
 				247447AD2576F91D006A6BAE /* CommentListingRouter.swift in Sources */,
@@ -1535,6 +1571,7 @@
 				24BDDA6D25828AD1006D78A1 /* String+Date.swift in Sources */,
 				24BA4B962579761900A7F088 /* PhotoListingManager.swift in Sources */,
 				2403DD21257D3990001F6025 /* ArticleListingManager.swift in Sources */,
+				24BBA0812589125A00E167C6 /* CreatePostManager.swift in Sources */,
 				248517EF25759788006F8A60 /* Album.swift in Sources */,
 				2462E0B82582C5D100B78203 /* AlbumsDataStub.swift in Sources */,
 				24CF04CC2570030200F92B49 /* GeneralRouter.swift in Sources */,
@@ -1551,6 +1588,7 @@
 				24C89D112579AC2000791646 /* TodoListingManager.swift in Sources */,
 				24CF04A42570026100F92B49 /* DetailModule.swift in Sources */,
 				24CF04722570022C00F92B49 /* LoginManager.swift in Sources */,
+				24BBA07B2589125A00E167C6 /* CreatePostPresenter.swift in Sources */,
 				24C89CE6257999FE00791646 /* PhotoViewCell.swift in Sources */,
 				248517F92575A236006F8A60 /* JSONinitiable.swift in Sources */,
 				2462E0B32582C59900B78203 /* CommentsDataStub.swift in Sources */,
@@ -1589,10 +1627,12 @@
 				24BA4B76257922E300A7F088 /* AlbumListingRouter.swift in Sources */,
 				2460187D257EF33000FF623E /* SellItem.swift in Sources */,
 				24E0ADF8257407FF00A54F30 /* ShowLocationInteractor.swift in Sources */,
+				24BBA07A2589125A00E167C6 /* CreatePostModule.swift in Sources */,
 				24BFC453258023AA00C15C67 /* ArticleDetailPresenter.swift in Sources */,
 				24DD576D2570382F00106BC6 /* UserModel.swift in Sources */,
 				2485180F2575A6BD006F8A60 /* PostListingManager.swift in Sources */,
 				24DD57472570330100106BC6 /* SettingsInteractor.swift in Sources */,
+				24BBA07C2589125A00E167C6 /* CreatePostRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

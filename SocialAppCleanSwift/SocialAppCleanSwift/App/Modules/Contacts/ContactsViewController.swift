@@ -60,8 +60,8 @@ extension ContactsViewController {
     func setupViews() {
         //view.backgroundColor = .red
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 50
+        //tableView.rowHeight = UITableView.automaticDimension
+        //tableView.estimatedRowHeight = 50
         tableView.register(ContactViewCell.self, forCellReuseIdentifier: ContactViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self

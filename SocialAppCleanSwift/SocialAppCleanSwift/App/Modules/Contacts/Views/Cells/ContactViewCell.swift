@@ -69,8 +69,8 @@ class ContactViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             photoImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: margin),
             photoImageView.topAnchor.constraint(equalTo: topAnchor, constant: margin),
-            photoImageView.widthAnchor.constraint(equalTo: photoImageView.heightAnchor, multiplier: 1.0),
-            photoImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -margin)
+            photoImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -margin),
+            photoImageView.widthAnchor.constraint(equalTo: photoImageView.heightAnchor, multiplier: 1.0)
         ])
         
         NSLayoutConstraint.activate([

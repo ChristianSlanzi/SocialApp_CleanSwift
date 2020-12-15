@@ -12,6 +12,7 @@ class NetworkingService: ApiServiceInterface {
     
     private func retrieveItems<T: JSONinitiable>(url: String, completion: @escaping (Result<[T], Error>) -> Void) {
         AF.request(url).responseJSON { (response) in
+            print(response)
             switch(response.result) {
             case .success(let value):
                 let data = JSON(value)
@@ -55,7 +56,7 @@ class NetworkingService: ApiServiceInterface {
     }
     
     func retrieveUsers(completion: @escaping (Result<[UserModel], Error>)->Void) {
-        retrieveItems(url: "https://jsonplaceholder.typicode.com/users", completion: completion)
+        retrieveItems(url: "https://my-json-server.typicode.com/christianslanzi/SocialAppJson/users", completion: completion)
     }
 }
 

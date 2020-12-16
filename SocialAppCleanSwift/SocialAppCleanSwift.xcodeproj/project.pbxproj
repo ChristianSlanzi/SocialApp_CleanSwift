@@ -30,6 +30,7 @@
 		24408B142586849600910D35 /* DiscoverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408B0C2586849500910D35 /* DiscoverModel.swift */; };
 		24408B152586849600910D35 /* DiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24408B0D2586849500910D35 /* DiscoverViewController.xib */; };
 		24408B162586849600910D35 /* DiscoverManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408B0E2586849500910D35 /* DiscoverManager.swift */; };
+		244C27AB258A15D00007E070 /* UITextView+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244C27AA258A15D00007E070 /* UITextView+Placeholder.swift */; };
 		245F4DA0258799F500C83134 /* NSLayoutConstraint+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F4D9F258799F500C83134 /* NSLayoutConstraint+Ext.swift */; };
 		24601861257EE02100FF623E /* UITableView+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24601860257EE02100FF623E /* UITableView+Empty.swift */; };
 		24601871257EF17900FF623E /* SellItemListingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24601869257EF17800FF623E /* SellItemListingModule.swift */; };
@@ -258,6 +259,7 @@
 		24408B0C2586849500910D35 /* DiscoverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverModel.swift; sourceTree = "<group>"; };
 		24408B0D2586849500910D35 /* DiscoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverViewController.xib; sourceTree = "<group>"; };
 		24408B0E2586849500910D35 /* DiscoverManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverManager.swift; sourceTree = "<group>"; };
+		244C27AA258A15D00007E070 /* UITextView+Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Placeholder.swift"; sourceTree = "<group>"; };
 		245F4D9F258799F500C83134 /* NSLayoutConstraint+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Ext.swift"; sourceTree = "<group>"; };
 		24601860257EE02100FF623E /* UITableView+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Empty.swift"; sourceTree = "<group>"; };
 		24601869257EF17800FF623E /* SellItemListingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellItemListingModule.swift; sourceTree = "<group>"; };
@@ -577,6 +579,14 @@
 			path = Discover;
 			sourceTree = "<group>";
 		};
+		244C27A9258A15B50007E070 /* UITextView */ = {
+			isa = PBXGroup;
+			children = (
+				244C27AA258A15D00007E070 /* UITextView+Placeholder.swift */,
+			);
+			path = UITextView;
+			sourceTree = "<group>";
+		};
 		245F4D9E258799AA00C83134 /* NSLayoutConstraint */ = {
 			isa = PBXGroup;
 			children = (
@@ -682,6 +692,7 @@
 		2485181E2575B82B006F8A60 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				244C27A9258A15B50007E070 /* UITextView */,
 				24BBA0682588FD0700E167C6 /* UIImageView */,
 				245F4D9E258799AA00C83134 /* NSLayoutConstraint */,
 				24BDDA6B258289CB006D78A1 /* Date */,
@@ -1574,6 +1585,7 @@
 				2402AAA525757FDF00D879C9 /* NetworkingServiceMock.swift in Sources */,
 				248517EA25759700006F8A60 /* Comment.swift in Sources */,
 				2403DD1C257D3990001F6025 /* ArticleListingRouter.swift in Sources */,
+				244C27AB258A15D00007E070 /* UITextView+Placeholder.swift in Sources */,
 				2462E0C22582C62C00B78203 /* ArticlesDataStub.swift in Sources */,
 				2403DD1E257D3990001F6025 /* ArticleListingInteractor.swift in Sources */,
 				24C89D0C2579AC2000791646 /* TodoListingRouter.swift in Sources */,

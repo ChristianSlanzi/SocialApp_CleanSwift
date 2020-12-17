@@ -27,6 +27,7 @@ class ArticleListingRouter: IArticleListingRouter {
     func create(parameters: [String: Any]) -> ArticleListingViewController {
         let bundle = Bundle(for: type(of: self))
         let view = ArticleListingViewController(nibName: "ArticleListingViewController", bundle: bundle)
+        view.title = "articlelisting_view_title".localized
         let presenter = ArticleListingPresenter(view: view)
         let interactor = ArticleListingInteractor(presenter: presenter)
         view.interactor = interactor

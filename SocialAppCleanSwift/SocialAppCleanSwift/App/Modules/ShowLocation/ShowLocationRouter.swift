@@ -25,6 +25,7 @@ class ShowLocationRouter: IShowLocationRouter {
     func create(parameters: [String: Any]) -> ShowLocationViewController {
         let bundle = Bundle(for: type(of: self))
         let view = ShowLocationViewController(nibName: "ShowLocationViewController", bundle: bundle)
+        view.title = "showlocation_view_title".localized
         let presenter = ShowLocationPresenter(view: view)
         let interactor = ShowLocationInteractor(presenter: presenter)
         view.interactor = interactor

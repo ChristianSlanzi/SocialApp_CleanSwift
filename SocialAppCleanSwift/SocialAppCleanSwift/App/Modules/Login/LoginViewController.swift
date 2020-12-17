@@ -18,14 +18,14 @@ class LoginViewController: UIViewController {
     let loginLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "LOGIN"
+        view.text = "login_view_label".localized
         return view
     }()
     
     let loginButton: UIButton = {
         let view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.setTitle("GO TO HOME", for: .normal)
+        view.setTitle("login_home_button".localized, for: .normal)
         return view
     }()
 

@@ -212,6 +212,8 @@
 		24E0ADF9257407FF00A54F30 /* ShowLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E0ADF1257407FF00A54F30 /* ShowLocationModel.swift */; };
 		24E0ADFA257407FF00A54F30 /* ShowLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E0ADF2257407FF00A54F30 /* ShowLocationViewController.xib */; };
 		24E0ADFB257407FF00A54F30 /* ShowLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E0ADF3257407FF00A54F30 /* ShowLocationManager.swift */; };
+		24FF4D9E258B6D990087807F /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FF4D9D258B6D990087807F /* String+Ext.swift */; };
+		24FF4DA7258B6E990087807F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24FF4DA6258B6E990087807F /* Localizable.strings */; };
 		315B797A157BB4B8BB4F8A8F /* Pods_SocialAppCleanSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B660C27D743F8B66039406 /* Pods_SocialAppCleanSwift.framework */; };
 		7E1500FE91579E279B8DDAE0 /* Pods_SocialAppCleanSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12715154AEB87DA1D221F984 /* Pods_SocialAppCleanSwiftTests.framework */; };
 /* End PBXBuildFile section */
@@ -447,6 +449,8 @@
 		24E0ADF1257407FF00A54F30 /* ShowLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLocationModel.swift; sourceTree = "<group>"; };
 		24E0ADF2257407FF00A54F30 /* ShowLocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowLocationViewController.xib; sourceTree = "<group>"; };
 		24E0ADF3257407FF00A54F30 /* ShowLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLocationManager.swift; sourceTree = "<group>"; };
+		24FF4D9D258B6D990087807F /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		24FF4DA6258B6E990087807F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		26B660C27D743F8B66039406 /* Pods_SocialAppCleanSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialAppCleanSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB9F03D6D9BA4C2464FE8FE /* Pods_SocialAppCleanSwift_SocialAppCleanSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialAppCleanSwift_SocialAppCleanSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBAA5C9B3ECDE7324BFDEF8 /* Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests/Pods-SocialAppCleanSwift-SocialAppCleanSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -692,6 +696,7 @@
 		2485181E2575B82B006F8A60 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				24FF4D9C258B6D840087807F /* String */,
 				244C27A9258A15B50007E070 /* UITextView */,
 				24BBA0682588FD0700E167C6 /* UIImageView */,
 				245F4D9E258799AA00C83134 /* NSLayoutConstraint */,
@@ -990,6 +995,7 @@
 		24CF045B2570017400F92B49 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				24FF4DA5258B6DD70087807F /* Resources */,
 				24CF0462257001EE00F92B49 /* Common */,
 				24CF045C2570018800F92B49 /* Modules */,
 			);
@@ -1197,6 +1203,22 @@
 			path = ShowLocation;
 			sourceTree = "<group>";
 		};
+		24FF4D9C258B6D840087807F /* String */ = {
+			isa = PBXGroup;
+			children = (
+				24FF4D9D258B6D990087807F /* String+Ext.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		24FF4DA5258B6DD70087807F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				24FF4DA6258B6E990087807F /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		3F969E8D3D875856E5B39788 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1341,6 +1363,7 @@
 				24408B152586849600910D35 /* DiscoverViewController.xib in Resources */,
 				24CF04712570022C00F92B49 /* LoginViewController.xib in Resources */,
 				24BFC458258023AA00C15C67 /* ArticleDetailViewController.xib in Resources */,
+				24FF4DA7258B6E990087807F /* Localizable.strings in Resources */,
 				24CF04972570025300F92B49 /* ProfileViewController.xib in Resources */,
 				24BA4B952579761900A7F088 /* PhotoListingViewController.xib in Resources */,
 				24CF04BD2570026F00F92B49 /* MainViewController.xib in Resources */,
@@ -1596,6 +1619,7 @@
 				24BA4B962579761900A7F088 /* PhotoListingManager.swift in Sources */,
 				2403DD21257D3990001F6025 /* ArticleListingManager.swift in Sources */,
 				24BBA0812589125A00E167C6 /* CreatePostManager.swift in Sources */,
+				24FF4D9E258B6D990087807F /* String+Ext.swift in Sources */,
 				248517EF25759788006F8A60 /* Album.swift in Sources */,
 				2462E0B82582C5D100B78203 /* AlbumsDataStub.swift in Sources */,
 				24CF04CC2570030200F92B49 /* GeneralRouter.swift in Sources */,

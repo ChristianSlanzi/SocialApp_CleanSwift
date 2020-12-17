@@ -28,7 +28,7 @@ class LoginRouter: ILoginRouter {
     func create(parameters: [String: Any]) -> LoginViewController {
         //let bundle = Bundle(for: type(of: self))
         let view = LoginViewController() //(nibName: "LoginViewController", bundle: bundle)
-        view.title = "Login"
+        view.title = "login_view_title".localized
         let presenter = LoginPresenter(view: view)
         let interactor = LoginInteractor(presenter: presenter)
         view.interactor = interactor

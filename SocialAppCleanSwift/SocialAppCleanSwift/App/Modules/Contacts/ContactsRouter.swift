@@ -28,7 +28,7 @@ class ContactsRouter: IContactsRouter {
     func create(parameters: [String: Any]) -> ContactsViewController {
         //let bundle = Bundle(for: type(of: self))
         let view = ContactsViewController()//(nibName: "ContactsViewController", bundle: bundle)
-        view.title = "Contacts"
+        view.title = "contacts_view_title".localized
         let presenter = ContactsPresenter(view: view)
         let interactor = ContactsInteractor(presenter: presenter)
         view.interactor = interactor

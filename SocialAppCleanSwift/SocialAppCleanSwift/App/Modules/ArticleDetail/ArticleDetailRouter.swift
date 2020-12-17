@@ -25,6 +25,7 @@ class ArticleDetailRouter: IArticleDetailRouter {
     func create(parameters: [String: Any]) -> ArticleDetailViewController {
         let bundle = Bundle(for: type(of: self))
         let view = ArticleDetailViewController(nibName: "ArticleDetailViewController", bundle: bundle)
+        view.title = "articledetail_view_title".localized
         let presenter = ArticleDetailPresenter(view: view)
         let interactor = ArticleDetailInteractor(presenter: presenter)
         view.interactor = interactor

@@ -25,7 +25,7 @@ class DetailRouter: IDetailRouter {
     func create(parameters: [String: Any]) -> DetailViewController {
         //let bundle = Bundle(for: type(of: self))
         let view = DetailViewController()//(nibName: "DetailViewController", bundle: bundle)
-        view.title = "Detail"
+        view.title = "detail_view_title".localized
         let presenter = DetailPresenter(view: view)
         let interactor = DetailInteractor(presenter: presenter)
         view.interactor = interactor

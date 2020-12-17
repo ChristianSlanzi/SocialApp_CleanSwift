@@ -25,7 +25,7 @@ class DiscoverRouter: IDiscoverRouter {
     func create(parameters: [String: Any]) -> DiscoverViewController {
         let bundle = Bundle(for: type(of: self))
         let view = DiscoverViewController(nibName: "DiscoverViewController", bundle: bundle)
-        view.title = "Discover"
+        view.title = "discover_view_title".localized
         let presenter = DiscoverPresenter(view: view)
         let interactor = DiscoverInteractor(presenter: presenter)
         view.interactor = interactor

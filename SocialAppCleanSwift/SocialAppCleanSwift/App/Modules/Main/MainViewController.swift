@@ -20,10 +20,10 @@ class MainViewController: UITabBarController {
         // do someting...
         
         let feeds = AppRouter.share.getModule(module: PostListingModule(AppRouter.share))!
-        feeds.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home-tab"), tag: 0)
+        feeds.tabBarItem = UITabBarItem(title: "home_tab_title".localized, image: UIImage(named: "home-tab"), tag: 0)
         
         let discover = AppRouter.share.getModule(module: DiscoverModule(AppRouter.share))!
-        discover.tabBarItem = UITabBarItem(title: "Discover", image: UIImage(named: "search-tab"), tag: 1)
+        discover.tabBarItem = UITabBarItem(title: "discover_tab_title".localized, image: UIImage(named: "search-tab"), tag: 1)
         
         let contacts = AppRouter.share.getModule(module: ContactsModule(AppRouter.share))!
         contacts.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 2)

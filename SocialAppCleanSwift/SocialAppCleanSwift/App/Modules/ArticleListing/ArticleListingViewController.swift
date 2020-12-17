@@ -46,7 +46,7 @@ class ArticleListingViewController: UIViewController {
 
 extension ArticleListingViewController: IArticleListingViewController {
     func displayNoContentScreen() {
-        tableView.setEmptyView(title: "There are no articles.", message: "Please retry later.")
+        tableView.setEmptyView(title: "articlelisting_emptyview_title".localized, message: "articlelisting_emptyview_message".localized)
     }
     
     func displayFetchedArticles(viewModel: ArticleListingModel.ViewModel) {

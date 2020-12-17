@@ -25,6 +25,7 @@ class PhotoListingRouter: IPhotoListingRouter {
     func create(parameters: [String: Any]) -> PhotoListingViewController {
         let bundle = Bundle(for: type(of: self))
         let view = PhotoListingViewController(nibName: "PhotoListingViewController", bundle: bundle)
+        view.title = "photolisting_view_title".localized
         let presenter = PhotoListingPresenter(view: view)
         let interactor = PhotoListingInteractor(presenter: presenter)
         view.interactor = interactor

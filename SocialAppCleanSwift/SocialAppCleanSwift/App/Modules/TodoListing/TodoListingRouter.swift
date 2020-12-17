@@ -26,6 +26,7 @@ class TodoListingRouter: ITodoListingRouter {
     func create(parameters: [String: Any]) -> TodoListingViewController {
         let bundle = Bundle(for: type(of: self))
         let view = TodoListingViewController(nibName: "TodoListingViewController", bundle: bundle)
+        view.title = "todolisting_view_title".localized
         let presenter = TodoListingPresenter(view: view)
         let interactor = TodoListingInteractor(presenter: presenter)
         view.interactor = interactor

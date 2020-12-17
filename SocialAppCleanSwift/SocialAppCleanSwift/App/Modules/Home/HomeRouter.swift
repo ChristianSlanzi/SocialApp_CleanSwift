@@ -26,7 +26,7 @@ class HomeRouter: IHomeRouter {
     func create(parameters: [String: Any]) -> HomeViewController {
         //let bundle = Bundle(for: type(of: self))
         let view = HomeViewController()//(nibName: "HomeViewController", bundle: bundle)
-        view.title = "Home"
+        view.title = "home_view_title".localized
         let presenter = HomePresenter(view: view)
         let interactor = HomeInteractor(presenter: presenter)
         view.interactor = interactor

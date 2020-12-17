@@ -1,0 +1,103 @@
+/* 
+  Localizable.strings
+  SocialAppCleanSwift
+
+  Created by Christian Slanzi on 17.12.20.
+  
+*/
+
+// MARK: - App localization
+
+//CREATE POST
+"createpost_view_title" = "Create Post";
+"createpost_posttext_placeholder" = "What are you doing now?";
+"createpost_postbutton_title" = "Post";
+
+//DISCOVER
+"discover_view_title" = "Discover";
+
+//REMINDER LISTING
+"reminderlisting_view_title" = "Reminders";
+
+//ARTICLE DETAIL
+"articledetail_view_title" = "Article Detail";
+
+//SELL ITEM LISTING
+"sellitemlisting_view_title" = "Marketplace";
+
+//ARTICLE LISTING
+"articlelisting_view_title" = "Articles";
+"articlelisting_emptyview_title" = "There are no articles.";
+"articlelisting_emptyview_message" = "Please retry later.";
+
+//TODO LISTING
+"todolisting_view_title" = "ToDo's";
+
+//ALBUM LISTING
+"albumlisting_view_title" = "Albums";
+
+//PHOTO LISTING
+"photolisting_view_title" = "Photos";
+
+//COMMENTS LISTING
+"commentlisting_view_title" = "Comments";
+
+//POSTS LISTING
+"postlisting_view_title" = "Feed";
+"postlisting_newpost_title" = "New post";
+
+//SHOW LOCATION
+"showlocation_view_title" = "Location";
+
+//CONTACTS
+"contacts_view_title" = "Contacts";
+
+//SETTINGS
+"settings_view_title" = "Settings";
+
+//DETAIL
+"detail_view_title" = "Detail";
+
+//PROFILE
+"profile_view_title" = "Profile";
+
+"profile_name_placeholder" = "NAME";
+"profile_username_placeholder" = "USERNAME";
+"profile_email_placeholder" = "EMAIL";
+"profile_street_placeholder" = "STREET";
+"profile_cityzip_placeholder" = "CITY+ZIP";
+"profile_phone_placeholder" = "PHONE";
+
+"profile_location_button" = "SHOW LOCATION";
+"profile_albums_button" = "SHOW ALBUMS";
+"profile_todos_button" = "SHOW TODOS";
+"profile_articles_button" = "SHOW ARTICLES";
+"profile_reminders_button" = "SHOW REMINDERS";
+"profile_marketplace_button" = "SHOW MARKETPLACE";
+
+"profile_username_label" = "Username: ";
+"profile_email_label" = "E-mail: ";
+"profile_street_label" = "Street: ";
+"profile_city_label" = "City: ";
+"profile_zip_label" = " , Zip: ";
+"profile_phone_label" = "Phone: ";
+
+//MAIN
+"home_tab_title" = "Home";
+"discover_tab_title" = "Discover";
+
+//HOME
+"home_view_title" = "Home";
+
+"home_view_label" = "HOME";
+"home_settings_button" = "GO TO SETTING";
+"home_settings_message" = "Settings Page Title passed as parameter";
+
+//LOGIN
+"login_view_title" = "Login";
+"login_view_label" = "LOGIN";
+"login_home_button" = "GO TO HOME";
+
+//ERRORS
+"error_generic_title" = "Error";
+"error_generic_message" = "Something went wrong";

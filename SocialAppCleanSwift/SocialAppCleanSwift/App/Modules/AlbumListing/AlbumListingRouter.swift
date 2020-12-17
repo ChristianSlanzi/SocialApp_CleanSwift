@@ -27,6 +27,7 @@ class AlbumListingRouter: IAlbumListingRouter {
     func create(parameters: [String: Any]) -> AlbumListingViewController {
         let bundle = Bundle(for: type(of: self))
         let view = AlbumListingViewController(nibName: "AlbumListingViewController", bundle: bundle)
+        view.title = "albumlisting_view_title".localized
         let presenter = AlbumListingPresenter(view: view)
         let interactor = AlbumListingInteractor(presenter: presenter)
         view.interactor = interactor

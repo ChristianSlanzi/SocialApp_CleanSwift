@@ -39,7 +39,7 @@ class CreatePostViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        textView.placeholder = "What are you doing now?"
+        textView.placeholder = "createpost_posttext_placeholder".localized
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,7 +54,7 @@ extension CreatePostViewController: ICreatePostViewController {
 extension CreatePostViewController {
 	// do someting...
     func setupViews() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Post", style: .plain, target: self, action: #selector(sendPost))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "createpost_postbutton_title".localized, style: .plain, target: self, action: #selector(sendPost))
         navigationItem.rightBarButtonItem?.isEnabled = false
         
         view.addSubview(headerView)

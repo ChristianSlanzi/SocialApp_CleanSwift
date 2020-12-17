@@ -25,7 +25,7 @@ class CommentListingRouter: ICommentListingRouter {
     func create(parameters: [String: Any]) -> CommentListingViewController {
         let bundle = Bundle(for: type(of: self))
         let view = CommentListingViewController(nibName: "CommentListingViewController", bundle: bundle)
-        view.title = "Comments"
+        view.title = "commentlisting_view_title".localized
         let presenter = CommentListingPresenter(view: view)
         let interactor = CommentListingInteractor(presenter: presenter)
         view.interactor = interactor

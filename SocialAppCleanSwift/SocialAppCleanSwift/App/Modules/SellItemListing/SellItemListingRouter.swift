@@ -25,6 +25,7 @@ class SellItemListingRouter: ISellItemListingRouter {
     func create(parameters: [String: Any]) -> SellItemListingViewController {
         let bundle = Bundle(for: type(of: self))
         let view = SellItemListingViewController(nibName: "SellItemListingViewController", bundle: bundle)
+        view.title = "sellitemlisting_view_title".localized
         let presenter = SellItemListingPresenter(view: view)
         let interactor = SellItemListingInteractor(presenter: presenter)
         view.interactor = interactor

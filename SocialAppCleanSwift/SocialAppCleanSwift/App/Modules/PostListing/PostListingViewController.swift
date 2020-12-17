@@ -57,7 +57,7 @@ extension PostListingViewController {
     // do someting...
     func setupViews() {
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "New post", style: .plain, target: self, action: #selector(createPost))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "postlisting_newpost_title".localized, style: .plain, target: self, action: #selector(createPost))
 
         //view.backgroundColor = .red
         tableView.translatesAutoresizingMaskIntoConstraints = false

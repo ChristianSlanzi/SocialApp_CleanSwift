@@ -28,42 +28,42 @@ class ProfileViewController: UIViewController {
     let nameLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "NAME"
+        view.text = "profile_name_placeholder".localized
         return view
     }()
     
     let usernameLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "USERNAME"
+        view.text = "profile_username_placeholder".localized
         return view
     }()
     
     let emailLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "EMAIL"
+        view.text = "profile_email_placeholder".localized
         return view
     }()
     
     let streetLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "STREET"
+        view.text = "profile_street_placeholder".localized
         return view
     }()
     
     let cityPlusZipLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "CITY+ZIP"
+        view.text = "profile_cityzip_placeholder".localized
         return view
     }()
     
     let phoneLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "PHONE"
+        view.text = "profile_phone_placeholder".localized
         return view
     }()
     
@@ -71,7 +71,7 @@ class ProfileViewController: UIViewController {
         let view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .purple
-        view.setTitle("SHOW LOCATION", for: .normal)
+        view.setTitle("profile_location_button".localized, for: .normal)
         return view
     }()
     
@@ -79,7 +79,7 @@ class ProfileViewController: UIViewController {
         let view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .orange
-        view.setTitle("SHOW ALBUMS", for: .normal)
+        view.setTitle("profile_albums_button".localized, for: .normal)
         return view
     }()
     
@@ -87,7 +87,7 @@ class ProfileViewController: UIViewController {
         let view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .cyan
-        view.setTitle("SHOW TODOS", for: .normal)
+        view.setTitle("profile_todos_button".localized, for: .normal)
         return view
     }()
     
@@ -95,7 +95,7 @@ class ProfileViewController: UIViewController {
         let view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .brown
-        view.setTitle("SHOW ARTICLES", for: .normal)
+        view.setTitle("profile_articles_button".localized, for: .normal)
         return view
     }()
     
@@ -103,7 +103,7 @@ class ProfileViewController: UIViewController {
         let view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .red
-        view.setTitle("SHOW REMINDERS", for: .normal)
+        view.setTitle("profile_reminders_button".localized, for: .normal)
         return view
     }()
     
@@ -111,7 +111,7 @@ class ProfileViewController: UIViewController {
         let view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .blue
-        view.setTitle("SHOW MARKETPLACE", for: .normal)
+        view.setTitle("profile_marketplace_button".localized, for: .normal)
         return view
     }()
 
@@ -284,11 +284,11 @@ extension ProfileViewController: IProfileViewController {
         }
         
         nameLabel.text = viewModel.displayedUser.name
-        usernameLabel.text = "Username: " + viewModel.displayedUser.username
-        emailLabel.text = "E-mail: " + viewModel.displayedUser.email
-        streetLabel.text = "Street: " + viewModel.displayedUser.street
-        cityPlusZipLabel.text = "City: " + viewModel.displayedUser.city + " , Zip: " + viewModel.displayedUser.zipcode
-        phoneLabel.text = "Phone: " + viewModel.displayedUser.phone
+        usernameLabel.text = "profile_username_label".localized + viewModel.displayedUser.username
+        emailLabel.text = "profile_email_label".localized + viewModel.displayedUser.email
+        streetLabel.text = "profile_street_label".localized + viewModel.displayedUser.street
+        cityPlusZipLabel.text = "profile_city_label".localized + viewModel.displayedUser.city + "profile_zip_label".localized + viewModel.displayedUser.zipcode
+        phoneLabel.text = "profile_phone_label".localized + viewModel.displayedUser.phone
     }
 }
 

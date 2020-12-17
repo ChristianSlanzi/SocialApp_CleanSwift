@@ -20,14 +20,14 @@ class HomeViewController: UIViewController {
     let titleLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "HOME"
+        view.text = "home_view_label".localized
         return view
     }()
     
     let settingsButton: UIButton = {
         let view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.setTitle("GO TO SETTING", for: .normal)
+        view.setTitle("home_settings_button".localized, for: .normal)
         return view
     }()
 
@@ -57,7 +57,7 @@ class HomeViewController: UIViewController {
     }
     
     @objc func navigateToSettings(_ sender: UIButton) {
-        let name = "Settings Page Title passed as parameter"
+        let name = "home_settings_message".localized
         router.navigateToSettings(title: name)
     }
 }

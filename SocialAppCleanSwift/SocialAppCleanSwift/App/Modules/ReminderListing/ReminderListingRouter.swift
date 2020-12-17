@@ -25,6 +25,7 @@ class ReminderListingRouter: IReminderListingRouter {
     func create(parameters: [String: Any]) -> ReminderListingViewController {
         let bundle = Bundle(for: type(of: self))
         let view = ReminderListingViewController(nibName: "ReminderListingViewController", bundle: bundle)
+        view.title = "reminderlisting_view_title".localized
         let presenter = ReminderListingPresenter(view: view)
         let interactor = ReminderListingInteractor(presenter: presenter)
         view.interactor = interactor

@@ -14,6 +14,7 @@ protocol ICreatePostViewController: class {
 class CreatePostViewController: UIViewController {
 	var interactor: ICreatePostInteractor!
 	var router: ICreatePostRouter!
+    var imagePicker: ImagePicker!
     
     private let headerView: UserHeaderView = {
         let view = UserHeaderView()
@@ -28,6 +29,15 @@ class CreatePostViewController: UIViewController {
         view.backgroundColor = .white
         return view
     }()
+    
+    let photoButton: UIButton = {
+        let view = UIButton()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.setTitle("image_take_picture".localized, for: .normal)
+        view.setTitleColor(.black, for: .normal)
+        view.backgroundColor = .yellow
+        return view
+    }()
 
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +45,9 @@ class CreatePostViewController: UIViewController {
         
         setupViews()
         setupConstraints()
+        
+        self.imagePicker = ImagePicker(presentationController: self, delegate: self)
+        photoButton.addTarget(self, action: #selector(getPhoto), for: .touchUpInside)
     }
     
     override func viewDidLayoutSubviews() {
@@ -45,10 +58,15 @@ class CreatePostViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
+    
+    @objc func getPhoto() {
+        self.imagePicker.present(from: self.view)
+    }
 }
 
 extension CreatePostViewController: ICreatePostViewController {
 	// do someting...
+    
 }
 
 extension CreatePostViewController {
@@ -59,6 +77,7 @@ extension CreatePostViewController {
         
         view.addSubview(headerView)
         view.addSubview(textView)
+        view.addSubview(photoButton)
         textView.delegate = self
         
         NotificationCenter.default.addObserver(self,
@@ -83,6 +102,13 @@ extension CreatePostViewController {
             textView.heightAnchor.constraint(equalToConstant: 150),
             textView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1.0)
         ])
+        
+        NSLayoutConstraint.activate([
+            photoButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0),
+            photoButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
+            photoButton.heightAnchor.constraint(equalToConstant: 75),
+            photoButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1.0)
+        ])
     }
     
     @objc func sendPost() {
@@ -94,6 +120,32 @@ extension CreatePostViewController: UITextViewDelegate {
     public func textViewDidChange(_ textView: UITextView) {
         if let text = self.textView.text{
             navigationItem.rightBarButtonItem?.isEnabled = !text.isEmpty
+        }
+    }
+}
+
+// MARK: - ImagePickerDelegate
+extension CreatePostViewController: ImagePickerDelegate {
+
+    func didSelect(image: UIImage?) {
+        
+        guard let selectedImage = image else {
+            print("Image not found!")
+            return
+        }
+        
+        //self.imageTake.image = selectedImage
+        //viewModel.updateImage(selectedImage.jpegData(compressionQuality: 1)!)
+    }
+    
+    //TODO: implement error handling but in other way
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            print(error)
+            //showMessage(title: "error_generic_save_title".localized, message: error.localizedDescription)
+        } else {
+            //showMessage(title: "save_operation_ok_title".localized, message: "save_image_successful".localized)
         }
     }
 }

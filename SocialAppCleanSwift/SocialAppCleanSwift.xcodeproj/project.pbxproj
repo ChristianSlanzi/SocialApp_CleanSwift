@@ -49,6 +49,7 @@
 		2462E0C22582C62C00B78203 /* ArticlesDataStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2462E0C12582C62C00B78203 /* ArticlesDataStub.swift */; };
 		2462E0C72582C67300B78203 /* TodosDataStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2462E0C62582C67300B78203 /* TodosDataStub.swift */; };
 		2462E0CC2582C69000B78203 /* UsersDataStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2462E0CB2582C69000B78203 /* UsersDataStub.swift */; };
+		246C666525911506002750D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 246C666425911506002750D8 /* GoogleService-Info.plist */; };
 		247447AB2576F91D006A6BAE /* CommentListingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247447A32576F91D006A6BAE /* CommentListingModule.swift */; };
 		247447AC2576F91D006A6BAE /* CommentListingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247447A42576F91D006A6BAE /* CommentListingPresenter.swift */; };
 		247447AD2576F91D006A6BAE /* CommentListingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247447A52576F91D006A6BAE /* CommentListingRouter.swift */; };
@@ -281,6 +282,7 @@
 		2462E0C12582C62C00B78203 /* ArticlesDataStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesDataStub.swift; sourceTree = "<group>"; };
 		2462E0C62582C67300B78203 /* TodosDataStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosDataStub.swift; sourceTree = "<group>"; };
 		2462E0CB2582C69000B78203 /* UsersDataStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataStub.swift; sourceTree = "<group>"; };
+		246C666425911506002750D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		247447A32576F91D006A6BAE /* CommentListingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListingModule.swift; sourceTree = "<group>"; };
 		247447A42576F91D006A6BAE /* CommentListingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListingPresenter.swift; sourceTree = "<group>"; };
 		247447A52576F91D006A6BAE /* CommentListingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListingRouter.swift; sourceTree = "<group>"; };
@@ -970,6 +972,7 @@
 		24CF03FB256FBFFE00F92B49 /* SocialAppCleanSwift */ = {
 			isa = PBXGroup;
 			children = (
+				246C666425911506002750D8 /* GoogleService-Info.plist */,
 				2425E83E2576C07B0084E415 /* Environment */,
 				2485181D2575B824006F8A60 /* Utils */,
 				24DD57672570382F00106BC6 /* DataModel */,
@@ -1374,6 +1377,7 @@
 				24408B152586849600910D35 /* DiscoverViewController.xib in Resources */,
 				24CF04712570022C00F92B49 /* LoginViewController.xib in Resources */,
 				24BFC458258023AA00C15C67 /* ArticleDetailViewController.xib in Resources */,
+				246C666525911506002750D8 /* GoogleService-Info.plist in Resources */,
 				24FF4DA7258B6E990087807F /* Localizable.strings in Resources */,
 				24CF04972570025300F92B49 /* ProfileViewController.xib in Resources */,
 				24BA4B952579761900A7F088 /* PhotoListingViewController.xib in Resources */,

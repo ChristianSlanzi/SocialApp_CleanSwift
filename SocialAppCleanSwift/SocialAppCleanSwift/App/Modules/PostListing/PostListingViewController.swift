@@ -15,6 +15,8 @@ protocol IPostListingViewController: class {
 class PostListingViewController: UIViewController {
 	var interactor: IPostListingInteractor!
 	var router: IPostListingRouter!
+    
+    var imagePicker: ImagePicker!
 
     let tableView = UITableView()
     
@@ -57,6 +59,9 @@ extension PostListingViewController {
     // do someting...
     func setupViews() {
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "postlisting_photo_title".localized, style: .plain, target: self, action: #selector(getPhoto))
+        self.imagePicker = ImagePicker(presentationController: self, delegate: self)
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "postlisting_newpost_title".localized, style: .plain, target: self, action: #selector(createPost))
 
         //view.backgroundColor = .red
@@ -79,6 +84,10 @@ extension PostListingViewController {
                 tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
             ]
         )
+    }
+    
+    @objc func getPhoto() {
+        self.imagePicker.present(from: self.view)
     }
     
     @objc func createPost() {
@@ -121,4 +130,30 @@ extension PostListingViewController {
 
 extension PostListingViewController {
 	// do someting...
+}
+
+// MARK: - ImagePickerDelegate
+extension PostListingViewController: ImagePickerDelegate {
+
+    func didSelect(image: UIImage?) {
+        
+        guard let selectedImage = image else {
+            print("Image not found!")
+            return
+        }
+        
+        //self.imageTake.image = selectedImage
+        //viewModel.updateImage(selectedImage.jpegData(compressionQuality: 1)!)
+    }
+    
+    //TODO: implement error handling but in other way
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            print(error)
+            //showMessage(title: "error_generic_save_title".localized, message: error.localizedDescription)
+        } else {
+            //showMessage(title: "save_operation_ok_title".localized, message: "save_image_successful".localized)
+        }
+    }
 }

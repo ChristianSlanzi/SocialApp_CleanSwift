@@ -44,6 +44,7 @@
 
 //POSTS LISTING
 "postlisting_view_title" = "Feed";
+"postlisting_photo_title" = "Photo";
 "postlisting_newpost_title" = "New post";
 
 //SHOW LOCATION
@@ -101,3 +102,19 @@
 //ERRORS
 "error_generic_title" = "Error";
 "error_generic_message" = "Something went wrong";
+
+
+
+
+
+
+
+
+///// UTILS /////
+
+//IMAGE PICKER
+"image_take_picture" = "Take photo";
+"image_camera_roll" = "Camera roll";
+"image_photo_library" = "Photo library";
+
+"action_cancel_title" = "Cancel";

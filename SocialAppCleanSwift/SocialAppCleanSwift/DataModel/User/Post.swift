@@ -36,4 +36,24 @@ struct Post: JSONinitiable {
         self.createdTime = json["created_time"].string?.toDate(format: "yyyy-MM-dd'T'HH:mm:ssZ", locale: Locale(identifier: "en_US_POSIX")) ?? Date()
         self.updatedTime = json["updated_time"].string?.toDate(format: "yyyy-MM-dd'T'HH:mm:ssZ", locale: Locale(identifier: "en_US_POSIX")) ?? Date()
     }
+    
+    init(userId: Int,
+         id: Int,
+         title: String,
+         body: String,
+         photo: String?,
+         type: String, // text, photo, ...
+         createdTime: Date,
+         updatedTime: Date) {
+        
+        self.userId = userId
+        self.id = id
+        self.title = title
+        self.body = body
+        self.photo = photo
+        self.type = type
+        
+        self.createdTime = createdTime
+        self.updatedTime = updatedTime
+    }
 }

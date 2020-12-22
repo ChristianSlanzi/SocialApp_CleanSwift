@@ -113,6 +113,7 @@ extension CreatePostViewController {
     
     @objc func sendPost() {
         //router.navigateToCreatePost()
+        interactor.createPost(request: CreatePostModel.Request())
     }
 }
 

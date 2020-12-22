@@ -36,8 +36,9 @@ extension PostListingInteractor {
                 self.posts = posts
                 let response = PostListingModel.Response(posts: posts)
                 self.presenter.presentFetchedPosts(response: response)
-            case .failure(_):
+            case .failure(let error):
                 //show failure message
+                print(error)
                 break
             }
         }

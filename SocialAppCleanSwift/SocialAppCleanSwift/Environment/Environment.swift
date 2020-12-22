@@ -9,12 +9,14 @@ struct Environment {
     var networkingService: ApiServiceInterface = NetworkingService()
 }
 
-var Current = Environment.mock
+var Current = Environment.firebase
 
 extension Environment {
     static let mock = Environment(networkingService: NetworkingService.mock)
+    static let firebase = Environment(networkingService: NetworkingService.firebase)
 }
 
 extension NetworkingService {
     static let mock = NetworkingServiceMock()
+    static let firebase = FirestoreService.shared
 }

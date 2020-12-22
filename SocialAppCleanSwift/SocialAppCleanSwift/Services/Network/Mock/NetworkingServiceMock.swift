@@ -12,6 +12,10 @@ enum NetworkServiceError: Error {
 }
 
 class NetworkingServiceMock: ApiServiceInterface {
+    func save(_ post: Post, completion: @escaping (Result<Bool, Error>) -> Void) {
+        
+    }
+    
     
     private func retrieveItems<T: JSONinitiable>(json: JSON, completion: @escaping (Result<[T], Error>) -> Void) {
         if let data = json.array {

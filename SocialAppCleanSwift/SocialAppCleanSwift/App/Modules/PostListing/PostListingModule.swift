@@ -12,9 +12,9 @@ class PostListingModule: IModule {
     var networkingService: ApiServiceInterface?
     
     private var router: PostListingRouter!
-    private var presenter: PostListingPresenter!
-    private var interactor: PostListingInteractor!
-    private var view: PostListingViewController!
+    //private var presenter: PostListingPresenter!
+    //private var interactor: PostListingInteractor!
+    //private var view: PostListingViewController!
 
     init(_ appRouter: IAppRouter) {
         self.appRouter = appRouter

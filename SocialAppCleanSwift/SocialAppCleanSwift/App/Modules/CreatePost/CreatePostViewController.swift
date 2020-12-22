@@ -112,8 +112,10 @@ extension CreatePostViewController {
     }
     
     @objc func sendPost() {
-        //router.navigateToCreatePost()
-        interactor.createPost(request: CreatePostModel.Request())
+        let textToPost = textView.text
+        let parameters = ["textToPost" : textToPost]
+        let request = CreatePostModel.Request(parameters: parameters as [String : Any])
+        interactor.createPost(request: request)
     }
 }
 

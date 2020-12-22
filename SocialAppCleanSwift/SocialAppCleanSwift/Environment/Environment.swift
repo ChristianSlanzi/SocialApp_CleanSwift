@@ -12,6 +12,7 @@ struct Environment {
 var Current = Environment.firebase
 
 extension Environment {
+    static let githubDB = Environment()
     static let mock = Environment(networkingService: NetworkingService.mock)
     static let firebase = Environment(networkingService: NetworkingService.firebase)
 }

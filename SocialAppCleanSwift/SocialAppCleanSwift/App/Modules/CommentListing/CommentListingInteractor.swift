@@ -29,7 +29,7 @@ class CommentListingInteractor: ICommentListingInteractor {
 
 extension CommentListingInteractor {
     func fetchComments(request: CommentListingModel.Request) {
-        guard let postId = parameters?["postId"] as? Int else { return }
+        guard let postId = parameters?["postId"] as? String else { return }
         Current.networkingService.retrieveComments(for: postId) { (result) in
             switch(result) {
             case .success(let comments):

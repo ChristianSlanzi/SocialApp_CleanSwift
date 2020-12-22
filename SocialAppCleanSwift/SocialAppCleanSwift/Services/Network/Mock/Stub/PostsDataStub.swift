@@ -11,7 +11,7 @@ let postsData = JSON(parseJSON: """
 [
 {
 "userId": 1,
-"id": 1,
+"id": "1",
 "created_time":"2017-01-27T18:36:36Z",
 "updated_time":"2020-11-27T18:36:36Z",
 "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
@@ -20,7 +20,7 @@ let postsData = JSON(parseJSON: """
 },
 {
 "userId": 1,
-"id": 2,
+"id": "2",
 "created_time":"2017-01-27T18:36:36Z",
 "updated_time":"2020-11-27T18:36:36Z",
 "title": "qui est esse",
@@ -28,7 +28,7 @@ let postsData = JSON(parseJSON: """
 },
 {
 "userId": 1,
-"id": 3,
+"id": "3",
 "created_time":"2017-01-27T18:36:36Z",
 "updated_time":"2020-11-27T18:36:36Z",
 "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
@@ -36,7 +36,7 @@ let postsData = JSON(parseJSON: """
 },
 {
 "userId": 1,
-"id": 4,
+"id": "4",
 "created_time":"2017-01-27T18:36:36Z",
 "updated_time":"2020-11-27T18:36:36Z",
 "title": "eum et est occaecati",
@@ -44,7 +44,7 @@ let postsData = JSON(parseJSON: """
 },
 {
 "userId": 1,
-"id": 5,
+"id": "5",
 "created_time":"2017-01-27T18:36:36Z",
 "updated_time":"2020-11-27T18:36:36Z",
 "title": "nesciunt quas odio",
@@ -52,7 +52,7 @@ let postsData = JSON(parseJSON: """
 },
 {
 "userId": 1,
-"id": 6,
+"id": "6",
 "created_time":"2017-01-27T18:36:36Z",
 "updated_time":"2020-11-27T18:36:36Z",
 "title": "dolorem eum magni eos aperiam quia",

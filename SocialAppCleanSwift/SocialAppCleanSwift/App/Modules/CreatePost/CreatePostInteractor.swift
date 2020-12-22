@@ -29,7 +29,9 @@ class CreatePostInteractor: ICreatePostInteractor {
 
 extension CreatePostInteractor {
     func createPost(request: CreatePostModel.Request) {
-        let post = Post(userId: 0, id: 1, title: "test title", body: "test body", photo: nil, type: "text", createdTime: Date(), updatedTime: Date())
+        
+        guard let unwrappedParameters = request.parameters, let body = unwrappedParameters["textToPost"] as? String else { return }
+        let post = Post(userId: 0, id: UUID().uuidString, title: "test title", body: body, photo: nil, type: "text", createdTime: Date(), updatedTime: Date())
         Current.networkingService.save(post, completion: { (result) in
             switch(result) {
             case .success(let wasSaved):

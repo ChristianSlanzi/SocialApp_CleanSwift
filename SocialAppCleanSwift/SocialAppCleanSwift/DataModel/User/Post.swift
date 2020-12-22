@@ -17,7 +17,7 @@ import SwiftyJSON
 
 struct Post: JSONinitiable {
     var userId: Int
-    var id: Int
+    var id: String
     var title: String
     var body: String
     var photo: String?
@@ -27,7 +27,7 @@ struct Post: JSONinitiable {
     
     init(json: JSON) {
         self.userId = json["userId"].int ?? -1
-        self.id = json["id"].int ?? -1
+        self.id = json["id"].string ?? (json["id"].int != nil ? String(json["id"].int!): "")
         self.title = json["title"].string ?? ""
         self.body = json["body"].string ?? ""
         self.photo = json["photo"].string
@@ -38,7 +38,7 @@ struct Post: JSONinitiable {
     }
     
     init(userId: Int,
-         id: Int,
+         id: String,
          title: String,
          body: String,
          photo: String?,

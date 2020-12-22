@@ -1,18 +1,18 @@
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
 	<key>PreferenceSpecifiers</key>
 	<array>
-		***REMOVED***
+		<dict>
 			<key>FooterText</key>
 			<string>This application makes use of the following third party libraries:</string>
 			<key>Title</key>
 			<string>Acknowledgements</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
-		***REMOVED***
-		***REMOVED***
+		</dict>
+		<dict>
 			<key>FooterText</key>
 			<string>Copyright (c) 2014-2020 Alamofire Software Foundation (http://alamofire.org/)
 
@@ -40,8 +40,8 @@ THE SOFTWARE.
 			<string>Alamofire</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
-		***REMOVED***
-		***REMOVED***
+		</dict>
+		<dict>
 			<key>FooterText</key>
 			<string>BoringSSL is a fork of OpenSSL. As such, large parts of it fall under OpenSSL
 licensing. Files that are completely new have a Google copyright and an ISC
@@ -301,8 +301,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 			<string>BoringSSL-GRPC</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
-		***REMOVED***
-		***REMOVED***
+		</dict>
+		<dict>
 			<key>FooterText</key>
 			<string>
                                  Apache License
@@ -513,8 +513,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 			<string>Firebase</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
-		***REMOVED***
-		***REMOVED***
+		</dict>
+		<dict>
 			<key>FooterText</key>
 			<string>Copyright 2020 Google</string>
 			<key>License</key>
@@ -523,8 +523,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 			<string>FirebaseAnalytics</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
-		***REMOVED***
-		***REMOVED***
+		</dict>
+		<dict>
 			<key>FooterText</key>
 			<string>
                                  Apache License
@@ -735,8 +735,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 			<string>FirebaseCore</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
-		***REMOVED***
-		***REMOVED***
+		</dict>
+		<dict>
 			<key>FooterText</key>
 			<string>
                                  Apache License
@@ -947,8 +947,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 			<string>FirebaseCoreDiagnostics</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
-		***REMOVED***
-		***REMOVED***
+		</dict>
+		<dict>
 			<key>FooterText</key>
 			<string>
                                  Apache License
@@ -1159,8 +1159,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 			<string>FirebaseFirestore</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
-		***REMOVED***
-		***REMOVED***
+		</dict>
+		<dict>
 			<key>FooterText</key>
 			<string>
                                  Apache License
@@ -1371,8 +1371,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 			<string>FirebaseInstallations</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
-		***REMOVED***
-		***REMOVED***
+		</dict>
+		<dict>
 			<key>FooterText</key>
 			<string>
                                  Apache License
@@ -1583,8 +1583,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 			<string>FirebaseStorage</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
-		***REMOVED***
-		***REMOVED***
+		</dict>
+		<dict>
 			<key>FooterText</key>
 			<string>
                                  Apache License
@@ -1795,8 +1795,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 			<string>GTMSessionFetcher</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
-		***REMOVED***
-		***REMOVED***
+		</dict>
+		<dict>
 			<key>FooterText</key>
 			<string>Copyright 2020 Google</string>
 			<key>License</key>
@@ -1805,8 +1805,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 			<string>GoogleAppMeasurement</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
-		***REMOVED***
-		***REMOVED***
+		</dict>
+		<dict>
 			<key>FooterText</key>
 			<string>
                                  Apache License
@@ -2017,8 +2017,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 			<string>GoogleDataTransport</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
-		***REMOVED***
-		***REMOVED***
+		</dict>
+		<dict>
 			<key>FooterText</key>
 			<string>
                                  Apache License
@@ -2274,8 +2274,8 @@ Fuller's blog&lt;/a&gt;
 			<string>GoogleUtilities</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
-		***REMOVED***
-		***REMOVED***
+		</dict>
+		<dict>
 			<key>FooterText</key>
 			<string>
                                  Apache License
@@ -2486,8 +2486,8 @@ Fuller's blog&lt;/a&gt;
 			<string>PromisesObjC</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
-		***REMOVED***
-		***REMOVED***
+		</dict>
+		<dict>
 			<key>FooterText</key>
 			<string>The MIT License (MIT)
 
@@ -2517,8 +2517,8 @@ THE SOFTWARE.
 			<string>SwiftyJSON</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
-		***REMOVED***
-		***REMOVED***
+		</dict>
+		<dict>
 			<key>FooterText</key>
 			<string>
                                  Apache License
@@ -2730,8 +2730,8 @@ THE SOFTWARE.
 			<string>abseil</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
-		***REMOVED***
-		***REMOVED***
+		</dict>
+		<dict>
 			<key>FooterText</key>
 			<string>
                                  Apache License
@@ -2942,8 +2942,8 @@ THE SOFTWARE.
 			<string>gRPC-C++</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
-		***REMOVED***
-		***REMOVED***
+		</dict>
+		<dict>
 			<key>FooterText</key>
 			<string>
                                  Apache License
@@ -3154,8 +3154,8 @@ THE SOFTWARE.
 			<string>gRPC-Core</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
-		***REMOVED***
-		***REMOVED***
+		</dict>
+		<dict>
 			<key>FooterText</key>
 			<string>Copyright (c) 2011 The LevelDB Authors. All rights reserved.
 
@@ -3191,8 +3191,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 			<string>leveldb-library</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
-		***REMOVED***
-		***REMOVED***
+		</dict>
+		<dict>
 			<key>FooterText</key>
 			<string>Copyright (c) 2011 Petteri Aimonen &lt;jpa at nanopb.mail.kapsi.fi&gt;
 
@@ -3221,19 +3221,19 @@ redistribute it freely, subject to the following restrictions:
 			<string>nanopb</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
-		***REMOVED***
-		***REMOVED***
+		</dict>
+		<dict>
 			<key>FooterText</key>
 			<string>Generated by CocoaPods - https://cocoapods.org</string>
 			<key>Title</key>
 			<string></string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
-		***REMOVED***
+		</dict>
 	</array>
 	<key>StringsTable</key>
 	<string>Acknowledgements</string>
 	<key>Title</key>
 	<string>Acknowledgements</string>
-***REMOVED***
-***REMOVED***
+</dict>
+</plist>

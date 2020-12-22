@@ -13,7 +13,7 @@ class FirestoreService: ApiServiceInterface {
     func retrievePosts(completion: @escaping (Result<[Post], Error>)->Void) {
         fetch(completion: completion)
     }
-    func retrieveComments(for postId: Int, completion: @escaping (Result<[Comment], Error>)->Void) {}
+    func retrieveComments(for postId: String, completion: @escaping (Result<[Comment], Error>)->Void) {}
     func retrieveAlbums(for userId: Int, completion: @escaping (Result<[Album], Error>)->Void) {}
     func retrievePhotos(for albumId: Int, completion: @escaping (Result<[Photo], Error>)->Void) {}
     func retrieveTodos(for userId: Int, completion: @escaping (Result<[Todo], Error>)->Void) {}
@@ -55,7 +55,7 @@ class FirestoreService: ApiServiceInterface {
                 let documentData = document.data()
                 
                 guard let userId = documentData["userId"] as? Int,
-                      let id = documentData["id"] as? Int,
+                      let id = documentData["id"] as? String,
                       let title = documentData["title"] as? String,
                       let body = documentData["body"] as? String,
                       let photo = documentData["photo"] as? String?,
@@ -85,7 +85,7 @@ class FirestoreService: ApiServiceInterface {
                 let documentData = document.data()
                 
                 guard let userId = documentData["userId"] as? Int,
-                      let id = documentData["id"] as? Int,
+                      let id = documentData["id"] as? String,
                       let title = documentData["title"] as? String,
                       let body = documentData["body"] as? String,
                       let photo = documentData["photo"] as? String?,

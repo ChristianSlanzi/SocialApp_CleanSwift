@@ -30,7 +30,7 @@ class NetworkingServiceMock: ApiServiceInterface {
         retrieveItems(json: todosData, completion: completion)
     }
     
-    func retrieveComments(for postId: Int, completion: @escaping (Result<[Comment], Error>) -> Void) {
+    func retrieveComments(for postId: String, completion: @escaping (Result<[Comment], Error>) -> Void) {
         retrieveItems(json: commentsPost1Data, completion: completion)
     }
     

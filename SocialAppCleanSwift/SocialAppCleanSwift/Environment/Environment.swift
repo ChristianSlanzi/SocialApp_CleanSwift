@@ -7,6 +7,7 @@
 
 struct Environment {
     var networkingService: ApiServiceInterface = NetworkingService()
+    var storageService: StorageServiceInterface = StorageService.shared
 }
 
 var Current = Environment.firebase

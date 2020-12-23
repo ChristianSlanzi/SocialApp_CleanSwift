@@ -10,6 +10,7 @@ import UIKit
 struct CreatePostModel {	
 	struct Request {
 		// do someting...
+        var photo: UIImage?
 
 		var parameters: [String: Any]?
 	}

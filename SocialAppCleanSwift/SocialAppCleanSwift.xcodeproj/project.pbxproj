@@ -21,6 +21,7 @@
 		2403DD26257D3D76001F6025 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403DD25257D3D76001F6025 /* Article.swift */; };
 		2403DD2D257D41E7001F6025 /* ArticleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403DD2C257D41E7001F6025 /* ArticleViewCell.swift */; };
 		2425E8402576C0970084E415 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425E83F2576C0970084E415 /* Environment.swift */; };
+		2431F17D2592570F007D779C /* StorageServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2431F17C2592570F007D779C /* StorageServiceInterface.swift */; };
 		24408AFF25866A9B00910D35 /* ContactViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408AFE25866A9B00910D35 /* ContactViewCell.swift */; };
 		24408B0F2586849600910D35 /* DiscoverModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408B072586849500910D35 /* DiscoverModule.swift */; };
 		24408B102586849600910D35 /* DiscoverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408B082586849500910D35 /* DiscoverPresenter.swift */; };
@@ -256,6 +257,7 @@
 		2403DD25257D3D76001F6025 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		2403DD2C257D41E7001F6025 /* ArticleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewCell.swift; sourceTree = "<group>"; };
 		2425E83F2576C0970084E415 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		2431F17C2592570F007D779C /* StorageServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceInterface.swift; sourceTree = "<group>"; };
 		24408AFE25866A9B00910D35 /* ContactViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewCell.swift; sourceTree = "<group>"; };
 		24408B072586849500910D35 /* DiscoverModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverModule.swift; sourceTree = "<group>"; };
 		24408B082586849500910D35 /* DiscoverPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPresenter.swift; sourceTree = "<group>"; };
@@ -558,6 +560,16 @@
 				2425E83F2576C0970084E415 /* Environment.swift */,
 			);
 			path = Environment;
+			sourceTree = "<group>";
+		};
+		2431F17B259256C9007D779C /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				24DD57662570382F00106BC6 /* ServiceInterface.swift */,
+				24DD57642570382F00106BC6 /* ApiServiceInterface.swift */,
+				2431F17C2592570F007D779C /* StorageServiceInterface.swift */,
+			);
+			path = Interfaces;
 			sourceTree = "<group>";
 		};
 		24408AFC25866A7900910D35 /* Views */ = {
@@ -1175,9 +1187,9 @@
 		24DD57622570382F00106BC6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2431F17B259256C9007D779C /* Interfaces */,
 				246C668725911C73002750D8 /* Firebase */,
 				24DD57632570382F00106BC6 /* Network */,
-				24DD57662570382F00106BC6 /* ServiceInterface.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1186,7 +1198,6 @@
 			isa = PBXGroup;
 			children = (
 				2402AAA325757FCB00D879C9 /* Mock */,
-				24DD57642570382F00106BC6 /* ApiServiceInterface.swift */,
 				24DD57652570382F00106BC6 /* NetworkingService.swift */,
 			);
 			path = Network;
@@ -1711,6 +1722,7 @@
 				24BFC453258023AA00C15C67 /* ArticleDetailPresenter.swift in Sources */,
 				24DD576D2570382F00106BC6 /* UserModel.swift in Sources */,
 				2485180F2575A6BD006F8A60 /* PostListingManager.swift in Sources */,
+				2431F17D2592570F007D779C /* StorageServiceInterface.swift in Sources */,
 				24DD57472570330100106BC6 /* SettingsInteractor.swift in Sources */,
 				24BBA07C2589125A00E167C6 /* CreatePostRouter.swift in Sources */,
 			);

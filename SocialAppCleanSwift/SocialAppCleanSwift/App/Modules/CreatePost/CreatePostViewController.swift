@@ -16,6 +16,9 @@ class CreatePostViewController: UIViewController {
 	var router: ICreatePostRouter!
     var imagePicker: ImagePicker!
     
+    private var photoHeightConstraint: NSLayoutConstraint?
+    private var photoReducedHeightConstraint: NSLayoutConstraint?
+    
     private let headerView: UserHeaderView = {
         let view = UserHeaderView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -27,6 +30,13 @@ class CreatePostViewController: UIViewController {
         let view = UITextView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .white
+        return view
+    }()
+    
+    private let photoImageView: CachedImageView = {
+        let view = CachedImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .gray
         return view
     }()
     
@@ -78,6 +88,7 @@ extension CreatePostViewController {
         view.addSubview(headerView)
         view.addSubview(textView)
         view.addSubview(photoButton)
+        view.addSubview(photoImageView)
         textView.delegate = self
         
         NotificationCenter.default.addObserver(self,
@@ -103,6 +114,21 @@ extension CreatePostViewController {
             textView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1.0)
         ])
         
+        photoHeightConstraint = photoImageView.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.66)
+        photoReducedHeightConstraint = photoImageView.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.0)
+        
+        NSLayoutConstraint.activate([
+            photoImageView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: margin),
+            photoImageView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -margin),
+            photoImageView.topAnchor.constraint(equalTo: textView.bottomAnchor, constant: margin),
+            photoReducedHeightConstraint!
+        ])
+        
+        photoHeightConstraint?.isActive = false
+        
+        
+        
+        
         NSLayoutConstraint.activate([
             photoButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0),
             photoButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
@@ -114,7 +140,10 @@ extension CreatePostViewController {
     @objc func sendPost() {
         let textToPost = textView.text
         let parameters = ["textToPost" : textToPost]
-        let request = CreatePostModel.Request(parameters: parameters as [String : Any])
+        var request = CreatePostModel.Request(parameters: parameters as [String : Any])
+        if let selectedImage = photoImageView.image {
+            request.photo = selectedImage
+        }
         interactor.createPost(request: request)
     }
 }
@@ -139,6 +168,10 @@ extension CreatePostViewController: ImagePickerDelegate {
         
         //self.imageTake.image = selectedImage
         //viewModel.updateImage(selectedImage.jpegData(compressionQuality: 1)!)
+        photoImageView.image = selectedImage
+        photoReducedHeightConstraint?.isActive = false
+        photoHeightConstraint?.isActive = true
+        view.setNeedsLayout()
     }
     
     //TODO: implement error handling but in other way

@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseStorage
 
-class StorageService {
+class StorageService: StorageServiceInterface {
     private init() {}
     static let shared = StorageService()
     
@@ -16,10 +16,10 @@ class StorageService {
     private let storage = Storage.storage()
     private lazy var imagesReference = storage.reference().child("images")
     
-    func upload(_ image: UIImage, completion: @escaping (String) -> Void) {
+    func upload(_ imageData: Data, completion: @escaping (String) -> Void) {
         let imageRef = imagesReference.child("images/\(Date().timeIntervalSince1970).jpg")
         
-        guard let imageData = image.jpegData(compressionQuality: 0.5) else { return }
+        //guard let imageData = image.jpegData(compressionQuality: 0.5) else { return }
         imageRef.putData(imageData, metadata: nil) { (_, error) in
             if let unwrappedError = error {
                 print(unwrappedError)

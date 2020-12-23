@@ -31,7 +31,19 @@ extension CreatePostInteractor {
     func createPost(request: CreatePostModel.Request) {
         
         guard let unwrappedParameters = request.parameters, let body = unwrappedParameters["textToPost"] as? String else { return }
-        let post = Post(userId: 0, id: UUID().uuidString, title: "test title", body: body, photo: nil, type: "text", createdTime: Date(), updatedTime: Date())
+        
+        if let unwrappedPhoto = request.photo {
+            guard let imageData = unwrappedPhoto.jpegData(compressionQuality: 0.5) else { return }
+            Current.storageService.upload(imageData) { (path) in
+                self.savePost(body: body, photo: path)
+            }
+        } else {
+            savePost(body: body, photo: nil)
+        }
+    }
+    
+    private func savePost(body: String, photo: String?) {
+        let post = Post(userId: 0, id: UUID().uuidString, title: "test title", body: body, photo: photo, type: "text", createdTime: Date(), updatedTime: Date())
         Current.networkingService.save(post, completion: { (result) in
             switch(result) {
             case .success(let wasSaved):

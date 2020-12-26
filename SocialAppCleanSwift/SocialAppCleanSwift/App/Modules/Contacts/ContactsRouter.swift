@@ -9,7 +9,7 @@ import UIKit
 
 protocol IContactsRouter {
 	// do someting...
-    func navigateToProfile(for contactId: Int)
+    func navigateToProfile(for contactId: String)
 }
 
 class ContactsRouter: IContactsRouter {
@@ -40,7 +40,7 @@ class ContactsRouter: IContactsRouter {
 }
 
 extension ContactsRouter {
-    func navigateToProfile(for contactId: Int) {
+    func navigateToProfile(for contactId: String) {
         let selectedContact = dataStore?.contacts?.first { $0.id == contactId }
         guard let contact = selectedContact else { return }
         let module = ProfileModule(appRouter)

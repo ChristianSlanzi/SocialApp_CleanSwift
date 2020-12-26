@@ -34,7 +34,7 @@ import SwiftyJSON
  */
 
 struct UserModel: JSONinitiable {
-    var id: Int
+    var id: String
     var name: String
     var username: String?
     var avatar: String?
@@ -45,7 +45,7 @@ struct UserModel: JSONinitiable {
     var company: UserCompany?
     
     init(json: JSON) {
-        self.id = json["id"].int!
+        self.id = json["id"].string ?? (json["id"].int != nil ? String(json["id"].int!): "")
         self.name = json["name"].string!
         self.username = json["username"].string
         self.avatar = json["avatar"].string
@@ -63,6 +63,26 @@ struct UserModel: JSONinitiable {
             self.company = new
         }
     }
+    
+    init(id: String,
+         name: String,
+         username: String?,
+         avatar: String?,
+         email: String?,
+         address: UserAddress?,
+         phone: String?,
+         website: String?,
+         company: UserCompany?) {
+        self.id = id
+        self.name = name
+        self.username = username
+        self.avatar = avatar
+        self.email = email
+        self.address = address
+        self.phone = phone
+        self.website = website
+        self.company = company
+    }
 }
 
 struct UserCompany {
@@ -74,6 +94,14 @@ struct UserCompany {
         self.name = json?["name"].string
         self.catchPhrase = json?["catchPhrase"].string
         self.bs = json?["bs"].string
+    }
+    
+    init(name: String?,
+         catchPhrase: String?,
+         bs: String?) {
+        self.name = name
+        self.catchPhrase = catchPhrase
+        self.bs = bs
     }
 }
 
@@ -95,6 +123,18 @@ struct UserAddress {
             self.geo = new
         }
     }
+    
+    init(street: String?,
+         suite: String?,
+         city: String?,
+         zipcode: String?,
+         geo: UserAddressGeo?) {
+        self.street = street
+        self.suite = suite
+        self.city = city
+        self.zipcode = zipcode
+        self.geo = geo
+    }
 }
 
 struct UserAddressGeo {
@@ -104,5 +144,11 @@ struct UserAddressGeo {
     init(json: JSON?) {
         self.lat = json?["lat"].string
         self.lng = json?["lng"].string
+    }
+    
+    init(lat: String?,
+         lng: String?) {
+        self.lat = lat
+        self.lng = lng
     }
 }

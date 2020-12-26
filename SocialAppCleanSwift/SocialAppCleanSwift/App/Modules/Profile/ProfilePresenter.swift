@@ -25,12 +25,12 @@ extension ProfilePresenter {
         let user = response.user
         let avatarURL = user.avatar != nil ? URL(string: user.avatar!) : nil
         let displayedUser = ProfileModel.ViewModel.DisplayedUser(name: user.name,
-                                                                 username: user.username!,
-                                                                 email: user.email!,
-                                                                 street: user.address!.street!,
-                                                                 city: user.address!.city!,
-                                                                 zipcode: user.address!.zipcode!,
-                                                                 phone: user.phone!,
+                                                                 username: user.username ?? "--",
+                                                                 email: user.email ?? "--",
+                                                                 street: user.address?.street ?? "--",
+                                                                 city: user.address?.city ?? "--",
+                                                                 zipcode: user.address?.zipcode ?? "--",
+                                                                 phone: user.phone ?? "--",
                                                                  avatarURL: avatarURL)
         let viewModel = ProfileModel.ViewModel(displayedUser: displayedUser)
         view.displayUserProfile(viewModel: viewModel)

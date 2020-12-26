@@ -9,7 +9,9 @@ import FirebaseFirestore
 
 class FirestoreService: ApiServiceInterface {
     
-    func retrieveUsers(completion: @escaping (Result<[UserModel], Error>)->Void) {}
+    func retrieveUsers(completion: @escaping (Result<[UserModel], Error>)->Void) {
+        fetchUsers(completion: completion)
+    }
     func retrievePosts(completion: @escaping (Result<[Post], Error>)->Void) {
         fetch(completion: completion)
     }
@@ -24,6 +26,7 @@ class FirestoreService: ApiServiceInterface {
     
     private let database = Firestore.firestore()
     private lazy var postTypesReference = database.collection("posts")
+    private lazy var userTypesReference = database.collection("users")
     
     func save(_ post: Post, completion: @escaping (Result<Bool, Error>) -> Void) {
         postTypesReference.addDocument(data: ["userId" :  post.userId,
@@ -41,6 +44,42 @@ class FirestoreService: ApiServiceInterface {
                 completion(.success(true))
             }
         }
+    }
+    
+    func fetchUsers(completion: @escaping (Result<[UserModel], Error>)->Void) {
+
+        userTypesReference.getDocuments(completion: { (snapshot, error) in
+            guard let unwrappedSnapshot = snapshot else { return }
+            
+            let documents = unwrappedSnapshot.documents
+            
+            var users = [UserModel]()
+            for document in documents {
+                let documentData = document.data()
+                
+                guard let name = documentData["name"] as? String,
+                      let id = documentData["id"] as? String,
+                      let username = documentData["username"] as? String?,
+                      let avatar = documentData["avatar"] as? String?,
+                      let email = documentData["email"] as? String?,
+                      //let address = documentData["address"] as? String,
+                      let phone = documentData["phone"] as? String?,
+                      let website = documentData["website"] as? String?//,
+                      //let company = documentData["company"] as? String
+                else {
+                    continue
+                }
+                
+                let addressObject = UserAddress(street: "pinco street", suite: nil, city: nil, zipcode: nil, geo: nil)
+                let companyObject = UserCompany(name: "FarmaTek", catchPhrase: nil, bs: nil)
+                
+                let user = UserModel(id: id, name: name, username: username, avatar: avatar, email: email, address: addressObject, phone: phone, website: website, company: companyObject)
+                users.append(user)
+                
+            }
+            
+            completion(.success(users))
+        })
     }
     
     func fetch(completion: @escaping (Result<[Post], Error>)->Void) {

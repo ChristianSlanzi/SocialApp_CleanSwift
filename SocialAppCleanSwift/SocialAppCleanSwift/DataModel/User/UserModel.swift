@@ -138,16 +138,16 @@ struct UserAddress {
 }
 
 struct UserAddressGeo {
-    var lat: String?
-    var lng: String?
+    var lat: String
+    var lng: String
     
     init(json: JSON?) {
-        self.lat = json?["lat"].string
-        self.lng = json?["lng"].string
+        self.lat = json?["lat"].string ?? ""
+        self.lng = json?["lng"].string ?? ""
     }
     
-    init(lat: String?,
-         lng: String?) {
+    init(lat: String,
+         lng: String) {
         self.lat = lat
         self.lng = lng
     }

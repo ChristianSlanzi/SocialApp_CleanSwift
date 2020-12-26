@@ -48,9 +48,14 @@ class ProfileRouter: IProfileRouter, ShowContactDataPassing {
     }
     
     func navigateToShowLocation() {
-        appRouter.presentModule(module: ShowLocationModule(appRouter),
-                                parameters: ["lat" : (dataStore?.user.address?.geo?.lat)!,
-                                             "lng" : (dataStore?.user.address?.geo?.lng)!])
+        if let location = dataStore?.user.address?.geo {
+            appRouter.presentModule(module: ShowLocationModule(appRouter),
+                                    parameters: ["lat" : location.lat,
+                                                 "lng" : location.lng])
+        } else {
+            //TODO
+        }
+        
     }
     
     func navigateToAlbumListing() {

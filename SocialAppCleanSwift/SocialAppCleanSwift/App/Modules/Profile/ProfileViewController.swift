@@ -289,6 +289,7 @@ extension ProfileViewController: IProfileViewController {
         streetLabel.text = "profile_street_label".localized + viewModel.displayedUser.street
         cityPlusZipLabel.text = "profile_city_label".localized + viewModel.displayedUser.city + "profile_zip_label".localized + viewModel.displayedUser.zipcode
         phoneLabel.text = "profile_phone_label".localized + viewModel.displayedUser.phone
+        
     }
 }
 

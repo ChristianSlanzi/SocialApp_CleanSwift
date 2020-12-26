@@ -138,6 +138,8 @@
 		24C89D102579AC2000791646 /* TodoListingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C89D082579AC2000791646 /* TodoListingViewController.xib */; };
 		24C89D112579AC2000791646 /* TodoListingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C89D092579AC2000791646 /* TodoListingManager.swift */; };
 		24C89D182579AF1700791646 /* TodoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C89D172579AF1700791646 /* TodoViewCell.swift */; };
+		24CB3B1925977198001E8383 /* DocumentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB3B1825977198001E8383 /* DocumentProtocol.swift */; };
+		24CB3B1F25977231001E8383 /* Article+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB3B1E25977231001E8383 /* Article+Firebase.swift */; };
 		24CF03FD256FBFFE00F92B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF03FC256FBFFE00F92B49 /* AppDelegate.swift */; };
 		24CF03FF256FBFFE00F92B49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF03FE256FBFFE00F92B49 /* SceneDelegate.swift */; };
 		24CF0401256FBFFE00F92B49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF0400256FBFFE00F92B49 /* ViewController.swift */; };
@@ -374,6 +376,8 @@
 		24C89D082579AC2000791646 /* TodoListingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodoListingViewController.xib; sourceTree = "<group>"; };
 		24C89D092579AC2000791646 /* TodoListingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListingManager.swift; sourceTree = "<group>"; };
 		24C89D172579AF1700791646 /* TodoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewCell.swift; sourceTree = "<group>"; };
+		24CB3B1825977198001E8383 /* DocumentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentProtocol.swift; sourceTree = "<group>"; };
+		24CB3B1E25977231001E8383 /* Article+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Article+Firebase.swift"; sourceTree = "<group>"; };
 		24CF03F9256FBFFE00F92B49 /* SocialAppCleanSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialAppCleanSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24CF03FC256FBFFE00F92B49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24CF03FE256FBFFE00F92B49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -659,6 +663,8 @@
 		246C668725911C73002750D8 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				24CB3B1D259771F5001E8383 /* DataModel+Ext */,
+				24CB3B172597717F001E8383 /* Protocols */,
 				246C668825911C8A002750D8 /* FirestoreService.swift */,
 				246C669025911CBC002750D8 /* StorageService.swift */,
 			);
@@ -970,6 +976,22 @@
 				24C89D172579AF1700791646 /* TodoViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		24CB3B172597717F001E8383 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				24CB3B1825977198001E8383 /* DocumentProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		24CB3B1D259771F5001E8383 /* DataModel+Ext */ = {
+			isa = PBXGroup;
+			children = (
+				24CB3B1E25977231001E8383 /* Article+Firebase.swift */,
+			);
+			path = "DataModel+Ext";
 			sourceTree = "<group>";
 		};
 		24CF03F0256FBFFE00F92B49 = {
@@ -1569,12 +1591,14 @@
 				2485180C2575A6BD006F8A60 /* PostListingInteractor.swift in Sources */,
 				24BFC457258023AA00C15C67 /* ArticleDetailModel.swift in Sources */,
 				24CF04A92570026100F92B49 /* DetailModel.swift in Sources */,
+				24CB3B1925977198001E8383 /* DocumentProtocol.swift in Sources */,
 				24CF04822570024200F92B49 /* HomeInteractor.swift in Sources */,
 				24408B0F2586849600910D35 /* DiscoverModule.swift in Sources */,
 				24601878257EF17900FF623E /* SellItemListingManager.swift in Sources */,
 				24BFC456258023AA00C15C67 /* ArticleDetailInteractor.swift in Sources */,
 				24C89D182579AF1700791646 /* TodoViewCell.swift in Sources */,
 				2496806025897373008907BA /* UserHeaderView.swift in Sources */,
+				24CB3B1F25977231001E8383 /* Article+Firebase.swift in Sources */,
 				24CF04C62570029700F92B49 /* AppRoute.swift in Sources */,
 				24CF04832570024200F92B49 /* HomeModel.swift in Sources */,
 				24BA4B912579761900A7F088 /* PhotoListingRouter.swift in Sources */,

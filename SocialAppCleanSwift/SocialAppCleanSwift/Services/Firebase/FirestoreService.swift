@@ -19,7 +19,9 @@ class FirestoreService: ApiServiceInterface {
     func retrieveAlbums(for userId: Int, completion: @escaping (Result<[Album], Error>)->Void) {}
     func retrievePhotos(for albumId: Int, completion: @escaping (Result<[Photo], Error>)->Void) {}
     func retrieveTodos(for userId: Int, completion: @escaping (Result<[Todo], Error>)->Void) {}
-    func retrieveArticles(for userId: Int, completion: @escaping (Result<[Article], Error>)->Void) {}
+    func retrieveArticles(for userId: String, completion: @escaping (Result<[Article], Error>)->Void) {
+        fetchCollection(collection: "articles", completion: completion)
+    }
     
     private init() {}
     static let shared = FirestoreService()
@@ -27,6 +29,7 @@ class FirestoreService: ApiServiceInterface {
     private let database = Firestore.firestore()
     private lazy var postTypesReference = database.collection("posts")
     private lazy var userTypesReference = database.collection("users")
+    private lazy var articlesTypesReference = database.collection("articles")
     
     func save(_ post: Post, completion: @escaping (Result<Bool, Error>) -> Void) {
         postTypesReference.addDocument(data: ["userId" :  post.userId,
@@ -42,6 +45,21 @@ class FirestoreService: ApiServiceInterface {
                 completion(.failure(unwrappedError))
             } else {
                 completion(.success(true))
+            }
+        }
+    }
+    
+    func fetchCollection<T: DocumentProtocol>(collection: String, completion: @escaping (Result<[T], Error>)->Void) {
+        var array: [T] = []
+        database.collection(collection).getDocuments() { (querySnapshot, err) in
+            if let snapshot = querySnapshot {
+                //guard let userID = Auth.auth().currentUser?.uid else { return }
+                for document in snapshot.documents {
+                    if let item: T = T.init(document: document) {
+                        array.append(item)
+                    }
+                }
+                completion(.success(array))
             }
         }
     }

@@ -46,7 +46,7 @@ class NetworkingServiceMock: ApiServiceInterface {
         retrieveItems(json: postsData, completion: completion)
     }
     
-    func retrieveArticles(for userId: Int, completion: @escaping (Result<[Article], Error>) -> Void) {
+    func retrieveArticles(for userId: String, completion: @escaping (Result<[Article], Error>) -> Void) {
         retrieveItems(json: articlesData, completion: completion)
         //retrieveItems(json: articlesEmptyData, completion: completion)
     }

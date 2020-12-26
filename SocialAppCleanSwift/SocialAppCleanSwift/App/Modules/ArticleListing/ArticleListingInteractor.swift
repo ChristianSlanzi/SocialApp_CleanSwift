@@ -28,7 +28,7 @@ class ArticleListingInteractor: IArticleListingInteractor {
 
 extension ArticleListingInteractor {
     func fetchArticles(request: ArticleListingModel.Request) {
-        guard let userId = parameters?["userId"] as? Int else { return }
+        guard let userId = parameters?["userId"] as? String else { return }
         Current.networkingService.retrieveArticles(for: userId) { (result) in
             switch(result) {
             case .success(let articles):

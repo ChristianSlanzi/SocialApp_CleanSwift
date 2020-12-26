@@ -27,5 +27,13 @@ extension User: DocumentProtocol {
             
             self.address = UserAddress(street: street, suite: suite, city: city, zipcode: zipcode, geo: nil)
         }
+        
+        if let value = documentData["company"] as? [String:Any] {
+            let name = value["name"] as? String? ?? nil
+            let catchPhrase = value["catchPhrase"] as? String? ?? nil
+            let bs = value["bs"] as? String? ?? nil
+            
+            self.company = UserCompany(name: name, catchPhrase: catchPhrase, bs: bs)
+        }
     }
 }

@@ -51,7 +51,7 @@ class NetworkingServiceMock: ApiServiceInterface {
         //retrieveItems(json: articlesEmptyData, completion: completion)
     }
     
-    func retrieveUsers(completion: @escaping (Result<[UserModel], Error>)->Void) {
+    func retrieveUsers(completion: @escaping (Result<[User], Error>)->Void) {
         retrieveItems(json: usersData, completion: completion)
     }
 }

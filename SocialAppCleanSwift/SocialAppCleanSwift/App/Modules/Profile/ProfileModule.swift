@@ -11,7 +11,7 @@ class ProfileModule: IModule, ShowContactDataStore {
     
     let appRouter: IAppRouter
     private var router: ProfileRouter!
-    var user: UserModel!
+    var user: User!
 
     init(_ appRouter: IAppRouter) {
         self.appRouter = appRouter

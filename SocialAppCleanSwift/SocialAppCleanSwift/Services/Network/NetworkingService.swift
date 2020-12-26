@@ -59,7 +59,7 @@ class NetworkingService: ApiServiceInterface {
         retrieveItems(url: "https://my-json-server.typicode.com/christianslanzi/SocialAppJson/articles", completion: completion)
     }
     
-    func retrieveUsers(completion: @escaping (Result<[UserModel], Error>)->Void) {
+    func retrieveUsers(completion: @escaping (Result<[User], Error>)->Void) {
         retrieveItems(url: "https://my-json-server.typicode.com/christianslanzi/SocialAppJson/users", completion: completion)
     }
 }

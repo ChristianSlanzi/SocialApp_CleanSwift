@@ -19,7 +19,7 @@ struct ProfileModel {
 
 	struct Response {
 		// do someting...
-        var user: UserModel
+        var user: User
 	}
 
 	struct ViewModel {

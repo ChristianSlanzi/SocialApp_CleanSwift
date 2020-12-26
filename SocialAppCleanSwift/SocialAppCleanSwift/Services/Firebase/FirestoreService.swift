@@ -9,11 +9,13 @@ import FirebaseFirestore
 
 class FirestoreService: ApiServiceInterface {
     
-    func retrieveUsers(completion: @escaping (Result<[UserModel], Error>)->Void) {
-        fetchUsers(completion: completion)
+    func retrieveUsers(completion: @escaping (Result<[User], Error>)->Void) {
+        //fetchUsers(completion: completion)
+        fetchCollection(collection: "users", completion: completion)
     }
     func retrievePosts(completion: @escaping (Result<[Post], Error>)->Void) {
-        fetch(completion: completion)
+        //fetch(completion: completion)
+        fetchCollection(collection: "posts", completion: completion)
     }
     func retrieveComments(for postId: String, completion: @escaping (Result<[Comment], Error>)->Void) {}
     func retrieveAlbums(for userId: Int, completion: @escaping (Result<[Album], Error>)->Void) {}
@@ -29,7 +31,7 @@ class FirestoreService: ApiServiceInterface {
     private let database = Firestore.firestore()
     private lazy var postTypesReference = database.collection("posts")
     private lazy var userTypesReference = database.collection("users")
-    private lazy var articlesTypesReference = database.collection("articles")
+    //private lazy var articlesTypesReference = database.collection("articles")
     
     func save(_ post: Post, completion: @escaping (Result<Bool, Error>) -> Void) {
         postTypesReference.addDocument(data: ["userId" :  post.userId,
@@ -64,14 +66,14 @@ class FirestoreService: ApiServiceInterface {
         }
     }
     
-    func fetchUsers(completion: @escaping (Result<[UserModel], Error>)->Void) {
+    func fetchUsers(completion: @escaping (Result<[User], Error>)->Void) {
 
         userTypesReference.getDocuments(completion: { (snapshot, error) in
             guard let unwrappedSnapshot = snapshot else { return }
             
             let documents = unwrappedSnapshot.documents
             
-            var users = [UserModel]()
+            var users = [User]()
             for document in documents {
                 let documentData = document.data()
                 
@@ -91,7 +93,7 @@ class FirestoreService: ApiServiceInterface {
                 let addressObject = UserAddress(street: "pinco street", suite: nil, city: nil, zipcode: nil, geo: nil)
                 let companyObject = UserCompany(name: "FarmaTek", catchPhrase: nil, bs: nil)
                 
-                let user = UserModel(id: id, name: name, username: username, avatar: avatar, email: email, address: addressObject, phone: phone, website: website, company: companyObject)
+                let user = User(id: id, name: name, username: username, avatar: avatar, email: email, address: addressObject, phone: phone, website: website, company: companyObject)
                 users.append(user)
                 
             }
@@ -100,6 +102,7 @@ class FirestoreService: ApiServiceInterface {
         })
     }
     
+    /*
     func fetch(completion: @escaping (Result<[Post], Error>)->Void) {
 
         postTypesReference.getDocuments(completion: { (snapshot, error) in
@@ -130,6 +133,7 @@ class FirestoreService: ApiServiceInterface {
             completion(.success(posts))
         })
     }
+    */
     
     func listen(completion: @escaping (Result<[Post], Error>)->Void) {
         postTypesReference.addSnapshotListener { (snapshot, error) in

@@ -140,6 +140,8 @@
 		24C89D182579AF1700791646 /* TodoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C89D172579AF1700791646 /* TodoViewCell.swift */; };
 		24CB3B1925977198001E8383 /* DocumentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB3B1825977198001E8383 /* DocumentProtocol.swift */; };
 		24CB3B1F25977231001E8383 /* Article+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB3B1E25977231001E8383 /* Article+Firebase.swift */; };
+		24CB3B2A25978D41001E8383 /* Post+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB3B2925978D41001E8383 /* Post+Firebase.swift */; };
+		24CB3B2F25978FE5001E8383 /* User+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB3B2E25978FE5001E8383 /* User+Firebase.swift */; };
 		24CF03FD256FBFFE00F92B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF03FC256FBFFE00F92B49 /* AppDelegate.swift */; };
 		24CF03FF256FBFFE00F92B49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF03FE256FBFFE00F92B49 /* SceneDelegate.swift */; };
 		24CF0401256FBFFE00F92B49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF0400256FBFFE00F92B49 /* ViewController.swift */; };
@@ -210,7 +212,7 @@
 		24DD576A2570382F00106BC6 /* ApiServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD57642570382F00106BC6 /* ApiServiceInterface.swift */; };
 		24DD576B2570382F00106BC6 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD57652570382F00106BC6 /* NetworkingService.swift */; };
 		24DD576C2570382F00106BC6 /* ServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD57662570382F00106BC6 /* ServiceInterface.swift */; };
-		24DD576D2570382F00106BC6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD57692570382F00106BC6 /* UserModel.swift */; };
+		24DD576D2570382F00106BC6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD57692570382F00106BC6 /* User.swift */; };
 		24E0ADF4257407FF00A54F30 /* ShowLocationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E0ADEC257407FE00A54F30 /* ShowLocationModule.swift */; };
 		24E0ADF5257407FF00A54F30 /* ShowLocationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E0ADED257407FF00A54F30 /* ShowLocationPresenter.swift */; };
 		24E0ADF6257407FF00A54F30 /* ShowLocationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E0ADEE257407FF00A54F30 /* ShowLocationRouter.swift */; };
@@ -378,6 +380,8 @@
 		24C89D172579AF1700791646 /* TodoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewCell.swift; sourceTree = "<group>"; };
 		24CB3B1825977198001E8383 /* DocumentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentProtocol.swift; sourceTree = "<group>"; };
 		24CB3B1E25977231001E8383 /* Article+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Article+Firebase.swift"; sourceTree = "<group>"; };
+		24CB3B2925978D41001E8383 /* Post+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+Firebase.swift"; sourceTree = "<group>"; };
+		24CB3B2E25978FE5001E8383 /* User+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Firebase.swift"; sourceTree = "<group>"; };
 		24CF03F9256FBFFE00F92B49 /* SocialAppCleanSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialAppCleanSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24CF03FC256FBFFE00F92B49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24CF03FE256FBFFE00F92B49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -454,7 +458,7 @@
 		24DD57642570382F00106BC6 /* ApiServiceInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiServiceInterface.swift; sourceTree = "<group>"; };
 		24DD57652570382F00106BC6 /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		24DD57662570382F00106BC6 /* ServiceInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceInterface.swift; sourceTree = "<group>"; };
-		24DD57692570382F00106BC6 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		24DD57692570382F00106BC6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		24E0ADEC257407FE00A54F30 /* ShowLocationModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLocationModule.swift; sourceTree = "<group>"; };
 		24E0ADED257407FF00A54F30 /* ShowLocationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLocationPresenter.swift; sourceTree = "<group>"; };
 		24E0ADEE257407FF00A54F30 /* ShowLocationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLocationRouter.swift; sourceTree = "<group>"; };
@@ -990,6 +994,8 @@
 			isa = PBXGroup;
 			children = (
 				24CB3B1E25977231001E8383 /* Article+Firebase.swift */,
+				24CB3B2925978D41001E8383 /* Post+Firebase.swift */,
+				24CB3B2E25978FE5001E8383 /* User+Firebase.swift */,
 			);
 			path = "DataModel+Ext";
 			sourceTree = "<group>";
@@ -1237,7 +1243,7 @@
 		24DD57682570382F00106BC6 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				24DD57692570382F00106BC6 /* UserModel.swift */,
+				24DD57692570382F00106BC6 /* User.swift */,
 				2402AA9E25757E8000D879C9 /* Post.swift */,
 				248517E925759700006F8A60 /* Comment.swift */,
 				248517EE25759788006F8A60 /* Album.swift */,
@@ -1620,6 +1626,7 @@
 				24BA4B74257922E300A7F088 /* AlbumListingModule.swift in Sources */,
 				24601876257EF17900FF623E /* SellItemListingModel.swift in Sources */,
 				247447AB2576F91D006A6BAE /* CommentListingModule.swift in Sources */,
+				24CB3B2A25978D41001E8383 /* Post+Firebase.swift in Sources */,
 				2485180D2575A6BD006F8A60 /* PostListingModel.swift in Sources */,
 				24601874257EF17900FF623E /* SellItemListingViewController.swift in Sources */,
 				24BFC46725802E4F00C15C67 /* ReminderListingPresenter.swift in Sources */,
@@ -1627,6 +1634,7 @@
 				245F4DA0258799F500C83134 /* NSLayoutConstraint+Ext.swift in Sources */,
 				24CF046D2570022C00F92B49 /* LoginRouter.swift in Sources */,
 				247447AD2576F91D006A6BAE /* CommentListingRouter.swift in Sources */,
+				24CB3B2F25978FE5001E8383 /* User+Firebase.swift in Sources */,
 				24BFC46B25802E4F00C15C67 /* ReminderListingModel.swift in Sources */,
 				2462E0BD2582C5F500B78203 /* PhotosDataStub.swift in Sources */,
 				24DD575B257036E200106BC6 /* ContactsInteractor.swift in Sources */,
@@ -1744,7 +1752,7 @@
 				24E0ADF8257407FF00A54F30 /* ShowLocationInteractor.swift in Sources */,
 				24BBA07A2589125A00E167C6 /* CreatePostModule.swift in Sources */,
 				24BFC453258023AA00C15C67 /* ArticleDetailPresenter.swift in Sources */,
-				24DD576D2570382F00106BC6 /* UserModel.swift in Sources */,
+				24DD576D2570382F00106BC6 /* User.swift in Sources */,
 				2485180F2575A6BD006F8A60 /* PostListingManager.swift in Sources */,
 				2431F17D2592570F007D779C /* StorageServiceInterface.swift in Sources */,
 				24DD57472570330100106BC6 /* SettingsInteractor.swift in Sources */,

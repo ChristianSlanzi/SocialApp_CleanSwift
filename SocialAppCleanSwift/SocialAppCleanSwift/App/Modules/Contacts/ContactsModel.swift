@@ -18,7 +18,7 @@ struct ContactsModel {
     }
 
     struct Response {
-        var contacts: [UserModel]
+        var contacts: [User]
     }
 
     struct ViewModel {

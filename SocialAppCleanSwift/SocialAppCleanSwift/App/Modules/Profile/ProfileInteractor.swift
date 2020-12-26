@@ -18,14 +18,14 @@ protocol ShowContactBusinessLogic
 
 protocol ShowContactDataStore
 {
-  var user: UserModel! { get set }
+  var user: User! { get set }
 }
 
 class ProfileInteractor: IProfileInteractor, ShowContactDataStore {
     var presenter: IProfilePresenter!
     var parameters: [String: Any]?
     
-    var user: UserModel!
+    var user: User!
 
     private var manager: IProfileManager {
         return ProfileManager()

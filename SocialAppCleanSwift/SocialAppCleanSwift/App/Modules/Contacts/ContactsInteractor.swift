@@ -14,13 +14,13 @@ protocol IContactsInteractor: class {
 }
 
 protocol ContactsDataStore {
-    var contacts: [UserModel]? { get }
+    var contacts: [User]? { get }
 }
 
 class ContactsInteractor: IContactsInteractor, ContactsDataStore {
     var presenter: IContactsPresenter!
     var parameters: [String: Any]?
-    var contacts: [UserModel]?
+    var contacts: [User]?
     //var networkingService: ApiServiceInterface?
 
     private var manager: IContactsManager {

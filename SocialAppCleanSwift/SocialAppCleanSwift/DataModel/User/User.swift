@@ -33,7 +33,7 @@ import SwiftyJSON
    },
  */
 
-struct UserModel: JSONinitiable {
+struct User: JSONinitiable {
     var id: String
     var name: String
     var username: String?

@@ -8,15 +8,15 @@
 import SwiftyJSON
 
 struct Photo: JSONinitiable {
-    var albumId: Int
-    var id: Int
+    var albumId: String
+    var id: String
     var title: String
     var url: String
     var thumbnailUrl: String
     
     init(json: JSON) {
-        self.albumId = json["albumId"].int ?? -1
-        self.id = json["id"].int ?? -1
+        self.albumId = json["albumId"].string ?? (json["albumId"].int != nil ? String(json["albumId"].int!): "")
+        self.id = json["id"].string ?? (json["id"].int != nil ? String(json["id"].int!): "")
         self.title = json["title"].string ?? ""
         self.url = json["url"].string ?? ""
         self.thumbnailUrl = json["thumbnailUrl"].string ?? ""

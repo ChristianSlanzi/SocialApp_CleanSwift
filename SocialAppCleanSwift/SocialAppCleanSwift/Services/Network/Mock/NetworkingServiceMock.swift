@@ -34,7 +34,7 @@ class NetworkingServiceMock: ApiServiceInterface {
         retrieveItems(json: commentsPost1Data, completion: completion)
     }
     
-    func retrieveAlbums(for userId: Int, completion: @escaping (Result<[Album], Error>) -> Void) {
+    func retrieveAlbums(for userId: String, completion: @escaping (Result<[Album], Error>) -> Void) {
         retrieveItems(json: albumsData, completion: completion)
     }
     

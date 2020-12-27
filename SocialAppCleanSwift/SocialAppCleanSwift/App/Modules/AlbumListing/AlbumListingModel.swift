@@ -11,10 +11,7 @@ struct AlbumListingModel {
 	struct Request {
 		// do someting...
 
-		var parameters: [String: Any]? {
-			// do someting...
-			return nil
-		}
+		var parameters: [String: Any]?
 	}
 
 	struct Response {
@@ -23,7 +20,7 @@ struct AlbumListingModel {
 
 	struct ViewModel {
         struct DisplayedAlbum {
-            var id: Int
+            var id: String
             var name: String
         }
         var displayedAlbums: [DisplayedAlbum]

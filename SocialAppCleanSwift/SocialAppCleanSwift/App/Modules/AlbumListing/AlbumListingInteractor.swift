@@ -28,7 +28,7 @@ class AlbumListingInteractor: IAlbumListingInteractor {
 
 extension AlbumListingInteractor {
     func fetchAlbums(request: AlbumListingModel.Request) {
-        guard let userId = parameters?["userId"] as? Int else { return }
+        guard let userId = request.parameters?["userId"] as? String else { return }
         Current.networkingService.retrieveAlbums(for: userId) { (result) in
             switch(result) {
             case .success(let albums):

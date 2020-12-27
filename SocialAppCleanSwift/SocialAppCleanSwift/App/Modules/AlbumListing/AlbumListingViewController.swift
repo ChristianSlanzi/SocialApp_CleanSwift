@@ -38,7 +38,8 @@ class AlbumListingViewController: UIViewController {
     
     func fetchAlbums()
     {
-        let request = AlbumListingModel.Request()
+        var request = AlbumListingModel.Request()
+        request.parameters = ["userId" : "1"]
         interactor?.fetchAlbums(request: request)
     }
 }

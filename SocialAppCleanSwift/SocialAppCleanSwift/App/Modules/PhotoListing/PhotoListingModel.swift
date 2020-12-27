@@ -23,7 +23,7 @@ struct PhotoListingModel {
 
     struct ViewModel {
         struct DisplayedPhoto {
-            var id: Int
+            var id: String
             var name: String
             var thumbnailUrl: String
         }

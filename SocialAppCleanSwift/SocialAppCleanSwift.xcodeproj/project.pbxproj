@@ -142,6 +142,8 @@
 		24CB3B1F25977231001E8383 /* Article+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB3B1E25977231001E8383 /* Article+Firebase.swift */; };
 		24CB3B2A25978D41001E8383 /* Post+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB3B2925978D41001E8383 /* Post+Firebase.swift */; };
 		24CB3B2F25978FE5001E8383 /* User+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB3B2E25978FE5001E8383 /* User+Firebase.swift */; };
+		24CB3B372597B7CF001E8383 /* Photo+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB3B362597B7CE001E8383 /* Photo+Firebase.swift */; };
+		24CB3B3C2597D364001E8383 /* Album+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB3B3B2597D364001E8383 /* Album+Firebase.swift */; };
 		24CF03FD256FBFFE00F92B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF03FC256FBFFE00F92B49 /* AppDelegate.swift */; };
 		24CF03FF256FBFFE00F92B49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF03FE256FBFFE00F92B49 /* SceneDelegate.swift */; };
 		24CF0401256FBFFE00F92B49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF0400256FBFFE00F92B49 /* ViewController.swift */; };
@@ -382,6 +384,8 @@
 		24CB3B1E25977231001E8383 /* Article+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Article+Firebase.swift"; sourceTree = "<group>"; };
 		24CB3B2925978D41001E8383 /* Post+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+Firebase.swift"; sourceTree = "<group>"; };
 		24CB3B2E25978FE5001E8383 /* User+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Firebase.swift"; sourceTree = "<group>"; };
+		24CB3B362597B7CE001E8383 /* Photo+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+Firebase.swift"; sourceTree = "<group>"; };
+		24CB3B3B2597D364001E8383 /* Album+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Album+Firebase.swift"; sourceTree = "<group>"; };
 		24CF03F9256FBFFE00F92B49 /* SocialAppCleanSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialAppCleanSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24CF03FC256FBFFE00F92B49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24CF03FE256FBFFE00F92B49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -996,6 +1000,8 @@
 				24CB3B1E25977231001E8383 /* Article+Firebase.swift */,
 				24CB3B2925978D41001E8383 /* Post+Firebase.swift */,
 				24CB3B2E25978FE5001E8383 /* User+Firebase.swift */,
+				24CB3B362597B7CE001E8383 /* Photo+Firebase.swift */,
+				24CB3B3B2597D364001E8383 /* Album+Firebase.swift */,
 			);
 			path = "DataModel+Ext";
 			sourceTree = "<group>";
@@ -1607,6 +1613,7 @@
 				24CB3B1F25977231001E8383 /* Article+Firebase.swift in Sources */,
 				24CF04C62570029700F92B49 /* AppRoute.swift in Sources */,
 				24CF04832570024200F92B49 /* HomeModel.swift in Sources */,
+				24CB3B372597B7CF001E8383 /* Photo+Firebase.swift in Sources */,
 				24BA4B912579761900A7F088 /* PhotoListingRouter.swift in Sources */,
 				24BFC46925802E4F00C15C67 /* ReminderListingViewController.swift in Sources */,
 				246C669125911CBC002750D8 /* StorageService.swift in Sources */,
@@ -1674,6 +1681,7 @@
 				24C89CD32579988500791646 /* CollectionViewHelper.swift in Sources */,
 				248518212575B84D006F8A60 /* UITableViewCell+Ext.swift in Sources */,
 				2403DD1D257D3990001F6025 /* ArticleListingViewController.swift in Sources */,
+				24CB3B3C2597D364001E8383 /* Album+Firebase.swift in Sources */,
 				24E0ADF7257407FF00A54F30 /* ShowLocationViewController.swift in Sources */,
 				2403DD2D257D41E7001F6025 /* ArticleViewCell.swift in Sources */,
 				24DD575E257036E200106BC6 /* ContactsManager.swift in Sources */,

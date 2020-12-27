@@ -26,7 +26,7 @@ class NetworkingServiceMock: ApiServiceInterface {
         completion(.failure(NetworkServiceError.jsonWrongFormat))
     }
     
-    func retrieveTodos(for userId: Int, completion: @escaping (Result<[Todo], Error>) -> Void) {
+    func retrieveTodos(for userId: String, completion: @escaping (Result<[Todo], Error>) -> Void) {
         retrieveItems(json: todosData, completion: completion)
     }
     

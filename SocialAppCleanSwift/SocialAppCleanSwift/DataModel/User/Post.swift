@@ -16,7 +16,7 @@
 import SwiftyJSON
 
 struct Post: JSONinitiable {
-    var userId: Int
+    var userId: String
     var id: String
     var title: String
     var body: String
@@ -26,7 +26,7 @@ struct Post: JSONinitiable {
     var updatedTime: Date
     
     init(json: JSON) {
-        self.userId = json["userId"].int ?? -1
+        self.userId = json["userId"].string ?? (json["id"].int != nil ? String(json["id"].int!): "")
         self.id = json["id"].string ?? (json["id"].int != nil ? String(json["id"].int!): "")
         self.title = json["title"].string ?? ""
         self.body = json["body"].string ?? ""
@@ -37,7 +37,7 @@ struct Post: JSONinitiable {
         self.updatedTime = json["updated_time"].string?.toDate(format: "yyyy-MM-dd'T'HH:mm:ssZ", locale: Locale(identifier: "en_US_POSIX")) ?? Date()
     }
     
-    init(userId: Int,
+    init(userId: String,
          id: String,
          title: String,
          body: String,

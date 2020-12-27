@@ -23,7 +23,7 @@ struct TodoListingModel {
 
     struct ViewModel {
         struct DisplayedTodo {
-            var id: Int
+            var id: String
             var name: String
             var completed: Bool
         }

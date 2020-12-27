@@ -28,7 +28,7 @@ class TodoListingInteractor: ITodoListingInteractor {
 
 extension TodoListingInteractor {
     func fetchTodos(request: TodoListingModel.Request) {
-        guard let userId = parameters?["userId"] as? Int else { return }
+        guard let userId = parameters?["userId"] as? String else { return }
         Current.networkingService.retrieveTodos(for: userId) { (result) in
             switch(result) {
             case .success(let todos):

@@ -11,7 +11,7 @@ extension Post: DocumentProtocol {
     init?(document: DocumentSnapshot) {
         guard let documentData = document.data() else { return nil }
         
-        self.userId = documentData["userId"] as? Int ?? -1
+        self.userId = documentData["userId"] as? String  ?? ""
         self.id = documentData["id"] as? String  ?? ""
         self.title = documentData["title"] as? String  ?? ""
         self.body = documentData["body"] as? String  ?? ""

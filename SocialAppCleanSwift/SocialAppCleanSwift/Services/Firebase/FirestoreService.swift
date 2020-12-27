@@ -24,7 +24,9 @@ class FirestoreService: ApiServiceInterface {
     func retrievePhotos(for albumId: String, completion: @escaping (Result<[Photo], Error>)->Void) {
         fetchCollection(collection: "photos", completion: completion)
     }
-    func retrieveTodos(for userId: Int, completion: @escaping (Result<[Todo], Error>)->Void) {}
+    func retrieveTodos(for userId: String, completion: @escaping (Result<[Todo], Error>)->Void) {
+        fetchCollection(collection: "todos", completion: completion)
+    }
     func retrieveArticles(for userId: String, completion: @escaping (Result<[Article], Error>)->Void) {
         fetchCollection(collection: "articles", completion: completion)
     }
@@ -149,7 +151,7 @@ class FirestoreService: ApiServiceInterface {
             for document in documents {
                 let documentData = document.data()
                 
-                guard let userId = documentData["userId"] as? Int,
+                guard let userId = documentData["userId"] as? String,
                       let id = documentData["id"] as? String,
                       let title = documentData["title"] as? String,
                       let body = documentData["body"] as? String,

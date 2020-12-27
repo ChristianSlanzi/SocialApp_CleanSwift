@@ -11,10 +11,10 @@ extension Photo: DocumentProtocol {
     init?(document: DocumentSnapshot) {
         guard let documentData = document.data() else { return nil }
         
-        self.albumId = documentData["date"] as? String ?? ""
-        self.id = documentData["authors"] as? String ?? ""
+        self.albumId = documentData["albumId"] as? String ?? ""
+        self.id = documentData["id"] as? String ?? ""
         self.title = documentData["title"] as? String ?? ""
-        self.url = documentData["website"] as? String ?? ""
-        self.thumbnailUrl = documentData["content"] as? String ?? ""
+        self.url = documentData["url"] as? String ?? ""
+        self.thumbnailUrl = documentData["thumbnailUrl"] as? String ?? ""
     }
 }

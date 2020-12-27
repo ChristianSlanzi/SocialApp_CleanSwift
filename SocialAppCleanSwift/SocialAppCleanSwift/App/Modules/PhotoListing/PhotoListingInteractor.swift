@@ -27,7 +27,7 @@ class PhotoListingInteractor: IPhotoListingInteractor {
 
 extension PhotoListingInteractor {
     func fetchPhotos(request: PhotoListingModel.Request) {
-        guard let albumId = parameters?["albumId"] as? Int else { return }
+        guard let albumId = parameters?["albumId"] as? String else { return }
         Current.networkingService.retrievePhotos(for: albumId) { (result) in
             switch(result) {
             case .success(let photos):

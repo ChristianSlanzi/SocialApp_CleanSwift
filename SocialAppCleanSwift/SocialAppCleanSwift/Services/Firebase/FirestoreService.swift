@@ -21,7 +21,7 @@ class FirestoreService: ApiServiceInterface {
     func retrieveAlbums(for userId: String, completion: @escaping (Result<[Album], Error>)->Void) {
         fetchCollection(collection: "albums", completion: completion)
     }
-    func retrievePhotos(for albumId: Int, completion: @escaping (Result<[Photo], Error>)->Void) {
+    func retrievePhotos(for albumId: String, completion: @escaping (Result<[Photo], Error>)->Void) {
         fetchCollection(collection: "photos", completion: completion)
     }
     func retrieveTodos(for userId: Int, completion: @escaping (Result<[Todo], Error>)->Void) {}

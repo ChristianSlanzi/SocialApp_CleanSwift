@@ -20,6 +20,7 @@
 		2403DD21257D3990001F6025 /* ArticleListingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403DD19257D3990001F6025 /* ArticleListingManager.swift */; };
 		2403DD26257D3D76001F6025 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403DD25257D3D76001F6025 /* Article.swift */; };
 		2403DD2D257D41E7001F6025 /* ArticleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403DD2C257D41E7001F6025 /* ArticleViewCell.swift */; };
+		242321192599E20500CADC09 /* Comment+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242321182599E20500CADC09 /* Comment+Firebase.swift */; };
 		2425E8402576C0970084E415 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425E83F2576C0970084E415 /* Environment.swift */; };
 		2431F17D2592570F007D779C /* StorageServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2431F17C2592570F007D779C /* StorageServiceInterface.swift */; };
 		24408AFF25866A9B00910D35 /* ContactViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408AFE25866A9B00910D35 /* ContactViewCell.swift */; };
@@ -263,6 +264,7 @@
 		2403DD19257D3990001F6025 /* ArticleListingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListingManager.swift; sourceTree = "<group>"; };
 		2403DD25257D3D76001F6025 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		2403DD2C257D41E7001F6025 /* ArticleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewCell.swift; sourceTree = "<group>"; };
+		242321182599E20500CADC09 /* Comment+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comment+Firebase.swift"; sourceTree = "<group>"; };
 		2425E83F2576C0970084E415 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		2431F17C2592570F007D779C /* StorageServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceInterface.swift; sourceTree = "<group>"; };
 		24408AFE25866A9B00910D35 /* ContactViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewCell.swift; sourceTree = "<group>"; };
@@ -1005,6 +1007,7 @@
 				24CB3B362597B7CE001E8383 /* Photo+Firebase.swift */,
 				24CB3B3B2597D364001E8383 /* Album+Firebase.swift */,
 				24829EAF259904D200D21993 /* Todo+Firebase.swift */,
+				242321182599E20500CADC09 /* Comment+Firebase.swift */,
 			);
 			path = "DataModel+Ext";
 			sourceTree = "<group>";
@@ -1696,6 +1699,7 @@
 				2403DD1C257D3990001F6025 /* ArticleListingRouter.swift in Sources */,
 				244C27AB258A15D00007E070 /* UITextView+Placeholder.swift in Sources */,
 				2462E0C22582C62C00B78203 /* ArticlesDataStub.swift in Sources */,
+				242321192599E20500CADC09 /* Comment+Firebase.swift in Sources */,
 				2403DD1E257D3990001F6025 /* ArticleListingInteractor.swift in Sources */,
 				24C89D0C2579AC2000791646 /* TodoListingRouter.swift in Sources */,
 				24408B142586849600910D35 /* DiscoverModel.swift in Sources */,

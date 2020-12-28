@@ -9,10 +9,10 @@ import Alamofire
 import SwiftyJSON
 
 class NetworkingService: ApiServiceInterface {
+    
     func save(_ post: Post, completion: @escaping (Result<Bool, Error>) -> Void) {
         
     }
-    
     
     private func retrieveItems<T: JSONinitiable>(url: String, completion: @escaping (Result<[T], Error>) -> Void) {
         AF.request(url).responseJSON { (response) in
@@ -32,6 +32,10 @@ class NetworkingService: ApiServiceInterface {
                 completion(.failure(error))
             }
         }
+    }
+    
+    func retrieveSellItems(for userId: String, completion: @escaping (Result<[SellItem], Error>) -> Void) {
+        //TODO
     }
     
     func retrieveTodos(for userId: String, completion: @escaping (Result<[Todo], Error>) -> Void) {

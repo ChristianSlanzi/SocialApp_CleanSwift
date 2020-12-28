@@ -8,14 +8,14 @@
 import SwiftyJSON
 
 struct SellItem: JSONinitiable {
-    var identifier: String
+    var id: String
     var title: String
     var description: String
     var imageUrl: String
     var price: String
     
     init(json: JSON) {
-        self.identifier = json["id"].string ?? ""
+        self.id = json["id"].string ?? ""
         self.title = json["title"].string ?? ""
         self.description = json["descr"].string ?? ""
         self.imageUrl = json["img"].string ?? ""

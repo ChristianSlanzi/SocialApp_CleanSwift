@@ -9,12 +9,22 @@ import UIKit
 
 protocol ISellItemListingPresenter: class {
 	// do someting...
+    func presentFetchedSellItems(response: SellItemListingModel.Response)
 }
 
-class SellItemListingPresenter: ISellItemListingPresenter {	
+class SellItemListingPresenter: ISellItemListingPresenter {
+
 	weak var view: ISellItemListingViewController!
 	
 	init(view: ISellItemListingViewController) {
 		self.view = view
 	}
+    
+    func presentFetchedSellItems(response: SellItemListingModel.Response) {
+        let displayedItems = response.sellItems.map {
+            SellItemListingModel.ViewModel.DisplayedSellItem(title: $0.title, description: $0.description, price: $0.price)
+        }
+        let viewModel = SellItemListingModel.ViewModel(displayedItems: displayedItems)
+        self.view.displayFetchedItems(viewModel: viewModel)
+    }
 }

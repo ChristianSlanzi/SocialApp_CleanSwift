@@ -9,6 +9,9 @@ import FirebaseFirestore
 
 class FirestoreService: ApiServiceInterface {
     
+    func retrieveSellItems(for userId: String, completion: @escaping (Result<[SellItem], Error>) -> Void) {
+        fetchCollection(collection: "sellItems", completion: completion)
+    }
     func retrieveUsers(completion: @escaping (Result<[User], Error>)->Void) {
         //fetchUsers(completion: completion)
         fetchCollection(collection: "users", completion: completion)

@@ -21,6 +21,8 @@
 		2403DD26257D3D76001F6025 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403DD25257D3D76001F6025 /* Article.swift */; };
 		2403DD2D257D41E7001F6025 /* ArticleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403DD2C257D41E7001F6025 /* ArticleViewCell.swift */; };
 		242321192599E20500CADC09 /* Comment+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242321182599E20500CADC09 /* Comment+Firebase.swift */; };
+		2423211E2599ED5B00CADC09 /* SellItem+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2423211D2599ED5B00CADC09 /* SellItem+Firebase.swift */; };
+		24232125259A083C00CADC09 /* SellItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24232124259A083C00CADC09 /* SellItemViewCell.swift */; };
 		2425E8402576C0970084E415 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425E83F2576C0970084E415 /* Environment.swift */; };
 		2431F17D2592570F007D779C /* StorageServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2431F17C2592570F007D779C /* StorageServiceInterface.swift */; };
 		24408AFF25866A9B00910D35 /* ContactViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408AFE25866A9B00910D35 /* ContactViewCell.swift */; };
@@ -265,6 +267,8 @@
 		2403DD25257D3D76001F6025 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		2403DD2C257D41E7001F6025 /* ArticleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewCell.swift; sourceTree = "<group>"; };
 		242321182599E20500CADC09 /* Comment+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comment+Firebase.swift"; sourceTree = "<group>"; };
+		2423211D2599ED5B00CADC09 /* SellItem+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SellItem+Firebase.swift"; sourceTree = "<group>"; };
+		24232124259A083C00CADC09 /* SellItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellItemViewCell.swift; sourceTree = "<group>"; };
 		2425E83F2576C0970084E415 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		2431F17C2592570F007D779C /* StorageServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceInterface.swift; sourceTree = "<group>"; };
 		24408AFE25866A9B00910D35 /* ContactViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewCell.swift; sourceTree = "<group>"; };
@@ -570,6 +574,22 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		24232122259A081A00CADC09 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				24232123259A082100CADC09 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		24232123259A082100CADC09 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				24232124259A083C00CADC09 /* SellItemViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		2425E83E2576C07B0084E415 /* Environment */ = {
 			isa = PBXGroup;
 			children = (
@@ -646,6 +666,7 @@
 		24601868257EF11B00FF623E /* SellItemListing */ = {
 			isa = PBXGroup;
 			children = (
+				24232122259A081A00CADC09 /* Views */,
 				24601869257EF17800FF623E /* SellItemListingModule.swift */,
 				2460186A257EF17800FF623E /* SellItemListingPresenter.swift */,
 				2460186B257EF17800FF623E /* SellItemListingRouter.swift */,
@@ -1008,6 +1029,7 @@
 				24CB3B3B2597D364001E8383 /* Album+Firebase.swift */,
 				24829EAF259904D200D21993 /* Todo+Firebase.swift */,
 				242321182599E20500CADC09 /* Comment+Firebase.swift */,
+				2423211D2599ED5B00CADC09 /* SellItem+Firebase.swift */,
 			);
 			path = "DataModel+Ext";
 			sourceTree = "<group>";
@@ -1725,6 +1747,7 @@
 				24CF04BB2570026F00F92B49 /* MainInteractor.swift in Sources */,
 				24C89D112579AC2000791646 /* TodoListingManager.swift in Sources */,
 				24CF04A42570026100F92B49 /* DetailModule.swift in Sources */,
+				2423211E2599ED5B00CADC09 /* SellItem+Firebase.swift in Sources */,
 				24CF04722570022C00F92B49 /* LoginManager.swift in Sources */,
 				24BBA07B2589125A00E167C6 /* CreatePostPresenter.swift in Sources */,
 				24C89CE6257999FE00791646 /* PhotoViewCell.swift in Sources */,
@@ -1773,6 +1796,7 @@
 				2431F17D2592570F007D779C /* StorageServiceInterface.swift in Sources */,
 				24DD57472570330100106BC6 /* SettingsInteractor.swift in Sources */,
 				24BBA07C2589125A00E167C6 /* CreatePostRouter.swift in Sources */,
+				24232125259A083C00CADC09 /* SellItemViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

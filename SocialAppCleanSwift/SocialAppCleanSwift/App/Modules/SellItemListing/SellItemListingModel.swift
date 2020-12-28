@@ -19,9 +19,16 @@ struct SellItemListingModel {
 
 	struct Response {
 		// do someting...
+        var sellItems: [SellItem]
 	}
 
 	struct ViewModel {
-		// do someting...
+        struct DisplayedSellItem {
+            var title: String
+            var description: String
+            var price: String
+            var image: String?
+        }
+        var displayedItems: [DisplayedSellItem]
 	}
 }

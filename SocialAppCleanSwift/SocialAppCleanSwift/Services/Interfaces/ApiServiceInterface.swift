@@ -13,6 +13,7 @@ protocol ApiServiceInterface: ServiceInterface {
     func retrievePhotos(for albumId: String, completion: @escaping (Result<[Photo], Error>)->Void)
     func retrieveTodos(for userId: String, completion: @escaping (Result<[Todo], Error>)->Void)
     func retrieveArticles(for userId: String, completion: @escaping (Result<[Article], Error>)->Void)
+    func retrieveSellItems(for userId: String, completion: @escaping (Result<[SellItem], Error>)->Void)
     
     func save(_ post: Post, completion: @escaping (Result<Bool, Error>) -> Void)
 }

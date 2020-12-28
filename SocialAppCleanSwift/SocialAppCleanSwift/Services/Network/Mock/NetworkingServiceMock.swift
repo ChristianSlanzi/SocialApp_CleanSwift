@@ -54,4 +54,8 @@ class NetworkingServiceMock: ApiServiceInterface {
     func retrieveUsers(completion: @escaping (Result<[User], Error>)->Void) {
         retrieveItems(json: usersData, completion: completion)
     }
+    
+    func retrieveSellItems(for userId: String, completion: @escaping (Result<[SellItem], Error>) -> Void) {
+        //TODO
+    }
 }

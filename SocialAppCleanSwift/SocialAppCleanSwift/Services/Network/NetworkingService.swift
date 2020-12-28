@@ -9,6 +9,14 @@ import Alamofire
 import SwiftyJSON
 
 class NetworkingService: ApiServiceInterface {
+    func update(_ todo: Todo, completion: @escaping (Result<Bool, Error>) -> Void) {
+        
+    }
+    
+    func save(_ todo: Todo, completion: @escaping (Result<Bool, Error>) -> Void) {
+        
+    }
+    
     
     func save(_ post: Post, completion: @escaping (Result<Bool, Error>) -> Void) {
         

@@ -8,6 +8,26 @@
 import FirebaseFirestore
 
 class FirestoreService: ApiServiceInterface {
+    func save(_ todo: Todo, completion: @escaping (Result<Bool, Error>) -> Void) {
+        
+    }
+    
+    func update(_ todo: Todo, completion: @escaping (Result<Bool, Error>) -> Void) {
+        database.collection("todos").whereField("id", isEqualTo: todo.id).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else if querySnapshot!.documents.count != 1 {
+                // Perhaps this is an error for you?
+            } else {
+                let document = querySnapshot!.documents.first!
+                document.reference.updateData([
+                    "title": todo.title,
+                    "completed": todo.completed
+                ])
+            }
+        }
+    }
+    
     func retrieveReminders(for userId: String, completion: @escaping (Result<[Reminder], Error>) -> Void) {
         fetchCollection(collection: "reminders", completion: completion)
     }

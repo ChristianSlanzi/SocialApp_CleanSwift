@@ -11,6 +11,7 @@ protocol ITodoListingInteractor: class {
 	var parameters: [String: Any]? { get }
     
     func fetchTodos(request: TodoListingModel.Request)
+    func updateTodo(request: TodoListingModel.Request)
 }
 
 class TodoListingInteractor: ITodoListingInteractor {
@@ -34,6 +35,21 @@ extension TodoListingInteractor {
             case .success(let todos):
                 let response = TodoListingModel.Response(todos: todos)
                 self.presenter.presentFetchedTodos(response: response)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func updateTodo(request: TodoListingModel.Request) {
+        guard let userId = parameters?["userId"] as? String else { return }
+        guard let id = request.parameters?["id"] as? String else { return }
+        guard let name = request.parameters?["name"] as? String else { return }
+        guard let completed = request.parameters?["completed"] as? Bool else { return }
+        Current.networkingService.update(Todo(userId: userId, id: id, title: name, completed: completed)) { (result) in
+            switch(result) {
+            case .success(let updated):
+                print(updated)
             case .failure(let error):
                 print(error.localizedDescription)
             }

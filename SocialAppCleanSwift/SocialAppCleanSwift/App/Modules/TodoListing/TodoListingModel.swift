@@ -11,10 +11,7 @@ struct TodoListingModel {
 	struct Request {
 		// do someting...
 
-		var parameters: [String: Any]? {
-			// do someting...
-			return nil
-		}
+		var parameters: [String: Any]?
 	}
 
     struct Response {

@@ -94,11 +94,17 @@ extension TodoListingViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TodoViewCell.identifier, for: indexPath) as! TodoViewCell
+        cell.delegate = self
         cell.item = self.displayedTodos[indexPath.row]
         return cell
     }
 }
 
-extension TodoListingViewController {
+extension TodoListingViewController: TodoViewCellDelegate {
 	// do someting...
+    func updateTodo(todo: TodoListingModel.ViewModel.DisplayedTodo) {
+        var request = TodoListingModel.Request()
+        request.parameters = ["id": todo.id, "name": todo.name, "completed": todo.completed]
+        interactor?.updateTodo(request: request)
+    }
 }

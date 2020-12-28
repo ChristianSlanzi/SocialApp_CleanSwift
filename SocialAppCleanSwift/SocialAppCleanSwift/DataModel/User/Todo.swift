@@ -19,4 +19,11 @@ struct Todo: JSONinitiable {
         self.title = json["title"].string ?? ""
         self.completed = json["completed"].bool ?? false
     }
+    
+    init(userId: String, id: String, title: String, completed: Bool) {
+        self.userId = userId
+        self.id = id
+        self.title = title
+        self.completed = completed
+    }
 }

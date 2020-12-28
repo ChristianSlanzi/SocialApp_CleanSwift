@@ -114,6 +114,11 @@
 		24BBA0812589125A00E167C6 /* CreatePostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BBA0792589125A00E167C6 /* CreatePostManager.swift */; };
 		24BDDA6D25828AD1006D78A1 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDDA6C25828AD1006D78A1 /* String+Date.swift */; };
 		24BDDA722582A5B0006D78A1 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDDA712582A5AF006D78A1 /* Date+String.swift */; };
+		24BEF1AF259A544900F50BE0 /* RadioButtonAlternate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BEF1AD259A544900F50BE0 /* RadioButtonAlternate.swift */; };
+		24BEF1B0259A544900F50BE0 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BEF1AE259A544900F50BE0 /* RadioButton.swift */; };
+		24BEF1B6259A561E00F50BE0 /* ChecklistOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BEF1B5259A561E00F50BE0 /* ChecklistOptionView.swift */; };
+		24BEF1BE259A564A00F50BE0 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BEF1BD259A564A00F50BE0 /* CustomView.swift */; };
+		24BEF1C4259A57DE00F50BE0 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BEF1C3259A57DE00F50BE0 /* UIView+Ext.swift */; };
 		24BFC452258023AA00C15C67 /* ArticleDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFC44A258023AA00C15C67 /* ArticleDetailModule.swift */; };
 		24BFC453258023AA00C15C67 /* ArticleDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFC44B258023AA00C15C67 /* ArticleDetailPresenter.swift */; };
 		24BFC454258023AA00C15C67 /* ArticleDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFC44C258023AA00C15C67 /* ArticleDetailRouter.swift */; };
@@ -363,6 +368,11 @@
 		24BBA0792589125A00E167C6 /* CreatePostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostManager.swift; sourceTree = "<group>"; };
 		24BDDA6C25828AD1006D78A1 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 		24BDDA712582A5AF006D78A1 /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
+		24BEF1AD259A544900F50BE0 /* RadioButtonAlternate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButtonAlternate.swift; sourceTree = "<group>"; };
+		24BEF1AE259A544900F50BE0 /* RadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
+		24BEF1B5259A561E00F50BE0 /* ChecklistOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistOptionView.swift; sourceTree = "<group>"; };
+		24BEF1BD259A564A00F50BE0 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		24BEF1C3259A57DE00F50BE0 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		24BFC44A258023AA00C15C67 /* ArticleDetailModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailModule.swift; sourceTree = "<group>"; };
 		24BFC44B258023AA00C15C67 /* ArticleDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailPresenter.swift; sourceTree = "<group>"; };
 		24BFC44C258023AA00C15C67 /* ArticleDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailRouter.swift; sourceTree = "<group>"; };
@@ -777,6 +787,7 @@
 		2485181D2575B824006F8A60 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				24BEF1AB259A542C00F50BE0 /* Components */,
 				24C89CD02579985400791646 /* Helpers */,
 				2485181E2575B82B006F8A60 /* Extensions */,
 			);
@@ -786,6 +797,7 @@
 		2485181E2575B82B006F8A60 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				24BEF1C2259A57CD00F50BE0 /* UIView */,
 				24FF4D9C258B6D840087807F /* String */,
 				244C27A9258A15B50007E070 /* UITextView */,
 				24BBA0682588FD0700E167C6 /* UIImageView */,
@@ -911,6 +923,41 @@
 				24BDDA712582A5AF006D78A1 /* Date+String.swift */,
 			);
 			path = Date;
+			sourceTree = "<group>";
+		};
+		24BEF1AB259A542C00F50BE0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				24BEF1B4259A560C00F50BE0 /* Checklist */,
+				24BEF1AC259A544900F50BE0 /* RadioButton */,
+				24BEF1BD259A564A00F50BE0 /* CustomView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		24BEF1AC259A544900F50BE0 /* RadioButton */ = {
+			isa = PBXGroup;
+			children = (
+				24BEF1AD259A544900F50BE0 /* RadioButtonAlternate.swift */,
+				24BEF1AE259A544900F50BE0 /* RadioButton.swift */,
+			);
+			path = RadioButton;
+			sourceTree = "<group>";
+		};
+		24BEF1B4259A560C00F50BE0 /* Checklist */ = {
+			isa = PBXGroup;
+			children = (
+				24BEF1B5259A561E00F50BE0 /* ChecklistOptionView.swift */,
+			);
+			path = Checklist;
+			sourceTree = "<group>";
+		};
+		24BEF1C2259A57CD00F50BE0 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				24BEF1C3259A57DE00F50BE0 /* UIView+Ext.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 		24BFC4332580233100C15C67 /* ArticleDetail */ = {
@@ -1636,10 +1683,12 @@
 				24CF03FD256FBFFE00F92B49 /* AppDelegate.swift in Sources */,
 				24CF04B92570026F00F92B49 /* MainRouter.swift in Sources */,
 				24CF04912570025200F92B49 /* ProfileModule.swift in Sources */,
+				24BEF1BE259A564A00F50BE0 /* CustomView.swift in Sources */,
 				24BBA07F2589125A00E167C6 /* CreatePostModel.swift in Sources */,
 				24DD5759257036E200106BC6 /* ContactsRouter.swift in Sources */,
 				24BFC46D25802E4F00C15C67 /* ReminderListingManager.swift in Sources */,
 				24BFC455258023AA00C15C67 /* ArticleDetailViewController.swift in Sources */,
+				24BEF1B6259A561E00F50BE0 /* ChecklistOptionView.swift in Sources */,
 				24DD5758257036E200106BC6 /* ContactsPresenter.swift in Sources */,
 				24CF04932570025300F92B49 /* ProfileRouter.swift in Sources */,
 				24DD575C257036E200106BC6 /* ContactsModel.swift in Sources */,
@@ -1692,6 +1741,7 @@
 				24601874257EF17900FF623E /* SellItemListingViewController.swift in Sources */,
 				24BFC46725802E4F00C15C67 /* ReminderListingPresenter.swift in Sources */,
 				24BBA07E2589125A00E167C6 /* CreatePostInteractor.swift in Sources */,
+				24BEF1C4259A57DE00F50BE0 /* UIView+Ext.swift in Sources */,
 				245F4DA0258799F500C83134 /* NSLayoutConstraint+Ext.swift in Sources */,
 				24CF046D2570022C00F92B49 /* LoginRouter.swift in Sources */,
 				247447AD2576F91D006A6BAE /* CommentListingRouter.swift in Sources */,
@@ -1762,6 +1812,7 @@
 				248517EF25759788006F8A60 /* Album.swift in Sources */,
 				2462E0B82582C5D100B78203 /* AlbumsDataStub.swift in Sources */,
 				24CF04CC2570030200F92B49 /* GeneralRouter.swift in Sources */,
+				24BEF1AF259A544900F50BE0 /* RadioButtonAlternate.swift in Sources */,
 				2462E0C72582C67300B78203 /* TodosDataStub.swift in Sources */,
 				24BA4B8F2579761900A7F088 /* PhotoListingModule.swift in Sources */,
 				24408AFF25866A9B00910D35 /* ContactViewCell.swift in Sources */,
@@ -1820,6 +1871,7 @@
 				24BBA07A2589125A00E167C6 /* CreatePostModule.swift in Sources */,
 				24BFC453258023AA00C15C67 /* ArticleDetailPresenter.swift in Sources */,
 				24DD576D2570382F00106BC6 /* User.swift in Sources */,
+				24BEF1B0259A544900F50BE0 /* RadioButton.swift in Sources */,
 				2485180F2575A6BD006F8A60 /* PostListingManager.swift in Sources */,
 				2431F17D2592570F007D779C /* StorageServiceInterface.swift in Sources */,
 				24DD57472570330100106BC6 /* SettingsInteractor.swift in Sources */,

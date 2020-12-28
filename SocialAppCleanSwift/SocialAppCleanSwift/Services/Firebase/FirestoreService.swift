@@ -8,7 +8,9 @@
 import FirebaseFirestore
 
 class FirestoreService: ApiServiceInterface {
-    
+    func retrieveReminders(for userId: String, completion: @escaping (Result<[Reminder], Error>) -> Void) {
+        fetchCollection(collection: "reminders", completion: completion)
+    }
     func retrieveSellItems(for userId: String, completion: @escaping (Result<[SellItem], Error>) -> Void) {
         fetchCollection(collection: "sellItems", completion: completion)
     }

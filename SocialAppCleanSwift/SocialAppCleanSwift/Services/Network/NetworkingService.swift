@@ -38,6 +38,10 @@ class NetworkingService: ApiServiceInterface {
         //TODO
     }
     
+    func retrieveReminders(for userId: String, completion: @escaping (Result<[Reminder], Error>) -> Void) {
+        //TODO
+    }
+    
     func retrieveTodos(for userId: String, completion: @escaping (Result<[Todo], Error>) -> Void) {
         retrieveItems(url: "https://jsonplaceholder.typicode.com/users/\(userId)/todos/", completion: completion)
     }

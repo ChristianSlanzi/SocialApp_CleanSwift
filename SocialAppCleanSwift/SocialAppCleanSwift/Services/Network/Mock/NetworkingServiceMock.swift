@@ -16,7 +16,6 @@ class NetworkingServiceMock: ApiServiceInterface {
         
     }
     
-    
     private func retrieveItems<T: JSONinitiable>(json: JSON, completion: @escaping (Result<[T], Error>) -> Void) {
         if let data = json.array {
             let items = data.map({ T(json: JSON($0.object)) })
@@ -24,6 +23,10 @@ class NetworkingServiceMock: ApiServiceInterface {
             return
         }
         completion(.failure(NetworkServiceError.jsonWrongFormat))
+    }
+    
+    func retrieveReminders(for userId: String, completion: @escaping (Result<[Reminder], Error>) -> Void) {
+        //TODO
     }
     
     func retrieveTodos(for userId: String, completion: @escaping (Result<[Todo], Error>) -> Void) {

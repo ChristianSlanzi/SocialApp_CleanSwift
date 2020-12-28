@@ -23,6 +23,9 @@
 		242321192599E20500CADC09 /* Comment+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242321182599E20500CADC09 /* Comment+Firebase.swift */; };
 		2423211E2599ED5B00CADC09 /* SellItem+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2423211D2599ED5B00CADC09 /* SellItem+Firebase.swift */; };
 		24232125259A083C00CADC09 /* SellItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24232124259A083C00CADC09 /* SellItemViewCell.swift */; };
+		2423212A259A0F0400CADC09 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24232129259A0F0400CADC09 /* Reminder.swift */; };
+		2423212F259A10C300CADC09 /* Reminder+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2423212E259A10C300CADC09 /* Reminder+Firebase.swift */; };
+		24232136259A145F00CADC09 /* ReminderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24232135259A145F00CADC09 /* ReminderViewCell.swift */; };
 		2425E8402576C0970084E415 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425E83F2576C0970084E415 /* Environment.swift */; };
 		2431F17D2592570F007D779C /* StorageServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2431F17C2592570F007D779C /* StorageServiceInterface.swift */; };
 		24408AFF25866A9B00910D35 /* ContactViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408AFE25866A9B00910D35 /* ContactViewCell.swift */; };
@@ -269,6 +272,9 @@
 		242321182599E20500CADC09 /* Comment+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comment+Firebase.swift"; sourceTree = "<group>"; };
 		2423211D2599ED5B00CADC09 /* SellItem+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SellItem+Firebase.swift"; sourceTree = "<group>"; };
 		24232124259A083C00CADC09 /* SellItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellItemViewCell.swift; sourceTree = "<group>"; };
+		24232129259A0F0400CADC09 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		2423212E259A10C300CADC09 /* Reminder+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reminder+Firebase.swift"; sourceTree = "<group>"; };
+		24232135259A145F00CADC09 /* ReminderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewCell.swift; sourceTree = "<group>"; };
 		2425E83F2576C0970084E415 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		2431F17C2592570F007D779C /* StorageServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceInterface.swift; sourceTree = "<group>"; };
 		24408AFE25866A9B00910D35 /* ContactViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewCell.swift; sourceTree = "<group>"; };
@@ -586,6 +592,22 @@
 			isa = PBXGroup;
 			children = (
 				24232124259A083C00CADC09 /* SellItemViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		24232133259A144500CADC09 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				24232134259A144C00CADC09 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		24232134259A144C00CADC09 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				24232135259A145F00CADC09 /* ReminderViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -909,6 +931,7 @@
 		24BFC45D25802E0300C15C67 /* ReminderListing */ = {
 			isa = PBXGroup;
 			children = (
+				24232133259A144500CADC09 /* Views */,
 				24BFC45E25802E4F00C15C67 /* ReminderListingModule.swift */,
 				24BFC45F25802E4F00C15C67 /* ReminderListingPresenter.swift */,
 				24BFC46025802E4F00C15C67 /* ReminderListingRouter.swift */,
@@ -1030,6 +1053,7 @@
 				24829EAF259904D200D21993 /* Todo+Firebase.swift */,
 				242321182599E20500CADC09 /* Comment+Firebase.swift */,
 				2423211D2599ED5B00CADC09 /* SellItem+Firebase.swift */,
+				2423212E259A10C300CADC09 /* Reminder+Firebase.swift */,
 			);
 			path = "DataModel+Ext";
 			sourceTree = "<group>";
@@ -1285,6 +1309,7 @@
 				24C89CFC2579A77900791646 /* Todo.swift */,
 				2403DD25257D3D76001F6025 /* Article.swift */,
 				2460187C257EF33000FF623E /* SellItem.swift */,
+				24232129259A0F0400CADC09 /* Reminder.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -1619,6 +1644,7 @@
 				24CF04932570025300F92B49 /* ProfileRouter.swift in Sources */,
 				24DD575C257036E200106BC6 /* ContactsModel.swift in Sources */,
 				24BFC46825802E4F00C15C67 /* ReminderListingRouter.swift in Sources */,
+				2423212F259A10C300CADC09 /* Reminder+Firebase.swift in Sources */,
 				24BFC452258023AA00C15C67 /* ArticleDetailModule.swift in Sources */,
 				24C89D0B2579AC2000791646 /* TodoListingPresenter.swift in Sources */,
 				24BBA07D2589125A00E167C6 /* CreatePostViewController.swift in Sources */,
@@ -1710,6 +1736,7 @@
 				248518212575B84D006F8A60 /* UITableViewCell+Ext.swift in Sources */,
 				2403DD1D257D3990001F6025 /* ArticleListingViewController.swift in Sources */,
 				24CB3B3C2597D364001E8383 /* Album+Firebase.swift in Sources */,
+				2423212A259A0F0400CADC09 /* Reminder.swift in Sources */,
 				24E0ADF7257407FF00A54F30 /* ShowLocationViewController.swift in Sources */,
 				2403DD2D257D41E7001F6025 /* ArticleViewCell.swift in Sources */,
 				24DD575E257036E200106BC6 /* ContactsManager.swift in Sources */,
@@ -1747,6 +1774,7 @@
 				24CF04BB2570026F00F92B49 /* MainInteractor.swift in Sources */,
 				24C89D112579AC2000791646 /* TodoListingManager.swift in Sources */,
 				24CF04A42570026100F92B49 /* DetailModule.swift in Sources */,
+				24232136259A145F00CADC09 /* ReminderViewCell.swift in Sources */,
 				2423211E2599ED5B00CADC09 /* SellItem+Firebase.swift in Sources */,
 				24CF04722570022C00F92B49 /* LoginManager.swift in Sources */,
 				24BBA07B2589125A00E167C6 /* CreatePostPresenter.swift in Sources */,

@@ -14,6 +14,7 @@ protocol ApiServiceInterface: ServiceInterface {
     func retrieveTodos(for userId: String, completion: @escaping (Result<[Todo], Error>)->Void)
     func retrieveArticles(for userId: String, completion: @escaping (Result<[Article], Error>)->Void)
     func retrieveSellItems(for userId: String, completion: @escaping (Result<[SellItem], Error>)->Void)
+    func retrieveReminders(for userId: String, completion: @escaping (Result<[Reminder], Error>)->Void)
     
     func save(_ post: Post, completion: @escaping (Result<Bool, Error>) -> Void)
 }

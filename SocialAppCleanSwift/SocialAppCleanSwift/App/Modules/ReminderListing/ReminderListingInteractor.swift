@@ -9,6 +9,8 @@ import UIKit
 
 protocol IReminderListingInteractor: class {
 	var parameters: [String: Any]? { get }
+    
+    func fetchReminders(request: ReminderListingModel.Request)
 }
 
 class ReminderListingInteractor: IReminderListingInteractor {
@@ -21,5 +23,20 @@ class ReminderListingInteractor: IReminderListingInteractor {
 
     init(presenter: IReminderListingPresenter) {
     	self.presenter = presenter
+    }
+}
+
+extension ReminderListingInteractor {
+    func fetchReminders(request: ReminderListingModel.Request) {
+        guard let userId = parameters?["userId"] as? String else { return }
+        Current.networkingService.retrieveReminders(for: userId) { (result) in
+            switch(result) {
+            case .success(let reminders):
+                let response = ReminderListingModel.Response(reminders: reminders)
+                self.presenter.presentFetchedReminders(response: response)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }

@@ -18,10 +18,15 @@ struct ReminderListingModel {
 	}
 
 	struct Response {
-		// do someting...
+        var reminders: [Reminder]
 	}
 
 	struct ViewModel {
-		// do someting...
+        struct DisplayedReminder {
+            var id: String
+            var title: String
+            var date: String
+        }
+        var displayedReminders: [DisplayedReminder]
 	}
 }

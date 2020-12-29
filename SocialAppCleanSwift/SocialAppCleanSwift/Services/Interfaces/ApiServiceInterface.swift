@@ -6,6 +6,7 @@
 //
 
 protocol ApiServiceInterface: ServiceInterface {
+    func retrieveUser(for userId: String,completion: @escaping (Result<User, Error>)->Void)
     func retrieveUsers(completion: @escaping (Result<[User], Error>)->Void)
     func retrievePosts(completion: @escaping (Result<[Post], Error>)->Void)
     func retrieveStories(completion: @escaping (Result<[Story], Error>)->Void)

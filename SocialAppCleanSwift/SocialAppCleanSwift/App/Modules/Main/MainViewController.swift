@@ -28,16 +28,16 @@ class MainViewController: UITabBarController {
         let contacts = AppRouter.share.getModule(module: ContactsModule(AppRouter.share))!
         contacts.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 2)
         
-        //let profile = AppRouter.share.getModule(module: ProfileModule(AppRouter.share))!
-        //profile.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
-        
         //let detail = AppRouter.share.getModule(module: DetailModule(AppRouter.share))!
         //detail.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
         
         let home = AppRouter.share.getModule(module: HomeModule(AppRouter.share))!
         home.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 3)
         
-        let views = [feeds, discover, contacts, home].map { UINavigationController(rootViewController: $0)
+        let profile = AppRouter.share.getModule(module: ProfileModule(AppRouter.share), parameters: ["userId" : "1"])!
+        profile.tabBarItem = UITabBarItem(title: "profile_tab_title".localized, image: UIImage(named: "profile-tab"), tag: 4)
+        
+        let views = [feeds, discover, contacts, home, profile].map { UINavigationController(rootViewController: $0)
         }
         viewControllers = views
         

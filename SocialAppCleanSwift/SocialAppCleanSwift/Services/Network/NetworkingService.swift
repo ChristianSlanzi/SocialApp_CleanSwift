@@ -9,6 +9,10 @@ import Alamofire
 import SwiftyJSON
 
 class NetworkingService: ApiServiceInterface {
+    func retrieveUser(for userId: String, completion: @escaping (Result<User, Error>) -> Void) {
+        
+    }
+    
     func retrieveStories(completion: @escaping (Result<[Story], Error>) -> Void) {
         
     }

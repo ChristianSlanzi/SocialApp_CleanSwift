@@ -89,6 +89,7 @@
 //MAIN
 "home_tab_title" = "Home";
 "discover_tab_title" = "Discover";
+"profile_tab_title" = "Profile";
 
 //HOME
 "home_view_title" = "Home";

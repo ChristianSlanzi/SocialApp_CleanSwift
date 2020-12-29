@@ -38,7 +38,21 @@ class ProfileInteractor: IProfileInteractor, ShowContactDataStore {
 
 extension ProfileInteractor: ShowContactBusinessLogic {
     func getUser(request: ProfileModel.Request) {
-        let response = ProfileModel.Response(user: user)
-        presenter?.presentUserProfile(response: response)
+    
+        if user != nil {
+            let response = ProfileModel.Response(user: user)
+            presenter?.presentUserProfile(response: response)
+        } else {
+            guard let userId = parameters?["userId"] as? String else { return }
+            Current.networkingService.retrieveUser(for: userId) { (result) in
+                switch(result) {
+                case .success(let user):
+                    let response = ProfileModel.Response(user: user)
+                    self.presenter?.presentUserProfile(response: response)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        }
     }
 }

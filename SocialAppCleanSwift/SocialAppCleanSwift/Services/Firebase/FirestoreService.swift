@@ -8,6 +8,23 @@
 import FirebaseFirestore
 
 class FirestoreService: ApiServiceInterface {
+    func retrieveUser(for userId: String, completion: @escaping (Result<User, Error>) -> Void) {
+        database.collection("users").whereField("id", isEqualTo: userId).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+                completion(.failure(err))
+            } else if querySnapshot!.documents.count != 1 {
+                // Perhaps this is an error for you?
+                print("Too many documents? \(querySnapshot!.documents.count)")
+            } else {
+                let document = querySnapshot!.documents.first!
+                if let user: User = User.init(document: document) {
+                    completion(.success(user))
+                }
+            }
+        }
+    }
+    
     
     func save(_ todo: Todo, completion: @escaping (Result<Bool, Error>) -> Void) {
         

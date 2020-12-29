@@ -59,10 +59,13 @@ extension PostListingViewController {
     // do someting...
     func setupViews() {
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "postlisting_photo_title".localized, style: .plain, target: self, action: #selector(getPhoto))
+        let cameraButtonImage = UIImage(named:"camera")?.withTintColor(.black, renderingMode: .alwaysOriginal)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: cameraButtonImage, style: .plain, target: self, action: #selector(getPhoto))
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "postlisting_newpost_title".localized, style: .plain, target: self, action: #selector(createPost))
+        let postButtonImage = UIImage(named:"document")?.withTintColor(.black, renderingMode: .alwaysOriginal)
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: postButtonImage, style: .plain, target: self, action: #selector(createPost))
 
         //view.backgroundColor = .red
         tableView.translatesAutoresizingMaskIntoConstraints = false

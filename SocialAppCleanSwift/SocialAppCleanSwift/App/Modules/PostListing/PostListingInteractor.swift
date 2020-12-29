@@ -11,13 +11,18 @@ protocol IPostListingInteractor: class {
 	var parameters: [String: Any]? { get }
     
     func fetchPosts(request: PostListingModel.Request)
+    func fetchStories(request: StoryListingModel.Request)
 }
 
 class PostListingInteractor: IPostListingInteractor {
+
     var presenter: IPostListingPresenter!
     var parameters: [String: Any]?
-    var posts: [Post]?
+    
     var networkingService: ApiServiceInterface?
+    
+    var posts: [Post]?
+    var stories: [Story]?
 
     private var manager: IPostListingManager {
         return PostListingManager()
@@ -36,6 +41,21 @@ extension PostListingInteractor {
                 self.posts = posts
                 let response = PostListingModel.Response(posts: posts)
                 self.presenter.presentFetchedPosts(response: response)
+            case .failure(let error):
+                //show failure message
+                print(error)
+                break
+            }
+        }
+    }
+    
+    func fetchStories(request: StoryListingModel.Request) {
+        networkingService?.retrieveStories { (result) in
+            switch(result) {
+            case .success(let stories):
+                self.stories = stories
+                let response = StoryListingModel.Response(stories: stories)
+                self.presenter.presentFetchedStories(response: response)
             case .failure(let error):
                 //show failure message
                 print(error)

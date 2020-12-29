@@ -8,6 +8,7 @@
 protocol ApiServiceInterface: ServiceInterface {
     func retrieveUsers(completion: @escaping (Result<[User], Error>)->Void)
     func retrievePosts(completion: @escaping (Result<[Post], Error>)->Void)
+    func retrieveStories(completion: @escaping (Result<[Story], Error>)->Void)
     func retrieveComments(for postId: String, completion: @escaping (Result<[Comment], Error>)->Void)
     func retrieveAlbums(for userId: String, completion: @escaping (Result<[Album], Error>)->Void)
     func retrievePhotos(for albumId: String, completion: @escaping (Result<[Photo], Error>)->Void)

@@ -10,6 +10,7 @@ import UIKit
 protocol IPostListingViewController: class {
 	// do someting...
     func displayFetchedPosts(viewModel: PostListingModel.ViewModel)
+    func displayFetchedStories(viewModel: StoryListingModel.ViewModel)
 }
 
 class PostListingViewController: UIViewController {
@@ -18,35 +19,47 @@ class PostListingViewController: UIViewController {
     
     var imagePicker: ImagePicker!
 
+    var collectionView: UICollectionView!
     let tableView = UITableView()
     
 	override func viewDidLoad() {
         super.viewDidLoad()
 		// do someting...
-        view.backgroundColor = .blue
+        view.backgroundColor = .black
         
         setupViews()
         setupConstraints()
     }
     
-    override func viewWillAppear(_ animated: Bool)
-    {
-      super.viewWillAppear(animated)
-      fetchPosts()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchStories()
+        fetchPosts()
+    }
+    
+    // MARK: - Fetch stories
+    var displayedStories: [StoryListingModel.ViewModel.DisplayedStory] = []
+    
+    func fetchStories() {
+        let request = StoryListingModel.Request()
+        interactor?.fetchStories(request: request)
     }
     
     // MARK: - Fetch posts
-    
     var displayedPosts: [PostListingModel.ViewModel.DisplayedPost] = []
     
-    func fetchPosts()
-    {
-      let request = PostListingModel.Request()
-      interactor?.fetchPosts(request: request)
+    func fetchPosts() {
+        let request = PostListingModel.Request()
+        interactor?.fetchPosts(request: request)
     }
 }
 
 extension PostListingViewController: IPostListingViewController {
+    func displayFetchedStories(viewModel: StoryListingModel.ViewModel) {
+        displayedStories = viewModel.displayedStories
+        collectionView.reloadData()
+    }
+    
     func displayFetchedPosts(viewModel: PostListingModel.ViewModel) {
         displayedPosts = viewModel.displayedPosts
         tableView.reloadData()
@@ -76,17 +89,45 @@ extension PostListingViewController {
         tableView.dataSource = self
         
         view.addSubview(tableView)
+        
+        configureCollectionView()
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate(
             [
-                tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+                collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
+                collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+                collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+                collectionView.heightAnchor.constraint(equalToConstant: 200)
+            ]
+        )
+        NSLayoutConstraint.activate(
+            [
+                tableView.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 5),
                 tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
                 tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
                 tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
             ]
         )
+    }
+    
+    private func configureCollectionView() {
+        let layout = UICollectionViewFlowLayout()
+        //collectionViewFlowLayout.estimatedItemSize = CGSize(width: 200, height: 200)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        layout.itemSize = CGSize(width: 200, height: 200)
+        layout.scrollDirection = .horizontal
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
+        collectionView.backgroundColor = .white
+        collectionView.showsHorizontalScrollIndicator = false
+
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(collectionView)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = .systemBackground
+        collectionView.register(StoryViewCell.self, forCellWithReuseIdentifier: StoryViewCell.identifier)
     }
     
     @objc func getPhoto() {
@@ -97,6 +138,27 @@ extension PostListingViewController {
         router.navigateToCreatePost()
     }
     
+}
+
+// MARK: - Extensions (Delegation Conformance)
+
+/// UICollectionViewDelegate Conformance
+extension PostListingViewController: UICollectionViewDelegate {
+
+}
+
+/// UICollectionViewDataSource Conformance
+extension PostListingViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        displayedStories.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryViewCell.identifier, for: indexPath) as! StoryViewCell
+        cell.backgroundColor = .white
+        cell.set(viewModel: displayedStories[indexPath.row])
+        return cell
+    }
 }
 
 extension PostListingViewController: UITableViewDelegate {
@@ -160,3 +222,21 @@ extension PostListingViewController: ImagePickerDelegate {
         }
     }
 }
+
+//for extimated size
+/*
+extension PostListingViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cell = StoryViewCell()
+        cell.set(viewModel: displayedStories[indexPath.row])
+        cell.setNeedsLayout()
+        cell.layoutIfNeeded()
+        let size: CGSize = cell.contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        //return CGSize(width: size.width, height: 30)
+        
+        return CGSize(width: 200, height: 200)
+    }
+}
+*/

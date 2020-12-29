@@ -32,3 +32,28 @@ struct PostListingModel {
         var displayedPosts: [DisplayedPost]
 	}
 }
+
+struct StoryListingModel {
+    struct Request {
+        // do someting...
+
+        var parameters: [String: Any]? {
+            // do someting...
+            return nil
+        }
+    }
+
+    struct Response {
+        var stories: [Story]
+    }
+
+    struct ViewModel {
+        struct DisplayedStory {
+            var id: String
+            var title: String
+            var updatedTime: String
+            var photoUrl: [URL]
+        }
+        var displayedStories: [DisplayedStory]
+    }
+}

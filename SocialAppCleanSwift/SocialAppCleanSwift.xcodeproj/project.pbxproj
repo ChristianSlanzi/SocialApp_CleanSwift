@@ -37,6 +37,8 @@
 		24408B142586849600910D35 /* DiscoverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408B0C2586849500910D35 /* DiscoverModel.swift */; };
 		24408B152586849600910D35 /* DiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24408B0D2586849500910D35 /* DiscoverViewController.xib */; };
 		24408B162586849600910D35 /* DiscoverManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408B0E2586849500910D35 /* DiscoverManager.swift */; };
+		2441FB25259B41A300ACF0B3 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2441FB24259B41A300ACF0B3 /* Story.swift */; };
+		2441FB2A259B63E300ACF0B3 /* Story+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2441FB29259B63E300ACF0B3 /* Story+Firebase.swift */; };
 		244C27AB258A15D00007E070 /* UITextView+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244C27AA258A15D00007E070 /* UITextView+Placeholder.swift */; };
 		245F4DA0258799F500C83134 /* NSLayoutConstraint+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F4D9F258799F500C83134 /* NSLayoutConstraint+Ext.swift */; };
 		24601861257EE02100FF623E /* UITableView+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24601860257EE02100FF623E /* UITableView+Empty.swift */; };
@@ -56,6 +58,7 @@
 		2462E0C22582C62C00B78203 /* ArticlesDataStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2462E0C12582C62C00B78203 /* ArticlesDataStub.swift */; };
 		2462E0C72582C67300B78203 /* TodosDataStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2462E0C62582C67300B78203 /* TodosDataStub.swift */; };
 		2462E0CC2582C69000B78203 /* UsersDataStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2462E0CB2582C69000B78203 /* UsersDataStub.swift */; };
+		2468456A259B8E220062E0A6 /* StoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24684569259B8E220062E0A6 /* StoryViewCell.swift */; };
 		246C666525911506002750D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 246C666425911506002750D8 /* GoogleService-Info.plist */; };
 		246C668925911C8A002750D8 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246C668825911C8A002750D8 /* FirestoreService.swift */; };
 		246C669125911CBC002750D8 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246C669025911CBC002750D8 /* StorageService.swift */; };
@@ -291,6 +294,8 @@
 		24408B0C2586849500910D35 /* DiscoverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverModel.swift; sourceTree = "<group>"; };
 		24408B0D2586849500910D35 /* DiscoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverViewController.xib; sourceTree = "<group>"; };
 		24408B0E2586849500910D35 /* DiscoverManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverManager.swift; sourceTree = "<group>"; };
+		2441FB24259B41A300ACF0B3 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		2441FB29259B63E300ACF0B3 /* Story+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Story+Firebase.swift"; sourceTree = "<group>"; };
 		244C27AA258A15D00007E070 /* UITextView+Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Placeholder.swift"; sourceTree = "<group>"; };
 		245F4D9F258799F500C83134 /* NSLayoutConstraint+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Ext.swift"; sourceTree = "<group>"; };
 		24601860257EE02100FF623E /* UITableView+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Empty.swift"; sourceTree = "<group>"; };
@@ -310,6 +315,7 @@
 		2462E0C12582C62C00B78203 /* ArticlesDataStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesDataStub.swift; sourceTree = "<group>"; };
 		2462E0C62582C67300B78203 /* TodosDataStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosDataStub.swift; sourceTree = "<group>"; };
 		2462E0CB2582C69000B78203 /* UsersDataStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataStub.swift; sourceTree = "<group>"; };
+		24684569259B8E220062E0A6 /* StoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewCell.swift; sourceTree = "<group>"; };
 		246C666425911506002750D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		246C668825911C8A002750D8 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		246C669025911CBC002750D8 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
@@ -780,6 +786,7 @@
 			isa = PBXGroup;
 			children = (
 				248518152575B7B4006F8A60 /* PostViewCell.swift */,
+				24684569259B8E220062E0A6 /* StoryViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1101,6 +1108,7 @@
 				242321182599E20500CADC09 /* Comment+Firebase.swift */,
 				2423211D2599ED5B00CADC09 /* SellItem+Firebase.swift */,
 				2423212E259A10C300CADC09 /* Reminder+Firebase.swift */,
+				2441FB29259B63E300ACF0B3 /* Story+Firebase.swift */,
 			);
 			path = "DataModel+Ext";
 			sourceTree = "<group>";
@@ -1357,6 +1365,7 @@
 				2403DD25257D3D76001F6025 /* Article.swift */,
 				2460187C257EF33000FF623E /* SellItem.swift */,
 				24232129259A0F0400CADC09 /* Reminder.swift */,
+				2441FB24259B41A300ACF0B3 /* Story.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -1709,6 +1718,7 @@
 				24CB3B1925977198001E8383 /* DocumentProtocol.swift in Sources */,
 				24CF04822570024200F92B49 /* HomeInteractor.swift in Sources */,
 				24408B0F2586849600910D35 /* DiscoverModule.swift in Sources */,
+				2441FB2A259B63E300ACF0B3 /* Story+Firebase.swift in Sources */,
 				24601878257EF17900FF623E /* SellItemListingManager.swift in Sources */,
 				24BFC456258023AA00C15C67 /* ArticleDetailInteractor.swift in Sources */,
 				24C89D182579AF1700791646 /* TodoViewCell.swift in Sources */,
@@ -1721,6 +1731,7 @@
 				24BFC46925802E4F00C15C67 /* ReminderListingViewController.swift in Sources */,
 				246C669125911CBC002750D8 /* StorageService.swift in Sources */,
 				24CF047F2570024200F92B49 /* HomePresenter.swift in Sources */,
+				2468456A259B8E220062E0A6 /* StoryViewCell.swift in Sources */,
 				24C89D0E2579AC2000791646 /* TodoListingInteractor.swift in Sources */,
 				2425E8402576C0970084E415 /* Environment.swift in Sources */,
 				24601872257EF17900FF623E /* SellItemListingPresenter.swift in Sources */,
@@ -1732,6 +1743,7 @@
 				24CF04C72570029700F92B49 /* Module.swift in Sources */,
 				2403DD26257D3D76001F6025 /* Article.swift in Sources */,
 				24CF04AB2570026100F92B49 /* DetailManager.swift in Sources */,
+				2441FB25259B41A300ACF0B3 /* Story.swift in Sources */,
 				24408B162586849600910D35 /* DiscoverManager.swift in Sources */,
 				24BA4B74257922E300A7F088 /* AlbumListingModule.swift in Sources */,
 				24601876257EF17900FF623E /* SellItemListingModel.swift in Sources */,

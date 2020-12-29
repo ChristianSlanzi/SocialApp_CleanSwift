@@ -8,6 +8,7 @@
 import FirebaseFirestore
 
 class FirestoreService: ApiServiceInterface {
+    
     func save(_ todo: Todo, completion: @escaping (Result<Bool, Error>) -> Void) {
         
     }
@@ -56,6 +57,9 @@ class FirestoreService: ApiServiceInterface {
     }
     func retrieveArticles(for userId: String, completion: @escaping (Result<[Article], Error>)->Void) {
         fetchCollection(collection: "articles", completion: completion)
+    }
+    func retrieveStories(completion: @escaping (Result<[Story], Error>) -> Void) {
+        fetchCollection(collection: "stories", completion: completion)
     }
     
     private init() {}

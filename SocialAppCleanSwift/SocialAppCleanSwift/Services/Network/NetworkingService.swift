@@ -9,6 +9,10 @@ import Alamofire
 import SwiftyJSON
 
 class NetworkingService: ApiServiceInterface {
+    func retrieveStories(completion: @escaping (Result<[Story], Error>) -> Void) {
+        
+    }
+    
     func update(_ todo: Todo, completion: @escaping (Result<Bool, Error>) -> Void) {
         
     }

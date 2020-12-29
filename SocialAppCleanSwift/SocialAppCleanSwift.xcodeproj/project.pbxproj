@@ -89,6 +89,14 @@
 		2496806025897373008907BA /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2496805F25897373008907BA /* UserHeaderView.swift */; };
 		24AE32F0257C01F80064598A /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE32EF257C01F80064598A /* CachedImageView.swift */; };
 		24B3C322258C14DD002A49CB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3C321258C14DD002A49CB /* ImagePicker.swift */; };
+		24B7942D259BE11700084647 /* StoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B79425259BE11700084647 /* StoryModule.swift */; };
+		24B7942E259BE11700084647 /* StoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B79426259BE11700084647 /* StoryPresenter.swift */; };
+		24B7942F259BE11700084647 /* StoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B79427259BE11700084647 /* StoryRouter.swift */; };
+		24B79430259BE11700084647 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B79428259BE11700084647 /* StoryViewController.swift */; };
+		24B79431259BE11700084647 /* StoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B79429259BE11700084647 /* StoryInteractor.swift */; };
+		24B79432259BE11700084647 /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B7942A259BE11700084647 /* StoryModel.swift */; };
+		24B79433259BE11700084647 /* StoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B7942B259BE11700084647 /* StoryViewController.xib */; };
+		24B79434259BE11700084647 /* StoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B7942C259BE11700084647 /* StoryManager.swift */; };
 		24BA4B74257922E300A7F088 /* AlbumListingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B6C257922E300A7F088 /* AlbumListingModule.swift */; };
 		24BA4B75257922E300A7F088 /* AlbumListingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B6D257922E300A7F088 /* AlbumListingPresenter.swift */; };
 		24BA4B76257922E300A7F088 /* AlbumListingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA4B6E257922E300A7F088 /* AlbumListingRouter.swift */; };
@@ -346,6 +354,14 @@
 		2496805F25897373008907BA /* UserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
 		24AE32EF257C01F80064598A /* CachedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
 		24B3C321258C14DD002A49CB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		24B79425259BE11700084647 /* StoryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryModule.swift; sourceTree = "<group>"; };
+		24B79426259BE11700084647 /* StoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPresenter.swift; sourceTree = "<group>"; };
+		24B79427259BE11700084647 /* StoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryRouter.swift; sourceTree = "<group>"; };
+		24B79428259BE11700084647 /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
+		24B79429259BE11700084647 /* StoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryInteractor.swift; sourceTree = "<group>"; };
+		24B7942A259BE11700084647 /* StoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryModel.swift; sourceTree = "<group>"; };
+		24B7942B259BE11700084647 /* StoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryViewController.xib; sourceTree = "<group>"; };
+		24B7942C259BE11700084647 /* StoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryManager.swift; sourceTree = "<group>"; };
 		24BA4B6C257922E300A7F088 /* AlbumListingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListingModule.swift; sourceTree = "<group>"; };
 		24BA4B6D257922E300A7F088 /* AlbumListingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListingPresenter.swift; sourceTree = "<group>"; };
 		24BA4B6E257922E300A7F088 /* AlbumListingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListingRouter.swift; sourceTree = "<group>"; };
@@ -851,6 +867,21 @@
 			path = Camera;
 			sourceTree = "<group>";
 		};
+		24B79424259BE0EF00084647 /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				24B79425259BE11700084647 /* StoryModule.swift */,
+				24B79426259BE11700084647 /* StoryPresenter.swift */,
+				24B79427259BE11700084647 /* StoryRouter.swift */,
+				24B79428259BE11700084647 /* StoryViewController.swift */,
+				24B79429259BE11700084647 /* StoryInteractor.swift */,
+				24B7942A259BE11700084647 /* StoryModel.swift */,
+				24B7942B259BE11700084647 /* StoryViewController.xib */,
+				24B7942C259BE11700084647 /* StoryManager.swift */,
+			);
+			path = Story;
+			sourceTree = "<group>";
+		};
 		24BA4B6B2579222A00A7F088 /* AlbumListing */ = {
 			isa = PBXGroup;
 			children = (
@@ -1185,6 +1216,7 @@
 		24CF045C2570018800F92B49 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				24B79424259BE0EF00084647 /* Story */,
 				24BBA071258911E500E167C6 /* CreatePost */,
 				24408B062586847800910D35 /* Discover */,
 				24BFC45D25802E0300C15C67 /* ReminderListing */,
@@ -1540,6 +1572,7 @@
 				24BA4B7A257922E300A7F088 /* AlbumListingViewController.xib in Resources */,
 				24BBA0802589125A00E167C6 /* CreatePostViewController.xib in Resources */,
 				24DD575D257036E200106BC6 /* ContactsViewController.xib in Resources */,
+				24B79433259BE11700084647 /* StoryViewController.xib in Resources */,
 				247447B12576F91D006A6BAE /* CommentListingViewController.xib in Resources */,
 				24601877257EF17900FF623E /* SellItemListingViewController.xib in Resources */,
 				24408B152586849600910D35 /* DiscoverViewController.xib in Resources */,
@@ -1687,6 +1720,7 @@
 				24CF046E2570022C00F92B49 /* LoginViewController.swift in Sources */,
 				24DD57432570330100106BC6 /* SettingsModule.swift in Sources */,
 				24CF0401256FBFFE00F92B49 /* ViewController.swift in Sources */,
+				24B79430259BE11700084647 /* StoryViewController.swift in Sources */,
 				246C668925911C8A002750D8 /* FirestoreService.swift in Sources */,
 				24601871257EF17900FF623E /* SellItemListingModule.swift in Sources */,
 				24CF03FD256FBFFE00F92B49 /* AppDelegate.swift in Sources */,
@@ -1749,6 +1783,7 @@
 				24601876257EF17900FF623E /* SellItemListingModel.swift in Sources */,
 				247447AB2576F91D006A6BAE /* CommentListingModule.swift in Sources */,
 				24CB3B2A25978D41001E8383 /* Post+Firebase.swift in Sources */,
+				24B7942D259BE11700084647 /* StoryModule.swift in Sources */,
 				2485180D2575A6BD006F8A60 /* PostListingModel.swift in Sources */,
 				24601874257EF17900FF623E /* SellItemListingViewController.swift in Sources */,
 				24BFC46725802E4F00C15C67 /* ReminderListingPresenter.swift in Sources */,
@@ -1779,6 +1814,7 @@
 				24BA4B922579761900A7F088 /* PhotoListingViewController.swift in Sources */,
 				247447AC2576F91D006A6BAE /* CommentListingPresenter.swift in Sources */,
 				24CF047E2570024200F92B49 /* HomeModule.swift in Sources */,
+				24B79434259BE11700084647 /* StoryManager.swift in Sources */,
 				24BFC46625802E4F00C15C67 /* ReminderListingModule.swift in Sources */,
 				24CF04922570025200F92B49 /* ProfilePresenter.swift in Sources */,
 				24DD576B2570382F00106BC6 /* NetworkingService.swift in Sources */,
@@ -1808,6 +1844,7 @@
 				248517EA25759700006F8A60 /* Comment.swift in Sources */,
 				24B3C322258C14DD002A49CB /* ImagePicker.swift in Sources */,
 				2403DD1C257D3990001F6025 /* ArticleListingRouter.swift in Sources */,
+				24B79432259BE11700084647 /* StoryModel.swift in Sources */,
 				244C27AB258A15D00007E070 /* UITextView+Placeholder.swift in Sources */,
 				2462E0C22582C62C00B78203 /* ArticlesDataStub.swift in Sources */,
 				242321192599E20500CADC09 /* Comment+Firebase.swift in Sources */,
@@ -1833,6 +1870,7 @@
 				24BA4B77257922E300A7F088 /* AlbumListingViewController.swift in Sources */,
 				247447AF2576F91D006A6BAE /* CommentListingInteractor.swift in Sources */,
 				24BA4B78257922E300A7F088 /* AlbumListingInteractor.swift in Sources */,
+				24B7942F259BE11700084647 /* StoryRouter.swift in Sources */,
 				248517F4257597DE006F8A60 /* Photo.swift in Sources */,
 				24CF04BB2570026F00F92B49 /* MainInteractor.swift in Sources */,
 				24C89D112579AC2000791646 /* TodoListingManager.swift in Sources */,
@@ -1862,6 +1900,7 @@
 				24BFC46A25802E4F00C15C67 /* ReminderListingInteractor.swift in Sources */,
 				2402AA9F25757E8000D879C9 /* Post.swift in Sources */,
 				247447AE2576F91D006A6BAE /* CommentListingViewController.swift in Sources */,
+				24B7942E259BE11700084647 /* StoryPresenter.swift in Sources */,
 				2485180B2575A6BD006F8A60 /* PostListingViewController.swift in Sources */,
 				24601875257EF17900FF623E /* SellItemListingInteractor.swift in Sources */,
 				24CF04962570025300F92B49 /* ProfileModel.swift in Sources */,
@@ -1882,6 +1921,7 @@
 				24E0ADF8257407FF00A54F30 /* ShowLocationInteractor.swift in Sources */,
 				24BBA07A2589125A00E167C6 /* CreatePostModule.swift in Sources */,
 				24BFC453258023AA00C15C67 /* ArticleDetailPresenter.swift in Sources */,
+				24B79431259BE11700084647 /* StoryInteractor.swift in Sources */,
 				24DD576D2570382F00106BC6 /* User.swift in Sources */,
 				24BEF1B0259A544900F50BE0 /* RadioButton.swift in Sources */,
 				2485180F2575A6BD006F8A60 /* PostListingManager.swift in Sources */,

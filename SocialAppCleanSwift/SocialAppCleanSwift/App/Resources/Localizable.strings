@@ -8,6 +8,9 @@
 
 // MARK: - App localization
 
+//STORY
+"story_view_title" = "Story";
+
 //CREATE POST
 "createpost_view_title" = "Create Post";
 "createpost_posttext_placeholder" = "What are you doing now?";

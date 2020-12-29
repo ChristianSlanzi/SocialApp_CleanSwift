@@ -11,6 +11,7 @@ protocol IPostListingRouter {
 	// do someting...
     func navigateToComments(for postId: String)
     func navigateToCreatePost()
+    func navigateToStory(storyId: String)
 }
 
 class PostListingRouter: IPostListingRouter {
@@ -39,5 +40,9 @@ extension PostListingRouter {
     
     func navigateToCreatePost() {
         appRouter.presentModule(module: CreatePostModule(appRouter), parameters: [:])
+    }
+    
+    func navigateToStory(storyId: String) {
+        appRouter.presentModule(module: StoryModule(appRouter), parameters: ["storyId" : storyId])
     }
 }

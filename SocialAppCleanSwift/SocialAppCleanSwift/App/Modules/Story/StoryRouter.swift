@@ -11,8 +11,14 @@ protocol IStoryRouter {
 	// do someting...
 }
 
-class StoryRouter: IStoryRouter {
+protocol StoryDataPassing
+{
+  var dataStore: StoryDataStore? { get }
+}
+
+class StoryRouter: IStoryRouter, StoryDataPassing {
     var appRouter: IAppRouter
+    var dataStore: StoryDataStore?
 
     init(appRouter: IAppRouter) {
         self.appRouter = appRouter
@@ -28,6 +34,7 @@ class StoryRouter: IStoryRouter {
         view.title = "story_view_title".localized
         let presenter = StoryPresenter(view: view)
         let interactor = StoryInteractor(presenter: presenter)
+        interactor.story = dataStore?.story
         view.interactor = interactor
         view.router = self
         interactor.parameters = parameters

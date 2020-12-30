@@ -145,7 +145,9 @@ extension PostListingViewController {
 /// UICollectionViewDelegate Conformance
 extension PostListingViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        router.navigateToStory(storyId: displayedStories[indexPath.row].id)
+        if let story = interactor.getStory(id: displayedStories[indexPath.row].id) {
+            router.navigateToStory(story: story)
+        }
     }
 }
 

@@ -19,9 +19,16 @@ struct StoryModel {
 
 	struct Response {
 		// do someting...
+        var story: Story
 	}
 
 	struct ViewModel {
-		// do someting...
+        struct DisplayedStory {
+            var id: String
+            var title: String
+            var photoUrls: [URL]
+            var currentPage: Int
+        }
+        var displayedStory: DisplayedStory
 	}
 }

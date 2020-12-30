@@ -8,13 +8,24 @@
 import UIKit
 
 protocol IStoryPresenter: class {
-	// do someting...
+    func presentStory(response: StoryModel.Response)
+    func moveToNextPage()
 }
 
-class StoryPresenter: IStoryPresenter {	
+class StoryPresenter: IStoryPresenter {
 	weak var view: IStoryViewController!
 	
 	init(view: IStoryViewController) {
 		self.view = view
 	}
+    
+    func presentStory(response: StoryModel.Response) {
+        let story = response.story
+        let displayedStory = StoryModel.ViewModel.DisplayedStory(id: story.id, title: story.title, photoUrls: story.pages.compactMap({URL(string: $0)}), currentPage: 0)
+        self.view.displayStory(displayedStory)
+    }
+    
+    func moveToNextPage() {
+        self.view.moveToNextPage()
+    }
 }

@@ -12,6 +12,7 @@ protocol IPostListingInteractor: class {
     
     func fetchPosts(request: PostListingModel.Request)
     func fetchStories(request: StoryListingModel.Request)
+    func getStory(id: String) -> Story?
 }
 
 class PostListingInteractor: IPostListingInteractor {
@@ -62,5 +63,9 @@ extension PostListingInteractor {
                 break
             }
         }
+    }
+    
+    func getStory(id: String) -> Story? {
+        return stories?.first(where: { $0.id == id })
     }
 }

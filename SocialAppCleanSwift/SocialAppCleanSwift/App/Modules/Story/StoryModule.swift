@@ -7,9 +7,12 @@
 
 import UIKit
 
-class StoryModule: IModule {
+class StoryModule: IModule, StoryDataStore {
+    
     let appRouter: IAppRouter
     private var router: StoryRouter!
+    
+    var story: Story!
 
     init(_ appRouter: IAppRouter) {
         self.appRouter = appRouter
@@ -17,6 +20,7 @@ class StoryModule: IModule {
     }
 
     func presentView(parameters: [String: Any]) {
+        router.dataStore = self
         router.presentView(parameters: parameters)
     }
 

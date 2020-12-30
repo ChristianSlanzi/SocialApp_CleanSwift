@@ -11,6 +11,8 @@ class StoryViewCell: UICollectionViewCell {
     
     let imageView: CachedImageView = {
         let view = CachedImageView()
+        view.contentMode = .scaleAspectFill
+        view.clipsToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .lightGray
         return view

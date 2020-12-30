@@ -68,6 +68,7 @@ class PostViewCell: UITableViewCell {
     
     private let photoImageView: CachedImageView = {
         let view = CachedImageView()
+        view.contentMode = .scaleAspectFill
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .gray
         return view

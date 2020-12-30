@@ -41,8 +41,8 @@ class StoryViewCell: UICollectionViewCell {
     
     func set(viewModel: StoryListingModel.ViewModel.DisplayedStory) {
         titleLabel.text = viewModel.title
-        //guard  let url = URL(string: viewModel.photoUrl.first!) else { return }
-        //imageView.load(url: url)
+        guard  let url = viewModel.photoUrl.first else { return }
+        imageView.load(url: url)
     }
     
     // MARK: - Layout Methods

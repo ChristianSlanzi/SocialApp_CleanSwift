@@ -38,6 +38,8 @@ class StoryViewController: UIViewController {
 }
 
 extension StoryViewController: IStoryViewController {
+    
+    //TODO: move logic to the interactor... 
     func moveToNextPage() {
         self.displayedStory.currentPage = self.displayedStory.currentPage + 1
         if self.displayedStory.currentPage >= self.displayedStory.photoUrls.count {

@@ -5,18 +5,11 @@
 //  Created by Christian Slanzi on 29.12.20.
 //  Copyright (c) 2020 Christian Slanzi. All rights reserved.
 
-import UIKit
-
 protocol IStoryInteractor: class {
 	var parameters: [String: Any]? { get }
     
     func getStory(request: StoryModel.Request)
     func moveToNextPage()
-}
-
-protocol StoryBusinessLogic
-{
-  
 }
 
 protocol StoryDataStore
@@ -39,7 +32,7 @@ class StoryInteractor: IStoryInteractor, StoryDataStore {
     }
 }
 
-extension StoryInteractor: StoryBusinessLogic {
+extension StoryInteractor {
     func getStory(request: StoryModel.Request) {
         if story != nil {
             let response = StoryModel.Response(story: story)

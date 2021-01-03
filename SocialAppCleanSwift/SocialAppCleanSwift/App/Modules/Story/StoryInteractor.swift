@@ -22,6 +22,7 @@ class StoryInteractor: IStoryInteractor, StoryDataStore {
     var parameters: [String: Any]?
     
     var story: Story!
+    var currentPage: Int = 0
 
     private var manager: IStoryManager {
         return StoryManager()
@@ -41,6 +42,11 @@ extension StoryInteractor {
     }
     
     func moveToNextPage() {
-        presenter.moveToNextPage()
+        self.currentPage = self.currentPage + 1
+        if self.currentPage >= self.story.pages.count {
+            self.currentPage = 0
+        }
+        
+        presenter.moveToPage(page: self.currentPage)
     }
 }

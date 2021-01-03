@@ -9,11 +9,12 @@ import UIKit
 
 protocol IStoryPresenter: class {
     func presentStory(response: StoryModel.Response)
-    func moveToNextPage()
+    func moveToPage(page: Int)
 }
 
 class StoryPresenter: IStoryPresenter {
 	weak var view: IStoryViewController!
+    var displayedStory: StoryModel.ViewModel.DisplayedStory?
 	
 	init(view: IStoryViewController) {
 		self.view = view
@@ -21,11 +22,14 @@ class StoryPresenter: IStoryPresenter {
     
     func presentStory(response: StoryModel.Response) {
         let story = response.story
-        let displayedStory = StoryModel.ViewModel.DisplayedStory(id: story.id, title: story.title, photoUrls: story.pages.compactMap({URL(string: $0)}), currentPage: 0)
-        self.view.displayStory(displayedStory)
+        displayedStory = StoryModel.ViewModel.DisplayedStory(id: story.id, title: story.title, photoUrls: story.pages.compactMap({URL(string: $0)}), currentPage: 0)
+        self.view.displayStory(displayedStory!)
     }
     
-    func moveToNextPage() {
-        self.view.moveToNextPage()
+    func moveToPage(page: Int) {
+        if displayedStory != nil {
+            displayedStory!.currentPage = page
+        }
+        self.view.displayStory(displayedStory!)
     }
 }

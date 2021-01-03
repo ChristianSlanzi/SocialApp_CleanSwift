@@ -9,7 +9,7 @@ import UIKit
 
 protocol IStoryViewController: class {
     func displayStory(_ displayedStory: StoryModel.ViewModel.DisplayedStory)
-    func moveToNextPage()
+    //func moveToNextPage()
 }
 
 class StoryViewController: UIViewController {
@@ -38,15 +38,6 @@ class StoryViewController: UIViewController {
 }
 
 extension StoryViewController: IStoryViewController {
-    
-    //TODO: move logic to the interactor... 
-    func moveToNextPage() {
-        self.displayedStory.currentPage = self.displayedStory.currentPage + 1
-        if self.displayedStory.currentPage >= self.displayedStory.photoUrls.count {
-            self.displayedStory.currentPage = 0
-        }
-        self.showCurrentPage()
-    }
     
     func displayStory(_ displayedStory: StoryModel.ViewModel.DisplayedStory) {
         self.displayedStory = displayedStory

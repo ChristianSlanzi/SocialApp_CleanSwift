@@ -117,12 +117,43 @@ class PostViewCell: UITableViewCell, IPostViewCell {
         view.backgroundColor = .gray
         return view
     }()
+    
+    private let likeImageView: UIImageView = {
+        let view = UIImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.image = UIImage(named: "like")
+        //view.backgroundColor = .gray
+        return view
+    }()
+    
+    private let commentImageView: UIImageView = {
+        let view = UIImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.image = UIImage(named: "comment")
+        //view.backgroundColor = .gray
+        return view
+    }()
+    
+    private let likesLabel: UILabel = {
+        let view = UILabel()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.text = "0 likes"
+        return view
+    }()
+    
+    private let commentsLabel: UILabel = {
+        let view = UILabel()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.text = "0 comments"
+        return view
+    }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         setupViews()
         setupConstraints()
+        setupActions()
         
     }
     
@@ -133,13 +164,16 @@ class PostViewCell: UITableViewCell, IPostViewCell {
     func setupViews() {
         backgroundColor = .white
         
-        addSubview(nameLabel)
-        addSubview(avatarImageView)
-        
-        addSubview(updatedTimeLabel)
-        addSubview(titleLabel)
-        addSubview(bodyLabel)
-        addSubview(photoImageView)
+        addSubviews(nameLabel,
+                    avatarImageView,
+                    updatedTimeLabel,
+                    titleLabel,
+                    bodyLabel,
+                    photoImageView,
+                    likeImageView,
+                    commentImageView,
+                    likesLabel,
+                    commentsLabel)
         
         let whiteBackgroundView = UIView(frame: self.frame)
         whiteBackgroundView.backgroundColor = .white
@@ -192,16 +226,51 @@ class PostViewCell: UITableViewCell, IPostViewCell {
             photoImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: margin),
             photoImageView.rightAnchor.constraint(equalTo: rightAnchor, constant: -margin),
             photoImageView.topAnchor.constraint(equalTo: bodyLabel.bottomAnchor, constant: margin),
-            photoHeightConstraint!,
-            photoImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -margin)
+            photoHeightConstraint!//,
+            //photoImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -margin)
+        ])
+        
+        NSLayoutConstraint.activate([
+            likeImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: margin),
+            likeImageView.topAnchor.constraint(equalTo: photoImageView.bottomAnchor, constant: margin),
+            likeImageView.widthAnchor.constraint(equalToConstant: 15),
+            likeImageView.heightAnchor.constraint(equalToConstant: 15),
+            likeImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -margin)
+        ])
+        
+        NSLayoutConstraint.activate([
+            commentImageView.leftAnchor.constraint(equalTo: likeImageView.rightAnchor, constant: margin),
+            commentImageView.topAnchor.constraint(equalTo: photoImageView.bottomAnchor, constant: margin),
+            commentImageView.widthAnchor.constraint(equalToConstant: 15),
+            commentImageView.heightAnchor.constraint(equalToConstant: 15)
+        ])
+        
+        NSLayoutConstraint.activate([
+            commentsLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -margin),
+            commentsLabel.bottomAnchor.constraint(equalTo: likeImageView.bottomAnchor, constant: 0)
+        ])
+        
+        NSLayoutConstraint.activate([
+            likesLabel.rightAnchor.constraint(equalTo: commentsLabel.leftAnchor, constant: -margin),
+            likesLabel.bottomAnchor.constraint(equalTo: likeImageView.bottomAnchor, constant: 0)
         ])
         
         photoReducedHeightConstraint?.isActive = false
     }
     
+    private func setupActions() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(likeTapped))
+        tap.numberOfTapsRequired = 1
+        likeImageView.addGestureRecognizer(tap)
+        likeImageView.isUserInteractionEnabled = true
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews() // call super.layoutSubviews()
         avatarImageView.maskCircle()
+    }
+    
+    @objc func likeTapped(sender: UITapGestureRecognizer) {
     }
 }
 

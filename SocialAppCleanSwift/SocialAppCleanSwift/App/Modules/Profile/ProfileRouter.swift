@@ -59,27 +59,32 @@ class ProfileRouter: IProfileRouter, ShowContactDataPassing {
     }
     
     func navigateToAlbumListing() {
+        guard let userId = dataStore?.user.id else { return }
         appRouter.presentModule(module: AlbumListingModule(appRouter),
-                                parameters: ["userId" : (dataStore?.user.id)!])
+                                parameters: ["userId" : userId])
     }
     
     func navigateToTodoListing() {
+        guard let userId = dataStore?.user.id else { return }
         appRouter.presentModule(module: TodoListingModule(appRouter),
-                                parameters: ["userId" : (dataStore?.user.id)!])
+                                parameters: ["userId" : userId])
     }
     
     func navigateToArticleListing() {
+        guard let userId = dataStore?.user.id else { return }
         appRouter.presentModule(module: ArticleListingModule(appRouter),
-                                parameters: ["userId" : (dataStore?.user.id)!])
+                                parameters: ["userId" : userId])
     }
     
     func navigateToReminderListing() {
+        guard let userId = dataStore?.user.id else { return }
         appRouter.presentModule(module: ReminderListingModule(appRouter),
-                                parameters: ["userId" : (dataStore?.user.id)!])
+                                parameters: ["userId" : userId])
     }
     
     func navigateToMarketplace() {
+        guard let userId = dataStore?.user.id else { return }
         appRouter.presentModule(module: SellItemListingModule(appRouter),
-                                parameters: ["userId" : (dataStore?.user.id)!])
+                                parameters: ["userId" : userId])
     }
 }

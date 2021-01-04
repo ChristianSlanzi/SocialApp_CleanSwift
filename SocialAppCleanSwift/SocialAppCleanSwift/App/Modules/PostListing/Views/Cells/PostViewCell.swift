@@ -34,6 +34,25 @@ class PostViewCell: UITableViewCell {
         }
     }
     
+    private let avatarImageView: CachedImageView = {
+        let view = CachedImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .gray
+        return view
+    }()
+    
+    private let nameLabel: UILabel = {
+        let lbl = UILabel()
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.textColor = .black
+        lbl.font = UIFont.boldSystemFont(ofSize: 22)
+        lbl.textAlignment = .left
+        lbl.numberOfLines = 0
+        lbl.text = "User"
+        //lbl.adjustsFontSizeToFitWidth = true
+        return lbl
+    }()
+    
     private let updatedTimeLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
@@ -89,6 +108,9 @@ class PostViewCell: UITableViewCell {
     func setupViews() {
         backgroundColor = .white
         
+        addSubview(nameLabel)
+        addSubview(avatarImageView)
+        
         addSubview(updatedTimeLabel)
         addSubview(titleLabel)
         addSubview(bodyLabel)
@@ -105,16 +127,30 @@ class PostViewCell: UITableViewCell {
         let margin: CGFloat = 16.0
         
         NSLayoutConstraint.activate([
-            updatedTimeLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: margin),
+            avatarImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: margin),
+            avatarImageView.topAnchor.constraint(equalTo: topAnchor, constant: margin),
+            avatarImageView.heightAnchor.constraint(equalToConstant: 70),
+            avatarImageView.widthAnchor.constraint(equalTo: avatarImageView.heightAnchor, multiplier: 1.0)
+        ])
+        
+        NSLayoutConstraint.activate([
+            nameLabel.leftAnchor.constraint(equalTo: avatarImageView.rightAnchor, constant: margin),
+            nameLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -margin),
+            nameLabel.heightAnchor.constraint(equalToConstant: 15),
+            nameLabel.topAnchor.constraint(equalTo: avatarImageView.topAnchor, constant: 0)
+        ])
+        
+        NSLayoutConstraint.activate([
+            updatedTimeLabel.leftAnchor.constraint(equalTo: nameLabel.leftAnchor, constant: 0),
             updatedTimeLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -margin),
             updatedTimeLabel.heightAnchor.constraint(equalToConstant: 15),
-            updatedTimeLabel.topAnchor.constraint(equalTo: topAnchor, constant: margin)
+            updatedTimeLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: margin)
         ])
         
         NSLayoutConstraint.activate([
             titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: margin),
             titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -margin),
-            titleLabel.topAnchor.constraint(equalTo: updatedTimeLabel.bottomAnchor, constant: margin)
+            titleLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: margin)
         ])
         
         NSLayoutConstraint.activate([

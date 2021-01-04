@@ -70,7 +70,7 @@ class PostViewCell: UITableViewCell, IPostViewCell {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.textColor = .black
-        lbl.font = UIFont.boldSystemFont(ofSize: 22)
+        lbl.font = UIFont.boldSystemFont(ofSize: 18)
         lbl.textAlignment = .left
         lbl.numberOfLines = 0
         lbl.text = "User"

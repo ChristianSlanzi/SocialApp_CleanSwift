@@ -21,7 +21,6 @@ class ContactsInteractor: IContactsInteractor, ContactsDataStore {
     var presenter: IContactsPresenter!
     var parameters: [String: Any]?
     var contacts: [User]?
-    //var networkingService: ApiServiceInterface?
 
     private var manager: IContactsManager {
         return ContactsManager()

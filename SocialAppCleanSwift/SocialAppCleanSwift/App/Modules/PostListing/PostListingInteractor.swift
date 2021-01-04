@@ -5,8 +5,6 @@
 //  Created by Christian Slanzi on 30.11.20.
 //  Copyright (c) 2020 Christian Slanzi. All rights reserved.
 
-import UIKit
-
 protocol IPostListingInteractor: class {
 	var parameters: [String: Any]? { get }
     

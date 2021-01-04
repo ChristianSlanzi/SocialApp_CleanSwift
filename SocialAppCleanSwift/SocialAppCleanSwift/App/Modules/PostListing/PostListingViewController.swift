@@ -187,6 +187,9 @@ extension PostListingViewController: UITableViewDataSource {
         //if(indexPath.row == 6 || indexPath.row == 5) {
         //    print("prr")
         //}
+        let presenter = PostViewCellPresenter(view: cell)
+        let interactor = PostViewCellInteractor(presenter: presenter)
+        cell.interactor = interactor
         cell.item = self.displayedPosts[indexPath.row]
         cell.layoutIfNeeded()
         return cell

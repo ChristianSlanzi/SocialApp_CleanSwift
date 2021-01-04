@@ -7,11 +7,31 @@
 
 import UIKit
 
-class PostViewCell: UITableViewCell {
+protocol IPostViewCell: class {
+    func displayFetchedUser(viewModel: PostViewCellModel.ViewModel)
+}
+
+class PostViewCell: UITableViewCell, IPostViewCell {
+    func displayFetchedUser(viewModel: PostViewCellModel.ViewModel) {
+        displayedUser = viewModel.displayedUser
+    }
+    
+    var interactor: IPostViewCellInteractor!
     
     private var photoHeightConstraint: NSLayoutConstraint?
     private var photoReducedHeightConstraint: NSLayoutConstraint?
     //private var photoHeightConstraint: NSLayoutConstraint?
+    
+    var displayedUser: PostViewCellModel.ViewModel.DisplayedUser? {
+        didSet {
+            if let displayedUser = displayedUser {
+                nameLabel.text = displayedUser.name
+                if let avatarUrl = displayedUser.userAvatarUrl {
+                    avatarImageView.load(url: avatarUrl)
+                }
+            }
+        }
+    }
     
     var item: PostListingModel.ViewModel.DisplayedPost? {
         didSet {
@@ -29,6 +49,11 @@ class PostViewCell: UITableViewCell {
                     photoHeightConstraint?.isActive = false
                     photoReducedHeightConstraint?.isActive = true
                 }
+            
+                let parameters = ["userId" : item.userId]
+                var request = PostViewCellModel.Request(parameters: parameters as [String : Any])
+                interactor.fetchUser(request: request)
+                
                 self.setNeedsLayout()
             }
         }
@@ -173,4 +198,11 @@ class PostViewCell: UITableViewCell {
         
         photoReducedHeightConstraint?.isActive = false
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews() // call super.layoutSubviews()
+        avatarImageView.maskCircle()
+    }
 }
+
+

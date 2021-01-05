@@ -24,7 +24,7 @@ class PostViewCell: UITableViewCell, IPostViewCell {
     
     var displayedUser: PostViewCellModel.ViewModel.DisplayedUser? {
         didSet {
-            if let displayedUser = displayedUser {
+            if let displayedUser = displayedUser, displayedUser.id == item?.userId {
                 nameLabel.text = displayedUser.name
                 if let avatarUrl = displayedUser.userAvatarUrl {
                     avatarImageView.load(url: avatarUrl)
@@ -49,9 +49,12 @@ class PostViewCell: UITableViewCell, IPostViewCell {
                     photoHeightConstraint?.isActive = false
                     photoReducedHeightConstraint?.isActive = true
                 }
+                
+                likesLabel.text = "\(item.likes) likes"
+                commentsLabel.text = "\(item.comments) comments"
             
                 let parameters = ["userId" : item.userId]
-                var request = PostViewCellModel.Request(parameters: parameters as [String : Any])
+                let request = PostViewCellModel.Request(parameters: parameters as [String : Any])
                 interactor.fetchUser(request: request)
                 
                 self.setNeedsLayout()

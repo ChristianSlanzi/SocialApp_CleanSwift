@@ -95,7 +95,9 @@ class FirestoreService: ApiServiceInterface {
                                               "photo" : post.photo ?? "",
                                               "type" : post.type,
                                               "createdTime": post.createdTime,
-                                              "updatedTime": post.createdTime
+                                              "updatedTime": post.createdTime,
+                                              "likes": post.likes,
+                                              "comments": post.comments
         ]) { (error) in
             if let unwrappedError = error {
                 completion(.failure(unwrappedError))
@@ -206,11 +208,13 @@ class FirestoreService: ApiServiceInterface {
                       let photo = documentData["photo"] as? String?,
                       let type = documentData["type"] as? String,
                       let createdTime = documentData["createdTime"] as? Timestamp,
-                      let updatedTime = documentData["updatedTime"] as? Timestamp else {
+                      let updatedTime = documentData["updatedTime"] as? Timestamp,
+                      let likes = documentData["likes"] as? Int,
+                      let comments = documentData["comments"] as? [Comment] else {
                     continue
                 }
                 
-                let post = Post(userId: userId, id: id, title: title, body: body, photo: photo, type: type, createdTime: createdTime.dateValue(), updatedTime: updatedTime.dateValue())
+                let post = Post(userId: userId, id: id, title: title, body: body, photo: photo, type: type, createdTime: createdTime.dateValue(), updatedTime: updatedTime.dateValue(), likes: likes, comments: comments)
                 posts.append(post)
                 
             }

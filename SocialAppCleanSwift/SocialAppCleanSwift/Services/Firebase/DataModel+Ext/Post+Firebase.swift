@@ -27,5 +27,16 @@ extension Post: DocumentProtocol {
         } else {
             self.updatedTime = Date()
         }
+        
+        self.likes = documentData["likes"] as? Int ?? 0
+        
+        self.comments = [Comment]()
+        if let commentsData = documentData["comments"] as? [[String:Any]] {
+            for value in commentsData {
+                if let comment = Comment(documentData: value) {
+                    self.comments.append(comment)
+                }
+            }
+        }
     }
 }

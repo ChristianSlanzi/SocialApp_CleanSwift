@@ -24,6 +24,8 @@ struct Post: JSONinitiable {
     var type: String // text, photo, ...
     var createdTime: Date
     var updatedTime: Date
+    var likes: Int
+    var comments: [Comment]
     
     init(json: JSON) {
         self.userId = json["userId"].string ?? (json["id"].int != nil ? String(json["id"].int!): "")
@@ -35,6 +37,16 @@ struct Post: JSONinitiable {
         
         self.createdTime = json["created_time"].string?.toDate(format: "yyyy-MM-dd'T'HH:mm:ssZ", locale: Locale(identifier: "en_US_POSIX")) ?? Date()
         self.updatedTime = json["updated_time"].string?.toDate(format: "yyyy-MM-dd'T'HH:mm:ssZ", locale: Locale(identifier: "en_US_POSIX")) ?? Date()
+        
+        self.likes = json["likes"].int ?? 0
+        
+        self.comments = [Comment]()
+        if let comments = json["comments"].array {
+            for commentItem in comments {
+                let new = Comment(json: JSON(commentItem))
+                self.comments.append(new)
+            }
+        }
     }
     
     init(userId: String,
@@ -44,7 +56,9 @@ struct Post: JSONinitiable {
          photo: String?,
          type: String, // text, photo, ...
          createdTime: Date,
-         updatedTime: Date) {
+         updatedTime: Date,
+         likes: Int,
+         comments: [Comment]) {
         
         self.userId = userId
         self.id = id
@@ -55,5 +69,10 @@ struct Post: JSONinitiable {
         
         self.createdTime = createdTime
         self.updatedTime = updatedTime
+        
+        self.likes = likes
+        self.comments = comments
     }
 }
+
+

@@ -43,7 +43,7 @@ extension CreatePostInteractor {
     }
     
     private func savePost(body: String, photo: String?) {
-        let post = Post(userId: "0", id: UUID().uuidString, title: "test title", body: body, photo: photo, type: "text", createdTime: Date(), updatedTime: Date())
+        let post = Post(userId: "0", id: UUID().uuidString, title: "test title", body: body, photo: photo, type: "text", createdTime: Date(), updatedTime: Date(), likes: 0, comments: [Comment]())
         Current.networkingService.save(post, completion: { (result) in
             switch(result) {
             case .success(let wasSaved):

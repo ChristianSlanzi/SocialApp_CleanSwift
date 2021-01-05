@@ -29,6 +29,8 @@ struct PostListingModel {
             var body: String
             var updatedTime: String
             var photoUrl: URL?
+            var likes: String
+            var comments: String
         }
         var displayedPosts: [DisplayedPost]
 	}

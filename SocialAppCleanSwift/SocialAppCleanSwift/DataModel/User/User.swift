@@ -85,15 +85,15 @@ struct User: JSONinitiable {
     }
 }
 
-struct UserCompany {
+struct UserCompany: JSONinitiable {
     var name: String?
     var catchPhrase: String?
     var bs: String?
     
-    init(json: JSON?) {
-        self.name = json?["name"].string
-        self.catchPhrase = json?["catchPhrase"].string
-        self.bs = json?["bs"].string
+    init(json: JSON) {
+        self.name = json["name"].string
+        self.catchPhrase = json["catchPhrase"].string
+        self.bs = json["bs"].string
     }
     
     init(name: String?,
@@ -105,20 +105,20 @@ struct UserCompany {
     }
 }
 
-struct UserAddress {
+struct UserAddress: JSONinitiable {
     var street: String?
     var suite: String?
     var city: String?
     var zipcode: String?
     var geo: UserAddressGeo?
     
-    init(json: JSON?) {
-        self.street = json?["street"].string
-        self.suite = json?["suite"].string
-        self.city = json?["city"].string
-        self.zipcode = json?["zipcode"].string
+    init(json: JSON) {
+        self.street = json["street"].string
+        self.suite = json["suite"].string
+        self.city = json["city"].string
+        self.zipcode = json["zipcode"].string
         
-        if let value = json?["geo"].dictionaryObject {
+        if let value = json["geo"].dictionaryObject {
             let new = UserAddressGeo(json: JSON(value))
             self.geo = new
         }
@@ -137,13 +137,13 @@ struct UserAddress {
     }
 }
 
-struct UserAddressGeo {
+struct UserAddressGeo: JSONinitiable {
     var lat: String
     var lng: String
     
-    init(json: JSON?) {
-        self.lat = json?["lat"].string ?? ""
-        self.lng = json?["lng"].string ?? ""
+    init(json: JSON) {
+        self.lat = json["lat"].string ?? ""
+        self.lng = json["lng"].string ?? ""
     }
     
     init(lat: String,

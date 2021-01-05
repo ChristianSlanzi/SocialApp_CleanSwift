@@ -23,7 +23,7 @@ class CommentListingPresenter: ICommentListingPresenter {
 
 extension CommentListingPresenter {
     func presentFetchedComments(response: CommentListingModel.Response) {
-        let displayedComments = response.comments.map { CommentListingModel.ViewModel.DisplayedComment(name: $0.name, body: $0.body) }
+        let displayedComments = response.comments.map { CommentListingModel.ViewModel.DisplayedComment(name: $0.userId, body: $0.body) }
         let viewModel = CommentListingModel.ViewModel(displayedComments: displayedComments)
         view?.displayFetchedComments(viewModel: viewModel)
     }

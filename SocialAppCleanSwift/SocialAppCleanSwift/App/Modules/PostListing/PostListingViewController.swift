@@ -160,6 +160,9 @@ extension PostListingViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryViewCell.identifier, for: indexPath) as! StoryViewCell
         cell.backgroundColor = .white
+        let presenter = StoryViewCellPresenter(view: cell)
+        let interactor = StoryViewCellInteractor(presenter: presenter)
+        cell.interactor = interactor
         cell.set(viewModel: displayedStories[indexPath.row])
         return cell
     }
@@ -168,7 +171,8 @@ extension PostListingViewController: UICollectionViewDataSource {
 extension PostListingViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        router.navigateToComments(for: self.displayedPosts[indexPath.row].id)
+        let comments = interactor.getComments(for: self.displayedPosts[indexPath.row].id)
+        router.navigateToComments(for: self.displayedPosts[indexPath.row].id, comments: comments)
     }
 }
 

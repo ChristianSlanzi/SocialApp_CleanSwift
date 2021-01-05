@@ -39,7 +39,8 @@ class CommentListingViewController: UIViewController {
     func fetchComments()
     {
         let request = CommentListingModel.Request()
-        interactor?.fetchComments(request: request)
+        //interactor?.fetchComments(request: request)
+        interactor?.getComments(request: request)
     }
 }
 

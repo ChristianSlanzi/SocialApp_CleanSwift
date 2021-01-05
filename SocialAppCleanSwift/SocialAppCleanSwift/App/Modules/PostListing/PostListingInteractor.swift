@@ -11,6 +11,7 @@ protocol IPostListingInteractor: class {
     func fetchPosts(request: PostListingModel.Request)
     func fetchStories(request: StoryListingModel.Request)
     func getStory(id: String) -> Story?
+    func getComments(for postId: String) -> [Comment]
 }
 
 class PostListingInteractor: IPostListingInteractor {
@@ -65,5 +66,9 @@ extension PostListingInteractor {
     
     func getStory(id: String) -> Story? {
         return stories?.first(where: { $0.id == id })
+    }
+    
+    func getComments(for postId: String) -> [Comment] {
+        return posts?.first(where: { $0.id == postId })?.comments ?? []
     }
 }

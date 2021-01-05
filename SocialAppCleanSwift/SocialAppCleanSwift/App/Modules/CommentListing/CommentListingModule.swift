@@ -7,9 +7,12 @@
 
 import UIKit
 
-class CommentListingModule: IModule {
+class CommentListingModule: IModule, CommentDataStore {
+    
     let appRouter: IAppRouter
     private var router: CommentListingRouter!
+    
+    var comments: [Comment]!
 
     init(_ appRouter: IAppRouter) {
         self.appRouter = appRouter
@@ -17,6 +20,7 @@ class CommentListingModule: IModule {
     }
 
     func presentView(parameters: [String: Any]) {
+        router.dataStore = self
         router.presentView(parameters: parameters)
     }
 

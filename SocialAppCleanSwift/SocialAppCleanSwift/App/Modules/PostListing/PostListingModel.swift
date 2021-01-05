@@ -56,6 +56,7 @@ struct StoryListingModel {
             var title: String
             var updatedTime: String
             var photoUrl: [URL]
+            var userId: String
         }
         var displayedStories: [DisplayedStory]
     }

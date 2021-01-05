@@ -11,7 +11,14 @@ protocol ICommentListingRouter {
 	// do someting...
 }
 
-class CommentListingRouter: ICommentListingRouter {
+protocol CommentDataPassing
+{
+  var dataStore: CommentDataStore? { get }
+}
+
+class CommentListingRouter: ICommentListingRouter, CommentDataPassing {
+    var dataStore: CommentDataStore?
+    
     var appRouter: IAppRouter
 
     init(appRouter: IAppRouter) {
@@ -28,6 +35,7 @@ class CommentListingRouter: ICommentListingRouter {
         view.title = "commentlisting_view_title".localized
         let presenter = CommentListingPresenter(view: view)
         let interactor = CommentListingInteractor(presenter: presenter)
+        interactor.comments = dataStore?.comments
         view.interactor = interactor
         view.router = self
         interactor.parameters = parameters

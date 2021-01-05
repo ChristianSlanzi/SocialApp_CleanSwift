@@ -9,7 +9,7 @@ import UIKit
 
 protocol IPostListingRouter {
 	// do someting...
-    func navigateToComments(for postId: String)
+    func navigateToComments(for postId: String, comments: [Comment])
     func navigateToCreatePost()
     func navigateToStory(story: Story)
 }
@@ -34,8 +34,10 @@ class PostListingRouter: IPostListingRouter {
 }
 
 extension PostListingRouter {
-    func navigateToComments(for postId: String) {
-        appRouter.presentModule(module: CommentListingModule(appRouter), parameters: ["postId" : postId])
+    func navigateToComments(for postId: String, comments: [Comment]) {
+        let commentsModule = CommentListingModule(appRouter)
+        commentsModule.comments = comments
+        appRouter.presentModule(module: commentsModule, parameters: ["postId" : postId])
     }
     
     func navigateToCreatePost() {

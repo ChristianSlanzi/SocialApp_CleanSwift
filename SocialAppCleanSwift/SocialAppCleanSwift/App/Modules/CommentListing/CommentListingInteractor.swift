@@ -11,10 +11,18 @@ protocol ICommentListingInteractor: class {
 	var parameters: [String: Any]? { get }
     
     func fetchComments(request: CommentListingModel.Request)
+    func getComments(request: CommentListingModel.Request)
 }
 
-class CommentListingInteractor: ICommentListingInteractor {
+protocol CommentDataStore
+{
+  var comments: [Comment]! { get set }
+}
 
+class CommentListingInteractor: ICommentListingInteractor, CommentDataStore {
+    
+    var comments: [Comment]!
+    
     var presenter: ICommentListingPresenter!
     var parameters: [String: Any]?
 
@@ -40,4 +48,12 @@ extension CommentListingInteractor {
             }
         }
     }
+    
+    func getComments(request: CommentListingModel.Request) {
+        if comments != nil {
+            let response = CommentListingModel.Response(comments: comments)
+            self.presenter.presentFetchedComments(response: response)
+        }
+    }
+    
 }

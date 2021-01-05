@@ -31,6 +31,9 @@
 		243C175825A32BA700FC815D /* PostViewCellInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243C175725A32BA700FC815D /* PostViewCellInteractor.swift */; };
 		243C175D25A32BBB00FC815D /* PostViewCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243C175C25A32BBB00FC815D /* PostViewCellPresenter.swift */; };
 		243C176225A340B600FC815D /* PostViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243C176125A340B500FC815D /* PostViewCellModel.swift */; };
+		243E87B925A4E6B70041F9F2 /* StoryViewCellInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E87B825A4E6B70041F9F2 /* StoryViewCellInteractor.swift */; };
+		243E87BE25A4E6CA0041F9F2 /* StoryViewCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E87BD25A4E6CA0041F9F2 /* StoryViewCellPresenter.swift */; };
+		243E87C325A4E6DA0041F9F2 /* StoryViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E87C225A4E6DA0041F9F2 /* StoryViewCellModel.swift */; };
 		24408AFF25866A9B00910D35 /* ContactViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408AFE25866A9B00910D35 /* ContactViewCell.swift */; };
 		24408B0F2586849600910D35 /* DiscoverModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408B072586849500910D35 /* DiscoverModule.swift */; };
 		24408B102586849600910D35 /* DiscoverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24408B082586849500910D35 /* DiscoverPresenter.swift */; };
@@ -300,6 +303,9 @@
 		243C175725A32BA700FC815D /* PostViewCellInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewCellInteractor.swift; sourceTree = "<group>"; };
 		243C175C25A32BBB00FC815D /* PostViewCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewCellPresenter.swift; sourceTree = "<group>"; };
 		243C176125A340B500FC815D /* PostViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewCellModel.swift; sourceTree = "<group>"; };
+		243E87B825A4E6B70041F9F2 /* StoryViewCellInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewCellInteractor.swift; sourceTree = "<group>"; };
+		243E87BD25A4E6CA0041F9F2 /* StoryViewCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewCellPresenter.swift; sourceTree = "<group>"; };
+		243E87C225A4E6DA0041F9F2 /* StoryViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewCellModel.swift; sourceTree = "<group>"; };
 		24408AFE25866A9B00910D35 /* ContactViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewCell.swift; sourceTree = "<group>"; };
 		24408B072586849500910D35 /* DiscoverModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverModule.swift; sourceTree = "<group>"; };
 		24408B082586849500910D35 /* DiscoverPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPresenter.swift; sourceTree = "<group>"; };
@@ -681,6 +687,17 @@
 			path = Post;
 			sourceTree = "<group>";
 		};
+		243E87B425A4C9F40041F9F2 /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				24684569259B8E220062E0A6 /* StoryViewCell.swift */,
+				243E87B825A4E6B70041F9F2 /* StoryViewCellInteractor.swift */,
+				243E87BD25A4E6CA0041F9F2 /* StoryViewCellPresenter.swift */,
+				243E87C225A4E6DA0041F9F2 /* StoryViewCellModel.swift */,
+			);
+			path = Story;
+			sourceTree = "<group>";
+		};
 		24408AFC25866A7900910D35 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -820,8 +837,8 @@
 		248518142575B753006F8A60 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				243E87B425A4C9F40041F9F2 /* Story */,
 				243C175625A32B8500FC815D /* Post */,
-				24684569259B8E220062E0A6 /* StoryViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1753,6 +1770,7 @@
 				246C668925911C8A002750D8 /* FirestoreService.swift in Sources */,
 				24601871257EF17900FF623E /* SellItemListingModule.swift in Sources */,
 				24CF03FD256FBFFE00F92B49 /* AppDelegate.swift in Sources */,
+				243E87B925A4E6B70041F9F2 /* StoryViewCellInteractor.swift in Sources */,
 				24CF04B92570026F00F92B49 /* MainRouter.swift in Sources */,
 				24CF04912570025200F92B49 /* ProfileModule.swift in Sources */,
 				24BEF1BE259A564A00F50BE0 /* CustomView.swift in Sources */,
@@ -1841,7 +1859,9 @@
 				24601873257EF17900FF623E /* SellItemListingRouter.swift in Sources */,
 				24CF04812570024200F92B49 /* HomeViewController.swift in Sources */,
 				24BDDA722582A5B0006D78A1 /* Date+String.swift in Sources */,
+				243E87BE25A4E6CA0041F9F2 /* StoryViewCellPresenter.swift in Sources */,
 				24408B122586849600910D35 /* DiscoverViewController.swift in Sources */,
+				243E87C325A4E6DA0041F9F2 /* StoryViewCellModel.swift in Sources */,
 				24BA4B922579761900A7F088 /* PhotoListingViewController.swift in Sources */,
 				247447AC2576F91D006A6BAE /* CommentListingPresenter.swift in Sources */,
 				24CF047E2570024200F92B49 /* HomeModule.swift in Sources */,

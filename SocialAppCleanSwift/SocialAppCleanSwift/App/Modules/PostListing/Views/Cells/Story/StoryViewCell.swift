@@ -7,9 +7,33 @@
 
 import UIKit
 
+protocol IStoryViewCell: class {
+    func displayFetchedUser(viewModel: StoryViewCellModel.ViewModel)
+}
+
 class StoryViewCell: UICollectionViewCell {
     
-    let imageView: CachedImageView = {
+    var interactor: IStoryViewCellInteractor!
+    
+    var displayedUser: StoryViewCellModel.ViewModel.DisplayedUser? {
+        didSet {
+            if let displayedUser = displayedUser/*, displayedUser.id == item?.userId */{
+               // nameLabel.text = displayedUser.name
+                if let avatarUrl = displayedUser.userAvatarUrl {
+                    avatarImageView.load(url: avatarUrl)
+                }
+            }
+        }
+    }
+    
+    private let avatarImageView: CachedImageView = {
+        let view = CachedImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .gray
+        return view
+    }()
+    
+    private let imageView: CachedImageView = {
         let view = CachedImageView()
         view.contentMode = .scaleAspectFill
         view.clipsToBounds = true
@@ -45,6 +69,10 @@ class StoryViewCell: UICollectionViewCell {
         titleLabel.text = viewModel.title
         guard  let url = viewModel.photoUrl.first else { return }
         imageView.load(url: url)
+        
+        let parameters = ["userId" : viewModel.userId]
+        let request = StoryViewCellModel.Request(parameters: parameters as [String : Any])
+        interactor.fetchUser(request: request)
     }
     
     // MARK: - Layout Methods
@@ -53,8 +81,9 @@ class StoryViewCell: UICollectionViewCell {
         backgroundColor = .lightGray
         //backgroundColor = .random()
         
-        contentView.addSubview(imageView)
-        contentView.addSubview(titleLabel)
+        contentView.addSubviews(imageView,
+                                titleLabel,
+                                avatarImageView)
         
         setupConstraints()
     }
@@ -62,6 +91,13 @@ class StoryViewCell: UICollectionViewCell {
     private func setupConstraints() {
         
         let margin: CGFloat = 8.0
+        
+        NSLayoutConstraint.activate([
+            avatarImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: margin*3),
+            avatarImageView.topAnchor.constraint(equalTo: topAnchor, constant: margin),
+            avatarImageView.heightAnchor.constraint(equalToConstant: 50),
+            avatarImageView.widthAnchor.constraint(equalTo: avatarImageView.heightAnchor, multiplier: 1.0)
+        ])
         
         NSLayoutConstraint.activate([
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0),
@@ -77,4 +113,15 @@ class StoryViewCell: UICollectionViewCell {
         ])
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews() // call super.layoutSubviews()
+        avatarImageView.maskCircle()
+    }
+    
+}
+
+extension StoryViewCell: IStoryViewCell {
+    func displayFetchedUser(viewModel: StoryViewCellModel.ViewModel) {
+        displayedUser = viewModel.displayedUser
+    }
 }

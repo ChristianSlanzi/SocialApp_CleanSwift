@@ -26,6 +26,7 @@ enum GeneralRouter {
     case reminderListing
     case createPost
     case story
+    case watchListing
 }
 
 private extension GeneralRouter {
@@ -90,6 +91,9 @@ private extension GeneralRouter {
     func mappingStory(value: IAppRouter) -> IModule {
         return StoryModule(value)
     }
+    func mappingWatchListing(value: IAppRouter) -> IModule {
+        return WatchListingModule(value)
+    }
 }
 
 extension GeneralRouter {
@@ -136,6 +140,8 @@ extension GeneralRouter {
             return mappingCreatePost
         case .story:
             return mappingStory
+        case .watchListing:
+            return mappingWatchListing
         }
     }
     

@@ -8,6 +8,14 @@
 import FirebaseFirestore
 
 class FirestoreService: ApiServiceInterface {
+    func retrieveWatchPosts(completion: @escaping (Result<[Post], Error>) -> Void) {
+        fetchCollection(collection: "watchPosts", completion: completion)
+    }
+    
+    func retrieveWatchStories(completion: @escaping (Result<[Story], Error>) -> Void) {
+        fetchCollection(collection: "watchStories", completion: completion)
+    }
+    
     func retrieveUser(for userId: String, completion: @escaping (Result<User, Error>) -> Void) {
         database.collection("users").whereField("id", isEqualTo: userId).getDocuments() { (querySnapshot, err) in
             if let err = err {

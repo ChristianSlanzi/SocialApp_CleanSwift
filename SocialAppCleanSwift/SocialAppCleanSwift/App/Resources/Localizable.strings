@@ -50,6 +50,9 @@
 "postlisting_photo_title" = "Photo";
 "postlisting_newpost_title" = "New post";
 
+//WATCH LISTING
+"watchlisting_view_title" = "Watch";
+
 //SHOW LOCATION
 "showlocation_view_title" = "Location";
 
@@ -90,6 +93,7 @@
 "home_tab_title" = "Home";
 "discover_tab_title" = "Discover";
 "profile_tab_title" = "Profile";
+"watch_tab_title" = "Watch";
 
 //HOME
 "home_view_title" = "Home";

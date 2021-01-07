@@ -11,7 +11,7 @@ class PostListingModule: IModule {
     let appRouter: IAppRouter
     var networkingService: ApiServiceInterface?
     
-    private var router: PostListingRouter!
+    var router: PostListingRouter!
     //private var presenter: PostListingPresenter!
     //private var interactor: PostListingInteractor!
     //private var view: PostListingViewController!
@@ -42,7 +42,7 @@ class PostListingModule: IModule {
 }
 
 extension PostListingModule: Module {
-    var routePath: String {
+    @objc var routePath: String {
         return "PostListing"
     }
 }

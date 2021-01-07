@@ -12,6 +12,14 @@ enum NetworkServiceError: Error {
 }
 
 class NetworkingServiceMock: ApiServiceInterface {
+    func retrieveWatchPosts(completion: @escaping (Result<[Post], Error>) -> Void) {
+        
+    }
+    
+    func retrieveWatchStories(completion: @escaping (Result<[Story], Error>) -> Void) {
+        
+    }
+    
     func retrieveUser(for userId: String, completion: @escaping (Result<User, Error>) -> Void) {
         
     }

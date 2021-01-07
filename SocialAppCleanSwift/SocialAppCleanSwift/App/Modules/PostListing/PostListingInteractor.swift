@@ -31,9 +31,7 @@ class PostListingInteractor: IPostListingInteractor {
     init(presenter: IPostListingPresenter) {
     	self.presenter = presenter
     }
-}
-
-extension PostListingInteractor {
+    
     func fetchPosts(request: PostListingModel.Request) {
         networkingService?.retrievePosts { (result) in
             switch(result) {

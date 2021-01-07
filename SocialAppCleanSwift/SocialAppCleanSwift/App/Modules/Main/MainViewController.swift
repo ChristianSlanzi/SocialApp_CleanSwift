@@ -22,8 +22,11 @@ class MainViewController: UITabBarController {
         let feeds = AppRouter.share.getModule(module: PostListingModule(AppRouter.share))!
         feeds.tabBarItem = UITabBarItem(title: "home_tab_title".localized, image: UIImage(named: "home-tab"), tag: 0)
         
-        let discover = AppRouter.share.getModule(module: DiscoverModule(AppRouter.share))!
-        discover.tabBarItem = UITabBarItem(title: "discover_tab_title".localized, image: UIImage(named: "search-tab"), tag: 1)
+        //let discover = AppRouter.share.getModule(module: DiscoverModule(AppRouter.share))!
+        //discover.tabBarItem = UITabBarItem(title: "discover_tab_title".localized, image: UIImage(named: "search-tab"), tag: 1)
+        
+        let watch = AppRouter.share.getModule(module: WatchListingModule(AppRouter.share))!
+        watch.tabBarItem = UITabBarItem(title: "watch_tab_title".localized, image: UIImage(named: "watch-tab"), tag: 1)
         
         let contacts = AppRouter.share.getModule(module: ContactsModule(AppRouter.share))!
         contacts.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 2)
@@ -37,13 +40,12 @@ class MainViewController: UITabBarController {
         let profile = AppRouter.share.getModule(module: ProfileModule(AppRouter.share), parameters: ["userId" : "1"])!
         profile.tabBarItem = UITabBarItem(title: "profile_tab_title".localized, image: UIImage(named: "profile-tab"), tag: 4)
         
-        let views = [feeds, discover, contacts, home, profile].map { UINavigationController(rootViewController: $0)
+        let views = [feeds, watch, contacts, home, profile].map { UINavigationController(rootViewController: $0)
         }
         viewControllers = views
         
         delegate = self
     }
-    
 }
 
 extension MainViewController: IMainViewController {

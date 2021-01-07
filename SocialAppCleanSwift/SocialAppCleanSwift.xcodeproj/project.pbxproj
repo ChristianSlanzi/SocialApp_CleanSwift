@@ -20,6 +20,8 @@
 		2403DD21257D3990001F6025 /* ArticleListingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403DD19257D3990001F6025 /* ArticleListingManager.swift */; };
 		2403DD26257D3D76001F6025 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403DD25257D3D76001F6025 /* Article.swift */; };
 		2403DD2D257D41E7001F6025 /* ArticleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403DD2C257D41E7001F6025 /* ArticleViewCell.swift */; };
+		241F186825A78C4D00C0987E /* WatchListingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241F186725A78C4D00C0987E /* WatchListingModule.swift */; };
+		241F187025A78F0000C0987E /* WatchListingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241F186F25A78F0000C0987E /* WatchListingInteractor.swift */; };
 		242321192599E20500CADC09 /* Comment+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242321182599E20500CADC09 /* Comment+Firebase.swift */; };
 		2423211E2599ED5B00CADC09 /* SellItem+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2423211D2599ED5B00CADC09 /* SellItem+Firebase.swift */; };
 		24232125259A083C00CADC09 /* SellItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24232124259A083C00CADC09 /* SellItemViewCell.swift */; };
@@ -292,6 +294,8 @@
 		2403DD19257D3990001F6025 /* ArticleListingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListingManager.swift; sourceTree = "<group>"; };
 		2403DD25257D3D76001F6025 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		2403DD2C257D41E7001F6025 /* ArticleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewCell.swift; sourceTree = "<group>"; };
+		241F186725A78C4D00C0987E /* WatchListingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListingModule.swift; sourceTree = "<group>"; };
+		241F186F25A78F0000C0987E /* WatchListingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListingInteractor.swift; sourceTree = "<group>"; };
 		242321182599E20500CADC09 /* Comment+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comment+Firebase.swift"; sourceTree = "<group>"; };
 		2423211D2599ED5B00CADC09 /* SellItem+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SellItem+Firebase.swift"; sourceTree = "<group>"; };
 		24232124259A083C00CADC09 /* SellItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellItemViewCell.swift; sourceTree = "<group>"; };
@@ -624,6 +628,15 @@
 				2403DD2C257D41E7001F6025 /* ArticleViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		241F186625A78AE200C0987E /* WatchListing */ = {
+			isa = PBXGroup;
+			children = (
+				241F186725A78C4D00C0987E /* WatchListingModule.swift */,
+				241F186F25A78F0000C0987E /* WatchListingInteractor.swift */,
+			);
+			path = WatchListing;
 			sourceTree = "<group>";
 		};
 		24232122259A081A00CADC09 /* Views */ = {
@@ -1261,6 +1274,7 @@
 		24CF045C2570018800F92B49 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				241F186625A78AE200C0987E /* WatchListing */,
 				24B79424259BE0EF00084647 /* Story */,
 				24BBA071258911E500E167C6 /* CreatePost */,
 				24408B062586847800910D35 /* Discover */,
@@ -1796,6 +1810,7 @@
 				24DD574A2570330100106BC6 /* SettingsManager.swift in Sources */,
 				2485180C2575A6BD006F8A60 /* PostListingInteractor.swift in Sources */,
 				24BFC457258023AA00C15C67 /* ArticleDetailModel.swift in Sources */,
+				241F187025A78F0000C0987E /* WatchListingInteractor.swift in Sources */,
 				24CF04A92570026100F92B49 /* DetailModel.swift in Sources */,
 				243C176225A340B600FC815D /* PostViewCellModel.swift in Sources */,
 				24CB3B1925977198001E8383 /* DocumentProtocol.swift in Sources */,
@@ -1878,6 +1893,7 @@
 				24CF04B82570026F00F92B49 /* MainPresenter.swift in Sources */,
 				24E0ADF6257407FF00A54F30 /* ShowLocationRouter.swift in Sources */,
 				24C89D0A2579AC2000791646 /* TodoListingModule.swift in Sources */,
+				241F186825A78C4D00C0987E /* WatchListingModule.swift in Sources */,
 				24CF04702570022C00F92B49 /* LoginModel.swift in Sources */,
 				247447B02576F91D006A6BAE /* CommentListingModel.swift in Sources */,
 				24DD576C2570382F00106BC6 /* ServiceInterface.swift in Sources */,

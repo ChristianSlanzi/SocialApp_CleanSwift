@@ -53,6 +53,10 @@
 //WATCH LISTING
 "watchlisting_view_title" = "Watch";
 
+//CHAT
+"chat_view_title" = "Chat";
+"chat_view_message" = "Let's chat...";
+
 //SHOW LOCATION
 "showlocation_view_title" = "Location";
 
@@ -94,6 +98,7 @@
 "discover_tab_title" = "Discover";
 "profile_tab_title" = "Profile";
 "watch_tab_title" = "Watch";
+"chat_tab_title" = "Chat";
 
 //HOME
 "home_view_title" = "Home";

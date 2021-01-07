@@ -44,7 +44,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             "Discover" : GeneralRouter.discover.imodule,
             "CreatePost" : GeneralRouter.createPost.imodule,
             "Story" : GeneralRouter.story.imodule,
-            "WatchListing" : GeneralRouter.watchListing.imodule
+            "WatchListing" : GeneralRouter.watchListing.imodule,
+            "Chat" : GeneralRouter.chat.imodule
         ]
         
         let startModule = GeneralRouter.login.module

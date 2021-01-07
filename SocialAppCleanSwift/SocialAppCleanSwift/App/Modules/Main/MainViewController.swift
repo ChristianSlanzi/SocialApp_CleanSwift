@@ -28,20 +28,22 @@ class MainViewController: UITabBarController {
         let watch = AppRouter.share.getModule(module: WatchListingModule(AppRouter.share))!
         watch.tabBarItem = UITabBarItem(title: "watch_tab_title".localized, image: UIImage(named: "watch-tab"), tag: 1)
         
+        let chat = AppRouter.share.getModule(module: ChatModule(AppRouter.share))!
+        chat.tabBarItem = UITabBarItem(title: "chat_tab_title".localized, image: UIImage(named: "chat-tab"), tag: 2)
+        
         let contacts = AppRouter.share.getModule(module: ContactsModule(AppRouter.share))!
-        contacts.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 2)
+        contacts.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 3)
         
         //let detail = AppRouter.share.getModule(module: DetailModule(AppRouter.share))!
         //detail.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
         
-        let home = AppRouter.share.getModule(module: HomeModule(AppRouter.share))!
-        home.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 3)
+        //let home = AppRouter.share.getModule(module: HomeModule(AppRouter.share))!
+        //home.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 3)
         
         let profile = AppRouter.share.getModule(module: ProfileModule(AppRouter.share), parameters: ["userId" : "1"])!
         profile.tabBarItem = UITabBarItem(title: "profile_tab_title".localized, image: UIImage(named: "profile-tab"), tag: 4)
         
-        let views = [feeds, watch, contacts, home, profile].map { UINavigationController(rootViewController: $0)
-        }
+        let views = [feeds, watch, chat,contacts, profile].map { UINavigationController(rootViewController: $0) }
         viewControllers = views
         
         delegate = self

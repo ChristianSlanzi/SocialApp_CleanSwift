@@ -95,6 +95,14 @@
 		248518162575B7B4006F8A60 /* PostViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248518152575B7B4006F8A60 /* PostViewCell.swift */; };
 		248518212575B84D006F8A60 /* UITableViewCell+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248518202575B84D006F8A60 /* UITableViewCell+Ext.swift */; };
 		248DA67F259CC28F00B87464 /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248DA67E259CC28F00B87464 /* Array+Ext.swift */; };
+		24961F9F25A7BBA900E848E0 /* ChatModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24961F9725A7BBA900E848E0 /* ChatModule.swift */; };
+		24961FA025A7BBA900E848E0 /* ChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24961F9825A7BBA900E848E0 /* ChatPresenter.swift */; };
+		24961FA125A7BBA900E848E0 /* ChatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24961F9925A7BBA900E848E0 /* ChatRouter.swift */; };
+		24961FA225A7BBA900E848E0 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24961F9A25A7BBA900E848E0 /* ChatViewController.swift */; };
+		24961FA325A7BBA900E848E0 /* ChatInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24961F9B25A7BBA900E848E0 /* ChatInteractor.swift */; };
+		24961FA425A7BBA900E848E0 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24961F9C25A7BBA900E848E0 /* ChatModel.swift */; };
+		24961FA525A7BBA900E848E0 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24961F9D25A7BBA900E848E0 /* ChatViewController.xib */; };
+		24961FA625A7BBA900E848E0 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24961F9E25A7BBA900E848E0 /* ChatManager.swift */; };
 		2496806025897373008907BA /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2496805F25897373008907BA /* UserHeaderView.swift */; };
 		24AE32F0257C01F80064598A /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE32EF257C01F80064598A /* CachedImageView.swift */; };
 		24B3C322258C14DD002A49CB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3C321258C14DD002A49CB /* ImagePicker.swift */; };
@@ -369,6 +377,14 @@
 		248518152575B7B4006F8A60 /* PostViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewCell.swift; sourceTree = "<group>"; };
 		248518202575B84D006F8A60 /* UITableViewCell+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Ext.swift"; sourceTree = "<group>"; };
 		248DA67E259CC28F00B87464 /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
+		24961F9725A7BBA900E848E0 /* ChatModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModule.swift; sourceTree = "<group>"; };
+		24961F9825A7BBA900E848E0 /* ChatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenter.swift; sourceTree = "<group>"; };
+		24961F9925A7BBA900E848E0 /* ChatRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRouter.swift; sourceTree = "<group>"; };
+		24961F9A25A7BBA900E848E0 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		24961F9B25A7BBA900E848E0 /* ChatInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInteractor.swift; sourceTree = "<group>"; };
+		24961F9C25A7BBA900E848E0 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		24961F9D25A7BBA900E848E0 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		24961F9E25A7BBA900E848E0 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 		2496805F25897373008907BA /* UserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
 		24AE32EF257C01F80064598A /* CachedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
 		24B3C321258C14DD002A49CB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -901,6 +917,21 @@
 			path = Array;
 			sourceTree = "<group>";
 		};
+		24961F9625A7BB3E00E848E0 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				24961F9725A7BBA900E848E0 /* ChatModule.swift */,
+				24961F9825A7BBA900E848E0 /* ChatPresenter.swift */,
+				24961F9925A7BBA900E848E0 /* ChatRouter.swift */,
+				24961F9A25A7BBA900E848E0 /* ChatViewController.swift */,
+				24961F9B25A7BBA900E848E0 /* ChatInteractor.swift */,
+				24961F9C25A7BBA900E848E0 /* ChatModel.swift */,
+				24961F9D25A7BBA900E848E0 /* ChatViewController.xib */,
+				24961F9E25A7BBA900E848E0 /* ChatManager.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		2496805E25897358008907BA /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -1274,6 +1305,7 @@
 		24CF045C2570018800F92B49 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				24961F9625A7BB3E00E848E0 /* Chat */,
 				241F186625A78AE200C0987E /* WatchListing */,
 				24B79424259BE0EF00084647 /* Story */,
 				24BBA071258911E500E167C6 /* CreatePost */,
@@ -1626,6 +1658,7 @@
 				24CF0409256FC00000F92B49 /* LaunchScreen.storyboard in Resources */,
 				24CF04AA2570026100F92B49 /* DetailViewController.xib in Resources */,
 				24E0ADFA257407FF00A54F30 /* ShowLocationViewController.xib in Resources */,
+				24961FA525A7BBA900E848E0 /* ChatViewController.xib in Resources */,
 				24CF0406256FC00000F92B49 /* Assets.xcassets in Resources */,
 				24DD57492570330100106BC6 /* SettingsViewController.xib in Resources */,
 				24BA4B7A257922E300A7F088 /* AlbumListingViewController.xib in Resources */,
@@ -1822,11 +1855,14 @@
 				24C89D182579AF1700791646 /* TodoViewCell.swift in Sources */,
 				2496806025897373008907BA /* UserHeaderView.swift in Sources */,
 				24CB3B1F25977231001E8383 /* Article+Firebase.swift in Sources */,
+				24961FA025A7BBA900E848E0 /* ChatPresenter.swift in Sources */,
 				24CF04C62570029700F92B49 /* AppRoute.swift in Sources */,
 				24CF04832570024200F92B49 /* HomeModel.swift in Sources */,
 				24CB3B372597B7CF001E8383 /* Photo+Firebase.swift in Sources */,
 				24BA4B912579761900A7F088 /* PhotoListingRouter.swift in Sources */,
+				24961FA425A7BBA900E848E0 /* ChatModel.swift in Sources */,
 				24BFC46925802E4F00C15C67 /* ReminderListingViewController.swift in Sources */,
+				24961FA325A7BBA900E848E0 /* ChatInteractor.swift in Sources */,
 				246C669125911CBC002750D8 /* StorageService.swift in Sources */,
 				24CF047F2570024200F92B49 /* HomePresenter.swift in Sources */,
 				2468456A259B8E220062E0A6 /* StoryViewCell.swift in Sources */,
@@ -1856,6 +1892,7 @@
 				245F4DA0258799F500C83134 /* NSLayoutConstraint+Ext.swift in Sources */,
 				24CF046D2570022C00F92B49 /* LoginRouter.swift in Sources */,
 				247447AD2576F91D006A6BAE /* CommentListingRouter.swift in Sources */,
+				24961FA625A7BBA900E848E0 /* ChatManager.swift in Sources */,
 				24CB3B2F25978FE5001E8383 /* User+Firebase.swift in Sources */,
 				24BFC46B25802E4F00C15C67 /* ReminderListingModel.swift in Sources */,
 				2462E0BD2582C5F500B78203 /* PhotosDataStub.swift in Sources */,
@@ -1943,6 +1980,7 @@
 				24CF04BB2570026F00F92B49 /* MainInteractor.swift in Sources */,
 				24C89D112579AC2000791646 /* TodoListingManager.swift in Sources */,
 				24CF04A42570026100F92B49 /* DetailModule.swift in Sources */,
+				24961FA225A7BBA900E848E0 /* ChatViewController.swift in Sources */,
 				24232136259A145F00CADC09 /* ReminderViewCell.swift in Sources */,
 				2423211E2599ED5B00CADC09 /* SellItem+Firebase.swift in Sources */,
 				24CF04722570022C00F92B49 /* LoginManager.swift in Sources */,
@@ -1983,9 +2021,11 @@
 				24CF046B2570022C00F92B49 /* LoginModule.swift in Sources */,
 				24829EB0259904D200D21993 /* Todo+Firebase.swift in Sources */,
 				24CF046C2570022C00F92B49 /* LoginPresenter.swift in Sources */,
+				24961F9F25A7BBA900E848E0 /* ChatModule.swift in Sources */,
 				24CF04A72570026100F92B49 /* DetailViewController.swift in Sources */,
 				24BA4B76257922E300A7F088 /* AlbumListingRouter.swift in Sources */,
 				2460187D257EF33000FF623E /* SellItem.swift in Sources */,
+				24961FA125A7BBA900E848E0 /* ChatRouter.swift in Sources */,
 				24E0ADF8257407FF00A54F30 /* ShowLocationInteractor.swift in Sources */,
 				24BBA07A2589125A00E167C6 /* CreatePostModule.swift in Sources */,
 				24BFC453258023AA00C15C67 /* ArticleDetailPresenter.swift in Sources */,
